@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Apple World Wide Developer Relation証明書の期限切れ | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Adhocビルドをdeploygateで配信しようとしたら、有効なiPhone Distribution　 Certificateがないというエラーに。先週末は問題なかったのにと思いつつ調べてみると、Apple Developerライセンス自体が切れているわけではなく、iPhone Distributionで発行している証明書もまだ有効期限内。しかしKeyChainアプリで証明書を見ると「証明書の">
+<meta name="keywords" content="blog,iosdev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apple World Wide Developer Relation証明書の期限切れ">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2016/02/16/201602/apple-wwdr-certificate-expired/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="Adhocビルドをdeploygateで配信しようとしたら、有効なiPhone Distribution　 Certificateがないというエラーに。先週末は問題なかったのにと思いつつ調べてみると、Apple Developerライセンス自体が切れているわけではなく、iPhone Distributionで発行している証明書もまだ有効期限内。しかしKeyChainアプリで証明書を見ると「証明書の">
+<meta property="og:updated_time" content="2016-02-17T01:20:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Apple World Wide Developer Relation証明書の期限切れ">
+<meta name="twitter:description" content="Adhocビルドをdeploygateで配信しようとしたら、有効なiPhone Distribution　 Certificateがないというエラーに。先週末は問題なかったのにと思いつつ調べてみると、Apple Developerライセンス自体が切れているわけではなく、iPhone Distributionで発行している証明書もまだ有効期限内。しかしKeyChainアプリで証明書を見ると「証明書の">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201602/apple-wwdr-certificate-expired" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/02/16/201602/apple-wwdr-certificate-expired/" class="article-date">
+  <time datetime="2016-02-15T15:00:00.000Z" itemprop="datePublished">Feb 16 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Apple World Wide Developer Relation証明書の期限切れ
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Adhocビルドをdeploygateで配信しようとしたら、有効なiPhone Distribution　 Certificateがないというエラーに。先週末は問題なかったのにと思いつつ調べてみると、Apple Developerライセンス自体が切れているわけではなく、iPhone Distributionで発行している証明書もまだ有効期限内。しかしKeyChainアプリで証明書を見ると「証明書の発行者が無効」というエラーになっていた。証明書のプロファイルを見ると、中間証明書であるApple World Wide Developer Relation Certificateが期限切れになってた。調べてみると2/14に切れてAppleDevで発行した証明書が一斉に無効になったらしい。こんなことがあるのか。</p>
+<p><a href="http://qiita.com/anchen/items/7febe30dc24aed0827c0" target="_blank" rel="external">【注意】Apple Worldwide Developer Relationsの期限切れ - Qiita</a><a href=""></a><br><a href="https://forums.developer.apple.com/message/114003" target="_blank" rel="external">Uploading archive error: “Missing iOS Distribut… | Apple Developer Forums</a></p>
+<p>新しい中間証明書は2023-02-07までなので、前に切れたのも7年前だったならiOS開発者は初めて期限切れを経験したとかなのかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/17/201602/bee/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          BeeでのGithub課題管理
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/15/201602/degital-media-and-japanese-graphic-design/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          『デジタルメディアと日本のグラフィックデザイン その過去と未来』を観た
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

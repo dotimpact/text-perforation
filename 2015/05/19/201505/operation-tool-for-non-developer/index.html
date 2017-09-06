@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>プログラマーじゃない人に使ってもらう運用ツールをなにで作るか | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="今している仕事ではアプリの開発のほかに既存の紙の本の組版データからコンテンツのデータを再構成するような作業があって、xlsxファイルに変換＋人力で構造化された本のデータと画像ファイル群からhtmlとsqlite3のdbファイルを作るようなスクリプトを僕がrubyで作ってまわしていたんだけど、スケジュールが逼迫しているため修正後のhtml状態での確認を作業者にしてもらうためにrubyスクリプトを渡し">
+<meta name="keywords" content="text,programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="プログラマーじゃない人に使ってもらう運用ツールをなにで作るか">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2015/05/19/201505/operation-tool-for-non-developer/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="今している仕事ではアプリの開発のほかに既存の紙の本の組版データからコンテンツのデータを再構成するような作業があって、xlsxファイルに変換＋人力で構造化された本のデータと画像ファイル群からhtmlとsqlite3のdbファイルを作るようなスクリプトを僕がrubyで作ってまわしていたんだけど、スケジュールが逼迫しているため修正後のhtml状態での確認を作業者にしてもらうためにrubyスクリプトを渡し">
+<meta property="og:updated_time" content="2015-05-22T04:24:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="プログラマーじゃない人に使ってもらう運用ツールをなにで作るか">
+<meta name="twitter:description" content="今している仕事ではアプリの開発のほかに既存の紙の本の組版データからコンテンツのデータを再構成するような作業があって、xlsxファイルに変換＋人力で構造化された本のデータと画像ファイル群からhtmlとsqlite3のdbファイルを作るようなスクリプトを僕がrubyで作ってまわしていたんだけど、スケジュールが逼迫しているため修正後のhtml状態での確認を作業者にしてもらうためにrubyスクリプトを渡し">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201505/operation-tool-for-non-developer" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/05/19/201505/operation-tool-for-non-developer/" class="article-date">
+  <time datetime="2015-05-18T15:00:00.000Z" itemprop="datePublished">May 19 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      プログラマーじゃない人に使ってもらう運用ツールをなにで作るか
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>今している仕事ではアプリの開発のほかに既存の紙の本の組版データからコンテンツのデータを再構成するような作業があって、xlsxファイルに変換＋人力で構造化された本のデータと画像ファイル群からhtmlとsqlite3のdbファイルを作るようなスクリプトを僕がrubyで作ってまわしていたんだけど、スケジュールが逼迫しているため修正後のhtml状態での確認を作業者にしてもらうためにrubyスクリプトを渡して作業してもらうことになった。さいわい作業者のマシンもMacだったのでruby実行環境の心配は必要なかったんだけど、sqlite3のgemはネイティブライブラリなのでビルドのためにXCodeもインストールしてもらう必要があり、しかもそれが判明したのが出先だったのでモバイル回線で3GBとかのXCodeをダウンロードされるのを待たなければならなくなってしまい…みたいな。</p>
+<p>こういう事態を考えると、各機種むけのバイナリをクロスコンパイルできるというGoを使えるようにしておくといいのかなとかなり思った。sqlite3とかxlsファイルの読み込みもあるみたい。余裕あるときにたいしたことしてない今回のをGoに移植できるとよさそう（その余裕がないのだけど…）</p>
+<ul>
+<li><a href="https://github.com/mattn/go-sqlite3" target="_blank" rel="external">mattn/go-sqlite3</a></li>
+<li><a href="http://kaorumori.hatenadiary.com/entry/2014/08/09/232553" target="_blank" rel="external">Go言語でエクセルファイル (.xlsx) を読み込む - 森薫の日記</a></li>
+</ul>
+<p>ちなみにこういう非開発者にインストールして作業してもらう想定の運用ツールって何度かつくったことがあり、一度はこういうときこそTitanium Desktopだろ！　と思って乗り出したのだけどけっこう痛い目にあった（gemのpathの問題があって開発時は動いても別環境では動かないとか…　Titanium Desktopってもうプロダクト継続してないのかな？）。別の機会のときにはOpenOfficeでシートに所定の項目を埋めてスクリプトを実行するとhtmlが生成されるみたいなツールで渡したこともあった。これは環境がつくってもらいやすいというメリットを期待したんだけど、それでもけっこう苦労した記憶がある（どういう問題だったのか忘れてしまった）。いまだとGoogle Spreadsheetのスクリプトだともうちょっとよさそう。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2015/05/20/201505/post-it-for-lecture/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          授業中のPost-it
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/05/18/201505/creativity-inc/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          エド・キャットムル『ピクサー流　創造するちから』を読んだ
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

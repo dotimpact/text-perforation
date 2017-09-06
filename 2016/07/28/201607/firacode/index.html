@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>FiraCode | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="tonsky/FiraCode: Monospaced font with programming ligatures 「FiraCode」というプログラミング言語の表示を最適化するフォントが開発されてるのを知ったので使ってみている。どういうふうに最適化するかというと、基本はモノスペースなんだけど、プログラミング言語に特徴的な記号の並び（「!=」とか「::」とか「=&amp;gt;」とかいった）に対する合字や">
+<meta name="keywords" content="blog,programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FiraCode">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2016/07/28/201607/firacode/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="tonsky/FiraCode: Monospaced font with programming ligatures 「FiraCode」というプログラミング言語の表示を最適化するフォントが開発されてるのを知ったので使ってみている。どういうふうに最適化するかというと、基本はモノスペースなんだけど、プログラミング言語に特徴的な記号の並び（「!=」とか「::」とか「=&amp;gt;」とかいった）に対する合字や">
+<meta property="og:image" content="http://text-perforation.doppac.cc/images/201607/firacode.png">
+<meta property="og:updated_time" content="2017-08-01T13:06:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FiraCode">
+<meta name="twitter:description" content="tonsky/FiraCode: Monospaced font with programming ligatures 「FiraCode」というプログラミング言語の表示を最適化するフォントが開発されてるのを知ったので使ってみている。どういうふうに最適化するかというと、基本はモノスペースなんだけど、プログラミング言語に特徴的な記号の並び（「!=」とか「::」とか「=&amp;gt;」とかいった）に対する合字や">
+<meta name="twitter:image" content="http://text-perforation.doppac.cc/images/201607/firacode.png">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201607/firacode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/28/201607/firacode/" class="article-date">
+  <time datetime="2016-07-28T01:41:00.000Z" itemprop="datePublished">Jul 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      FiraCode
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/201607/firacode.png">
+<p><a href="https://github.com/tonsky/FiraCode" target="_blank" rel="external">tonsky/FiraCode: Monospaced font with programming ligatures</a></p>
+<p>「FiraCode」というプログラミング言語の表示を最適化するフォントが開発されてるのを知ったので使ってみている。どういうふうに最適化するかというと、基本はモノスペースなんだけど、プログラミング言語に特徴的な記号の並び（「!=」とか「::」とか「=>」とかいった）に対する合字やマージン調整が定義されていて、プログラミング言語における意味に即した文字の並びが実現されているという。ただ一般的にプログラミングに使うエディタでは合字処理が必要とされないので対応しているエディタでないと使用できないみたい。IntellijのIDEの最新版ではちょうど正式サポートされたようで、フォント設定で<code>Enable Font Ligatures</code>をEnableにすることで使用できる。</p>
+<p>最初はちょっと違和感があった（とくに記号をバックスペースで削除するときの動きとかに）けどすぐ慣れたし、快適に感じてきた。目立つ演算子の合字もいいんだけど、「::」「..」「//」のようなデリミタ的な連続記号のスペーシングが適切になるのが気持ちいい。このフォント使って区切りのスペースを最低限にするといいかもしれないな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/30/201607/shinsei-kamattechan-the-movie/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          入江悠『劇場版神聖かまってちゃん』を観た
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/28/201607/niconiko-comment-simulation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          ニコニコ動画のコメントを再現する動画をつくる
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

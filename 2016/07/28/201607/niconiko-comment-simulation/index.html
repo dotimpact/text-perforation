@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ニコニコ動画のコメントを再現する動画をつくる | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="奥さんが通っている映画学校の課題でニコ生がモチーフの映画を撮っているのだそうで、撮影した実写素材にニコ動風のコメントを流したいんだけど…という話をしていたのでそういうソリューションがあるのかちょっと調べた（AEでコメントを全部動かすつもりだったみたいけど、それは大変なので）。 ニコ動風コメントをPCやブラウザ上で再現するツールはいろいろあるみたいだけど、Macで動画保存（あとで撮影素材と合成するの">
+<meta name="keywords" content="blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ニコニコ動画のコメントを再現する動画をつくる">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2016/07/28/201607/niconiko-comment-simulation/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="奥さんが通っている映画学校の課題でニコ生がモチーフの映画を撮っているのだそうで、撮影した実写素材にニコ動風のコメントを流したいんだけど…という話をしていたのでそういうソリューションがあるのかちょっと調べた（AEでコメントを全部動かすつもりだったみたいけど、それは大変なので）。 ニコ動風コメントをPCやブラウザ上で再現するツールはいろいろあるみたいだけど、Macで動画保存（あとで撮影素材と合成するの">
+<meta property="og:updated_time" content="2016-08-01T11:44:09.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ニコニコ動画のコメントを再現する動画をつくる">
+<meta name="twitter:description" content="奥さんが通っている映画学校の課題でニコ生がモチーフの映画を撮っているのだそうで、撮影した実写素材にニコ動風のコメントを流したいんだけど…という話をしていたのでそういうソリューションがあるのかちょっと調べた（AEでコメントを全部動かすつもりだったみたいけど、それは大変なので）。 ニコ動風コメントをPCやブラウザ上で再現するツールはいろいろあるみたいだけど、Macで動画保存（あとで撮影素材と合成するの">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201607/niconiko-comment-simulation" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/28/201607/niconiko-comment-simulation/" class="article-date">
+  <time datetime="2016-07-27T15:00:00.000Z" itemprop="datePublished">Jul 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      ニコニコ動画のコメントを再現する動画をつくる
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>奥さんが通っている映画学校の課題でニコ生がモチーフの映画を撮っているのだそうで、撮影した実写素材にニコ動風のコメントを流したいんだけど…という話をしていたのでそういうソリューションがあるのかちょっと調べた（AEでコメントを全部動かすつもりだったみたいけど、それは大変なので）。</p>
+<p>ニコ動風コメントをPCやブラウザ上で再現するツールはいろいろあるみたいだけど、Macで動画保存（あとで撮影素材と合成するのでグリーンバックにコメントだけ流れる動画ファイル作れるのが望ましい）のことを考えると「<a href="https://rot1024.github.io/jikkyo/" target="_blank" rel="external">jikkyo - ニコニコ風実況アプリ</a>」がよさそうだった。nw.jsで作られたユニバーサルアプリで、本来は透明ウインドウに流れる保存されたコメントを別アプリで流している動画に重ねて鑑賞する目的のアプリなんだけど、背景色を任意で変えられるのであとで抜く色にしておいてQuickTimeの画面収録機能とかでキャプチャすれば合成用コメント動画が作れた。</p>
+<p>ニコ動のコメントデータ構造というのも知らなかったんだけど、</p>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><packet><br>    <thread last_res="xxxx" resultcode="0" revision="2" server_time="xxxxxx" thread="111111" ticket="xxxx"><br>    <view_counter id="smXXXXXX" mylist="xxxx" video="xxxxx"><br>    <chat anonymity="1" date="1202708675" mail="184" no="9661" thread="111111" user_id="xxx" vpos="0">こんなかんじ</chat><br>    …</view_counter></thread></packet></p>
+<p>みたいな感じになって、chatタグのvposに動画先頭からのコメント出現位置（1/100秒単位）を指定してやればよいみたい。あと<code>mail</code>というプロパティがなぜかコメントの修飾コマンドになっているらしく（歴史的経緯がありそう）、<code>mail=&quot; ue red&quot;</code>みたいに書いてやれば色付きコメントができるっぽい。コマンドについては「<a href="http://www59.atwiki.jp/nicoapi/pages/20.html" target="_blank" rel="external">ニコニコAPIリストwiki - ニコ生コメント</a>」とかにくわしく書いてあった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/28/201607/firacode/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          FiraCode
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/27/201607/sentan-prog2016-last-study/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          授業終了
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

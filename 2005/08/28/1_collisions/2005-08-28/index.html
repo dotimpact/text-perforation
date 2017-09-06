@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>スケジュール指向webメモツール：Calki　ver.002 | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="■夏の自由研究がわりにcalkiに手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。 prototype.jsを使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。  http://calki.">
+<meta name="keywords" content="web,work">
+<meta property="og:type" content="article">
+<meta property="og:title" content="スケジュール指向webメモツール：Calki　ver.002">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2005/08/28/1_collisions/2005-08-28/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="■夏の自由研究がわりにcalkiに手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。 prototype.jsを使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。  http://calki.">
+<meta property="og:image" content="http://text-perforation.doppac.cc/images/wp-content/uploads/2008/02/calki002.png">
+<meta property="og:updated_time" content="2017-08-01T13:06:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="スケジュール指向webメモツール：Calki　ver.002">
+<meta name="twitter:description" content="■夏の自由研究がわりにcalkiに手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。 prototype.jsを使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。  http://calki.">
+<meta name="twitter:image" content="http://text-perforation.doppac.cc/images/wp-content/uploads/2008/02/calki002.png">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-1_collisions/2005-08-28" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/08/28/1_collisions/2005-08-28/" class="article-date">
+  <time datetime="2005-08-27T15:00:00.000Z" itemprop="datePublished">Aug 28 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      スケジュール指向webメモツール：Calki　ver.002
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/calki002.png" alt="calki002.png"></p>
+<p>■夏の自由研究がわりに<a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">calki</a>に手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。</p>
+<p><a href="http://prototype.conio.net/" target="_blank" rel="external">prototype.js</a>を使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。</p>
+<ul>
+<li><a href="http://calki.dotimpac.to/" target="_blank" rel="external">http://calki.dotimpac.to/</a>　サンプルサイト</li>
+</ul>
+<h1 id="Calkiとは"><a href="#Calkiとは" class="headerlink" title="Calkiとは"></a>Calkiとは</h1><p>■日付管理、簡易スケジュール機能のあるWiki風のメモツールです。<a href="http://ninjinix.x0.com/rn/" target="_blank" rel="external">RandomNote</a>がベースになっています。詳しくは以下のページをごらんください。</p>
+<ul>
+<li><a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">スケジュール指向Wiki風メモツール：Calki</a> <ul>
+<li>前バージョンの記事</li>
+</ul>
+</li>
+<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">Calkiとは</a> <ul>
+<li>CalkiのAboutPage</li>
+</ul>
+</li>
+</ul>
+<h1 id="新機能"><a href="#新機能" class="headerlink" title="新機能"></a>新機能</h1><p>■最近になって<a href="http://book.mycom.co.jp/wd/" target="_blank" rel="external">WebDesigning</a>の今月号を立ち読みしてたら、JavaScript/Ajaxの特集に<a href="http://collisions.dotimpac.to/works/web/kaiwarecotonoha.html" target="_blank" rel="external">kaiwarecotonoha</a>が紹介されてて驚いて、それでAjaxの検索が多かったのかー、あれすごい適当だしメンテもしてないしその後Ajaxもとくに触ってないから恐縮だなー、などと思いまして、じゃあprototype.jsでもちょっと触ってみるかと思ったんですな。せっかくだからとcalkiにいろいろ機能をつけていったら、インターフェイスの部分がかなり刷新されてしまいました。おおむね使いやすくなってると思います。</p>
+<h2 id="JavaScriptによる動的なページ操作"><a href="#JavaScriptによる動的なページ操作" class="headerlink" title="JavaScriptによる動的なページ操作"></a>JavaScriptによる動的なページ操作</h2><ul>
+<li>日付ページへのマウスオーバーでその日付ページに対するツールバーが出ます。直感的な操作が可能です。</li>
+<li>見出しをクリックすることで、メモを畳んで隠すことができます。</li>
+<li>開いている日付から「前の日」「次の週」のように順番に日付ページを開くことができます。</li>
+</ul>
+<p>JavaScriptでの動的なスタイル操作で、見たくない情報は隠せてちょっと気持ちがいいです。まだ開いてないメモを開いたり、日付を進めたり戻したりするときは、Ajax式の非同期ロードをします。</p>
+<h2 id="非同期ロード／セーブによるシームレス編集"><a href="#非同期ロード／セーブによるシームレス編集" class="headerlink" title="非同期ロード／セーブによるシームレス編集"></a>非同期ロード／セーブによるシームレス編集</h2><ul>
+<li>以前までは画面が切り替わっていたメモの編集がその場でできるようになりました。</li>
+<li>追記の書き込みもその場で非同期に行います。</li>
+<li>編集時にほかのメモが参照できるので、コピー＆ペーストが簡単です。</li>
+</ul>
+<p><a href="http://www.tiddlywiki.com/" target="_blank" rel="external">TiddlyWiki</a>のサクサク感を目指してみました。やや重いので待ち時間なしとはいきませんが。使ってみて編集時にほかのメモが見られる（そのメモも編集状態にしてwikiフォーマットでコピペできる）ってのがわりと重要だなと思ったんですが、それは後で書きます。</p>
+<h2 id="MM-memoインポート機能"><a href="#MM-memoインポート機能" class="headerlink" title="MM/memoインポート機能"></a><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>インポート機能</h2><ul>
+<li><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>から自分のブックマークを日付ごとに取得してメモを作れます。</li>
+<li>ちゃんとタグをキーワードリンクにするので、うれしいかも</li>
+</ul>
+<p>おまけというか、自分が欲しかったのでつけました。ほんとは毎日自動取得したほうがいいかもしれないけど。</p>
+<h1 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h1><p>■Ruby1.8.1の環境が必須です。また、非同期編集とMM/memoインポートは、別途Uconvをインストールしないと使えなくなっちゃったんで、デフォルトでは無効になっています。そのあたりご了承のうえ設置・使用してください。もちろん無保証です。</p>
+<ul>
+<li><a href="http://calki.dotimpac.to/release/calki002_20050829.zip" target="_blank" rel="external">http://calki.dotimpac.to/release/calki002_20050829.zip</a></li>
+</ul>
+<p>設置方法はAboutPageをごらんください。</p>
+<ul>
+<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">http://calki.dotimpac.to/?AboutPage.txt</a></li>
+</ul>
+<h1 id="雑談：シームレス編集とwikiページの再統合"><a href="#雑談：シームレス編集とwikiページの再統合" class="headerlink" title="雑談：シームレス編集とwikiページの再統合"></a>雑談：シームレス編集とwikiページの再統合</h1><p>■上にもちょっと書きましたが自分でちょっと使ってみて、シームレス編集（というかJavaScriptでエレメントを差し替えてその場で編集できる機能）とwikiはかなり相性がいいんじゃないかと思いましたね（TiddlyWikiはもともとそれを狙っているのかもしれませんが）。とくに、編集しながらほかのページを見たり、そのページから（しかもWiki書式で）コピーしたりできるのがwiki的にうれしい。wikiエンジンによるアジャイルなコンテンツ作りには、方針の変更とか内容の再統合というプロセスが絶対に避けられないわけで、長くなりすぎたページの株分けとか、よく参照する内容を集めた新しいページの作成みたいなことが極力やりやすくないといけないのではと思いました。</p>
+<p>CalkiにはRandomNoteから継承した検索キーワードリンク機能があって、この検索結果の一番上に「このキーワードの新しいメモを作る」というフォームを前バージョンからつけてたんですが、使ってるうちにあんまり便利じゃないんではずしたりしてたんですな。ところが、これが今バージョンからはかなり威力を発揮します。たとえば「JavaScript」を検索すると、いままでメモしたJavaScriptのメモが一覧されますが、この中にはよく見るメモもあればぜんぜん見ないメモもあるわけです。そこでよく見るメモをそれぞれ編集状態にしてコピーして、新しいフォームに入れて別のキーワードをつけてメモを作成すれば、いままでより情報が簡単に引き出せるようになるというわけ。これかなり便利じゃないすか？　便利だと思うんですが、どうでしょう。</p>
+<p>というわけで、もし興味があったら使ってみてください。たぶんバグはたくさんあると思いますが。バグがあったらサンプルサイトに［［バグ］］とか検索キーワードをつけてメモを作っておいていただけるとたすかります。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2005/09/01/1_collisions/2005-09-01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2005年の夏休み
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2005/07/25/1_collisions/2005-07-25/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Autostitchの間違った使いかた
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

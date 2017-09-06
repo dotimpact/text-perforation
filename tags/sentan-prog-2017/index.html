@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: sentan-prog-2017 | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="text perforation">
+<meta property="og:url" content="http://text-perforation.doppac.cc/tags/sentan-prog-2017/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="text perforation">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-201704/lzw-archiving-unplugged" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/18/201704/lzw-archiving-unplugged/" class="article-date">
+  <time datetime="2017-04-17T15:00:00.000Z" itemprop="datePublished">Apr 18 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/18/201704/lzw-archiving-unplugged/">人力LZW圧縮/展開/グリッチ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>授業第２回。<a href="/2016/04/19/201604/easy-6502-and-sando">去年</a>は山本さんに『算道』の実演をしてもらったりeasy6502を使った授業をしてたんだけど、今年はプログラムを書く体験の前の「プログラムを実行する体験」として、圧縮/展開アルゴリズムを受講生の手で実行してもらう授業をやってみた。</p>
+<p>もともとは<a href="http://csunplugged.org/" target="_blank" rel="external">Computer Science Unplugged</a>を見てたなかでText Compressionのアクティビティが見た目楽しそうで、こういう「テキストが圧縮（コーディング）される」という結果が得られるアルゴリズムが題材なら、コンピュータとプログラムがすることを実感して興味を持ってもらえるイントロダクションの授業ができるんじゃないかと思ったことがきっかけ。</p>
+<img src="https://i.gyazo.com/a388fe81d1357d3e3e67897b4e75cae4.png" width="400">
+<p>CS Unpluggedの「Text Compression」アクティビティの解説pdfより</p>
+<p>でもよく考えたら圧縮アルゴリズムの内容ってよく知らなくてハフマン圧縮とかでできるのかなーと思いながら思って調べているうちに、テキストの圧縮過程を実感できそうでかつ学生も常々お世話になってるだろうLZW圧縮に決めた（検討には<a href="http://www.snap-tck.com/room03/c02/comp/comp.html" target="_blank" rel="external">データ圧縮法概説</a>がとても参考になった。最終的に例文にした早口言葉もこの概説の実演で使用されていたもの）。</p>
+<p>当初「受講生の好きな歌の歌詞を圧縮させて、圧縮データを他の受講生と交換して展開する授業にしよう」と思っていたんだけど、実際に自分の手でLZW圧縮のアルゴリズムを実行してみると思った以上に時間がかかる（2,30文字の処理に20分以上）うえ、意図的に歌詞の繰り返しの多い歌を選ばないかぎりは圧縮のおもしろみも味わえない単なる作業になってしまうことが予想できたので、後ろ髪をひかれつつ元テキストは圧縮が効きやすい早口言葉（「カエルピョコピョコ…」）に固定して、プログラム手実行の過程を理解するところにフォーカスできるように手順やワークシートをまとめて授業に臨んだ。</p>
+<img src="https://i.gyazo.com/4e55efa73cbe358b38f7d9106390ea59.png" width="400">
+<p>ワークシートその１（入力・出力）(<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVQVpoRldDRDdfYXc/view" target="_blank" rel="external">pdf</a>)</p>
+<img src="https://i.gyazo.com/e556239d8bd2508bb3090425f3aa9c42.png" width="400">
+<p>ワークシートその２（ワークメモリ：圧縮用辞書）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVVFdfUUZiTmtHV2M/view" target="_blank" rel="external">pdf</a>）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVbUZWT1JFSUdvWU0/view?usp=sharing" target="_blank" rel="external">亜展開用辞書（内容は同じです）</a>）</p>
+<img src="https://i.gyazo.com/ae9c142adb824fc26e9dac923bbdbe06.png" width="400">
+<p>圧縮手順書（プログラム部）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVOVdYRDF5bWZWZ0U/view?usp=sharing" target="_blank" rel="external">pdf</a> ）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVY1V3MkNzdER6c0U/view?usp=sharing" target="_blank" rel="external">展開手順pdf</a>）</p>
+<p>実行時のポインタの役割をするものとして色ごとに役割を決めた付箋を配って使ってもらうようにしたんだけど、これはなかなかうまくいったような気がする。実際に学生（8人）にやってもらったらやってるうちに手順を飛ばしてしまうことが続出したので、もう一つ付箋を配っていま実行している手順を指す（つまりプログラムポインタ）ようにしたほうがよかったかもしれない。手違いで途中からやり直しになってしまった人もいたけど、見たところみんな最初の意味のわからないことをやらされている、という感じから途中でこのアルゴリズムの巧妙さにはっと気づき、最後まで興味を持って作業してもらえていたように思う。</p>
+<p><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BS-xuD9g-js/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">デバッグ中</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">kotaro tanakaさん(@doppac)がシェアした投稿 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-04-17T09:08:43+00:00">2017  4月 17 2:08午前 PDT</time></p></div></blockquote></p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>そして、LZW圧縮といえばGIF画像の圧縮アルゴリズムであり、アーカイブデータのコードをいくつかスワップさせれば簡単にグリッチさせることができる。今回圧縮しているのは文字単位のテキストなので、「カエルピョコピョコミピョコピョコアワセテピョコピョコムピョコピョコ」が「エカルピョピョココミココアココワセココアョピテョムコ」になったりする。というのを、受講生にそれぞれ好きなところでグリッチしたデータを展開させて結果を見てもらった。これ、正常データとグリッチデータを両方手で展開してみると、データの入れ替えが辞書にどのように波及していくかがよくわかってとてもおもしろい。（4,5箇所グリッチするよう指示したけど、2つくらいでもいいのかも）。</p>
+<p>というわけで、僕がこれまでいろいろ試したなかでも一番手応えのある授業になってよかった。来週からは普通のプログラミングの授業に入っていくけど、今回やったことがプログラム言語の諸概念の参照（変数は人力圧縮でいうところのワークシートのところだよとか）にできるはずなので、そこの飲み込みやすさにもつながるといいなと思う。あと以前からデバッガのおもしろさをプログラミング入門の文脈で使えないものかなと思ってたんだけど、考えてみると今回のはその点にもかなっている面があって個人的な満足度が高い。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sentan-prog-2017/">sentan-prog-2017</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201704/scrapbox-for-class-groupware" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/11/201704/scrapbox-for-class-groupware/" class="article-date">
+  <time datetime="2017-04-10T15:00:00.000Z" itemprop="datePublished">Apr 11 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/11/201704/scrapbox-for-class-groupware/">Scrapboxを授業グループウェアに使う</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>2017年の授業第１回。ここのところの定番になっている<a href="/2015/04/08/201504/regexp-workshop/">正規表現ワークショップ</a>をした。</p>
+<p>新機軸としては授業の情報共有用のグループウェアに<a href="http://scrapbox.io" target="_blank" rel="external">Scrapbox</a>を使うことにしたこと。去年のSlackは発言の敷居がとても低かったり絵文字が使えたりする点はとてもよかったんだけど、情報をストックするのが困難なのはどうにもならなそうだったのでやめた。scrapboxはチャットみたいに気軽に書いてもらうのは無理とはいえ、今のところいい感じ。受講者をプロジェクトに参加してもらう手順を楽に組めた（参加URLをgoo.glで短くしたurlを打ち込んでもらう）のは助かった。Googleアカウントを持ってない学生も今年はいなかった。</p>
+<p><code>CTRL-I</code> で自分のプロフィールページの画像がアイコンがわりにおける機能がなかなかいいので、活用できないかなと思っている</p>
+<img src="https://i.gyazo.com/5d0e0acd3377a200689c84110527f0fd.png" width="400">
+<p>出席者一覧として</p>
+<img src="https://i.gyazo.com/eb126bf4cf8edaa4b5fd5099d057369c.png" width="400">
+<p>アンケート</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sentan-prog-2017/">sentan-prog-2017</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

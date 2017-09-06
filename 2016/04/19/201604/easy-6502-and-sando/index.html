@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Easy6502と『算道』 | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="授業第２回。自分の授業にはじめてゲスト講師を呼ぶというのをやってみた。 BCCKSの仕事でデジティミニミにいるときに、４月から来るようになった新入社員だと紹介された山本ー彰さんが聞いてみると昨年度のメディア芸術祭でアート部門入賞した『算道』の作者だというので、ちょうどいいタイミングだったのもあり紹介してもらって数週後のゲスト講師をお願いすることになった。授業では算道のパフォーマンス（「真または偽」">
+<meta name="keywords" content="activity,education,sentan-prog2016">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Easy6502と『算道』">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2016/04/19/201604/easy-6502-and-sando/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="授業第２回。自分の授業にはじめてゲスト講師を呼ぶというのをやってみた。 BCCKSの仕事でデジティミニミにいるときに、４月から来るようになった新入社員だと紹介された山本ー彰さんが聞いてみると昨年度のメディア芸術祭でアート部門入賞した『算道』の作者だというので、ちょうどいいタイミングだったのもあり紹介してもらって数週後のゲスト講師をお願いすることになった。授業では算道のパフォーマンス（「真または偽」">
+<meta property="og:image" content="http://text-perforation.doppac.cc/images/201604/snake.png">
+<meta property="og:updated_time" content="2017-08-01T13:06:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Easy6502と『算道』">
+<meta name="twitter:description" content="授業第２回。自分の授業にはじめてゲスト講師を呼ぶというのをやってみた。 BCCKSの仕事でデジティミニミにいるときに、４月から来るようになった新入社員だと紹介された山本ー彰さんが聞いてみると昨年度のメディア芸術祭でアート部門入賞した『算道』の作者だというので、ちょうどいいタイミングだったのもあり紹介してもらって数週後のゲスト講師をお願いすることになった。授業では算道のパフォーマンス（「真または偽」">
+<meta name="twitter:image" content="http://text-perforation.doppac.cc/images/201604/snake.png">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201604/easy-6502-and-sando" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/19/201604/easy-6502-and-sando/" class="article-date">
+  <time datetime="2016-04-18T15:00:00.000Z" itemprop="datePublished">Apr 19 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Easy6502と『算道』
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>授業第２回。自分の授業にはじめてゲスト講師を呼ぶというのをやってみた。</p>
+<p>BCCKSの仕事でデジティミニミにいるときに、４月から来るようになった新入社員だと紹介された山本ー彰さんが聞いてみると昨年度のメディア芸術祭でアート部門入賞した<a href="http://sando.monophile.net/" target="_blank" rel="external">『算道』</a>の作者だというので、ちょうどいいタイミングだったのもあり紹介してもらって数週後のゲスト講師をお願いすることになった。授業では算道のパフォーマンス（「真または偽」の計算実演）や、メディアアートと現代アートの関係の話などをしていただいた。算道のパフォーマンスは正式には着物ですると聞いてたんだけど今回は着物ではなかった。</p>
+<p><a href="http://festival.j-mediaarts.jp/award/art/sando" target="_blank" rel="external">算道 | 第19回文化庁メディア芸術祭</a></p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/j3yeSdN3o7Y" frameborder="0" allowfullscreen></iframe></div>
+<p>僕のほうの講義は、例年だと第２回からProcessingの演習に入っていくんだけど、山本さんの講義に合わせてもうちょっとコンピュータの原理の部分に触れてもらうといいのかなと思ってノイマン型コンピュータの話をしてから<a href="https://skilldrick.github.io/easy6502/" target="_blank" rel="external">Easy6502</a>でCPUとメモリとプログラムの関係を体験するという授業にしてみた。Easy6502はJavaScriptで動く6502エミュレータにビジュアルで状態が表示されるメモリが接続された学習用のバーチャルマシンみたいなもので、メモリにデータを書き込めばメモリ状態部にデータに応じた色でドットが表示されることになるので、ある意味BASICやProcessingと同じようにプログラムの結果をビジュアルに確かめられてわかりやすく、プログラムによってコンピュータの中で起きていることを説明するのには最適なんじゃないかと思った。一瞬でこれでプログラムの授業全部すればいいのでは？　と思ったんだけど分岐とかサブルーチンコールとかをアセンブラで教えるのは不毛そう。</p>
+<img src="/images/201604/snake.png">
+<p>授業ではEasy6502そのものではなく、福地健太郎さんがプログラムメモリ部分もビジュアル表示するようにしたバージョン「<a href="http://fukuchi.org/works/shortshort/6502snake/snake.html" target="_blank" rel="external">6502 snake (destructive edition)</a>」を使ってプログラムもメモリ上ではデータの一部であること、プログラム自身がプログラムとしてのデータを書き換えることも可能であることなどを説明して、こういう発想が発展した表現としてのグリッチやゲームのバグ技（ポケモンのセレクトバグやスーパーマリオワールドのTASグリッチ）なども紹介した。プログラムの自己書き換えの話やEasy6502のカラフルなドットでプログラムが示されるあたり「算道」の話にもちょっとつながったかな？</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sentan-prog2016/">sentan-prog2016</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/22/201604/pc-minecraft-wiiu-key-assign/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PC版マインクラフトをWiiUゲームパッドのキーアサインで遊ぶ
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/16/201604/mommy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          グザヴィエ・ドラン『Mommy/マミー』を観た
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

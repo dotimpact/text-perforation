@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: iosdev | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="text perforation">
+<meta property="og:url" content="http://text-perforation.doppac.cc/tags/iosdev/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="text perforation">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-201611/realm-init-hang-because-of-getter-method-conflict" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/11/14/201611/realm-init-hang-because-of-getter-method-conflict/" class="article-date">
+  <time datetime="2016-11-13T15:00:00.000Z" itemprop="datePublished">Nov 14 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/11/14/201611/realm-init-hang-because-of-getter-method-conflict/">モデルオブジェクトのプロパティgetterメソッドと同名のメソッドを作り込んでいるとRealmの初期化時にアプリが固まる</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>ちょっと前まで動いていた開発中のアプリが突然スプラッシュで固まるようになってしまい、Realmの初期化でなにかトラブルが起きることは把握したけど理由がぜんぜんわからず、あせってPodのアップデートをしたり過去のリビジョンと比較したり大騒ぎしてしまったんだけど、原因はRealmのモデルオブジェクトクラスに作っていたメソッドの名前を何の気なしにリネームしたら、それがモデルのRealmで永続化されるプロパティのgetterと衝突しており、そのせいでRealmを起動できず固まるという状態になっていた。</p>
+<p>ドキュメントには「<a href="https://realm.io/jp/docs/swift/latest/#settergetter" target="_blank" rel="external">モデルクラスのsetterおよびgetterメソッドはオーバーライドできません</a>」とは書いてあるけどそんな致命的な状態になるのはなんか別の原因があったのかな。Objective-Cそのもののgetter/setterの挙動で同じようにハマったこともあったような…ともかくあせった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realm/">realm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201609/symbolicatecrash-never-finish" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/09/28/201609/symbolicatecrash-never-finish/" class="article-date">
+  <time datetime="2016-09-27T15:00:00.000Z" itemprop="datePublished">Sep 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/09/28/201609/symbolicatecrash-never-finish/">symbolicatecrashの処理が終わらないクラッシュレポート</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>iOSアプリのクラッシュ時に吐き出されるクラッシュレポートのメモリイメージをシンボルテーブルと引き合わせてヒューマンリーダブルなスタックトレースを得るsynbolicateというのをいままでやったことなかったんだけど、今回再現しないクラッシュの原因究明のためにやってみた。んだけど、なんか処理が終わらないように見える。初めてだったのでこういうもんかなとずっと待ってみたんだけど、やっぱり終わらない。perlスクリプトだというsymbolicatecrash（<a href="https://github.com/bitstadium/QuincyKit/blob/develop/server/local/symbolicatecrash.pl" target="_blank" rel="external">ここ</a>のを落とした）をいじって動作状況をみてみたところ、クラッシュリポートのメモリイメージに循環参照（？　じゃなくて、単に同じメモリイメージの項目が大量にあるので処理に時間んがかかるだけかな）があってそこでシンボル検索が無限ループになって終わらないようになっているっぽかった。</p>
+<pre><code>while ( length($nextIDKey) ) {
+    last if ( !length($images{$nextIDKey}{nextID}) );
+    $nextIDKey = $images{$nextIDKey}{nextID};
+}
+</code></pre><p>というとこを、</p>
+<pre><code>while ( length($nextIDKey) ) {
+    last if ( !length($images{$nextIDKey}{nextID}) );
+    $nextIDKey = $images{$nextIDKey}{nextID};
+    last if ( $nextIDKey == $images{$nextIDKey}{nextID} );
+}
+</code></pre><p>とかしたらとりあえず出力された。</p>
+<p>同様の症状についての記事。クラッシュレポートのライブラリアドレステーブルが変になるのはiOS9からの現象らしい。</p>
+<ul>
+<li><a href="https://groups.google.com/forum/#!msg/plcrashreporter/i6rYc2f4yBo/G8uBTEnMAgAJ" target="_blank" rel="external">PLCR 1.2 and problematic crash logs generated under iOS 9 - Google グループ</a></li>
+<li><a href="http://stackoverflow.com/questions/31920423/ios9-duplicated-lines-in-crash-reports-are-causing-symbolicatecrash-to-get-stuc" target="_blank" rel="external">ios - iOS9: duplicated lines in crash reports are causing symbolicatecrash to get stuck - Stack Overflow</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/realm-crash-on-physical-iphone-device" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/05/201604/realm-crash-on-physical-iphone-device/" class="article-date">
+  <time datetime="2016-04-04T15:00:00.000Z" itemprop="datePublished">Apr 5 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/05/201604/realm-crash-on-physical-iphone-device/">RealmがiPhone実機でだけクラッシュする（ことがあるらしい）</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>iOS開発が佳境で、そろそろ結合テストというタイミングのころ、iPhoneのいくつかの実機でだけアプリが起動直後にクラッシュするという現象が起きた。当該機種でもシミュレータでは再現しないし、手持ちの端末実機でも再現しない。しょうがないのでその機種を借りにいってその場で調べたら確かにクラッシュしてて、なにかと思ったらjsonファイルでバンドルしているマスタデータを初回起動時にまとめてインサートしてるとこで</p>
+<p>json.forEach { v in<br>    let master = Master()<br>    try relam.write {<br>        master.import(v)<br>    }<br>}</p>
+<p>的なコードで個別にトランザクションを張ってデータを入れてたら機種によっては（手持ちのiPhone5だと大丈夫でiPhone6だとだめだったりしたので、パフォーマンスの問題なのかも）クラッシュしてしまうらしかった。トランザクションをループの外で張るようにしたら大丈夫になった。ただあとでバグなら報告しようと思って後で戻して再度実行したらクラッシュしなくなってたのでなにか別の要因もあるのかも。</p>
+<p>Realm使い心地としてはかなり最高だし次のプロジェクトでも絶対導入したいけど、初期データを投入したDBファイルを作っておくみたいなことはしにくいのはなんとかならないかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realm/">realm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/ios8-crash-with-viewcontroller-init-without-nibname" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/" class="article-date">
+  <time datetime="2016-03-29T15:00:00.000Z" itemprop="datePublished">Mar 30 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/">nibnameなしでViewControllerをinitするとiOS8だけでクラッシュする</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>配信したアプリがログイン後に落ちたりスプラッシュで落ちたりする、という報告を受けて、自分のところでは起きていなかったのでなんだろうと思って調べたら、画面の初期化時に読み込んでいるカスタムViewControllerのinitが間違っていて、しかもそれでもiOS9は動くためだった。</p>
+<p>対応するnibを持つSubViewControllerを、</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController()<br>}</p>
+<p>と引数なしで生成すると、iOS9ではnibを探してロードしてくれるようで（ちゃんと調べてないけどそうなんだと思う）問題ないんだけど、iOS8は読み込まれないのでOutletのオブジェクトに触ろうとするとクラッシュする。</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController(nibname: “SubViewController”, bundle: nil)<br>}</p>
+<p>と正しく初期化すると問題ない。</p>
+<p><a href="http://stackoverflow.com/questions/34045998/addsubview-from-xib-ios-8-vs-ios-9" target="_blank" rel="external">swift - addSubview from xib - iOS 8 vs iOS 9 - Stack Overflow</a></p>
+<p>あと、</p>
+<p><a href="http://qiita.com/manji602/items/346226435594d36c2e9b" target="_blank" rel="external">iOS8系をサポートするなら、UILabelやUITextViewのフォントにHiraginoSansは使わないほうが良い - Qiita</a></p>
+<blockquote><ul>
+<li>Xcode7でiOS8系をサポートしたアプリを作成するときに、Interface Builder上(xibやstoryboard)で UILabel やUITextView のフォントに HiraginoSans を利用するViewControllerを作成すると、その画面ヘの遷移が遅くなる<ul>
+<li>体感では、1つの HiraginoSans フォントを利用したUIパーツを配置する毎に1秒弱ずつ遅くなる</li>
+<li>現象が発生するのはアプリ初回起動時のみ</li>
+</ul>
+</li>
+<li>これはフォントに依存する問題で、System FontやTimes New Romanなど他のフォントを利用すると再現しなかった</li>
+</ul>
+</blockquote>
+<p>こんな恐ろしい情報もあったので全部のUILabelのフォントを再設定した。  </p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201602/apple-wwdr-certificate-expired" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/02/16/201602/apple-wwdr-certificate-expired/" class="article-date">
+  <time datetime="2016-02-15T15:00:00.000Z" itemprop="datePublished">Feb 16 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/02/16/201602/apple-wwdr-certificate-expired/">Apple World Wide Developer Relation証明書の期限切れ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Adhocビルドをdeploygateで配信しようとしたら、有効なiPhone Distribution　 Certificateがないというエラーに。先週末は問題なかったのにと思いつつ調べてみると、Apple Developerライセンス自体が切れているわけではなく、iPhone Distributionで発行している証明書もまだ有効期限内。しかしKeyChainアプリで証明書を見ると「証明書の発行者が無効」というエラーになっていた。証明書のプロファイルを見ると、中間証明書であるApple World Wide Developer Relation Certificateが期限切れになってた。調べてみると2/14に切れてAppleDevで発行した証明書が一斉に無効になったらしい。こんなことがあるのか。</p>
+<p><a href="http://qiita.com/anchen/items/7febe30dc24aed0827c0" target="_blank" rel="external">【注意】Apple Worldwide Developer Relationsの期限切れ - Qiita</a><a href=""></a><br><a href="https://forums.developer.apple.com/message/114003" target="_blank" rel="external">Uploading archive error: “Missing iOS Distribut… | Apple Developer Forums</a></p>
+<p>新しい中間証明書は2023-02-07までなので、前に切れたのも7年前だったならiOS開発者は初めて期限切れを経験したとかなのかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201602/realm" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/02/05/201602/realm/" class="article-date">
+  <time datetime="2016-02-04T15:00:00.000Z" itemprop="datePublished">Feb 5 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/02/05/201602/realm/">Realmを使ってみる</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://realm.io/jp/" target="_blank" rel="external">Realm is a mobile database: a replacement for SQLite &amp; Core Data </a></p>
+<p>新しいiOSアプリのデータストアはRealmを使ってみることにした。過去のiOS開発だとCoreDataを使ったりSQLite+FMDBを使ったりしていて、CoreDataは二度と使いたくない感じだったし、SQLiteは初期データを入れたDBファイルを使うプロジェクトでは便利だったけど今回はそういう要件もないので新し目の技術にした。</p>
+<p>で触ってみているけどこれはだいぶ便利なのではないだろうか。なにがいいってモデルと別にスキーマを管理しなくていいとこがいい。永続化されるデータをほぼモデルそのものと考えることができる。APIも（RealmSwiftだと）rubyライクというか、まっとうなSwiftライブラリだということかもしれないけど、納得感が高い。</p>
+<p>ひたすらありがたいなこれはーと思いながら実装している。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201602/simple-rack-app-for-api-mocking" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/02/04/201602/simple-rack-app-for-api-mocking/" class="article-date">
+  <time datetime="2016-02-03T15:00:00.000Z" itemprop="datePublished">Feb 4 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/02/04/201602/simple-rack-app-for-api-mocking/">rackアプリでモックAPIをつくる</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>新規開発するiOSアプリの開発フェーズに入ったのでいろいろ準備したり新しいことを覚えたりしている。今回はSwiftで開発することにしたのでSwift向きのライブラリ環境を模索しているところ。</p>
+<p>別チームが開発しているAPIが用意されるまでダミーの応答で初期開発をすすめるためのAPIモックもなんかやり方かえようかなと思ったけど、ここはどうせ作り捨てなのでいつものにした。いつものというのはリクエストに応じてjsonファイルを読んで返すだけのrackアプリを<a href="http://pow.cx/" target="_blank" rel="external">pow</a>でローカルサーバにするやつ。</p>
+<script src="https://gist.github.com/dotimpact/2d92bc940017030bc1b1.js"></script>
+
+<p>これが一番楽な気がしている。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/deploygate-cli" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/29/201601/deploygate-cli/" class="article-date">
+  <time datetime="2016-01-28T15:00:00.000Z" itemprop="datePublished">Jan 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/29/201601/deploygate-cli/">deploygateのコマンドラインツールを使ってみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://deploygate.com/docs?locale=ja" target="_blank" rel="external">DeployGate コマンドラインツール</a></p>
+<p>去年コンテンツ違いで9つ作ったiOSアプリのバージョンアップの準備をしている。ファーストリリースのときは１本づつそれなりの時間をかけて出していたのでまあよかったけど、まとめて作業するとなると9本は流石にごつい数で、しかも実際にはそれぞれプロビジョニングとかAPIを切り替えた2バージョン（つまり全18バージョンとか）を扱わねばならないため、それぞれビルドしたりアドホック版の配布作業をするのがかなり大変。ということで、アドホック版のテスターへの配布に使っているdeploygateが提供しているデプロイツールを試してみた。</p>
+<p>deploygateのデプロイ用cliツールは、ipaファイルをコマンドラインからアップロードしてくれるだけでなく、ちゃんとコマンドラインからの自動ビルド〜アーカイブ〜ipa書き出し（これもXCodeでやるとけっこう手間取る）や、あのレジェンド級にめんどくさいApple Dev CenterへのUDID登録からプロビジョニングダウンロード後のipa再作成も1コマンドでお願いできるというもの。ちょっとホントかいなと思っていたけど導入してみたらちゃんとやってくれた。iOSアプリのXCode外ビルドってなんとなくそんなにすんなり行かなそうな気がしていたけど、（最近は？）意外とすんなりいくものらしい。上記の通り異常にビルドターゲットがたくさんあるプロジェクトなんだけど、deployコマンドをたたくとビルドターゲットが列挙されて使うターゲットを選べるし問題なかった。とりあえずこれで配信作業はかなり楽になる。</p>
+<p>ただこのcliツールはかなり使い方に制限を設けているのか、Build ConfigurationがRelease固定だったりとか（deployするんだからReleaseだろということか。とりあえずgemのソースを書き換えてAdhocコンフィグでビルドするようにした）、あとコマンドからのUDID登録もたしかにできるんだけど、コマンドから更新されたプロビジョニングには登録されたデバイスが全部追加されるっぽいのでけっこう困る。簡単コマンドは単純なユースケースを対象にして複雑なのは自前でビルドタスクをつくれということかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/simulator-remote-notifications" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/20/201601/simulator-remote-notifications/" class="article-date">
+  <time datetime="2016-01-19T15:00:00.000Z" itemprop="datePublished">Jan 20 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/20/201601/simulator-remote-notifications/">SimulatorRemoteNotificationsを使ってみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/acoomans/SimulatorRemoteNotifications" target="_blank" rel="external">acoomans/SimulatorRemoteNotifications - Objective-C</a></p>
+<p>これ使ってみた。iOSシミュレータでプッシュ通知をシミュレートして受信時のテストを行うライブラリ。cocoapodsで導入できる。</p>
+<p><code>didfinishLaunching</code>でライブラリを起動しておいて（デバッグターゲットのみで）、</p>
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    ...
+
+    if DEBUG
+        [application listenForRemoteNotifications];
+    endif
+
+    return YES;
+}
+</code></pre><p>ターミナルで9930ポートにデータを送ると</p>
+<pre><code>echo -n &apos;{&quot;message&quot;:&quot;message&quot;}&apos; | nc -4u -w1 localhost 9930
+</code></pre><p>iOSシミュレータに起動中のアプリの<code>didReceiveRemoteNotification</code>が擬似的に呼ばれる仕組み。簡単に確認できてよかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

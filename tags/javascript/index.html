@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: javascript | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="text perforation">
+<meta property="og:url" content="http://text-perforation.doppac.cc/tags/javascript/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="text perforation">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-201701/ava-and-wallaby-js" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/01/24/201701/ava-and-wallaby-js/" class="article-date">
+  <time datetime="2017-01-23T15:00:00.000Z" itemprop="datePublished">Jan 24 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/01/24/201701/ava-and-wallaby-js/">AVAをWallaby.jsで使う</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>ひさしぶりに完全な新規プロジェクトでプロトを作ることになったので、「<a href="http://blog.satotaichi.info/modern-javascript_201701/" target="_blank" rel="external">Modern JavaScript概観、そしてElectronへ</a>」を参考に、JavaScriptの最新環境を入れて使ってみている。このエントリ、「ここまで長い解説を読み通しても終わっているのは開発の事前準備だけなんだよね…」というつぶやきも読んだけど、モダンJSの環境（トランスパイラと型システム拡張、静的解析環境、テスト、UIフレームワーク、ビルドなど）について選択肢とシンプルさを重視するようなご本人の選択と、なぜそのツールが必要なのかの解説が明快でとてもうれしい。フレームワークはまだ検討段階だけど開発環境については基本的にこの解説の通りにしてる（ボイラープレートは使ってない）。</p>
+<p>使ってみていまのところいちばんこれいいなと思っているのは<a href="https://github.com/avajs/ava" target="_blank" rel="external">AVA</a>。先エントリに書いてあるとおりシンプルで高速でPowerAssert、That’s itというテスティングフレームワークで、しかもこれはすでにWallaby.jsに対応している。Wallaby.jsごしでもPowerAssertのアサート情報はとてもわかりやすく表示されるので、こけたテストを直すときの手数が明らかに減ってとても快適。</p>
+<p><img src="https://cloud.githubusercontent.com/assets/979966/10989814/c57074ca-8497-11e5-89cd-73bd78c6d371.gif" alt="ava on wallaby.js"></p>
+<p><a href="http://dm.gl/2016/04/26/wallaby-sublime-electron-ava/" target="_blank" rel="external">http://dm.gl/2016/04/26/wallaby-sublime-electron-ava/</a> より</p>
+<p>現状バグがあるのかAVAのコールバックモード（test.cb）だと挙動が怪しいけど、これはPromiseを使えば解決するのでPromiseを使うための強制ギブスになるのも結果オーライだった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201606/unit-testing-for-webpack-module-private-function" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/06/29/201606/unit-testing-for-webpack-module-private-function/" class="article-date">
+  <time datetime="2016-06-28T15:00:00.000Z" itemprop="datePublished">Jun 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/06/29/201606/unit-testing-for-webpack-module-private-function/">Webpackモジュールのプライベート関数をユニットテストしたい</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>レガシーなJavaScriptソースをWebpackでビルドできるようにモジュールに切り分けてテストを書くことをしている（わりとヒマなので）。</p>
+<p>jsモジュール内の機能をプライベート関数に分割して書く場合に、そのプライベート関数部分の単体テストを書きたい場合があると思うんだけど、それをどうやればいいのかわからなくていろいろ調べた。</p>
+<p><a href="http://stackoverflow.com/questions/14874208/how-to-access-and-test-an-internal-non-exports-function-in-a-node-js-module" target="_blank" rel="external">unit testing - How to access and test an internal (non-exports) function in a node.js module? - Stack Overflow</a></p>
+<p>こういう話で、ここでは<a href="https://github.com/jhnns/rewire" target="_blank" rel="external">rewire</a>を使えという事になってるんだけど、これはうまくいかなかった。<a href="https://github.com/jhnns/rewire-webpack" target="_blank" rel="external">rewire-webpack</a>というのもあるんだけど、これもだめだった。</p>
+<p>でうまくいったのは、<a href="https://github.com/webpack/exports-loader" target="_blank" rel="external">exports-loader</a>でプライベート関数を指定してエクスポートする方法で、</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">privateFunc</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="string">"private"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">exportFunc</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> <span class="string">"export"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = exportFunc;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>こういうモジュールのテストを</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">describe(<span class="string">'test'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">it(<span class="string">'モジュールのテスト'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> exportFunc = <span class="built_in">require</span>(<span class="string">'export-module.js'</span>);</div><div class="line">expects(exportFunc()).toBe(<span class="string">'export'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">it(<span class="string">'プライベート関数のテスト'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> privateFunc = <span class="built_in">require</span>(<span class="string">"exports?privateFunc!./export-module.js"</span>);</div><div class="line"></div><div class="line">expects(privateFunc).toBe(<span class="string">'private'</span>);</div><div class="line">&#125;);</div><div class="line">&#125;);</div><div class="line"></div></pre></td></tr></table></figure>
+<p>こんな感じにしたらうまくいった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/get-running-js-object-as-json" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/15/201509/get-running-js-object-as-json/" class="article-date">
+  <time datetime="2015-09-14T15:00:00.000Z" itemprop="datePublished">Sep 15 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/15/201509/get-running-js-object-as-json/">ChromeのDeveloper Toolで実行中のJavascriptオブジェクトをJSONで取得する</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://dackdive.hateblo.jp/entry/2015/09/10/100117" target="_blank" rel="external">Chrome開発者ツールのコンソールに表示したObjectをクリップボードにコピーする - dackdive’s blog</a></p>
+<p>というわけで既存Javascriptコードのテストをいまさら書いてるわけだけど、ユニットテストの入力を動いてるコードの変数から取れないかと思って調べたらChromeの開発者ツールのコンソールで<code>copy(変数)</code>とするとjsonで取れるのがわかった。これは便利。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/develop/">develop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/wallaby-js" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/09/201509/wallaby-js/" class="article-date">
+  <time datetime="2015-09-08T15:00:00.000Z" itemprop="datePublished">Sep 9 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/09/201509/wallaby-js/">IDEプラグイン型の自動テストツール「Wallaby.js」を導入してみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://wallabyjs.com/" target="_blank" rel="external">Wallaby - intelligent test runner for JavaScript, TypeScript, and CoffeeScript</a></p>
+<p>BCCKSの組版エンジンに安定性と大規模な拡張が同時に求められる局面が生じてきたのでちゃんとテストを書いてからいじるようにしようとjsのテストフレームワークやら自動テスト環境やらを調べていたら、Intellij系のIDE（やVisual StudioとAtom）向けのプラグインとして提供され、テストのパス状態や結果がエディタのコード上に完全なかたちで統合されるというツール「Wallaby.js」を見つけたので導入してみた。1ライセンス$100でまあちょっと高いなと思うけど、１日使ってみてこれはテストうんぬんより開発ツールとして非常に便利なので確実に定着するしすでに誰かにオススメしたい感じがしている。</p>
+<p>僕が使っているのはIntellij IDE（PhpStorm / Intellij IDEA）なのでIntellij プラグイン版のみの評価になる（Atomプラグイン版もどんな感じなのか気になるけど）。もともとIntellijのIDEには標準でもテストランナープラグインが提供されていて、それを使ってみるつもりでいろいろ調べていたんだけど、ブラウザjsのテストはjsTestDriverを起動してからブラウザを起動しないといけなかったり、いまいち乗りきれない感じがあった。Wallabyはプラグインにヘッドレスブラウザ（PhantomJS）が完全に隠蔽された形で統合されていて、テストフレームワークのインストールと設定（テスト対象のソースとテストソースの定義）をすれば実行過程のことはなにも気にしなくてもテストが実行されるようになる。導入が楽。</p>
+<p>テスト結果のエディタ統合も想像した以上の完成度で、テスト側のソースの各行にカラーチップでテストのパス状態が信号のように表示されるのはもちろん、テストするソース側も現在のテストスイートでの各行のカバレッジ状態がやはりカラーチップで表示されるので、テストがぜんぜんないコードにテストを足していく今回のような場合でもモチベーションを上がりやすいし、キーになるロジックのテストを先に書こうといった判断もしやすい。コード修正後の反映パフォーマンスもまったく問題ない（これはまだテストが少ないせいかもしれないけど）。</p>
+<img src="http://wallabyjs.com/assets/img/wallaby.gif">
+<p>Wallaby.jsのサイトからアニメgifを引用</p>
+<p>さらに体験してみて眼からうろこが落ちたのは、Wallabyの環境だとほんとうに「テスト駆動開発」ができるということ。Wallabyプラグインはテストの状態だけでなく、テスト実行時の各行での出力やエラー内容もインラインで表示される（Chromeのjsデバッガのステップ実行状態とおなじ感じ）。コードにconsole.logを追記すれば即座にそのブロックに関するテストが実行され、出力された変数の値がインラインに表示される。Wallabyの環境でテストが書かれた環境でコードを書くと、まさにテストというエンジンに接続された動いているプログラムを動いたまま触っているような感覚で開発ができる。あまりテストツールをさわったことがないので他のツールでもできることなのかもしれないけど、これは新鮮だった。</p>
+<img src="https://i.gyazo.com/527ee24bab0615e656816c939d89f658.gif">
+<p>なにしろきのう導入したばかりなのでもうちょっと使ってみないとわからない部分もあるけど（テストが増えるとどうなるかとか）、現時点ではWallabyによってコーディングの進めかた自体が変わりそうな気がしている。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/intellij/">intellij</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/hexo-generator-single-page" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/24/201503/hexo-generator-single-page/" class="article-date">
+  <time datetime="2015-03-23T15:00:00.000Z" itemprop="datePublished">Mar 24 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/24/201503/hexo-generator-single-page/">テーマテンプレートからシングルページを作るだけのHexoプラグイン</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://text-perforation.doppac.cc/2015/01/28/">archivesページを整える[2015/01/28]</a><a href="http://text-perforation.doppac.cc/2015/01/28/">1</a>のときにいまいちな感じにしていたサイトの構成をちゃんとするために、Hexoのgeneratorプラグインをつくった。標準のpageと同じ感じだけど専用のレイアウトテンプレートでヘルパーを使って内容が更新されるページが作れる。</p>
+<ul>
+<li><a href="https://github.com/dotimpact/hexo-generator-single-page" target="_blank" rel="external">dotimpact/hexo-generator-single-page</a></li>
+</ul>
+<p>これを使って<a href="http://text-perforation.doppac.cc/highlights/">Highlights</a>をまとまった読み物が並ぶページにして、Archivesはもとに戻した。</p>
+<p>ちなみにこないだ作ったmonthly_post_listもあげてある。</p>
+<ul>
+<li><a href="https://github.com/dotimpact/hexo-generator-single-page" target="_blank" rel="external">dotimpact/monthly_post_lists</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/monthly_post_list" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/04/201503/monthly_post_list/" class="article-date">
+  <time datetime="2015-03-03T15:00:00.000Z" itemprop="datePublished">Mar 4 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/04/201503/monthly_post_list/">Hexoプラグインを試作した</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>せっかく毎日blogを書いているので、月末にまとめ記事を作れるようにしたいなと思っていて、それを実現するHexoプラグインを手探りでつくった。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;% monthly\_post\_list 201502 book %&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>とすると、2015年2月のbookタグを持ったポストの一覧が生成される。</p>
+<p>使ったページがこれ。</p>
+<ul>
+<li><a href="/2015/01/31/201501/201501-summary/">2015年1月のまとめ</a></li>
+<li><a href="/2015/02/28/201502/201502-summary/">2015年2月のまとめ</a></li>
+</ul>
+<script src="//gist.github.com/67957fd4d6db9323b503.js"></script>
+<p>とりあえずHexoのブログフォルダのscriptsに置けば動くけどあとで正式なプラグインにしよう。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/hexo-3-upgrade" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/02/201503/hexo-3-upgrade/" class="article-date">
+  <time datetime="2015-03-01T15:00:00.000Z" itemprop="datePublished">Mar 2 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/02/201503/hexo-3-upgrade/">Hexoを3.0.0-rc.4にアップグレードした</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>なぜかいつのまにかHexoが動かなくなっていたので勢いで3.0.0-rc.4にしてみたら、けっこう各部が動かなくて困った。</p>
+<p>archive画面でget_postsで記事をリスティングしてたのが動かなくなってて（v3ではヘルパーのget_postsが廃止されたそうだ）、しかもその代替コードがいまいちよくわからなったのだが、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\&lt;% site.tags.find(&#123;name: &apos;work&apos;&#125;).data[0].posts.sort(&apos;date&apos;, -1).forEach(function(item)&#123; %\&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;&lt;%- config.root %&gt;&lt;%- item.path %&gt;&quot;&gt;&lt;%= item.title %&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">\&lt;% &#125;); %\&gt;</div></pre></td></tr></table></figure>
+<p>にしたらひとまず動いた（postsを取るもっといいインターフェイスがないとおかしい気がするのだが）。</p>
+<p>あとhexo-generator-feedがnpmにあるのだとv3に対応してないので、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install git+https://git@github.com/hexojs/hexo-generator-feed.git --save</div></pre></td></tr></table></figure>
+<p>とgitのを入れて間に合わせた。</p>
+<p>今日はとりあえずここまで。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2012-03-02" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2012/03/02/1_collisions/2012-03-02/" class="article-date">
+  <time datetime="2012-03-01T15:00:00.000Z" itemprop="datePublished">Mar 2 2012</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2012/03/02/1_collisions/2012-03-02/">「紙のBCCKS」をリリースしました</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/images/wp-content/uploads/2012/03/paperbccks.png" alt="Paperbccks" title="paperbccks.png" border="0" width="600" height="391"></p>
+<p>■ようやく…、って書き出そうとして<a href="http://collisions.doppac.cc/archives/460" target="_blank" rel="external">エディタ公開のときも</a>そう言ってるのに気付きましたがはやりようやく、BCCKSでつくった本が、ワンタッチでそのまま「紙の本」として印刷製本することができるサービスその名も<strong>『紙のBCCKS』</strong>が昨日未明にサービスインしました。詳細はまだあんまりどこにも書けてないです（すいません）。やや堅苦しいですが<a href="http://bccks.jp/about/bccks#tabs-5" target="_blank" rel="external">サービス概要</a>に本の仕様とか価格とかの情報はまとまっております。単価については「買う本」の値段としてはちょっと割高に見えるかと思いますけど、「作る本」としてはかなりがんばった値段にしてあります。</p>
+<p>紙のBCCKSのためにバージョンアップされた本のフォーマットと紙本の自慢ポイントなんかはこちらの本<a href="http://bccks.jp/bcck/104085/info" target="_blank" rel="external">『書籍002参考書』</a>にまとまっております。あと自分の紙の本をつくるためのサンプルとしてこの本を再編集した「紙の本見本」を買いやすい値段で販売する予定（もうすぐ）なので、それが出たらぜひ買って手に取ってみていただきたいです。</p>
+<p><a href="http://bccks.jp/bcck/104085/info" target="_blank" rel="external"> <img style="display:block; margin-left:auto; margin-right:auto;" src="/images/wp-content/uploads/2012/03/jacket_160.jpeg" alt="Jacket 160" title="jacket_160.jpeg" border="0" width="96" height="160"></a></p>
+<p>■「紙のBCCKS」はいちおうニュースリリース的には「電子書籍を紙の本に印刷製本するサービス」という言いかたで紹介することになっているんですが、今回開発に関わってきた僕（ふくむBCCKSチーム）からすると、逆にむしろこの「紙の本」こそがアーキタイプで、このかたちの「本」をだれでも、どこでも、つくって読める環境を実現するために外堀を埋めるような開発を続けてきたというべきではないかという印象があります。先日の<a href="http://www.dotbook.jp/magazine-k/2012/02/24/books_are_expanding_on_ustream/" target="_blank" rel="external">マガジン航『本は、ひろがる』リリース記念公開鼎談</a>で弦人さんが言ってたこと（「ページ数が決まってると埋めたり削ったりしたくなるから内容が締まるはず」という発言がありました）になるほどと思いましたけど、ひとつの「紙の本」という形も量も固定されたアンドゥーの効かない形に書き出される、あるいはそのような可能性を持たないと、そのコンテンツらしくあるべき外形が意識されず、そのコンテンツにあるべき価値も生まれず、そのコンテンツにお金を払う気にならない、といったことは往々にしてあるわけです。そういった意味で、「紙のBCCKS」というサービスが「本」とよばれるコンテンツをつくるための「計量カップ」になったりするとおもいろいなーと思います。ぜひためしに使ってみてくださいませ。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/info/">info</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2011-10-27" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2011/10/27/1_collisions/2011-10-27/" class="article-date">
+  <time datetime="2011-10-26T15:00:00.000Z" itemprop="datePublished">Oct 27 2011</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2011/10/27/1_collisions/2011-10-27/">第22回HTML5とか勉強会で発表しました</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/images/wp-content/uploads/2011/10/スクリーンショット-2011-10-27-14.23.29.png" alt="スクリーンショット 2011 10 27 14 23 29" title="スクリーンショット 2011-10-27 14.23.29.png" border="0" width="600" height="437"></p>
+<p>■依頼いただく縁がありまして、第22回 HTML5とか勉強会で「Processing.jsってなんだ？」というタイトルで発表をしました。こういった発表はひさしぶりだったり準備不足だったのもあり個人的には反省しきりで見ていただいたかたがた（USTやってたのもあとから知りました）にお楽しみいただけか心配なのですが…ひとまず資料を公開しておきます。</p>
+<ul>
+<li>[第22回 HTML5とか勉強会発表「Processing.jsってなんだ？」発表資料][1] <ul>
+<li>ChromeまたはSafariでご覧ください（bccks readerと同じものです）</li>
+<li>キー(カーゾル←→/jk/np/スペース）でページが進んだり戻ったりします</li>
+<li>processing.jsのまざったページは最後のとこにあります</li>
+<li>宮沢賢治「雨ニモマケズ」のテキストは<a href="http://www.aozora.gr.jp/cards/000081/files/45630_23908.html" target="_blank" rel="external">青空文庫</a>から転載させていただきました</li>
+</ul>
+</li>
+</ul>
+<p>発表内でこのプレゼンシートもBCCKSでつくってます、というようなことを言ったのでやや誤解されてしまったようですが、BCCKSのサービスでプレゼン資料に向いたデータ作れたりするという意味ではないです。Keynoteでつくったページを画像に書きだして、見開きの画像として貼り付けただけですのであしからず（もちろんそういったスタイルをつくることもできそうですが、BCCKSはそういうサービスはしないかな…）。</p>
+<p>あと発表の最後におまけで見せたProcessing.jsをページに埋め込むものも僕が勝手に実験としてつくったものなのでBCCKSでそういった機能ができるというわけはない、ということを念を押しておきます。</p>
+<p> [1]: javascript:window.open(‘<a href="http://dotimpact.heteml.jp/work/html5/reader_b6.html" target="_blank" rel="external">http://dotimpact.heteml.jp/work/html5/reader_b6.html</a>‘, ‘第22回 HTML5とか勉強会発表「Processing.jsってなんだ？」’, ‘width=944, height=688, menubar=no, toolbar=no, scrollbars=no’); return false;</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/info/">info</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2011-10-25" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2011/10/25/1_collisions/2011-10-25/" class="article-date">
+  <time datetime="2011-10-24T15:00:00.000Z" itemprop="datePublished">Oct 25 2011</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2011/10/25/1_collisions/2011-10-25/">あたらしいBCCKSエディタでだれでも「本」が作れるようになりました</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/images/wp-content/uploads/2011/10/editor.png" alt="Editor" title="editor.png" border="0" width="600" height="267"></p>
+<p>■ようやく、というほかないのですがようやく、長らく開発していたあたらしいBCCKSで本を編集・出版するためのブラウザ上エディタを一般リリースしました。6月の発表会でのロードマップからはやや遅れつつも、無料ユーザーがだれでも本を編集・発行でき、そうして出版された本をだれでも好きな方法で快適に読むことができる、というあたらしいBCCKSのサービスのコアが立ち上がったことになります。今後も有料出版機能とかプリントオンデマンド機能とか進めていて間に合ってない機能はたくさんあるのですが、ひとまずいろんなかたに本を出版してみていただければと思います。</p>
+<ul>
+<li><a href="http://bccks.jp" target="_blank" rel="external">http://bccks.jp/</a><ul>
+<li>BCCKSのサービス概要はこちらの<a href="http://www.facebook.com/BCCKS?sk=app_265926730096044" target="_blank" rel="external">Facebookページ</a>がわかりやすいです</li>
+</ul>
+</li>
+<li><a href="http://bccks.jp/bcck/100524/info" target="_blank" rel="external">本づくりの参考書</a><ul>
+<li>BCCKSエディタで作れる本のフォーマットの紹介や、編集のヒントをまとめた本です。</li>
+<li>BCCKSエディタをはじめて使うさいに参考になるように、この本は自分の書斎でコピーして編集データをのぞけるようになっています。発行された本と見比べて参考にしてみてください。</li>
+</ul>
+</li>
+<li><a href="http://www.youtube.com/watch?v=0X8GYLBo2dY" target="_blank" rel="external">BCCKSでの本の作り方ムービー</a><ul>
+<li>BCCKSエディタの使いかたをまとめた動画です。やや長いですが、エントリ単位の文章の編集やジャケットの作りかた、発行までの操作を順を追って紹介しているので、エディタの使いかたがよくわからないときは観てみてください。</li>
+</ul>
+</li>
+</ul>
+<p>■僕はWeb用リーダーに引き続きエディタのJavaScriptによるUI一式と編集関連のバックエンドの開発を担当しております。いま世の中にある電子書籍出版Webサービスの多くは（たぶん）ブログエンジンベースで、各ページの編集はいわゆるブログエントリーを執筆するのとほぼ同じUIが採用されていますが、BCCKSではより「編集」という作業にフォーカスするために、むしろ<a href="http://togetter.com/" target="_blank" rel="external">Togetter</a>や<a href="http://storify.com/" target="_blank" rel="external">Storify</a>の編集画面に近いアプローチで、テキストや画像のエレメントを並び替えたりスタイルを変えたりしながらプレビューページを自分の意に沿うよう変化させていく編集作業ができるエディタUIを果敢にもゼロから構築しました。エディタ画面をみてただけるとわかるのですが、今後エディタ右端に検索ペインが追加され、twitter、facebookほか自分の他サービスコンテンツや、転載許諾されたBCCKS内のエントリを本に自由に取りこめるような仕組みを導入してく予定です。</p>
+<p>これまでのBCCKSには直感的に操作できるという意味では非常に優れたエディタがあり、それと比較して今回のエディタに違和感がある方は多いでしょうし、通常のブログエディタのようにテキスト修飾や画像挿入が自由に出来たほうが楽だという意見もありそうで、もちろんBCCKSとしてもこれ以外ないと考えてるわけでもないのですが、縦書きベースのリフローコンテンツをWeb技術で直感的に編集するUI、というのは世の中的にもかなり前人未到で、すぐにでき上がったりしないだろうなとも思っており（最終的にはInDesign on Webでいいのかもしれませんが、縦書きのインライン変換をはじめとする技術的な難関もふくめ開発パワー的に無理なので、今回はとにかくInDesingを目指したら負け、というスタンスで進めております）、ひとまず形になってある程度快適に使えるエディタを仕上げたのでいろんな人に触れていただいて意見をいただければなーと。個人的には先行モニターとしてつかっていただいた <a href="http://twitter.com/#!/ssuge" target="_blank" rel="external">suge™</a> さんの「<a href="http://twitter.com/#!/ssuge/status/116146729631494144" target="_blank" rel="external">はじめてHTML覚えて、emacsで書いてはブラウザで確認って繰り返してwebのレイアウトをちまちまいじってた頃の楽しさがある。</a>」という意見に共感しつつ、やや手間はあっても手をかけたデータが「発行」される小気味よさを伸ばしていけたらいいなと思っています。</p>
+<p>ちなみにjs的にもDnD API / File API / FormData Post / textareaダイナミックハイライトなどなど、できそうなことはなるべくつっこんだ感じのつくりになっておりますので、試しにでも触っていただけるとうれしいです。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/info/">info</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/javascript/page/2/">2</a><a class="extend next" rel="next" href="/tags/javascript/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>添削したコードを共有するサービス | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="第８回。前回授業の課題（グラフィックツール的なものを作る）の制作実習の日だけど、その前の課題（パターン模写）の提出を確認してプログラムを添削してフィードバックを返したりした。 テキストを公開したりコードを共有するようなサービスっていろいろあるから、元のコードと添削後のコードを並べて差分表示できるようないかしたコードシェアサービスがきっとあるんだろうと思って調べていたんだけどあまり見つからなかった。">
+<meta name="keywords" content="education,geidai-prog2015,programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="添削したコードを共有するサービス">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2015/06/03/201506/sharing-corrected-code/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="第８回。前回授業の課題（グラフィックツール的なものを作る）の制作実習の日だけど、その前の課題（パターン模写）の提出を確認してプログラムを添削してフィードバックを返したりした。 テキストを公開したりコードを共有するようなサービスっていろいろあるから、元のコードと添削後のコードを並べて差分表示できるようないかしたコードシェアサービスがきっとあるんだろうと思って調べていたんだけどあまり見つからなかった。">
+<meta property="og:updated_time" content="2015-06-05T14:09:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="添削したコードを共有するサービス">
+<meta name="twitter:description" content="第８回。前回授業の課題（グラフィックツール的なものを作る）の制作実習の日だけど、その前の課題（パターン模写）の提出を確認してプログラムを添削してフィードバックを返したりした。 テキストを公開したりコードを共有するようなサービスっていろいろあるから、元のコードと添削後のコードを並べて差分表示できるようないかしたコードシェアサービスがきっとあるんだろうと思って調べていたんだけどあまり見つからなかった。">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201506/sharing-corrected-code" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/06/03/201506/sharing-corrected-code/" class="article-date">
+  <time datetime="2015-06-02T15:00:00.000Z" itemprop="datePublished">Jun 3 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      添削したコードを共有するサービス
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>第８回。前回授業の課題（グラフィックツール的なものを作る）の制作実習の日だけど、その前の課題（パターン模写）の提出を確認してプログラムを添削してフィードバックを返したりした。</p>
+<p>テキストを公開したりコードを共有するようなサービスっていろいろあるから、元のコードと添削後のコードを並べて差分表示できるようないかしたコードシェアサービスがきっとあるんだろうと思って調べていたんだけどあまり見つからなかった。まあgithubのdiffのスプリットビューでいいだろとも思ったんだけど（processingnのシンタックスハイライトもあるし）、githubのスプリットビューはコードが分断されてしまうので慣れてないとプログラムを追えないような気がしたので、差分表示されつつ双方のコードは分断されないオンラインdiff系のサービスの<a href="http://mergely.com/" target="_blank" rel="external">mergely</a>にコードを貼って課題のフィードバックをしてみた。mergelyもそんなにいい感じはしてないんだけど。他にないものかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog2015/">geidai-prog2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2015/06/04/201506/araki-hirohiko-manga-method/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          荒木飛呂彦『荒木飛呂彦の漫画術』を読んだ
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/06/02/201506/processing-30a9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Processing 3.0a9
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

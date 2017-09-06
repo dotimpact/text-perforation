@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>正規表現ワークショップ | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="今年度の藝大先端での授業（プログラミング演習）が始まった。例年１回めの授業は最後の授業から間があいてるのもありかなり緊張する。今年度は授業のカリキュラムが変わったのもありここ数年変えていなかった授業の進めかたや教えかたも変えていくつもりで、考えたり準備したりすることが多くなりそう。 今日は実際のプログラム演習の内容に入る前（まだ履修登録期間中で、受講生の入れ替わりがあるので）にイントロダクションと">
+<meta name="keywords" content="activity,education,geidai-prog2015">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正規表現ワークショップ">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2015/04/08/201504/regexp-workshop/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="今年度の藝大先端での授業（プログラミング演習）が始まった。例年１回めの授業は最後の授業から間があいてるのもありかなり緊張する。今年度は授業のカリキュラムが変わったのもありここ数年変えていなかった授業の進めかたや教えかたも変えていくつもりで、考えたり準備したりすることが多くなりそう。 今日は実際のプログラム演習の内容に入る前（まだ履修登録期間中で、受講生の入れ替わりがあるので）にイントロダクションと">
+<meta property="og:updated_time" content="2015-04-23T02:08:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="正規表現ワークショップ">
+<meta name="twitter:description" content="今年度の藝大先端での授業（プログラミング演習）が始まった。例年１回めの授業は最後の授業から間があいてるのもありかなり緊張する。今年度は授業のカリキュラムが変わったのもありここ数年変えていなかった授業の進めかたや教えかたも変えていくつもりで、考えたり準備したりすることが多くなりそう。 今日は実際のプログラム演習の内容に入る前（まだ履修登録期間中で、受講生の入れ替わりがあるので）にイントロダクションと">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201504/regexp-workshop" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/04/08/201504/regexp-workshop/" class="article-date">
+  <time datetime="2015-04-07T15:00:00.000Z" itemprop="datePublished">Apr 8 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      正規表現ワークショップ
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>今年度の藝大先端での授業（プログラミング演習）が始まった。例年１回めの授業は最後の授業から間があいてるのもありかなり緊張する。今年度は授業のカリキュラムが変わったのもありここ数年変えていなかった授業の進めかたや教えかたも変えていくつもりで、考えたり準備したりすることが多くなりそう。</p>
+<p>今日は実際のプログラム演習の内容に入る前（まだ履修登録期間中で、受講生の入れ替わりがあるので）にイントロダクションとして、ちょうどイミテーションゲームが上映中なので映画と主人公であるアラン・チューリングの話をして、彼の考案したチューリングマシンとコンピュータの関係を説明したうえで、チューリングマシンが行うような記号処理を身近な形で体験してもらうために、「正規表現ワークショップ」をやってみた。こんな感じ。</p>
+<ol>
+<li>正規表現とは「特定の文字の並び」を表現する特殊な記法であることなど概略を説明する </li>
+<li><a href="http://www.regexr.com/" target="_blank" rel="external">http://www.regexr.com/</a> を開いてもらい使いかたをかるく説明する</li>
+<li>正規表現の基本的な書式（選択、文字クラス、繰り返しなど）を説明しながらregexrで正規表現に文字がマッチする仕組みを試してもらう</li>
+<li>「では腕試しに芸大の複数の書きかたにマッチする正規表現を考えてみましょう」<ul>
+<li>「東京芸術大学」「東京藝術大学」「東京芸大」「芸大」「藝大」などにマッチする正規表現を考えてもらう</li>
+</ul>
+</li>
+<li><a href="https://www.debuggex.com/" target="_blank" rel="external">https://www.debuggex.com/</a> を紹介する。正規表現のグラフ構造を確認して正規表現の構造を理解したりバグがないか確かめたりする</li>
+<li>「今度は身の回りで複数の表記がある言葉を探して、それの正規表現を考えてみましょう」<ul>
+<li>まず複数の表記を列挙する</li>
+<li>全部にマッチする正規表現を書いてみる</li>
+<li>うまくいかなかったらdebuggexで見てみる</li>
+</ul>
+</li>
+<li>できた正規表現を掲示板に書き込んでもらい、他のひとの書いた正規表現が「読める」かどうか見ていく</li>
+</ol>
+<p>正規表現で自分が決めた言葉のパターンが全部マッチするかどうか、というのはゲームっぽくもなるし興味も持ちやすくて、いきなりプログラムでコンピュータの実行過程を想像してもらうよりもよりコンピューターが何をしているか理解してもらいやすいんじゃないかと思っている。今日の授業でもみんな想像してたよりおもしろい題材を探してきて正規表現を書いていた。以下できた正規表現だけ書いてみます（書いてもらったそのものなので合ってないものもありますが）。</p>
+<ul>
+<li>/(百|100)円?(ショップ|均一?)/</li>
+<li>/先端(芸術表現)?科|I(nter)? ?M(edia)? ?A(rt)?/</li>
+<li>/((ケンタ)((ッキー)(フライドチキン)?)?|kfc|KFC)/</li>
+<li>/田中(孝太郎)?(先生|さん)/</li>
+<li>(お〜い|静岡|緑)?(ティー|お?茶渋?)|あがり</li>
+<li>/バレー(ボール)?/</li>
+<li>/(東京)?(ディズニー)|(ランド|シー)/</li>
+<li>/(meh|meh+)|ugh/</li>
+<li>/[マ](ック|クド(ナルド)?)/</li>
+<li>/(^(携帯)|スマ(ホ|ートフォン)(携帯)?)/</li>
+<li>/(([1-2][0-9])|[1-9])?[0-9],(([1-2][0-9])|[1-9])?[0-9],(([1-2][0-9])|[1-9])?[0-9],/</li>
+<li>/(マイルドセブン|マイセン)(・)?(ライト|ディースペック|スタイルプラス)?(スーパーライト|ワン)?(ボックス)?/</li>
+<li>/赤|金|黒|マル|マー?ル)(マ(ー?ル|ル)|ボ(ー?ロ|ロ)|メ(ン|ラ))|マル/</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog2015/">geidai-prog2015</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/09/201504/annotation-for-asset-generator/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UIを流用するUI
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/04/07/201504/memory-stream/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Yeojin Shin『Memory Stream』
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

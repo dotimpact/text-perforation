@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="text perforation">
+<meta property="og:url" content="http://text-perforation.doppac.cc/page/37/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="text perforation">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-201603/ios8-crash-with-viewcontroller-init-without-nibname" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/" class="article-date">
+  <time datetime="2016-03-29T15:00:00.000Z" itemprop="datePublished">Mar 30 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/">nibnameなしでViewControllerをinitするとiOS8だけでクラッシュする</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>配信したアプリがログイン後に落ちたりスプラッシュで落ちたりする、という報告を受けて、自分のところでは起きていなかったのでなんだろうと思って調べたら、画面の初期化時に読み込んでいるカスタムViewControllerのinitが間違っていて、しかもそれでもiOS9は動くためだった。</p>
+<p>対応するnibを持つSubViewControllerを、</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController()<br>}</p>
+<p>と引数なしで生成すると、iOS9ではnibを探してロードしてくれるようで（ちゃんと調べてないけどそうなんだと思う）問題ないんだけど、iOS8は読み込まれないのでOutletのオブジェクトに触ろうとするとクラッシュする。</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController(nibname: “SubViewController”, bundle: nil)<br>}</p>
+<p>と正しく初期化すると問題ない。</p>
+<p><a href="http://stackoverflow.com/questions/34045998/addsubview-from-xib-ios-8-vs-ios-9" target="_blank" rel="external">swift - addSubview from xib - iOS 8 vs iOS 9 - Stack Overflow</a></p>
+<p>あと、</p>
+<p><a href="http://qiita.com/manji602/items/346226435594d36c2e9b" target="_blank" rel="external">iOS8系をサポートするなら、UILabelやUITextViewのフォントにHiraginoSansは使わないほうが良い - Qiita</a></p>
+<blockquote><ul>
+<li>Xcode7でiOS8系をサポートしたアプリを作成するときに、Interface Builder上(xibやstoryboard)で UILabel やUITextView のフォントに HiraginoSans を利用するViewControllerを作成すると、その画面ヘの遷移が遅くなる<ul>
+<li>体感では、1つの HiraginoSans フォントを利用したUIパーツを配置する毎に1秒弱ずつ遅くなる</li>
+<li>現象が発生するのはアプリ初回起動時のみ</li>
+</ul>
+</li>
+<li>これはフォントに依存する問題で、System FontやTimes New Romanなど他のフォントを利用すると再現しなかった</li>
+</ul>
+</blockquote>
+<p>こんな恐ろしい情報もあったので全部のUILabelのフォントを再設定した。  </p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/kyou-no-hi-ha-sayonara" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/29/201603/kyou-no-hi-ha-sayonara/" class="article-date">
+  <time datetime="2016-03-28T15:00:00.000Z" itemprop="datePublished">Mar 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/29/201603/kyou-no-hi-ha-sayonara/">一穂ミチ『きょうの日はさようなら』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4086800586/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51YpGOCjEML._SL160_.jpg" alt="きょうの日はさようなら (集英社オレンジ文庫)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4086800586/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">きょうの日はさようなら (集英社オレンジ文庫)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">一穂 ミチ <br>集英社 (2016-01-20)<br>売り上げランキング: 212,076<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4086800586/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>さやわかさんが<a href="https://twitter.com/someru/status/696829056415723520" target="_blank" rel="external">おすすめしていた</a>ので読んでみた。1995年の夏休み直前にとある事情で時が止められた女子高生が、30年後の2025年に「1995年の女子高生」として現れ、「リアルタイムの高校生」と不思議な夏休みをすごすことになる…という話。 あらすじから予想できるように95年当時の懐かしネタや現代とのギャップをひけらかすようなところから始まるんだけど、そこにとどまらない終盤の怒涛の展開があり、いびつなバランスがジュブナイルとしてぐっとくるという感じの作品だった。表紙イラストが宮崎夏次系さんなのは納得。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/generative-design" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/29/201603/generative-design/" class="article-date">
+  <time datetime="2016-03-28T15:00:00.000Z" itemprop="datePublished">Mar 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/29/201603/generative-design/">Hartmut Bohnacker / Benedikt Gross / Julia Laub『Generative Design ―Processingで切り拓く、デザインの新たな地平』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51JdWtC96TL._SL160_.jpg" alt="Generative Design ―Processingで切り拓く、デザインの新たな地平" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Generative Design ―Processingで切り拓く、デザインの新たな地平</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">Hartmut Bohnacker Benedikt Gross Julia Laub <br>ビー・エヌ・エヌ新社 (2016-02-25)<br>売り上げランキング: 31,699<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>そろそろ新学期も始まるので、授業の参考にと目を通した。もうなんというか、偉業としかいいようがないな。強いて言うと、重いので授業に持っていって学生に見せたりするのが困難。</p>
+<p>おもしろかったのが、「誤解を恐れずに言うと、この本のサンプルはプログラムを学ぶつもりがなくても活用することができます」みたいなことが明言されていて、つまりサンプルを実行させて操作したり、すこしパラメータやデータを変えてみるだけで十分すぎるほどのジェネラティブアートが生成できるので、ポスターグラフィックの素材くらいは作れるよという意味なんだろうけど、実際どのサンプルもそういうレベルなのがすごい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/processing/">processing</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/psvr-prevew-in-game-on" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/28/201603/psvr-prevew-in-game-on/" class="article-date">
+  <time datetime="2016-03-27T15:00:00.000Z" itemprop="datePublished">Mar 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/28/201603/psvr-prevew-in-game-on/">『GAME ON』展でPSVRを体験した</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>せっかく一人で動けるタイミングなんだからと、早朝から未来館に向かい、『GAME ON』のPSVR先行体験にチャレンジしてみた。10時の開館前に到着したんだけどすでに結構な行列ができていて（でも未来館の企画展水準でいうとそこまでひどい行列というほどでもないかも）、思いつきで行ったので前売りも入手しておらずチケット販売の列にも並ぶ必要があってやや出遅れ。PSVR体験の整理券はなんとか取れたものの15:30開始のチケットになってた。</p>
+<p>企画展を観て過ごすにはちょっと長すぎるので別のところで時間をつぶして（というか仕事をして）あらためて未来館に入場。先行体験で選んだソフトはFPS的なシューター「The London Heist」。</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/z0HMLA-KzeM" frameborder="0" allowfullscreen></iframe></div>
+<p>だいたいこの動画でわかる通りのことが展開するゲームだけど、車のグローブボックス開けるのがちょっとおもしろかった。こう、取っ手を下からつかむために手をひねりながら前に出してつかむことになるんだけど、実際には手に持ったMOVEコントローラをひねって前に出しながらトリガーを引くわけで、それがゲームのなかで最初に行う動作になるのもあり、グローブボックスがつかめた瞬間に自分の身体感覚とゲームの中での身体感覚が、磁石が引き合ったようにすちゃっとくっつくのを感じた。</p>
+<p>ただしかし、VRデバイスとしてはこれまで体験しているOculus Riftと較べて劇的な向上があるわけではなさそうなのと、ゲームを始めるまでのセットアップの煩雑さ（HMDは一人でつけられるにしても、そのあと目がふさがったままヘッドフォンをつけてさらに両手にMOVEコントローラを持つのはアシスタントのお姉さんがいない状況だとかなり大変なのでは）など現実的な問題も垣間見えてうーむとも思った。とはいえ、これがもう半年先にはコンシューマ用の周辺機器として出てしまう状況はやっぱり興奮するものがあるな。</p>
+<p>あと、体験が終わったあとにアシスタントの方が言った「それではVR外しまーす」という言葉がちょっとおもしろかった。PSVRというデバイスなので間違ってはないんだけど、言われてみればたしかにVRはつけたりはずしたりするものなのかもしれないな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualreality/">virtualreality</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/the-boy-and-the-world" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/27/201603/the-boy-and-the-world/" class="article-date">
+  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/27/201603/the-boy-and-the-world/">アレ・アブレウ『父を探して』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://newdeer.net/sagashite/" target="_blank" rel="external">映画『父を探して』公式ホームページ</a></p>
+<p>突発的一人暮らしの週末にやっぱり大学生みたいにミニシアターで海外アニメを観た。『父を探して』、あんまり情報あつめないまま観に行ったんだけどとてもよかった。</p>
+<p>画用紙を思わせる白ベースの背景に、色鉛筆やクレヨンなどで生々しいタッチの残る描線による落書きのような線画のキャラクター。抑制された動きと鮮烈なレイアウト（これが特によかったと思う）。そして音楽。最低限の最良のものだけを使ってできるかぎり大きな円を描いた。というような気持ちのいい映画。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/no-country-for-old-men" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/27/201603/no-country-for-old-men/" class="article-date">
+  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/27/201603/no-country-for-old-men/">コーエン兄弟『ノーカントリー』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B001APXBUA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51AWagSwsFL._SL160_.jpg" alt="ノーカントリー スペシャル・コレクターズ・エディション [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B001APXBUA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ノーカントリー スペシャル・コレクターズ・エディション [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">パラマウント ホーム エンタテインメント ジャパン (2008-08-08)<br>売り上げランキング: 13,583<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B001APXBUA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>見逃してた世評の高い作品だけど、これはたしかにすごかった。全編にわたって緊張感が途切れなかった。</p>
+<p>かっこよさと気持ち悪さが同居して、かつ気持ち悪さが強いみたいなところがコーエン兄弟らしさかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/hitori-gurashi" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/26/201603/hitori-gurashi/" class="article-date">
+  <time datetime="2016-03-25T15:00:00.000Z" itemprop="datePublished">Mar 26 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/26/201603/hitori-gurashi/">突発的一人暮らし</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>奥さんが春休みに入った子供たちを連れて実家に帰省することになったので突発的に一人で週末過ごすことになった。どのくらいぶりだろう、次男が生まれてからはあまり覚えがないので4年くらいかな。</p>
+<p>といって特に行くべきところもなかったのでものすごく久しぶりに秋葉原に行ってみた。行ったことがなかった<a href="http://www.beep-shop.com/" target="_blank" rel="external">BEEP</a>とか<a href="http://www.t-tax.net/natuge/" target="_blank" rel="external">ナツゲーミュージアム</a>でいくらかお金を落としてみたり意味もなく家電屋をうろついてみたり夜遅くまで本屋で立ち読みしたりした。大学生かという感じの行動パターンだったけど久しぶりだったのでかなり充実感あった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/spring-songs" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/25/201603/spring-songs/" class="article-date">
+  <time datetime="2016-03-24T15:00:00.000Z" itemprop="datePublished">Mar 25 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/25/201603/spring-songs/">春っぽい曲</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>この曲が春っぽくてよかった。</p>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/254406106&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>春が近くなるとロマンティックな曲にたいするセンサーが敏感になるのかな。</p>
+<p>これもよかった。</p>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/254860203&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soundcloud/">soundcloud</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/flightplan" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/21/201603/flightplan/" class="article-date">
+  <time datetime="2016-03-20T15:00:00.000Z" itemprop="datePublished">Mar 21 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/21/201603/flightplan/">ロベルト・シュヴェンケ『フライトプラン』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000CS44YI/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/5105S2Y9W8L._SL160_.jpg" alt="フライトプラン [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000CS44YI/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">フライトプラン [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.23</div></div><div class="amazlet-detail">ブエナ・ビスタ・ホーム・エンターテイメント (2006-05-24)<br>売り上げランキング: 66,179<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000CS44YI/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>WOWOWの録画で観た。気を持たせるわりにそんなに予想を裏切らない脚本と、ケレン味のつよい演出と、ジョディ・フォスターのやり過ぎ感のあるサイコ演技が互いを引き立て合わないまま終わったという感じだった。いいとこなかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/ant-man" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/20/201603/ant-man/" class="article-date">
+  <time datetime="2016-03-19T15:00:00.000Z" itemprop="datePublished">Mar 20 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/20/201603/ant-man/">ペイトン・リード『アントマン』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017SJS86I/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51B9Eqi%2BkaL._SL160_.jpg" alt="アントマン MovieNEX [ブルーレイ+DVD+デジタルコピー(クラウド対応)+MovieNEXワールド] [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017SJS86I/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">アントマン MovieNEX [ブルーレイ+DVD+デジタルコピー(クラウド対応)+MovieNEXワールド] [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.23</div></div><div class="amazlet-detail">ウォルト・ディズニー・ジャパン株式会社 (2016-01-20)<br>売り上げランキング: 191<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017SJS86I/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>久しぶりにわりと新作iTunesストアでレンタルして観た。ほかのかっこいい系マーベル映画とは一線を画したブラックジョークの多いコメディになっていて（途中まで制作をエドガー・ライトが主導していたようで言わずもがなだけど）たいへんおもしろかった。マイケル・ペーニャが回想を語り始める下りのいかがわしさ満点の劇伴と回想内の登場人物がリップシンクしてるとことか最高だった。続編観たい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/36/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><span class="page-number current">37</span><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/98/">98</a><a class="extend next" rel="next" href="/page/38/">Next &raquo;</a>
+    </nav>
+  
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
