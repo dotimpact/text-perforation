@@ -56,6 +56,222 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2005-11-11" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/11/1_collisions/2005-11-11/" class="article-date">
+  <time datetime="2005-11-10T15:00:00.000Z" itemprop="datePublished">Nov 11 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/11/1_collisions/2005-11-11/">＠IT連載「Ajaxで作るインタラクティブWebアプリケーション」(1)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>■<a href="http://www.atmarkit.co.jp/fwcr/index.html" target="_blank" rel="external">@IT：リッチクライアント＆帳票</a>フォーラムの記事を担当することになりました。全３回の連載第１回が公開されています。</p>
+<ul>
+<li>Ajaxで作るインタラクティブWebアプリケーション(1) <ul>
+<li><a href="http://www.atmarkit.co.jp/fwcr/rensai/ajax_photoalbum01/01.html" target="_blank" rel="external">Ajaxフォトアルバムのフェードイン画像フレームを作ろう</a></li>
+</ul>
+</li>
+</ul>
+<p>実践的な内容のAjax記事が欲しいという編集者さんとお話をさせてもらう機会がありまして、Prototypeやscript.aculo.usを紹介しながら、<a href="http://collisions.dotimpac.to/works/web/piccy.html" target="_blank" rel="external">Piccy</a>みたいなAjaxアプリケーションを実際につくるプロセスを解説するようなものなら書けるかなということで今回の連載となりました。Ajaxの技術は細かなテクニックやノウハウは各所のブログで公開されているものの、アプリっぽいものを最初からつくっていくような記事はあまりないようなので（強いて言うと<a href="http://d.hatena.ne.jp/AjaxEroge/" target="_blank" rel="external">Ajaxでエロゲーを作るブログ</a>とか？　ほかにあったら教えてください）。解説読んでたいしたことないなーともっと面白いもの作ってくれる人が増えるといいなと。あと２回続きますのでよろしくお願いします。ちなみにサーバ通信は最後の最後（！）になる予定です。まだ書いてないですけど。</p>
+<p>第１回の執筆時には以下の日記／ブログ／ソースを参考にさせていただきました。順不同で感謝。</p>
+<ul>
+<li><a href="http://prototype.conio.net/" target="_blank" rel="external">prototype.js</a></li>
+<li><a href="http://script.acul.us/" target="_blank" rel="external">script.acul.us</a></li>
+<li><a href="http://d.hatena.ne.jp/naoya/" target="_blank" rel="external">naoyaのはてなダイアリー</a>（prototype.js でデザインパターンのシリーズ）</li>
+<li><a href="http://www.sergiopereira.com/articles/prototype.js.html" target="_blank" rel="external">Using prototype.js</a></li>
+<li><a href="http://d.hatena.ne.jp/wanpark/" target="_blank" rel="external">こども(てれび)</a> <ul>
+<li><a href="http://d.hatena.ne.jp/wanpark/20050820#1124465166" target="_blank" rel="external">prototype.js ってなに？の巻</a></li>
+<li><a href="http://d.hatena.ne.jp/wanpark/20050821#1124556721" target="_blank" rel="external">prototype.js で簡単な Ajax のサンプル</a></li>
+</ul>
+</li>
+<li><a href="http://d.hatena.ne.jp/higepon/" target="_blank" rel="external">ひげぽん OSとか作っちゃうかMona</a> <ul>
+<li><a href="http://d.hatena.ne.jp/higepon/20050831/1125472820" target="_blank" rel="external">実践 prototype.js ［1］</a></li>
+<li><a href="http://d.hatena.ne.jp/higepon/20050901/1125555797" target="_blank" rel="external">実践 prototype.js ［2］</a></li>
+</ul>
+</li>
+<li><a href="http://d.hatena.ne.jp/brazil/" target="_blank" rel="external">Collection &amp; Copy</a> <ul>
+<li><a href="http://d.hatena.ne.jp/brazil/20050909/1126254775" target="_blank" rel="external">（翻訳）AJAX/JavaScriptライブラリまとめ</a></li>
+</ul>
+</li>
+<li><a href="http://www.lesserwiki.org/" target="_blank" rel="external">LesserWiki</a></li>
+<li><a href="http://zerobase.jp/blog/entry-268.html" target="_blank" rel="external">ページ内リンクでスムーススクロール@ZEROBASE CAST</a></li>
+</ul>
+<p>そのほか多くのJavaScript/Ajaxハッカーの技術とあけっぴろげのソースにも感謝。</p>
+<p>書き起こしのAjaxアプリの意義の考えかたについては<a href="http://chasen.org/~taku/blog/archives/2005/10/ajax.html" target="_blank" rel="external">Ajax で隠れた技術を表舞台に出す</a>をヒントにしました。<a href="http://chasen.org/~taku/blog/" target="_blank" rel="external">きまぐれ日記</a>の工藤拓さんもちょうど<a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20051104/224040/" target="_blank" rel="external">作って理解するAjax</a>という連載を始めるようなので、どんな内容になるのか楽しみです。</p>
+<p>あとあれだ、サンプルの画像が意味もなく<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752637/" target="_blank" rel="external">シンメトリー写真</a>なのはまあ気にせず。無難なのがなかっただけです。ほんとはオランダのサッカーチームの写真とかがよかったんですが。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/info/">info</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2005-11-08" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/08/1_collisions/2005-11-08/" class="article-date">
+  <time datetime="2005-11-07T15:00:00.000Z" itemprop="datePublished">Nov 8 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/08/1_collisions/2005-11-08/">Tropy(とろぴぃ）のことを考えている</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>■ご多分にもれず、<a href="http://www.hyuki.com/d/200511.html#i20051103183338" target="_blank" rel="external">Tropy(とろぴぃ）</a>のことを考えている。Tropyとは、<a href="http://www.hyuki.com/index.html" target="_blank" rel="external">結城浩</a>さんがつくり、つい先日公開されていたソフトウェアだ。サーバ負荷の問題があり、いまは稼動していない。</p>
+<p>現在「お休み」しているTropyのことを記憶と想像だけで語るのはむずかしくあぶなっかしいのだが、それをしてみたい。たぶんおぼつかないので、間違いのないところは<a href="http://www.hyuki.com/d/200511.html#i20051103183338" target="_blank" rel="external">結城さん自身による解説</a>を読んでもらったほうがいいだろう。</p>
+<p>Tropyには「どこにも中心はない」、と結城さんが解説しているとおり、<a href="http://www.hyuki.com/tropy/" target="_blank" rel="external">http://www.hyuki.com/tropy/</a> を開いたとき表示されるページは、毎回ランダムに決定される。だから、Tropyを見た多くの人が、じっさいに最初にどんなページを見たかはわからない。にもかかわらずそれなりに確信があるのだけど、興味をもってTropyのページへ移動した人が、最初にTropyのページを見たとき、みんな「はっとした」んではないだろうか。Tropyのページは、いままで自分がみてきたいわゆるwebページの「なににも似ていない」、と感じただろうと想像する。それはおそらく結城さんが、「なににも似ていない」ようにTropyを設計していたからだ。</p>
+<p>しかし、その「なににも似ていない」Tropyが、初対面の仕事相手のように緊張を誘うものだったかというと、そうでもなかったはずだ。むしろ逆だろう。ここはやや大胆に言ってみようと思うけども、Tropyのページを見たとき、そのページに書かれたテキストを、「どこかのだれかが実際につぶやいているところ」をイメージしたんじゃなかっただろうか。Tropyのページには、どれにもちょうど「どこかのだれかの実際のつぶやき」分くらいの真実が含まれていたような気がする。その「つぶやき」を、ほかならぬ「どこかのだれかの実際のつぶやき」を聞くために、多くの人は「Random」のリンクを何度もクリックしてみたんだと僕は思う。そして、おそらくそれも、結城さんがTropyをそのように設計していたから、そうだったのだ。</p>
+<p>Tropyを見て、べつに最初からこういうことを考えていたわけではない。「Tropyが何をしていたのか」を考えるようになったのは、すでにたくさん開発されている<a href="http://www.hyuki.com/d/200511.html#i20051105203040" target="_blank" rel="external">Tropyクローン</a>をひととおり見てからだ。それらは、同機能を実現しているという意味では間違いなくTropyクローンだった。のだが、それらの多くは、Tropyよりも、「Tropy以外の別のもの」に似すぎているように感じられたのだった。どういうことだ？　と考えはじめたのは、それからだ。じっさいのところ、まだよくはわからない。</p>
+<p>結城浩さんご自身による<a href="http://www.hyuki.com/d/200511.html#i20051107092750" target="_blank" rel="external">Tropy設計判断</a>というメモが公開されていて、Tropyのいろいろな要素を、なぜそうしたのかがわかるようになっている。僭越ながらコメントをつけさせてもらうと、これらの判断そのものは、プログラムやデザインをする人なら、特にwebアプリケーションの開発者やwebデザイナーなら、だれでもやっていることであり、驚くところではないと思う。驚くべきはそこではなくて、結城さん自身が語っているとおり、開発の時点ではTropy（開発されていた時点では、まだ名前のついていなかった「それ」）が、いったいどういうものなのか結城さん自身にもわかっていなかったにもかかわらず、そうした自覚的な判断をしていたというところではないかな。</p>
+<blockquote>
+<p>Tropyでは、書かれたページの全貌や関係を、できるだけ&#8221;把握させない&#8221;ように工夫されています。できるだけランダムに、できるだけバラバラに。 </p>
+<p>このような、Webの慣習に逆行しているようなページに、いったいどんな意味があるのでしょうか。 </p>
+<p>結城自身にも、まだよくわかっていません。</p>
+<p>でも、あなたには、わかるかも。 </p>
+</blockquote>
+<p>たぶん結城さんは、そのページをみて、それがまだ「なににも似ていない」ことを目指して、それを見た人が「はっとする」ところを想像しながら、Tropyと名づけられるそれを作っていたのではないかと思うのだった。</p>
+<p>■私見ですが、現時点で本家にもっとも近いTropyクローン「<a href="http://tropy.aquahill.net/sys?a" target="_blank" rel="external">Fropy</a>」をどうぞ。</p>
+<ul>
+<li><a href="http://tropy.aquahill.net/" target="_blank" rel="external">http://tropy.aquahill.net/</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2005-11-06" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/06/1_collisions/2005-11-06/" class="article-date">
+  <time datetime="2005-11-05T15:00:00.000Z" itemprop="datePublished">Nov 6 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/06/1_collisions/2005-11-06/">胡口桂子「１円も儲からずにＴシャツを作る方法」</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<ul>
+<li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752564/dotimpact-22/ref=nosim/" target="_blank" rel="external">１円も儲からずにＴシャツを作る方法—オンラインＴシャツショップGbMの伝説</a> <ul>
+<li>著作：胡口桂子／挿 T ：タナカカツキ／編集：伊藤ガビン／装丁：千原航</li>
+<li>価格：1500円（＋税）</li>
+<li>ラピュータ刊</li>
+</ul>
+</li>
+</ul>
+<p>■言うまでもない、のかどうか。この本、つまり「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752564/dotimpact-22/ref=nosim/" target="_blank" rel="external">１円も儲からずにＴシャツを作る方法—オンラインＴシャツショップGbMの伝説</a>」について語る前に、やはり<a href="http://kuromatsu.jp/gbm/" target="_blank" rel="external">オンラインＴシャツショップGbM</a>について解説しなければならないのかもしれない。</p>
+<p>GbMとは、Ｔシャツ業界に別段縁があったわけでもない漫画家で映像作家の<a href="http://www.kaerucafe.com/ka2ki/" target="_blank" rel="external">タナカカツキ</a>氏と、編集者でライターでタナカカツキ氏の知人であったコグこと<a href="http://www.kogu.org/" target="_blank" rel="external">胡口桂子</a>氏が、1999年に突如立ち上げたオンラインＴシャツショップであり、原則そのサイトでしか販売されていないオリジナルＴシャツのレーベルである。「GbM」とは「Gin bako Money（ギンバコマネー）」を意味し、そのロゴがＴシャツのボディにもタグにもでかでかと誇らしげにプリントされているが、その由来はここには書かない。くだらないので。GbMが本業でもないこの７年間の活動でラインナップしたＴシャツは実に74種類、そのすべてにタナカカツキの描き下ろしイラストをフィーチャーし、そのすべてに通常では考えられない特殊な加工や多版プリントや刺繍をほどこし、そのすべてに高価な特色後染を含む節操のないほど多彩なボディカラーを配し、そのすべてにわざわざ毎シーズン違うオリジナルタグをぬい込み、そのすべてにいわゆる「こだわりのアーティストＴシャツ」と呼ぶにはあまりにも控えめな価格を設定し、さして宣伝も営業もせず、自宅の部屋に在庫のダンボールを積み上げ、オーダーに合わせてＴシャツをたたみ、フルカラーのカタログをバレンで折り込み、頼まれてもいないのにノベルティのステッカーを封入し、年が変われば年賀ダイレクトメールを郵送し、なおかつ１円も儲からなかった。それがオンラインＴシャツショップGbMだ。そしてこの本、つまり「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752564/dotimpact-22/ref=nosim/" target="_blank" rel="external">１円も儲からずにＴシャツを作る方法—オンラインＴシャツショップGbMの伝説</a>」は、そんなGbMの７年間の活動を追ったネットビジネス書…、ではない。そうではない。ここからはその話だ。</p>
+<p>僕の記憶が確かならば、初期のころGbMは「攻め型」のオンラインＴシャツショップを自称していたはずだ。GbMは「攻め」なのだと彼らは言っていた。実際のところ僕はGbMの活動をそれほど知っているわけではないんだけども（Ｔシャツもあんま買ってないし）、この本を読んでGbMはいったい何をどう「攻め」ていたのかが、なんとなくわかってきた。こういうことだ。GbMはオンラインＴシャツショップを自称し、事実そうであったにもかかわらず、「まるでＴシャツショップではないのかのように」活動してきたのであった。それが彼らの言う「攻め」なわけだ。「１円も儲からない」とは、ＴシャツショップであるGbMが「まるでＴシャツショップではないかのように」活動するための方法のひとつだ。</p>
+<p>さて。この本でコレクションを一覧すればわかるとおり、GbMのつくろうとしているＴシャツとは、ひとことで言えば「素の」Ｔシャツ、のようなものだ。なにかばっちりデザインされたカッコイイものとか、見る前からかわいいようなものは目指されていない。むしろ、古着屋のワゴンの底のほうに１枚だけあるような、どこのだれが作ったんだかわからないような、デザインの意図が読めない、でもどこか憎めない、自分がはじめて見つけた感じのするおもしろさを持った、そういったＴシャツが目指されている。おそらくそんなオリジナルＴシャツをつくろうとしているメーカーは世界で探してもGbMしかいないだろう。だって本来それは、オリジナルＴシャツのデザインによって目指せるものではないからだ。GbMが「まるでＴシャツショップではないかのように」活動する姿勢は、ここにもあらわれている。</p>
+<p>そしてGbMがさらに変わっていることには、Ｔシャツを「デザイン」しないかわりに、そのＴシャツの「ストーリー」を用意するのである。もちろんＴシャツに印刷されたキャラクターに設定があるとか、そういうことではない。言ってみればGbMは、自分たちが作ったオリジナルＴシャツを古着屋のワゴンに放り込んで、それを底から引っ張り出すわけだ。デザインの意図が読めない、でもどこか憎めない、自分がはじめて見つけた感じのするおもしろさを持った、そういったＴシャツを発見したときについぼんやり思い巡らすようなエピソードやストーリーを、GbMはＴシャツの「解説」として用意する。この本、つまり「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752564/dotimpact-22/ref=nosim/" target="_blank" rel="external">１円も儲からずにＴシャツを作る方法—オンラインＴシャツショップGbMの伝説</a>」にコグ氏は、74種類すべてのＴシャツについてそれを書き下ろしている。この本の内容の大部分をしめる膨大な文章は、GbMのＴシャツそのものとは特に関係のない、こういってよければとりとめのない、しかし驚きに満ちわけもなく輝く、自分がはじめて見つけた感じのするおもしろさを持った、夢物語のようなものだ。Ｔシャツショップの本なのに！　変わっている！　と言わざるをえないが、GbMとは、そしてGbMの考えるＴシャツとは、つまりそういうものなのだということだろう。</p>
+<p>したがって、お分かりと思うが、つまりこの本「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752564/dotimpact-22/ref=nosim/" target="_blank" rel="external">１円も儲からずにＴシャツを作る方法—オンラインＴシャツショップGbMの伝説</a>」は、GbMの７年間の活動を追ったネットビジネス書…、ではなく、「まるでＴシャツショップではないかのように」活動を続けてきたオンラインＴシャツショップGbMの、最新の活動である。GbMは、だれも目指してないような「素の」Ｔシャツを、ふつうよりずっと丹念な手間をかけながら、７年間も作り続け、さらにはそれを誰かが見つけたときの74通りの気持ちまでも文章に綴り、いぜん１円も儲からないまま、なぜかそれを本にした。それがGbMというＴシャツショップの「攻め」なのだと、彼らは言っている。</p>
+<p>GbMの伝説は、おそらくまだ続くのだろう。</p>
+<ul>
+<li><a href="http://kuromatsu.jp/books/001/index.html" target="_blank" rel="external">黒松ブックスVol.001　 『１円も儲からずにTシャツを作る方法〜オンラインTシャツショップGbMの伝説』</a> <ul>
+<li>立ち読みPDFあり</li>
+</ul>
+</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2005-11-05" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -661,200 +877,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-07-25" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/07/25/1_collisions/2005-07-25/" class="article-date">
-  <time datetime="2005-07-24T15:00:00.000Z" itemprop="datePublished">Jul 25 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/25/1_collisions/2005-07-25/">Autostitchの間違った使いかた</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/autostitch.jpg" alt="autostitch.jpg"></p>
-<p>■<a href="http://cs.ubc.ca/~mbrown/autostitch/autostitch.html" target="_blank" rel="external">Autostitch</a>というソフトを最近知りました。カメラを振りながら撮った連続画像をつないで、いわゆるパノラマ画像にするソフト。同様の処理はいまやたいていのデジカメに同梱ツールでついてそうな気がしますが、ふつうはなんからの手作業が必要そうなところがこれは処理が完全全自動で、それらしい画像を多数つっこんでやれば、なんとなく画像を作ってくれるというところが特色なんでしょうか。</p>
-<p>せっかくなので試してみようと思ったんですがあんまりパノラマっぽい連続画像を撮ったことがなかったので、去年金沢２１世紀美術館に行ったときに外周を回りながら撮影していた連続画像をつっこんでみたところ、ぜんぜんパノラマではないですが奇妙な画像ができました。なんかがんばって整合させようとしてるとこが泣ける。よく見ると建物のガラスに映った自分の像をキーにつなごうとしてたりして。</p>
-<ul>
-<li>大きい画像はこっちに。 <ul>
-<li><a href="http://project.dotimpac.to/kanazawa21st/kanazawa_pano.jpg" target="_blank" rel="external">http://project.dotimpac.to/kanazawa21st/kanazawa_pano.jpg</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="金沢２１世紀美術館人力タイムスライス"><a href="#金沢２１世紀美術館人力タイムスライス" class="headerlink" title="金沢２１世紀美術館人力タイムスライス"></a>金沢２１世紀美術館人力タイムスライス</h1><p>去年の１１月ごろ遊びにいった<a href="http://www.kanazawa21.jp/ja/index.html" target="_blank" rel="external">金沢２１世紀美術館</a>は、上から見ると建物が完全な円形をしていることで有名な美術館なんですが、構内に建物に沿って敷かれた遊歩道もあって、つまりこの道も円形になっているわけです。てことはこの遊歩道を数歩づつ歩きながら建物をデジカメで撮影していけば、円形の建物を周回するムービーができるなーと思ってやってみたんですな。当時サポートしてた映像の授業でデジカメでなにかのモノを周回しながら撮影してその静止画をタイムラインに並べて、いわゆる「タイムスライス（「マトリックス」にあるような、時間の止まった世界でカメラだけが移動するような効果を得られる特殊撮影）」っぽい映像を手作りするという課題を出していたんですが、これは21世紀美術館の人力タイムスライスというわけです。せっかくなんでムービーを公開しておきます。ダウンロードしてループ再生するとおもしろいかもしれません。</p>
-<ul>
-<li><a href="http://project.dotimpac.to/kanazawa21st/kanazawa21.mov" target="_blank" rel="external">http://project.dotimpac.to/kanazawa21st/kanazawa21.mov</a></li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-07-24" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/07/24/1_collisions/2005-07-24/" class="article-date">
-  <time datetime="2005-07-23T15:00:00.000Z" itemprop="datePublished">Jul 24 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/24/1_collisions/2005-07-24/">PONG-ED　(2005)</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/pong-ed.jpg" alt="pong-ed.jpg"></p>
-<ul>
-<li>体験型インスタレーション</li>
-<li>PC、プロジェクター、パドルコントローラ、スピーカ、合板</li>
-<li>制作協力：江田 由美子</li>
-</ul>
-<p>　世界最初の商用ビデオゲーム「PONG（ポン）」のルールで、ネットワークを介してとなりのギャラリーの相手と対戦プレイができます。ボールがとなりのギャラリーの画面に移る際、３つの場所の違うサーバ（会場内、東京都内、米国）を中継するため、最初はひとつに重なったボールが遅延によってしだいに離れていきます。</p>
-<p>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
-<h1 id="PONG-ED-2005"><a href="#PONG-ED-2005" class="headerlink" title="PONG-ED (2005)"></a>PONG-ED (2005)</h1><ul>
-<li>Interactive installation</li>
-<li>Computer, Projector, Paddle controller, Speaker system, Chipbord</li>
-<li>Collaboration with designing exterior: Yumiko Eda </li>
-</ul>
-<p>In this work, you can play the video game with another person who at next gallery space over computer network. When “the ball” moves to another monitor that put in the next gallery space, the data is transferred through three different servers. As a result, “the ball” is separated into three, and these balls is delayed each other little by little. </p>
-<p>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-05-08" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/05/08/1_collisions/2005-05-08/" class="article-date">
-  <time datetime="2005-05-07T15:00:00.000Z" itemprop="datePublished">May 8 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/05/08/1_collisions/2005-05-08/">Modulobeで遊んでみた</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/modulobe.jpg" alt="modulobe.jpg"></p>
-<p>■<a href="http://eto.com/" target="_blank" rel="external">江渡浩一郎</a>さんが現在産総研のプロジェクトで開発しているコンピュータ上でフレームを組み立てて仮想生物を作る物理シミュレーション環境「<a href="http://www.modulobe.com/" target="_blank" rel="external">Modulobe</a>」のbeta版がちょっと前にリリースされています。はまってしまうのは目に見えてるのでなかなか触れなかったんですが、夏休み的に時間ができたのでいろいろやってみました。</p>
-<ul>
-<li><a href="http://www.modulobe.com/" target="_blank" rel="external">http://www.modulobe.com/</a> <ul>
-<li>公式サイト</li>
-</ul>
-</li>
-<li><a href="http://wiki.modulobe.com/" target="_blank" rel="external">http://wiki.modulobe.com/</a>　 <ul>
-<li>マニュアルやモデルデータが公開されているWiki</li>
-</ul>
-</li>
-</ul>
-<p>デスクトップで起動したらかなり致命的に落ちたので（ビデオドライバを新しくしたら直りましたが、原因はわかりません）しばらくノート（タブレットPC）で遊んでたんですが、タブレットだとかなり直感的にいじれてすごく楽しい。シミュレーションが重いのかCPUパワーをかなり（うちのTC1100だと常に計算率80%以上になります）使うのでバッテリを消耗する＆本体が持てないくらい熱くなるのが残念。外で暇なときに遊べたりすると楽しそうなんだけど。</p>
-<p>むかしプレステに「<a href="http://www.playstation.jp/products/title/scps10096.html" target="_blank" rel="external">パネキット</a>」というゲームがありましたが、あれをもうちょっとシンプルにした、というか、もうちょっとゲームっぽくなくした感じでしょうか（そのはずでパネキットのスタッフの渡辺kuniさんもModulobeの開発にもかかわってるそうです）。“シャフト”と呼ばれる骨組みと“リンク”と呼ばれる駆動部（つながったモジュールとの接合部を曲げる動きをつけられる）というふたつのモジュールを角度をつけながらうまくつないでいくと、ちゃんと物理法則にのっとっていろんな動きをするモノがつくれます。具体的に言うとシャフトの連結方式はパネキットで、リンクの動きの指定は<a href="http://www.sodaplay.com/constructor/" target="_blank" rel="external">sodaconstractor</a>ぽい（？　そうでもないかな）感じ。慣れるまではけっこう難しいですが、しばらくいじってみてコピー＆ペーストも活用できるころには（2,3時間くらいずっと触ってたんですが）、もうかなりシャフトの組み合わせる角度やリンクとの使い分けが頭に入ってきて、形が想像で作れるようになりました。いまも「あー、こうしてこうすると8の字走行する３輪車とか作れそうだなー」というアイデアが浮かんできてまた遊んでしまいそうです。</p>
-<ul>
-<li>とりあえず作ってみた多足ホイールと立体スネーク <ul>
-<li><a href="http://dotimpac.to/misc/wheel.gif" target="_blank" rel="external">http://dotimpac.to/misc/wheel.gif</a></li>
-<li><a href="http://dotimpac.to/misc/snake.gif" target="_blank" rel="external">http://dotimpac.to/misc/snake.gif</a></li>
-</ul>
-</li>
-</ul>
-<p>sodaplayなんかより環境の自由度が高いぶん、ここから先どうバージョンアップしていくのかが楽しみです。がんばってください！＞etoさん</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
 
 			</span>
 		</div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://text-perforation.doppac.cc/"/>
-  <updated>2017-09-06T03:00:35.000Z</updated>
+  <updated>2017-09-13T04:17:41.000Z</updated>
   <id>http://text-perforation.doppac.cc/</id>
   
   <author>
@@ -16,29 +16,88 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>深田晃司『淵に立つ』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/09/02/201709/fuchi-ni-tatsu/"/>
-    <id>http://text-perforation.doppac.cc/2017/09/02/201709/fuchi-ni-tatsu/</id>
-    <published>2017-09-01T15:00:00.000Z</published>
-    <updated>2017-09-06T03:00:35.000Z</updated>
+    <title>CEDECでのゼルダの伝説開発セッション</title>
+    <link href="http://text-perforation.doppac.cc/2017/09/08/201709/cedec-zelda-presentations/"/>
+    <id>http://text-perforation.doppac.cc/2017/09/08/201709/cedec-zelda-presentations/</id>
+    <published>2017-09-07T15:00:00.000Z</published>
+    <updated>2017-09-13T04:17:41.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://fuchi-movie.com/" target="_blank" rel="external">映画『淵に立つ』公式サイト</a></p>
-<hr>
-<p><a href="/2017/08/31/201708/hotori-no-sakuko/">『ほとりの朔子』を観て</a>よかったので内容全然知らないまま『淵に立つ』も楽しみとか言ってたんだけど、観てみたらタイプがまったくもって違う映画でびっくりした。『ほとりの〜』からの流れで観た僕としてはちょっと話を劇的に盛りすぎかなという気もしてしまったけど、気合いの入った、イヤさに身を揺さぶられる映画だった。</p>
+    <content type="html"><![CDATA[<p>CEDECのタイムシフトは <a href="https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk" target="_blank" rel="external">Video Speed Controller</a>で1.5倍速くらいにしつつで、10そこらくらいのセッションを観た。「<a href="http://cedec.cesa.or.jp/2017/session/ENG/s58dda7eb7a63a/" target="_blank" rel="external">キャラクターらしさ学習AI：　多数のキャラクターの個性や違いの可視化によるシナリオライティング支援システム事例</a>」というセッションが面白かったらしいけど見逃しちゃった。とりあえずゼルダの伝説についてのセッションは全部ちゃんと聞けて（あと画面キャプチャなどとれて）よかった。</p>
+<p>ワールドマップ制作のノウハウの話はもちろん面白かったんだけど、やっぱり一番衝撃的だったのは、ゲームエンジンに統合された（正確にいうとデバッグ版のゲームエンジンと接続された開発環境（「ゼルダエディタ」と呼ばれるゲーム内のすべてのアセットとデータを管理、制作支援する開発環境をすべての開発者が使用していたという）に統合された、かな）タスク管理システムを開発することが世界の磨き込みやゲームの完成に寄与した、これがなければ不可能だったという話だった。ゲームでもWebサービスでも開発のなかでなんらかの形でタスク管理システムを使用するのは普通のことだと思うけれど、開発する主体に密接なものとしてタスク管理（やその場にまつわるコミュニケーションシステム）を組み込んでいくアプローチというのはあまり聞いたことがない。そしてこれはもしかしたら、Wikiエンジン（江渡さんの『パターン、Wiki、XP』で示されたアレクザンダーのパターンランゲージから連なる文脈）に近い発想なんじゃないかな。ワールドマップ制作過程の話の中でも、制作途中のワールドに開発者がプレイヤーとして降り立ち、実際にその場を冒険し（デバッグ移動を使わず時間がかかってもキャラクターを実際に動かしながら）、その場の雰囲気や感覚を確かめながら地形や遊びを作り込んでいったというプロセスが語られていたけど、これもアレクザンダーのいう利用者（プレイヤー）参加型の建築手法に近いものかもしれない。</p>
+<p>今回のゼルダの開発プロセスについては、CEDECのセッションでも扱われなかったものもあるっぽい（ゲームの要素のよい部分、悪い部分について匿名で投稿し、意見への賛否が可視化される掲示板があったとか →<a href="/2017/04/08/201704/famitsu-zelda-botw-issue/">週間ファミ通2017年4月20日号『特集 開発秘話から紐解く新たな『ゼルダ』の姿』を読んだ</a>)ので、誰か徹底取材して1冊の本にしてくれたりしないかな。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;http://fuchi-movie.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『淵に立つ』公式サイト&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&quot;/2017/08/31/201708/hotori-no-saku
+      &lt;p&gt;CEDECのタイムシフトは &lt;a href=&quot;https://chrome.google.com/webstore/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk&quot; target=&quot;_blank&quot;
     
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="videogame" scheme="http://text-perforation.doppac.cc/tags/videogame/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ATOK 2017 for Mac</title>
+    <link href="http://text-perforation.doppac.cc/2017/09/05/201709/atok-2017/"/>
+    <id>http://text-perforation.doppac.cc/2017/09/05/201709/atok-2017/</id>
+    <published>2017-09-04T15:00:00.000Z</published>
+    <updated>2017-09-13T05:05:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>去年の12月になんとなく思い立ってATOK 2016を購入して使っている。それまではGoogle日本語入力をとくに不自由もなく使っていて、ふとATOKってどうなのかなと思って変えてみたんだけど…ぜんぜんよくなかった。かな漢字変換の制度はほかのIMEと大差ないように思えるし、変換確定の学習の影響なのか使っているとどんどん変換精度が下がるように見えること（文頭の「の」を「乃」に変換するのとかバカと名高かったASK68Kを彷彿とした）、あとATOKインサイト（他アプリで表示中のテキストから変換候補の優先度を変更する機能）がバグってるのか時々異常に長い変換候補が出てジャマだったり、いいとこなし。</p>
+<p>で、シャクだったので6月に出たATOK 2017にアップデートしてみて、多少なりともよくなってるのか試してみたところ…なんかだいぶよくなってる気がする。辞書がリセットされたとかそういうことかもしれないけど。これで駄目ならGoogle日本語入力に戻そうと思ってたんだけど、とりあえずまだしばらく使うことにした。プログラムのパフォーマンスも上がっているのか、とくにATOKイミクルという付属辞書をワンタッチで引くサブ機能がわりと使えるようになってるのがわりとうれしい。</p>
+<p>ただ、上記のATOKインサイト由来（？）の異常に長い変換候補については直らなかったので、変換候補を削除する方法ないのかなと調べてみた。</p>
+<ul>
+<li><a href="https://www.kotalog.net/archives/5555" target="_blank" rel="external">ATOKで意図しない変換候補を削除する方法 | kotaログ</a></li>
+<li><a href="http://support.justsystems.com/faq/1032/app/servlet/qadoc?QID=021107" target="_blank" rel="external">[021107]省入力候補や推測変換候補を削除したい</a></li>
+</ul>
+<p>これだ。しかしMac版はこれではだめだった。<code>Ctrl + D</code>ではなく、<code>Shift + Ctrl + D</code>にバインドしてある。これでアホみたいに長い候補が消せた。</p>
+<img src="/images/201709/atok2017.png" width="500">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;去年の12月になんとなく思い立ってATOK 2016を購入して使っている。それまではGoogle日本語入力をとくに不自由もなく使っていて、ふとATOKってどうなのかなと思って変えてみたんだけど…ぜんぜんよくなかった。かな漢字変換の制度はほかのIMEと大差ないように思えるし、
+    
+    </summary>
+    
     
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="pc" scheme="http://text-perforation.doppac.cc/tags/pc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>マイナーなSF映画</title>
+    <link href="http://text-perforation.doppac.cc/2017/09/04/201709/minor-sf-movies/"/>
+    <id>http://text-perforation.doppac.cc/2017/09/04/201709/minor-sf-movies/</id>
+    <published>2017-09-03T15:00:00.000Z</published>
+    <updated>2017-09-08T14:48:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>（最近こればっかりだけど）SF作品をいろいろ調べていて、観たことなくて設定的に面白そうなSF映画のDVDを借りてきていろいろ観た。</p>
+<h3 id="ダグラス・トランブル『サイレント・ランニング』"><a href="#ダグラス・トランブル『サイレント・ランニング』" class="headerlink" title="ダグラス・トランブル『サイレント・ランニング』"></a>ダグラス・トランブル『サイレント・ランニング』</h3><div class="video-container"><iframe src="//www.youtube.com/embed/TckJBvl_uT0" frameborder="0" allowfullscreen></iframe></div>
+<p>『2001年宇宙の旅』特撮監督ダグラス・トランブルの監督差品なんだそうで、1972年の作品としては特撮や宇宙船内描写が凝ってておもしろい。本来作業用なのにプログラムを書き換えて主人公の怪我を手当したりカードゲームの相手をしてくれるロボット（作中ではドローンと呼ばれる）がかわいい。映画としてはテンポが昔の映画だなあという感じだったけどおもしろく観れた。</p>
+<h3 id="マイケル・クライトン『未来警察』"><a href="#マイケル・クライトン『未来警察』" class="headerlink" title="マイケル・クライトン『未来警察』"></a>マイケル・クライトン『未来警察』</h3><div class="video-container"><iframe src="//www.youtube.com/embed/lA6ybohAVq8" frameborder="0" allowfullscreen></iframe></div>
+<p>マイケル・クライトン自身の監督作品なんだな。ロボットのトラブル専門の警察チームのバディムービーで、いろんなロボットが出てきておもしろい。B級映画ぽい感じで楽しく観られた。</p>
+<h3 id="マルコ・ブランビラ『デモリションマン』"><a href="#マルコ・ブランビラ『デモリションマン』" class="headerlink" title="マルコ・ブランビラ『デモリションマン』"></a>マルコ・ブランビラ『デモリションマン』</h3><div class="video-container"><iframe src="//www.youtube.com/embed/18e4GeUwVWs" frameborder="0" allowfullscreen></iframe></div>
+<p>タイトルは聞いたことあるけど観たことなかったやつ。管理社会で人々がだいぶマヌケな感じになっている未来社会に、冷凍睡眠から目覚めたデモリションマンことシルベスター・スタローンが大暴れという映画なんだけど、未来社会のディテールがギャグタッチで細かく描かれていて興味深い。映画としてはあんまり面白くないけど。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;（最近こればっかりだけど）SF作品をいろいろ調べていて、観たことなくて設定的に面白そうなSF映画のDVDを借りてきていろいろ観た。&lt;/p&gt;
+&lt;h3 id=&quot;ダグラス・トランブル『サイレント・ランニング』&quot;&gt;&lt;a href=&quot;#ダグラス・トランブル『サイレント・ランニング』&quot;
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -62,6 +121,33 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>深田晃司『淵に立つ』を観た</title>
+    <link href="http://text-perforation.doppac.cc/2017/09/02/201709/fuchi-ni-tatsu/"/>
+    <id>http://text-perforation.doppac.cc/2017/09/02/201709/fuchi-ni-tatsu/</id>
+    <published>2017-09-01T15:00:00.000Z</published>
+    <updated>2017-09-06T03:00:35.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://fuchi-movie.com/" target="_blank" rel="external">映画『淵に立つ』公式サイト</a></p>
+<hr>
+<p><a href="/2017/08/31/201708/hotori-no-sakuko/">『ほとりの朔子』を観て</a>よかったので内容全然知らないまま『淵に立つ』も楽しみとか言ってたんだけど、観てみたらタイプがまったくもって違う映画でびっくりした。『ほとりの〜』からの流れで観た僕としてはちょっと話を劇的に盛りすぎかなという気もしてしまったけど、気合いの入った、イヤさに身を揺さぶられる映画だった。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://fuchi-movie.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『淵に立つ』公式サイト&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;/2017/08/31/201708/hotori-no-saku
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -100,7 +186,7 @@
     
     <content type="html"><![CDATA[<p>19エントリ。SFマンガをやたらとあさって読み始めた。</p>
 <p>ちなみに「そのうち絶対なくす」と書いていたambieのイヤーピースはさっそく一つ落としている…</p>
-<ul><li><a href="/2017/08/01/201708/the-mummy/">『ザ・マミー/呪われた砂漠の王女』を観た [08/01]</a></li><li><a href="/2017/08/02/201708/nev-rawlins-s-unreadable-pebble-watchface/">Nev Rawlinsさんの（読めない）Pebble Watchfaceたち [08/02]</a></li><li><a href="/2017/08/03/201708/ambie-sound-earcuffs-impression/">ambie sound earcuffsを使ってみた [08/03]</a></li><li><a href="/2017/08/05/201708/genron-cafe-cyberspace-revival/">『佐藤大×さやわか×東浩紀「サイバーパンク・リバイバルーー復活した没入（ジャック・イン）的想像力とその可能性」【さやわか式☆現代文化論 #30】』を観た [08/05]</a></li><li><a href="/2017/08/06/201708/splatoon-2/">スプラトゥーン２ [08/06]</a></li><li><a href="/2017/08/11/201708/astra-lost-in-space/">篠原健太『彼方のアストラ』を読んだ [08/11]</a></li><li><a href="/2017/08/14/201708/atom-the-beginning/">カサハラテツロー『アトム・ザ・ビギニング』を読んだ [08/14]</a></li><li><a href="/2017/08/14/201708/working-with-gpd-win/">GPD Winで仕事する [08/14]</a></li><li><a href="/2017/08/15/201708/kracie-tanoshii-omatsuriya-san/">『たのしいおまつりやさん』を新幹線でつくった [08/15]</a></li><li><a href="/2017/08/17/201708/scientia/">戸田誠二『スキエンティア』を読んだ [08/17]</a></li><li><a href="/2017/08/19/201708/mobile-bluetooth-keyboard-with-small-touchpad/">小型タッチパッド付きBluetoothキーボード [08/19]</a></li><li><a href="/2017/08/20/201708/the-soup/">川端裕人『The S.O.U.P.』を読んだ [08/20]</a></li><li><a href="/2017/08/24/201708/metamorphose-animation-night-2017/">『変態アニメーションナイト2017』を観た [08/24]</a></li><li><a href="/2017/08/24/201708/the-emperor-in-august-in-1967-and-2015/">『日本のいちばん長い日』の1967年版と2015年版を観た [08/24]</a></li><li><a href="/2017/08/24/201708/setsuna-flick/">今井大輔『セツナフリック』 [08/24]</a></li><li><a href="/2017/08/27/201708/spider-man-homecoming/">ジョン・ワッツ『スパイダーマン：ホームカミング』を観た [08/27]</a></li><li><a href="/2017/08/27/201708/too-young-to-die/">宮藤官九郎『TOO YOUNG TO DIE！ 若くして死ぬ』を観た [08/27]</a></li><li><a href="/2017/08/31/201708/hotori-no-sakuko/">深田晃司『ほとりの朔子』を観た [08/31]</a></li><li><a href="/2017/08/31/201708/genron-5/">『ゲンロン5 幽霊的身体』を読んだ [08/31]</a></li></ul>
+<ul><li><a href="/2017/08/01/201708/the-mummy/">『ザ・マミー/呪われた砂漠の王女』を観た [08/01]</a></li><li><a href="/2017/08/02/201708/nev-rawlins-s-unreadable-pebble-watchface/">Nev Rawlinsさんの（読めない）Pebble Watchfaceたち [08/02]</a></li><li><a href="/2017/08/03/201708/ambie-sound-earcuffs-impression/">ambie sound earcuffsを使ってみた [08/03]</a></li><li><a href="/2017/08/05/201708/genron-cafe-cyberspace-revival/">『佐藤大×さやわか×東浩紀「サイバーパンク・リバイバルーー復活した没入（ジャック・イン）的想像力とその可能性」【さやわか式☆現代文化論 #30】』を観た [08/05]</a></li><li><a href="/2017/08/06/201708/splatoon-2/">スプラトゥーン２ [08/06]</a></li><li><a href="/2017/08/11/201708/astra-lost-in-space/">篠原健太『彼方のアストラ』を読んだ [08/11]</a></li><li><a href="/2017/08/14/201708/working-with-gpd-win/">GPD Winで仕事する [08/14]</a></li><li><a href="/2017/08/14/201708/atom-the-beginning/">カサハラテツロー『アトム・ザ・ビギニング』を読んだ [08/14]</a></li><li><a href="/2017/08/15/201708/kracie-tanoshii-omatsuriya-san/">『たのしいおまつりやさん』を新幹線でつくった [08/15]</a></li><li><a href="/2017/08/17/201708/scientia/">戸田誠二『スキエンティア』を読んだ [08/17]</a></li><li><a href="/2017/08/19/201708/mobile-bluetooth-keyboard-with-small-touchpad/">小型タッチパッド付きBluetoothキーボード [08/19]</a></li><li><a href="/2017/08/20/201708/the-soup/">川端裕人『The S.O.U.P.』を読んだ [08/20]</a></li><li><a href="/2017/08/24/201708/metamorphose-animation-night-2017/">『変態アニメーションナイト2017』を観た [08/24]</a></li><li><a href="/2017/08/24/201708/the-emperor-in-august-in-1967-and-2015/">『日本のいちばん長い日』の1967年版と2015年版を観た [08/24]</a></li><li><a href="/2017/08/24/201708/setsuna-flick/">今井大輔『セツナフリック』 [08/24]</a></li><li><a href="/2017/08/27/201708/spider-man-homecoming/">ジョン・ワッツ『スパイダーマン：ホームカミング』を観た [08/27]</a></li><li><a href="/2017/08/27/201708/too-young-to-die/">宮藤官九郎『TOO YOUNG TO DIE！ 若くして死ぬ』を観た [08/27]</a></li><li><a href="/2017/08/31/201708/hotori-no-sakuko/">深田晃司『ほとりの朔子』を観た [08/31]</a></li><li><a href="/2017/08/31/201708/genron-5/">『ゲンロン5 幽霊的身体』を読んだ [08/31]</a></li></ul>
 ]]></content>
     
     <summary type="html">
@@ -113,6 +199,31 @@
     
     
       <category term="summary" scheme="http://text-perforation.doppac.cc/tags/summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『ゲンロン5 幽霊的身体』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/08/31/201708/genron-5/"/>
+    <id>http://text-perforation.doppac.cc/2017/08/31/201708/genron-5/</id>
+    <published>2017-08-30T15:00:00.000Z</published>
+    <updated>2017-09-06T03:54:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://shop.genron.co.jp/products/detail.php?product_id=375" target="_blank" rel="external">ゲンロンショップ / ゲンロン5【日本国内向け/For Domestic】</a></p>
+<hr>
+<p>ゲンロン6が来る前に目を通した。福嶋亮大さん（『悪霊・崇高・身体ーー上田秋成と一八世紀のパラダイム』）、渡邉大輔さん（『「顔」に憑く幽霊たちーー映像文化と幽霊的なもの』）の論考とか黒瀬陽平さんの『他の平面論』とかがおもしろかった。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://shop.genron.co.jp/products/detail.php?product_id=375&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ゲンロンショップ / ゲンロン5【日本国内向け/For Domesti
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -138,34 +249,9 @@
     </summary>
     
     
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『ゲンロン5 幽霊的身体』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/08/31/201708/genron-5/"/>
-    <id>http://text-perforation.doppac.cc/2017/08/31/201708/genron-5/</id>
-    <published>2017-08-30T15:00:00.000Z</published>
-    <updated>2017-09-06T03:54:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://shop.genron.co.jp/products/detail.php?product_id=375" target="_blank" rel="external">ゲンロンショップ / ゲンロン5【日本国内向け/For Domestic】</a></p>
-<hr>
-<p>ゲンロン6が来る前に目を通した。福嶋亮大さん（『悪霊・崇高・身体ーー上田秋成と一八世紀のパラダイム』）、渡邉大輔さん（『「顔」に憑く幽霊たちーー映像文化と幽霊的なもの』）の論考とか黒瀬陽平さんの『他の平面論』とかがおもしろかった。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://shop.genron.co.jp/products/detail.php?product_id=375&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ゲンロンショップ / ゲンロン5【日本国内向け/For Domesti
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
   </entry>
   
@@ -190,9 +276,9 @@
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -218,9 +304,9 @@
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -252,33 +338,6 @@
   </entry>
   
   <entry>
-    <title>『日本のいちばん長い日』の1967年版と2015年版を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/08/24/201708/the-emperor-in-august-in-1967-and-2015/"/>
-    <id>http://text-perforation.doppac.cc/2017/08/24/201708/the-emperor-in-august-in-1967-and-2015/</id>
-    <published>2017-08-23T15:00:00.000Z</published>
-    <updated>2017-08-28T02:58:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://nihon-ichi.jp/" target="_blank" rel="external">映画『日本のいちばん長い日』公式サイト</a></p>
-<hr>
-<p>WOWOWで連続放映されてたのを録画して二晩に分けて観た。先に観たのは1976年の岡本喜八版で、クーデター決起にいたる帝国陸軍将校の常軌の逸しぶりには映画なのを忘れるくらい興奮したけど、2015年版は青年将校たちにかなり幼い印象の役者をあててあってかなり印象が違った。阿南役が役所広司なのも含め、あんまりマッチョ感のない帝国陸軍だった。他方2015年版は昭和天皇と宮内庁の描写が多くて、これはこないだ観た原田眞人監督の前作『駆込み女と駆出し男』の駆け込み寺との共通性（政治的な無風地帯の間の抜けたムード）を感じた。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://nihon-ichi.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『日本のいちばん長い日』公式サイト&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;WOWOWで連続放映されてたのを録画して二晩に分けて観た。先に観たのは197
-    
-    </summary>
-    
-    
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『変態アニメーションナイト2017』を観た</title>
     <link href="http://text-perforation.doppac.cc/2017/08/24/201708/metamorphose-animation-night-2017/"/>
     <id>http://text-perforation.doppac.cc/2017/08/24/201708/metamorphose-animation-night-2017/</id>
@@ -304,9 +363,36 @@
     </summary>
     
     
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
+  </entry>
+  
+  <entry>
+    <title>『日本のいちばん長い日』の1967年版と2015年版を観た</title>
+    <link href="http://text-perforation.doppac.cc/2017/08/24/201708/the-emperor-in-august-in-1967-and-2015/"/>
+    <id>http://text-perforation.doppac.cc/2017/08/24/201708/the-emperor-in-august-in-1967-and-2015/</id>
+    <published>2017-08-23T15:00:00.000Z</published>
+    <updated>2017-08-28T02:58:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://nihon-ichi.jp/" target="_blank" rel="external">映画『日本のいちばん長い日』公式サイト</a></p>
+<hr>
+<p>WOWOWで連続放映されてたのを録画して二晩に分けて観た。先に観たのは1976年の岡本喜八版で、クーデター決起にいたる帝国陸軍将校の常軌の逸しぶりには映画なのを忘れるくらい興奮したけど、2015年版は青年将校たちにかなり幼い印象の役者をあててあってかなり印象が違った。阿南役が役所広司なのも含め、あんまりマッチョ感のない帝国陸軍だった。他方2015年版は昭和天皇と宮内庁の描写が多くて、これはこないだ観た原田眞人監督の前作『駆込み女と駆出し男』の駆け込み寺との共通性（政治的な無風地帯の間の抜けたムード）を感じた。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://nihon-ichi.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『日本のいちばん長い日』公式サイト&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;WOWOWで連続放映されてたのを録画して二晩に分けて観た。先に観たのは197
+    
+    </summary>
+    
+    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -331,9 +417,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -384,9 +470,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -418,6 +504,33 @@
   </entry>
   
   <entry>
+    <title>カサハラテツロー『アトム・ザ・ビギニング』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/08/14/201708/atom-the-beginning/"/>
+    <id>http://text-perforation.doppac.cc/2017/08/14/201708/atom-the-beginning/</id>
+    <published>2017-08-13T15:00:00.000Z</published>
+    <updated>2017-09-01T02:28:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.heros-web.com/works/atom/" target="_blank" rel="external">【公式】アトム ザ・ビギニング ゆうきまさみ×カサハラテツロー｜月刊 ヒーローズHEROS 毎月1日発売</a></p>
+<hr>
+<p>SF仕事がらみで読み始めたシリーズ。ふつうに絵がうまいし漫画読んでるーって気分になって楽しい。とりあえず既刊は読み終えた。<br>アニメ版も1話観てみたらよさそうだった。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.heros-web.com/works/atom/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;【公式】アトム ザ・ビギニング ゆうきまさみ×カサハラテツロー｜月刊 ヒーローズHEROS 毎月1日発売&lt;/a&gt;&lt;/p
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GPD Winで仕事する</title>
     <link href="http://text-perforation.doppac.cc/2017/08/14/201708/working-with-gpd-win/"/>
     <id>http://text-perforation.doppac.cc/2017/08/14/201708/working-with-gpd-win/</id>
@@ -437,117 +550,6 @@
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
       <category term="computer" scheme="http://text-perforation.doppac.cc/tags/computer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>カサハラテツロー『アトム・ザ・ビギニング』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/08/14/201708/atom-the-beginning/"/>
-    <id>http://text-perforation.doppac.cc/2017/08/14/201708/atom-the-beginning/</id>
-    <published>2017-08-13T15:00:00.000Z</published>
-    <updated>2017-09-01T02:28:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.heros-web.com/works/atom/" target="_blank" rel="external">【公式】アトム ザ・ビギニング ゆうきまさみ×カサハラテツロー｜月刊 ヒーローズHEROS 毎月1日発売</a></p>
-<hr>
-<p>SF仕事がらみで読み始めたシリーズ。ふつうに絵がうまいし漫画読んでるーって気分になって楽しい。とりあえず既刊は読み終えた。<br>アニメ版も1話観てみたらよさそうだった。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://www.heros-web.com/works/atom/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;【公式】アトム ザ・ビギニング ゆうきまさみ×カサハラテツロー｜月刊 ヒーローズHEROS 毎月1日発売&lt;/a&gt;&lt;/p
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>篠原健太『彼方のアストラ』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/08/11/201708/astra-lost-in-space/"/>
-    <id>http://text-perforation.doppac.cc/2017/08/11/201708/astra-lost-in-space/</id>
-    <published>2017-08-10T15:00:00.000Z</published>
-    <updated>2017-08-24T02:10:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://shonenjumpplus.com/episode/10833497643049550210" target="_blank" rel="external">[1話]彼方のアストラ - 篠原健太 | 少年ジャンプ＋</a></p>
-<hr>
-<p>これもSF仕事がらみで読んだ。<a href="https://shonenjumpplus.com" target="_blank" rel="external">ジャンプ＋</a>で2016年5月から隔週連載してる漫画でいま4巻まで出てる。わりとちゃんとSFしてる15少年漂流記的なサバイバルアクションで、すごいジャンプっぽいなーと思いつつ楽しく読んでる。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://shonenjumpplus.com/episode/10833497643049550210&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;[1話]彼方のアストラ - 篠原健太 | 少年ジャンプ＋&lt;/a&gt;&lt;/p&gt;
-&lt;hr
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>スプラトゥーン２</title>
-    <link href="http://text-perforation.doppac.cc/2017/08/06/201708/splatoon-2/"/>
-    <id>http://text-perforation.doppac.cc/2017/08/06/201708/splatoon-2/</id>
-    <published>2017-08-05T15:00:00.000Z</published>
-    <updated>2017-08-22T12:52:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>四年生がやりたいというので買ったけど僕はまだほとんど触れてない。というか、グラフィックの質感のちょっとした違い（床や壁に塗られたインクの描写は２のグロッシーな感じより、１の粘度の低くてさらっとしたのが好きだった）やら新曲のちょっと様子の違う感じやら、試射会で触ったころからなんとなくしっくりきてない部分をひきずっててあんまりテンションが上がってない。こないだひさしぶりにWiiUで１を立ち上げたけどあの初期ロード時の画面と曲の初期衝動感がやっぱり好きだなーと思った。インディーズから応援してたバンドがメジャーデビューしたのを見てるみたいな感じなのだろうか…</p>
-<p>四年生はあっというまにヒーローモードをクリアしていてエンドロールを見せてもらったけど、スタッフ全員の名前がグラフィックロゴになってるのにちょっと生中継68のエンディングを連想した。</p>
-<img src="/images/201708/n68.png">
-<p>これね</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;四年生がやりたいというので買ったけど僕はまだほとんど触れてない。というか、グラフィックの質感のちょっとした違い（床や壁に塗られたインクの描写は２のグロッシーな感じより、１の粘度の低くてさらっとしたのが好きだった）やら新曲のちょっと様子の違う感じやら、試射会で触ったころからな
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="videogame" scheme="http://text-perforation.doppac.cc/tags/videogame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『佐藤大×さやわか×東浩紀「サイバーパンク・リバイバルーー復活した没入（ジャック・イン）的想像力とその可能性」【さやわか式☆現代文化論 #30】』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/08/05/201708/genron-cafe-cyberspace-revival/"/>
-    <id>http://text-perforation.doppac.cc/2017/08/05/201708/genron-cafe-cyberspace-revival/</id>
-    <published>2017-08-04T15:00:00.000Z</published>
-    <updated>2017-08-23T01:29:06.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://genron-cafe.jp/event/20170804/" target="_blank" rel="external">サイバーパンク・リバイバル – ゲンロンカフェ</a></p>
-<hr>
-<p>これ観た。終始スケールの大きいバカ話という感じでおもしろかった。佐藤大さんがいってた「ブレードランナーは映画の内容よりも、さまざまな事情から無数のバージョンが生まれ、内容に矛盾が生じていたりなんなら結末まで変わってしまっているという状況が一番ディック的」だという看破がよかったな。</p>
-<p>あとサイバーパンク的なイメージの需要と供給が一致しているのがゲームの世界だというのはそうなんだろうな。「Detroit becomes human」や「The last night」は実際のところどうなるのか（トークでは「ゲームそのものより『ゲームの予告編』がいちばんサイバーパンクしている（本編は期待したほどでないことが多い）」という話が出ていた）。</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/Z96vf3zcaVU" frameborder="0" allowfullscreen></iframe></div>
-<div class="video-container"><iframe src="//www.youtube.com/embed/pupdeq1MoVw" frameborder="0" allowfullscreen></iframe></div>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://genron-cafe.jp/event/20170804/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;サイバーパンク・リバイバル – ゲンロンカフェ&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;これ観た。終始スケールの大きいバカ話
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="genron-cafe" scheme="http://text-perforation.doppac.cc/tags/genron-cafe/"/>
     
   </entry>
   
