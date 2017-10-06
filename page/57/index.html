@@ -56,6 +56,165 @@
     <div id="main">
       
   
+    <article id="post-201509/wallaby-js" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/09/201509/wallaby-js/" class="article-date">
+  <time datetime="2015-09-08T15:00:00.000Z" itemprop="datePublished">Sep 9 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/09/201509/wallaby-js/">IDEプラグイン型の自動テストツール「Wallaby.js」を導入してみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://wallabyjs.com/" target="_blank" rel="external">Wallaby - intelligent test runner for JavaScript, TypeScript, and CoffeeScript</a></p>
+<p>BCCKSの組版エンジンに安定性と大規模な拡張が同時に求められる局面が生じてきたのでちゃんとテストを書いてからいじるようにしようとjsのテストフレームワークやら自動テスト環境やらを調べていたら、Intellij系のIDE（やVisual StudioとAtom）向けのプラグインとして提供され、テストのパス状態や結果がエディタのコード上に完全なかたちで統合されるというツール「Wallaby.js」を見つけたので導入してみた。1ライセンス$100でまあちょっと高いなと思うけど、１日使ってみてこれはテストうんぬんより開発ツールとして非常に便利なので確実に定着するしすでに誰かにオススメしたい感じがしている。</p>
+<p>僕が使っているのはIntellij IDE（PhpStorm / Intellij IDEA）なのでIntellij プラグイン版のみの評価になる（Atomプラグイン版もどんな感じなのか気になるけど）。もともとIntellijのIDEには標準でもテストランナープラグインが提供されていて、それを使ってみるつもりでいろいろ調べていたんだけど、ブラウザjsのテストはjsTestDriverを起動してからブラウザを起動しないといけなかったり、いまいち乗りきれない感じがあった。Wallabyはプラグインにヘッドレスブラウザ（PhantomJS）が完全に隠蔽された形で統合されていて、テストフレームワークのインストールと設定（テスト対象のソースとテストソースの定義）をすれば実行過程のことはなにも気にしなくてもテストが実行されるようになる。導入が楽。</p>
+<p>テスト結果のエディタ統合も想像した以上の完成度で、テスト側のソースの各行にカラーチップでテストのパス状態が信号のように表示されるのはもちろん、テストするソース側も現在のテストスイートでの各行のカバレッジ状態がやはりカラーチップで表示されるので、テストがぜんぜんないコードにテストを足していく今回のような場合でもモチベーションを上がりやすいし、キーになるロジックのテストを先に書こうといった判断もしやすい。コード修正後の反映パフォーマンスもまったく問題ない（これはまだテストが少ないせいかもしれないけど）。</p>
+<img src="http://wallabyjs.com/assets/img/wallaby.gif">
+<p>Wallaby.jsのサイトからアニメgifを引用</p>
+<p>さらに体験してみて眼からうろこが落ちたのは、Wallabyの環境だとほんとうに「テスト駆動開発」ができるということ。Wallabyプラグインはテストの状態だけでなく、テスト実行時の各行での出力やエラー内容もインラインで表示される（Chromeのjsデバッガのステップ実行状態とおなじ感じ）。コードにconsole.logを追記すれば即座にそのブロックに関するテストが実行され、出力された変数の値がインラインに表示される。Wallabyの環境でテストが書かれた環境でコードを書くと、まさにテストというエンジンに接続された動いているプログラムを動いたまま触っているような感覚で開発ができる。あまりテストツールをさわったことがないので他のツールでもできることなのかもしれないけど、これは新鮮だった。</p>
+<img src="https://i.gyazo.com/527ee24bab0615e656816c939d89f658.gif">
+<p>なにしろきのう導入したばかりなのでもうちょっと使ってみないとわからない部分もあるけど（テストが増えるとどうなるかとか）、現時点ではWallabyによってコーディングの進めかた自体が変わりそうな気がしている。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/intellij/">intellij</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/second-nasne" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/08/201509/second-nasne/" class="article-date">
+  <time datetime="2015-09-07T15:00:00.000Z" itemprop="datePublished">Sep 8 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/08/201509/second-nasne/">２台目のnasne</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>自分が録画したい番組が奥さんが録るドラマの予約とぶつかって録画できないことが多くなってきたので、nasneを増設してみてみた。1台目と同じLANに接続してtorneから登録すれば、録画済みのデータに関してはどちらのnasneに入っているかは意識せずに見たり管理したりできるみたい。よくできてるな。録画に関してはどちらのnasneに予約登録するのかを選ぶ必要があった（WOWOWとかの契約はB-CASカード単位で１台でしか録画できないので仕方ない）。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gadget/">gadget</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/zenpad-s-8" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/07/201509/zenpad-s-8/" class="article-date">
+  <time datetime="2015-09-06T15:00:00.000Z" itemprop="datePublished">Sep 7 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/07/201509/zenpad-s-8/">ZenPad S 8.0を買った</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0148KH1Q8/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/41K7DsJt40L._SL160_.jpg" alt="ASUS ZenPadシリーズ TABLET / ブラック ( Android 5.0 / 7.9inch touch / インテルR Atom Z3580 / 4G / 32G ) Z580CA-BK32" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0148KH1Q8/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ASUS ZenPadシリーズ TABLET / ブラック ( Android 5.0 / 7.9inch touch / インテルR Atom Z3580 / 4G / 32G ) Z580CA-BK32</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.09.14</div></div><div class="amazlet-detail">Asustek (2015-09-04)<br>売り上げランキング: 2,274<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0148KH1Q8/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>タブレットっぽくてペンのついてるデバイスとしてASUSのFonepad note 6を楽しく使っていたんだけど、バッテリーがすぐ切れるようになってしまったのでやっぱりASUSの安くてペンのついているタブレットとして出たZenPad S 8.0を買った。ASUSのZenPadというタブレットの新ブランドは今回まとめて5機種くらい出たけどそのなかのフラッグシップでアスペクト比4:3の8インチで64ビットAtomで4GBメモリのやつ。Fonepadはsimが挿せたので便利だったんだけどwifiモデルしかないのが残念。</p>
+<p>まだそんなに使い込んでないけど、スペックはすごく上がったので快適にはなった（まえはdマガジンの雑誌を１つ開くのに5分くらいかかっていた）。デジタイザペン（Z Stylus）も買ってそれもスペックに合わせてよくなってるといいなと思ったけどこれは印象が変わるような変化はなかった（筆跡の追従性はかなりアプリによるのと、やっぱりペン先の位置やパームリジェクションの問題はさけられないみたい）。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gadget/">gadget</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201509/lucy" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -417,160 +576,9 @@
 
 
   
-    <article id="post-201508/oktober-fest-with-kumode" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/30/201508/oktober-fest-with-kumode/" class="article-date">
-  <time datetime="2015-08-29T15:00:00.000Z" itemprop="datePublished">Aug 30 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/30/201508/oktober-fest-with-kumode/">オクトーバーフェスト飲み会</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>去年に引き続きコミティア詣でに状況したクモデ氏主催のオクトーバーフェストでドイツビールを飲む会に参加した。話題は艦これやらスプラトゥーンやらダンジョン飯やらPNGグリッチやら。ビール飲むのものすごい久しぶりだったのでものすごい酔った。</p>
-<p>いま子供がマリオ＆ルイージRPG4を楽しんでプレイしている、と伝えたら <a href="https://twitter.com/babagiant" target="_blank" rel="external">@babagiant</a>さんがすごくうれしそうだったのが印象的だった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/workshop-collection" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/29/201508/workshop-collection/" class="article-date">
-  <time datetime="2015-08-28T15:00:00.000Z" itemprop="datePublished">Aug 29 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/29/201508/workshop-collection/">ワークショップコレクション</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://wsc.or.jp/" target="_blank" rel="external">ワークショップコレクション・こどものためのワークショップの博覧会</a></p>
-<p>土日に子供と行ってきた。サイト見たら2004年から毎年開催してるんだな。今年は東急の取り壊し予定のビル２棟を使ってかなり自由な感じで開催されていた。CETとかTrans Art Tokyoとか東京の東側ではときどきあるタイプのイベントだけど渋谷でここまで大規模なのは珍しい気がする。</p>
-<p>100以上のワークショップがあったらしく（実際はあんまりワークショップになってないものもあったけど）とても全体は見られなかったけど、子供がやってたのでいうとエッグランディングチャレンジ（生卵を天井から落としても割れないような対ショックケースを紙やストローで作ってその場で落として実験してみるワークショップ）は本人的にうまくできたらしくもう一度やってみたいと言っていた。ほかにも手作り、お絵かき系のワークショップにいくつか参加。</p>
-<p>HMDを装着してCGのモンスターと戦う<a href="http://wsc.or.jp/workshop/special/article/2618.html" target="_blank" rel="external">HADO</a>も体験してたんだけど、ハードが不調だったのかやりかたの問題だったのか、あんまりモンスターと戦ってるように見えなかったみたい。ああいう主観型のゲームだと実際にどう見えてるのか外から確認できないからこういうトラブルもありそうだな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kosodate/">kosodate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/workshop/">workshop</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/nineth-attend-to-dentist" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/28/201508/nineth-attend-to-dentist/" class="article-date">
-  <time datetime="2015-08-27T15:00:00.000Z" itemprop="datePublished">Aug 28 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/28/201508/nineth-attend-to-dentist/">歯医者（通院９回目）</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>今回はほぼ施術はなしで歯石除去くらいで済んで、まる２ヶ月通院した歯医者の治療がようやく終わった。今回そんな痛みで駆け込んだわけでもなく歯医者そのものもそんなにいやじゃないのでつらいわけではなかったけど、２ヶ月毎週時間をとられてたので開放感はあるなあ。年齢からすると歯周病のコンディションに意識的になるべきだとのことで歯間ブラシを買った。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/health/">health</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/56/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/">55</a><a class="page-number" href="/page/56/">56</a><span class="page-number current">57</span><a class="page-number" href="/page/58/">58</a><a class="page-number" href="/page/59/">59</a><span class="space">&hellip;</span><a class="page-number" href="/page/99/">99</a><a class="extend next" rel="next" href="/page/58/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/56/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/55/">55</a><a class="page-number" href="/page/56/">56</a><span class="page-number current">57</span><a class="page-number" href="/page/58/">58</a><a class="page-number" href="/page/59/">59</a><span class="space">&hellip;</span><a class="page-number" href="/page/100/">100</a><a class="extend next" rel="next" href="/page/58/">Next &raquo;</a>
     </nav>
   
 
