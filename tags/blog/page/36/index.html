@@ -56,6 +56,493 @@
     <div id="main">
       
   
+    <article id="post-201604/mismatch-of-minecraft-life" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/06/201604/mismatch-of-minecraft-life/" class="article-date">
+  <time datetime="2016-04-05T15:00:00.000Z" itemprop="datePublished">Apr 6 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/06/201604/mismatch-of-minecraft-life/">マイクラ生活の不一致</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://text-perforation.doppac.cc/2016/02/22/201602/minecraft/">家庭内マインクラフト事情</a>の続き。</p>
+<p>母子のマインクラフト生活は１ヶ月ほどつづがなく続いていたのだけど、先日の実家帰省を境にマイクラ生活の危機が訪れたらしい。帰省している間はとうぜんWiiUでは遊べないのでiPadに入れたマインクラフトPEをちょっと触らせてもらっていたそうなんだけど、そっちで初めてクリエイティブモードを遊んだら（WiiU版ではずっとサバイバルモードで遊んでいた）、息子は自分がやりたかったのはサバイバルモードの限られた材料をやりくりすることではなくて、無限の材料でゲーム世界に好きなものを作れるクリエイティブモードだということに気づいてしまったらしい。なので家に帰ってきてWiiU版でもクリエイティブモードにしたいと言いだした。</p>
+<p>でも奥さんはブロックでの建物作りではなく洞窟を掘り進めてレアな鉱石を探すゲームとしてマインクラフトを遊んでいるので、掘るまでもなくすべてのアイテムが揃っているクリエイティブモードは興ざめで、マイクラ熱は冷めてないけど息子ホストのクリエイティブモードのワールドに参加してもつまらないし、かといって一人でやるほどではない（それほどヒマでもない）…ということで、マイクラ生活の不一致というか、マイクラ観の相違によるマイクラチームの解散が起きてしまった。いまは子供が一人でWiiU版クリエイティブモードで遊んでいる。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/minecraft/">minecraft</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/realm-crash-on-physical-iphone-device" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/05/201604/realm-crash-on-physical-iphone-device/" class="article-date">
+  <time datetime="2016-04-04T15:00:00.000Z" itemprop="datePublished">Apr 5 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/05/201604/realm-crash-on-physical-iphone-device/">RealmがiPhone実機でだけクラッシュする（ことがあるらしい）</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>iOS開発が佳境で、そろそろ結合テストというタイミングのころ、iPhoneのいくつかの実機でだけアプリが起動直後にクラッシュするという現象が起きた。当該機種でもシミュレータでは再現しないし、手持ちの端末実機でも再現しない。しょうがないのでその機種を借りにいってその場で調べたら確かにクラッシュしてて、なにかと思ったらjsonファイルでバンドルしているマスタデータを初回起動時にまとめてインサートしてるとこで</p>
+<p>json.forEach { v in<br>    let master = Master()<br>    try relam.write {<br>        master.import(v)<br>    }<br>}</p>
+<p>的なコードで個別にトランザクションを張ってデータを入れてたら機種によっては（手持ちのiPhone5だと大丈夫でiPhone6だとだめだったりしたので、パフォーマンスの問題なのかも）クラッシュしてしまうらしかった。トランザクションをループの外で張るようにしたら大丈夫になった。ただあとでバグなら報告しようと思って後で戻して再度実行したらクラッシュしなくなってたのでなにか別の要因もあるのかも。</p>
+<p>Realm使い心地としてはかなり最高だし次のプロジェクトでも絶対導入したいけど、初期データを投入したDBファイルを作っておくみたいなことはしにくいのはなんとかならないかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realm/">realm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/why-are-vide-games-so-interesting" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/04/201604/why-are-vide-games-so-interesting/" class="article-date">
+  <time datetime="2016-04-03T15:00:00.000Z" itemprop="datePublished">Apr 4 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/04/201604/why-are-vide-games-so-interesting/">アスキー総研（編）『ゲームってなんでおもしろい？』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048996053/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/519hW03HgRL._SL160_.jpg" alt="ゲームってなんでおもしろい?" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048996053/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ゲームってなんでおもしろい?</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.04.08</div></div><div class="amazlet-detail"><br>KADOKAWA (2016-03-09)<br>売り上げランキング: 13,448<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048996053/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>「GAME ON」展の図録的な扱いの本なのでもっと資料価値重視の本かと思っていたけどわりと読み応えのある内容で、「ゲームってなんでおもしろい？」というより「ゲームをおもしろく感じることは人間にとってどういう意味をもつのか」というテーマに多角的にアプローチする本なんだなと思えておもしろかった。「GAME ON」の展示ではゲームの未来として象徴的に扱われていたのはPSVRだったけど、もうひとつの未来は「プレイヤーをおもしろくさせ続けるAIとしてのゲーム」なんだろうな。</p>
+<blockquote><p>ある人が『テトリス』の版権をとりに、ロシア（当時のソ連）に行き、テトリスの作者に「すごく面白いゲームだ」と言ったら怒られたそうなんです。「あれはゲームじゃない、科学なんだ」と。どういう科学かというと、人間はささいなギミックを連続的にあたえることで、いつまでも作業を続けることができる。そのことを実証するための実験だった。どれだけ単純作業を我慢できるのかという目的でテトリスが作られていた、という。</p>
+<footer><strong>『ゲームってなんでおもしろい？」 - 川上量生インタビュー</strong></footer></blockquote>
+<blockquote><p>似たようなところでは、ビットコインがありますが、あれは（ある種の）ゲームなんだけど、ちょっと違うんですよ。いまは発掘できませんが、努力すれば発掘できてゲーム臭くなかったのが良くて。”意味のない壁”がちょっと高めに設定されていて、ちょっと頑張れば超えられるのが、人類のハマるゲームだと思うんです。安易にハマるゲームほど、資本主義のサブセットみたいになっていて、それって現象として面白いなと思いますね。</p>
+<footer><strong>『ゲームってなんでおもしろい？」 - 落合陽一×真鍋大度 メディアアーティスト対談（落合陽一発言）</strong></footer></blockquote>
+<p>あ、あともう一つゲームの未来あって、本のなかで最新のゲームとして一番言及されているのが『ねこあつめ』だっていう。生かさず殺さず楽しませてくれるAIが猫の姿してるのがゲームの未来っぽい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/mogura-no-uta" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/03/201604/mogura-no-uta/" class="article-date">
+  <time datetime="2016-04-02T15:00:00.000Z" itemprop="datePublished">Apr 3 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/03/201604/mogura-no-uta/">三池崇史『土竜の唄 潜入捜査官REIJI』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00KXUJ2UQ/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61yOp3iL4lL._SL160_.jpg" alt="土竜の唄 潜入捜査官REIJI Blu-rayスタンダード・エディション" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00KXUJ2UQ/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">土竜の唄 潜入捜査官REIJI Blu-rayスタンダード・エディション</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.04.05</div></div><div class="amazlet-detail">東宝 (2014-09-24)<br>売り上げランキング: 13,905<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00KXUJ2UQ/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>正月に地上波で放映してたのの録画で。監督も脚本家もキャストもノリノリなのが伝わってくる最高な仕上がりの映画だったけど、これ1/8の夜9時とかから放映するのけっこう勇気あるな…</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/ui-graphics" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/02/201604/ui-graphics/" class="article-date">
+  <time datetime="2016-04-01T15:00:00.000Z" itemprop="datePublished">Apr 2 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/02/201604/ui-graphics/">水野 勝仁ほか『UI GRAPHICS ―世界の成功事例から学ぶ、スマホ以降のインターフェイスデザイン』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510063/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/416Q62nV4IL._SL160_.jpg" alt="UI GRAPHICS ―世界の成功事例から学ぶ、スマホ以降のインターフェイスデザイン" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510063/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">UI GRAPHICS ―世界の成功事例から学ぶ、スマホ以降のインターフェイスデザイン</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.04.05</div></div><div class="amazlet-detail">水野 勝仁 深津 貴之 渡邊 恵太 菅 俊一 緒方 壽人 iA 鹿野 護 森田 考陽 <br>ビー・エヌ・エヌ新社 (2015-12-17)<br>売り上げランキング: 16,171<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510063/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>BNNお得意のデザインスタイルブックに、スマートフォンの全世界的な普及とともにドラスティックな変化を遂げているインターフェイスデザインの潮流を思想面から補う論考が添えられた、フレッシュさが際立つかっこいい本だった。HOW TOじゃなくて、いままさに起きている変化を伝えようとしている、本というよりは雑誌の特集のような内容（雑誌『MASSAGE』の編集者庄野祐輔が編集されているからかな）。こういう本に中学とか高校生のころに触れるとやられてしまうんじゃないかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/">design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interface/">interface</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/chihayafuru-kami-no-ku" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/01/201604/chihayafuru-kami-no-ku/" class="article-date">
+  <time datetime="2016-03-31T15:00:00.000Z" itemprop="datePublished">Apr 1 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/01/201604/chihayafuru-kami-no-ku/">小泉徳宏『ちはやふる　上の句』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://chihayafuru-movie.com/%20" target="_blank" rel="external">映画『ちはやふる』公式サイト</a></p>
+<p>映画の日に観た。めずらしく原作漫画を（途中まで）読んでるしわりと評判も聞こえてくるので観てみようと思ったものの正直それほど期待していなかった（一番最近観た邦画が<a href="">『暗殺教室』</a>だったし）ぶん、若者チームスポーツもの映画としてかなり完成度の高い映画になってたので驚いた。これはいい。下の句もたのしみ。</p>
+<p>ガンガンに音圧の高いPerfumeの音楽は映画館で聞くとちょっとさめるなとも思った。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/ios8-crash-with-viewcontroller-init-without-nibname" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/" class="article-date">
+  <time datetime="2016-03-29T15:00:00.000Z" itemprop="datePublished">Mar 30 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/">nibnameなしでViewControllerをinitするとiOS8だけでクラッシュする</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>配信したアプリがログイン後に落ちたりスプラッシュで落ちたりする、という報告を受けて、自分のところでは起きていなかったのでなんだろうと思って調べたら、画面の初期化時に読み込んでいるカスタムViewControllerのinitが間違っていて、しかもそれでもiOS9は動くためだった。</p>
+<p>対応するnibを持つSubViewControllerを、</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController()<br>}</p>
+<p>と引数なしで生成すると、iOS9ではnibを探してロードしてくれるようで（ちゃんと調べてないけどそうなんだと思う）問題ないんだけど、iOS8は読み込まれないのでOutletのオブジェクトに触ろうとするとクラッシュする。</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController(nibname: “SubViewController”, bundle: nil)<br>}</p>
+<p>と正しく初期化すると問題ない。</p>
+<p><a href="http://stackoverflow.com/questions/34045998/addsubview-from-xib-ios-8-vs-ios-9" target="_blank" rel="external">swift - addSubview from xib - iOS 8 vs iOS 9 - Stack Overflow</a></p>
+<p>あと、</p>
+<p><a href="http://qiita.com/manji602/items/346226435594d36c2e9b" target="_blank" rel="external">iOS8系をサポートするなら、UILabelやUITextViewのフォントにHiraginoSansは使わないほうが良い - Qiita</a></p>
+<blockquote><ul>
+<li>Xcode7でiOS8系をサポートしたアプリを作成するときに、Interface Builder上(xibやstoryboard)で UILabel やUITextView のフォントに HiraginoSans を利用するViewControllerを作成すると、その画面ヘの遷移が遅くなる<ul>
+<li>体感では、1つの HiraginoSans フォントを利用したUIパーツを配置する毎に1秒弱ずつ遅くなる</li>
+<li>現象が発生するのはアプリ初回起動時のみ</li>
+</ul>
+</li>
+<li>これはフォントに依存する問題で、System FontやTimes New Romanなど他のフォントを利用すると再現しなかった</li>
+</ul>
+</blockquote>
+<p>こんな恐ろしい情報もあったので全部のUILabelのフォントを再設定した。  </p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/kyou-no-hi-ha-sayonara" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/29/201603/kyou-no-hi-ha-sayonara/" class="article-date">
+  <time datetime="2016-03-28T15:00:00.000Z" itemprop="datePublished">Mar 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/29/201603/kyou-no-hi-ha-sayonara/">一穂ミチ『きょうの日はさようなら』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4086800586/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51YpGOCjEML._SL160_.jpg" alt="きょうの日はさようなら (集英社オレンジ文庫)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4086800586/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">きょうの日はさようなら (集英社オレンジ文庫)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">一穂 ミチ <br>集英社 (2016-01-20)<br>売り上げランキング: 212,076<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4086800586/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>さやわかさんが<a href="https://twitter.com/someru/status/696829056415723520" target="_blank" rel="external">おすすめしていた</a>ので読んでみた。1995年の夏休み直前にとある事情で時が止められた女子高生が、30年後の2025年に「1995年の女子高生」として現れ、「リアルタイムの高校生」と不思議な夏休みをすごすことになる…という話。 あらすじから予想できるように95年当時の懐かしネタや現代とのギャップをひけらかすようなところから始まるんだけど、そこにとどまらない終盤の怒涛の展開があり、いびつなバランスがジュブナイルとしてぐっとくるという感じの作品だった。表紙イラストが宮崎夏次系さんなのは納得。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/generative-design" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/29/201603/generative-design/" class="article-date">
+  <time datetime="2016-03-28T15:00:00.000Z" itemprop="datePublished">Mar 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/29/201603/generative-design/">Hartmut Bohnacker / Benedikt Gross / Julia Laub『Generative Design ―Processingで切り拓く、デザインの新たな地平』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51JdWtC96TL._SL160_.jpg" alt="Generative Design ―Processingで切り拓く、デザインの新たな地平" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Generative Design ―Processingで切り拓く、デザインの新たな地平</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">Hartmut Bohnacker Benedikt Gross Julia Laub <br>ビー・エヌ・エヌ新社 (2016-02-25)<br>売り上げランキング: 31,699<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>そろそろ新学期も始まるので、授業の参考にと目を通した。もうなんというか、偉業としかいいようがないな。強いて言うと、重いので授業に持っていって学生に見せたりするのが困難。</p>
+<p>おもしろかったのが、「誤解を恐れずに言うと、この本のサンプルはプログラムを学ぶつもりがなくても活用することができます」みたいなことが明言されていて、つまりサンプルを実行させて操作したり、すこしパラメータやデータを変えてみるだけで十分すぎるほどのジェネラティブアートが生成できるので、ポスターグラフィックの素材くらいは作れるよという意味なんだろうけど、実際どのサンプルもそういうレベルなのがすごい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/processing/">processing</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201603/psvr-prevew-in-game-on" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -110,484 +597,9 @@
 
 
   
-    <article id="post-201603/no-country-for-old-men" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/27/201603/no-country-for-old-men/" class="article-date">
-  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/27/201603/no-country-for-old-men/">コーエン兄弟『ノーカントリー』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B001APXBUA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51AWagSwsFL._SL160_.jpg" alt="ノーカントリー スペシャル・コレクターズ・エディション [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B001APXBUA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ノーカントリー スペシャル・コレクターズ・エディション [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">パラマウント ホーム エンタテインメント ジャパン (2008-08-08)<br>売り上げランキング: 13,583<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B001APXBUA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>見逃してた世評の高い作品だけど、これはたしかにすごかった。全編にわたって緊張感が途切れなかった。</p>
-<p>かっこよさと気持ち悪さが同居して、かつ気持ち悪さが強いみたいなところがコーエン兄弟らしさかな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/the-boy-and-the-world" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/27/201603/the-boy-and-the-world/" class="article-date">
-  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/27/201603/the-boy-and-the-world/">アレ・アブレウ『父を探して』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://newdeer.net/sagashite/" target="_blank" rel="external">映画『父を探して』公式ホームページ</a></p>
-<p>突発的一人暮らしの週末にやっぱり大学生みたいにミニシアターで海外アニメを観た。『父を探して』、あんまり情報あつめないまま観に行ったんだけどとてもよかった。</p>
-<p>画用紙を思わせる白ベースの背景に、色鉛筆やクレヨンなどで生々しいタッチの残る描線による落書きのような線画のキャラクター。抑制された動きと鮮烈なレイアウト（これが特によかったと思う）。そして音楽。最低限の最良のものだけを使ってできるかぎり大きな円を描いた。というような気持ちのいい映画。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/hitori-gurashi" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/26/201603/hitori-gurashi/" class="article-date">
-  <time datetime="2016-03-25T15:00:00.000Z" itemprop="datePublished">Mar 26 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/26/201603/hitori-gurashi/">突発的一人暮らし</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>奥さんが春休みに入った子供たちを連れて実家に帰省することになったので突発的に一人で週末過ごすことになった。どのくらいぶりだろう、次男が生まれてからはあまり覚えがないので4年くらいかな。</p>
-<p>といって特に行くべきところもなかったのでものすごく久しぶりに秋葉原に行ってみた。行ったことがなかった<a href="http://www.beep-shop.com/" target="_blank" rel="external">BEEP</a>とか<a href="http://www.t-tax.net/natuge/" target="_blank" rel="external">ナツゲーミュージアム</a>でいくらかお金を落としてみたり意味もなく家電屋をうろついてみたり夜遅くまで本屋で立ち読みしたりした。大学生かという感じの行動パターンだったけど久しぶりだったのでかなり充実感あった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/spring-songs" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/25/201603/spring-songs/" class="article-date">
-  <time datetime="2016-03-24T15:00:00.000Z" itemprop="datePublished">Mar 25 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/25/201603/spring-songs/">春っぽい曲</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>この曲が春っぽくてよかった。</p>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/254406106&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-
-<p>春が近くなるとロマンティックな曲にたいするセンサーが敏感になるのかな。</p>
-<p>これもよかった。</p>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/254860203&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soundcloud/">soundcloud</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/flightplan" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/21/201603/flightplan/" class="article-date">
-  <time datetime="2016-03-20T15:00:00.000Z" itemprop="datePublished">Mar 21 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/21/201603/flightplan/">ロベルト・シュヴェンケ『フライトプラン』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000CS44YI/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/5105S2Y9W8L._SL160_.jpg" alt="フライトプラン [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000CS44YI/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">フライトプラン [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.23</div></div><div class="amazlet-detail">ブエナ・ビスタ・ホーム・エンターテイメント (2006-05-24)<br>売り上げランキング: 66,179<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000CS44YI/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>WOWOWの録画で観た。気を持たせるわりにそんなに予想を裏切らない脚本と、ケレン味のつよい演出と、ジョディ・フォスターのやり過ぎ感のあるサイコ演技が互いを引き立て合わないまま終わったという感じだった。いいとこなかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/ant-man" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/20/201603/ant-man/" class="article-date">
-  <time datetime="2016-03-19T15:00:00.000Z" itemprop="datePublished">Mar 20 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/20/201603/ant-man/">ペイトン・リード『アントマン』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017SJS86I/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51B9Eqi%2BkaL._SL160_.jpg" alt="アントマン MovieNEX [ブルーレイ+DVD+デジタルコピー(クラウド対応)+MovieNEXワールド] [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017SJS86I/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">アントマン MovieNEX [ブルーレイ+DVD+デジタルコピー(クラウド対応)+MovieNEXワールド] [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.23</div></div><div class="amazlet-detail">ウォルト・ディズニー・ジャパン株式会社 (2016-01-20)<br>売り上げランキング: 191<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017SJS86I/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>久しぶりにわりと新作iTunesストアでレンタルして観た。ほかのかっこいい系マーベル映画とは一線を画したブラックジョークの多いコメディになっていて（途中まで制作をエドガー・ライトが主導していたようで言わずもがなだけど）たいへんおもしろかった。マイケル・ペーニャが回想を語り始める下りのいかがわしさ満点の劇伴と回想内の登場人物がリップシンクしてるとことか最高だった。続編観たい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/construction-and-destruction-in-game-design" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/19/201603/construction-and-destruction-in-game-design/" class="article-date">
-  <time datetime="2016-03-18T15:00:00.000Z" itemprop="datePublished">Mar 19 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/19/201603/construction-and-destruction-in-game-design/">渡辺訓章『組み立て×分解! ゲームデザイン ――ゲームが変わる「ルール」のパワー』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774179442/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51uDszavcNL._SL160_.jpg" alt="組み立て×分解! ゲームデザイン ――ゲームが変わる「ルール」のパワー" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774179442/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">組み立て×分解! ゲームデザイン ――ゲームが変わる「ルール」のパワー</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.23</div></div><div class="amazlet-detail">渡辺 訓章 <br>技術評論社 <br>売り上げランキング: 11,826<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774179442/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>技術書っぽい内容なのかなと思って読み始めたんだけど、ものすごく変わった本だった。なんだろうこれは。</p>
-<p>タイトルの通りこれはゲームデザインについての本で、ゲーム開発者が試行錯誤しながらそのゲームに必要なルールを模索していく過程を詳細に解説したなかなか稀有な本になっていると思う。なんだけど、この本が想定している「ゲーム」ってちょっと特殊というか、一般的な「こういうゲームが作りたい」と考えて作るような、言ってしまえばイージーなものとはちょっと違うのではないか。</p>
-<p>本書の「はじめに」で、この本では既存のゲームの模倣や現実の出来事や行為の再現から出発しない、「抽象表現」としてのゲームを扱うことが宣言される。僕の理解だと、この本で目指されている「ゲーム」とは、人が楽しむ「道具」ではなく、限られたルールの自律によって成立した「環境」のようなもので、それはコンピュータゲームの、もっというとコンピュータそのものの特質と呼ぶべきものだ。昔からシミュレータ的性質の強いゲームを制作されてきた著者であるkuniこと渡辺訓章さんのコンピュータ観が反映された内容になっていて、その部分にとても共感する。</p>
-<p>第２章の</p>
-<blockquote><p>　ゲームを作る際の取っ掛かりについて考えると、「ルールはプレイヤーの行動と関連性が大きい」ため、そこからゲームを考え始めると、つい完成形まで思い浮かべてしまうことは避けられません。<br>　しかし、より細部のふるまいを作るアルゴリズムから考えるなら、当初は予想しなかった形にまで、完成形を持っていくことも可能でしょう。</p>
-</blockquote>
-<p>という一節が印象的で、「いや、ゲームを作ろうとしてるんだから完成形まで思い浮かべていいのでは」とつっこみを入れたくなったんだけど、おそらくここにはゲームとはそのように最初から最後まで決めて「作れる」ようなものではなく、プレイしながらルールをこねくりまわしているうちにいつしか「できる」ものなのだという、著者のゲーム制作者としての実感があるのだと思う。</p>
-<p>ただ、そうした著者のゲーム制作に関する実感や知恵の部分と、イージーなメソッドが求められる技術書フォーマットの本はそれほど取り合わせがよくなかったのかもしれない。抽象的すぎる内容を補う漫画風の挿絵も残念ながらあまり功を奏してないように見える。いっそ掛け合い漫談風のテキストになっていてもよかったのかな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/the-big-short-novel" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/18/201603/the-big-short-novel/" class="article-date">
-  <time datetime="2016-03-17T15:00:00.000Z" itemprop="datePublished">Mar 18 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/18/201603/the-big-short-novel/">マイケル・ルイス『世紀の空売り―世界経済の破綻に賭けた男たち』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4167651866/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/510eOe3PF5L._SL160_.jpg" alt="世紀の空売り―世界経済の破綻に賭けた男たち (文春文庫)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4167651866/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">世紀の空売り―世界経済の破綻に賭けた男たち (文春文庫)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.24</div></div><div class="amazlet-detail">マイケル・ルイス <br>文藝春秋 (2013-03-08)<br>売り上げランキング: 368<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4167651866/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>映画がおもしろかったので原作も読んだけどすごいおもしろかった。というかマイケル・ルイスがすごいのかな。映画では「とりあえずこれは詐欺」というレベルでしかわからなかったCDOやCDSの成り立ちがよりはっきりとわかり、映画の登場人物のモデルとなった実在の人物たち（や、映画では焦点が当てられなかった売り手サイドの人物たち）の描写もよかった。もう一度映画もしていろいろ確認したい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/fujihata-masaki-anachive6" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/15/201603/fujihata-masaki-anachive6/" class="article-date">
-  <time datetime="2016-03-14T15:00:00.000Z" itemprop="datePublished">Mar 15 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/15/201603/fujihata-masaki-anachive6/">『anarchive n°6 - Masaki Fujihata -』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.anarchive.net/fujihata/mf1_fr.htm" target="_blank" rel="external">anarchive n°6 - Masaki Fujihata - </a><br><a href="http://sayusha.com/catalog/books/p=%ef%bc%bb%e8%bc%b8%e5%85%a5%e8%b2%a9%e5%a3%b2%ef%bc%bd%e8%97%a4%e5%b9%a1%e6%ad%a3%e6%a8%b9%e5%85%a8%e4%bd%9c%e5%93%81%e9%9b%86masaki-fujihata-anarchive6" target="_blank" rel="external">［輸入販売］藤幡正樹全作品集MASAKI FUJIHATA Anarchive6 | 左右社 </a></p>
-<p>藤幡さんの作品集「Anachive No.6」が届いた。アーティストの全作品とその批評を本や映像メディアなどで多角的に収録した作品集を制作、発行するプロジェクト「Anachive」（anarchy + archiveの造語で「アナーシーブ」と読むらしい）のひとつとして3年ごしで制作されたものだそう。ICCやらいま個展をしている<a href="http://www2.kb2-unet.ocn.ne.jp/ask/2016/fujihata_masaki.html" target="_blank" rel="external">Ask?</a>で直販しているらしいけど、国内販売を委託されている左右社のサイトにあったので注文してみたらわりとすぐに届いた。</p>
-<p>作品集全体が3穴リングの分厚いバインダーになっていて、作品ごとのリーフレットや折り込みのシートを順序などを入れ替えつつ綴じて見られるという趣向。藤幡正樹文脈でいうと『脱着するリアリティー』の図録みたいな感じ、ということなのかな（脱リア図録は手にとって読んだことはないので想像）。モノとしてうれしい。そういえば2003年の<a href="http://visualogue.com/" target="_blank" rel="external">世界グラフィック会議名古屋</a>（作品集に収録されている藤幡さんの作品「パラレルリアリティ」も上演されてた）のガイドブックもこういう感じだった。</p>
-<p>藤幡さんは作品自体の魅力やコンセプトの力強さもさることながら、ご本人の文章におけるメディアとアートについての洞察と作品との対応関係にもほかの作家にない強さがあるので、この作品集はほんとうに幸せなかたちでまとまっていると思う。読んでいろいろ考えたけど「Beyond Pages」の自作解説で触れられている「インプットとアウトプットの間の詩的な関係性」というものは、僕がインタラクティブな作品にもとめているものの核心に近いなと思った。</p>
-<p>あとこの作品集にはiOSアプリを通してみるとARコンテンツが見られるという仕組みもあるんだけど、当のアプリがリジェクトを食らってまだリリースされていないということなのでリリースされたらアプリも含めてあらためて再読することにした。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mediaart/">mediaart</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/blog/page/35/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/34/">34</a><a class="page-number" href="/tags/blog/page/35/">35</a><span class="page-number current">36</span><a class="page-number" href="/tags/blog/page/37/">37</a><a class="page-number" href="/tags/blog/page/38/">38</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/68/">68</a><a class="extend next" rel="next" href="/tags/blog/page/37/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/tags/blog/page/35/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/34/">34</a><a class="page-number" href="/tags/blog/page/35/">35</a><span class="page-number current">36</span><a class="page-number" href="/tags/blog/page/37/">37</a><a class="page-number" href="/tags/blog/page/38/">38</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/69/">69</a><a class="extend next" rel="next" href="/tags/blog/page/37/">Next &raquo;</a>
     </nav>
   
 

@@ -56,6 +56,480 @@
     <div id="main">
       
   
+    <article id="post-201607/firacode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/28/201607/firacode/" class="article-date">
+  <time datetime="2016-07-28T01:41:00.000Z" itemprop="datePublished">Jul 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/28/201607/firacode/">FiraCode</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/201607/firacode.png">
+<p><a href="https://github.com/tonsky/FiraCode" target="_blank" rel="external">tonsky/FiraCode: Monospaced font with programming ligatures</a></p>
+<p>「FiraCode」というプログラミング言語の表示を最適化するフォントが開発されてるのを知ったので使ってみている。どういうふうに最適化するかというと、基本はモノスペースなんだけど、プログラミング言語に特徴的な記号の並び（「!=」とか「::」とか「=>」とかいった）に対する合字やマージン調整が定義されていて、プログラミング言語における意味に即した文字の並びが実現されているという。ただ一般的にプログラミングに使うエディタでは合字処理が必要とされないので対応しているエディタでないと使用できないみたい。IntellijのIDEの最新版ではちょうど正式サポートされたようで、フォント設定で<code>Enable Font Ligatures</code>をEnableにすることで使用できる。</p>
+<p>最初はちょっと違和感があった（とくに記号をバックスペースで削除するときの動きとかに）けどすぐ慣れたし、快適に感じてきた。目立つ演算子の合字もいいんだけど、「::」「..」「//」のようなデリミタ的な連続記号のスペーシングが適切になるのが気持ちいい。このフォント使って区切りのスペースを最低限にするといいかもしれないな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/niconiko-comment-simulation" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/28/201607/niconiko-comment-simulation/" class="article-date">
+  <time datetime="2016-07-27T15:00:00.000Z" itemprop="datePublished">Jul 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/28/201607/niconiko-comment-simulation/">ニコニコ動画のコメントを再現する動画をつくる</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>奥さんが通っている映画学校の課題でニコ生がモチーフの映画を撮っているのだそうで、撮影した実写素材にニコ動風のコメントを流したいんだけど…という話をしていたのでそういうソリューションがあるのかちょっと調べた（AEでコメントを全部動かすつもりだったみたいけど、それは大変なので）。</p>
+<p>ニコ動風コメントをPCやブラウザ上で再現するツールはいろいろあるみたいだけど、Macで動画保存（あとで撮影素材と合成するのでグリーンバックにコメントだけ流れる動画ファイル作れるのが望ましい）のことを考えると「<a href="https://rot1024.github.io/jikkyo/" target="_blank" rel="external">jikkyo - ニコニコ風実況アプリ</a>」がよさそうだった。nw.jsで作られたユニバーサルアプリで、本来は透明ウインドウに流れる保存されたコメントを別アプリで流している動画に重ねて鑑賞する目的のアプリなんだけど、背景色を任意で変えられるのであとで抜く色にしておいてQuickTimeの画面収録機能とかでキャプチャすれば合成用コメント動画が作れた。</p>
+<p>ニコ動のコメントデータ構造というのも知らなかったんだけど、</p>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><packet><br>    <thread last_res="xxxx" resultcode="0" revision="2" server_time="xxxxxx" thread="111111" ticket="xxxx"><br>    <view_counter id="smXXXXXX" mylist="xxxx" video="xxxxx"><br>    <chat anonymity="1" date="1202708675" mail="184" no="9661" thread="111111" user_id="xxx" vpos="0">こんなかんじ</chat><br>    …</view_counter></thread></packet></p>
+<p>みたいな感じになって、chatタグのvposに動画先頭からのコメント出現位置（1/100秒単位）を指定してやればよいみたい。あと<code>mail</code>というプロパティがなぜかコメントの修飾コマンドになっているらしく（歴史的経緯がありそう）、<code>mail=&quot; ue red&quot;</code>みたいに書いてやれば色付きコメントができるっぽい。コマンドについては「<a href="http://www59.atwiki.jp/nicoapi/pages/20.html" target="_blank" rel="external">ニコニコAPIリストwiki - ニコ生コメント</a>」とかにくわしく書いてあった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/violent-cop" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/27/201607/violent-cop/" class="article-date">
+  <time datetime="2016-07-26T15:00:00.000Z" itemprop="datePublished">Jul 27 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/27/201607/violent-cop/">北野武『その男、凶暴につき』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000UMP1FC/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51voyxGo6oL._SL160_.jpg" alt="その男、凶暴につき [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000UMP1FC/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">その男、凶暴につき [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.29</div></div><div class="amazlet-detail">バンダイビジュアル (2007-10-26)<br>売り上げランキング: 27,723<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000UMP1FC/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>北野武映画もうひとつ観た。これも10年以上ぶりだけど、いま観ると韓国映画っぽく見えるなーというのが発見だった。</p>
+<p>あとこのころのたけしはやっぱり江渡さんに似てるな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/sentan-prog2016-last-study" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/27/201607/sentan-prog2016-last-study/" class="article-date">
+  <time datetime="2016-07-26T15:00:00.000Z" itemprop="datePublished">Jul 27 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/27/201607/sentan-prog2016-last-study/">授業終了</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>最終課題の発表、講評が終わって今年度の授業が終了した。今年は例年にくらべて履修途中で脱落する学生が（比較的）少なく進行していたんだけど、最終課題についてはやりきれた感じのものが少なかったかな。だいたい学期末には他の授業でも集大成的な課題が出されるので、作業として彼（女）らの手に馴染んているとは言い難い段階のプログラミングの最終課題は後回しになりがちなのかなと思ったりする（まあ自分が学生のときの課題提出のことを思い出してみればえらそうなことはいえない）。期末より前のタイミングに大きな課題が出せるといいのかなと思って前から思案しているんだけど、プログラムについてのレクチャーが終わっていないと大きな課題も出せないというジレンマもあり、うまい形が出せていない。</p>
+<p>あと授業の情報共有ツールとしてslackを使っていた件だけど、けっこううまくいった部分もあるけど、ストック情報を作ったり集めたりすることがどうしてもまだるっこしいやり方（受講生に自分用のチャットルームを作ってもらい、そのルームにPage機能で課題のプログラムを書き込んで提出してもらったりした）でしかできず一覧性も参照性もよくないので、来年もこれでやるかというとかなり微妙な感じ。よかったのはコミュニケーションが圧倒的にフランクで楽しげになること。プログラムで制作した画像やGIFアニメをslackに投稿したり、作業経過のスクリーンショットを共有するのは受講生間のモチベーションキープにもかなり効果があるような気がしたのでこういうのは今後もやるといいなと思う。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sentan-prog2016/">sentan-prog2016</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/birigal" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/25/201607/birigal/" class="article-date">
+  <time datetime="2016-07-24T15:00:00.000Z" itemprop="datePublished">Jul 25 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/25/201607/birigal/">土井裕泰『映画 ビリギャル』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B013FZN7UG/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51w2JJC9LkL._SL160_.jpg" alt="映画 ビリギャル Blu-ray プレミアム・エディション" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B013FZN7UG/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">映画 ビリギャル Blu-ray プレミアム・エディション</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.28</div></div><div class="amazlet-detail">東宝 (2015-11-18)<br>売り上げランキング: 3,892<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B013FZN7UG/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>「映画 ビリギャル」が映画の正式タイトルらしい。英語タイトルは「fliyng colors」となっていて「with flying colors」で勝利とか合格を意味するイディオムなんですな。</p>
+<p>映画のほうはものすごく戯画化された設定のなか着実な努力で本来のドラマを引き出すというまさに原作の成功譚のような映画になっていて予想よりずっと楽しめた。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/the-phone" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/24/201607/the-phone/" class="article-date">
+  <time datetime="2016-07-23T15:00:00.000Z" itemprop="datePublished">Jul 24 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/24/201607/the-phone/">キム・ボンジョ『妻は二度殺される』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.wowow.co.jp/pg_info/detail/108246/index.php" target="_blank" rel="external">妻は二度殺される｜映画｜WOWOWオンライン</a></p>
+<p>WOWOWのジャパンプレミア（日本未公開作のプレミア放映）でやってた2015年の韓国映画。殺された妻との事件直前の電話がちょうど１年後の同時刻にかかってくる、というフィクショナルな仕掛けのあるサスペンスで、携帯電話を通じて映画内の現在（2015年）と2014年の事件の進行が擬似同期しているような展開（犯人も２つの時空でそれぞれ動く）になっているのが意外にいままで観たことない感じでよかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/a-treasury-of-written-characters" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/23/201607/a-treasury-of-written-characters/" class="article-date">
+  <time datetime="2016-07-22T15:00:00.000Z" itemprop="datePublished">Jul 23 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/23/201607/a-treasury-of-written-characters/">LIXILギャラリー『文字の博覧会 -旅して集めた“みんぱく”中西コレクション-展』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www1.lixil.co.jp/gallery/exhibition/detail/d_003419.html" target="_blank" rel="external">LIXIL｜企業情報｜文化活動｜LIXILギャラリー｜巡回企画展｜文字の博覧会 -旅して集めた“みんぱく”中西コレクション-展A Treasury of Written Characters</a></p>
+<p>もう一回『シングストリート』観たいなと思ってヒューマントラスト有楽町に行ってみたら観ようと思っていた回は早々に満員で入れなかったため、ひさしぶりにLIXILギャラリーに行ってやってた企画展『文字の博覧会』を観てきた。</p>
+<p>中西亮氏が印刷会社の社長のかたわらライフワークとして収集した世界の古代文字が書かれた粘土板や貝葉、写本などのコレクション（没後日本民族博物館に寄贈された）に関する企画展。自分が解せず見覚えもないような文字が活字でびっしり打たれた印刷物を見るときの圧倒される、もしくは恐怖する感じは独特の感覚で嫌いではないんだけど（今回の展示だとエスキモー文字の新聞にはそれを感じた）、手書きの文字はそれが古代の未知のものであったとしてもそれが自分と同じタイプの人間の手によって書かれている、という安心感があってわりとずっと見ていられるなと思った。こういうのは本や写真と実物とでは受ける印象がだいぶ違う。</p>
+<p>あと中西さんの手書きの旅行記が展示されていたんだけど、なんというか初々しさのある字（ゆっくり息をとめて描かれたようなもので、時間もかかっただろうと思われた）や作り込みの旅行記になっていて、学生時代とかなのかなと思いきや年代で計算してみると50代とかだったりして背筋を正される思いがした。</p>
+<p>図録も買ったけど安定のLIXIL(INAX)ギャラリークオリティ。</p>
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/486480513X/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61Y8tfAeoKL._SL160_.jpg" alt="文字の博覧会―旅して集めた" みんぱく"中西コレクション="" (lixil="" booklet)"="" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/486480513X/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">文字の博覧会―旅して集めた”みんぱく”中西コレクション (LIXIL BOOKLET)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.25</div></div><div class="amazlet-detail">西尾哲夫 臼田捷治 浅葉克己 永原康史 八杉佳穂 <br>LIXIL出版 <br>売り上げランキング: 150,425<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/486480513X/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/epub-press-chrome-extension" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/22/201607/epub-press-chrome-extension/" class="article-date">
+  <time datetime="2016-07-22T01:33:00.000Z" itemprop="datePublished">Jul 22 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/22/201607/epub-press-chrome-extension/">EpubPressでEPUBを作ってPlayBooksで読む</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://epub.press/" target="_blank" rel="external">EpubPress - Create ebooks from your favorite webpages</a></p>
+<p><a href="http://forest.watch.impress.co.jp/docs/review/1008708.html" target="_blank" rel="external">【レビュー】開いているタブをまとめてEPUB化できるGoogle Chrome拡張機能「EpubPress」 - 窓の杜</a></p>
+<p>タブに開いているWebページのコンテンツを抽出してEPUBファイルを作れる「EpubPress」というChrome拡張があるのを知って、ちょっと使ってみた。じつは前々からWebページのファイル書き出しオプションとしてEPUBがほしいと思っていたのだった。</p>
+<p>おそらく本文抽出したhtmlと画像をスタンダードなCSSといっしょにzipで固めているだけで大したことはしていないんだと思うけど、いくつか試してみた限りだとちゃんと読める（画像などもちゃんと挿入された）EPUBがダウンロードされて電子書籍アプリで読める（EPUBの代わりにmobiを出力してKindleのメアドに直接送信する機能もあるようだけどそっちは試してない）。</p>
+<p>Kinoppyはリーダーに本の開き方向（縦組/横組）変更機能があるので縦書で読めるかなと思ったけどサイドロードしたEPUBだとそのUIが出ないので縦書にはできないっぽい。あとたまたま試したWebページが「<a href="http://ekrits.jp/2016/07/2076/%20" target="_blank" rel="external">絵文字😹😸🙀は空白をつくり、感情🔥を区切る | ÉKRITS / エクリ</a>」だったので絵文字が出なくて残念みたいな問題も発生していた。他のリーダーだとどうかなと思って普段は使ってないGoogle Play Booksを試してみたら、絵文字も表示されていい感じだった（レンダリングにChromeをそのまま使ってるのかな）。</p>
+<img src="/images/201607/epubpress.png" width="250">
+<p>EPUBにしてリーダーで読めば長文記事も集中して（オフラインでも）読めるよというというのがツールの趣旨だと思うけど、電子書籍リーダーだと読み上げ機能が使えるのもなかなかよいと思った。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selfpublising/">selfpublising</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201607/re-viewing-outrage" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/07/20/201607/re-viewing-outrage/" class="article-date">
+  <time datetime="2016-07-19T15:00:00.000Z" itemprop="datePublished">Jul 20 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/07/20/201607/re-viewing-outrage/">北野武『アウトレイジ』を再視聴した</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B003ZSH2PA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/515FBO%2BdCnL._SL160_.jpg" alt="アウトレイジ [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B003ZSH2PA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">アウトレイジ [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.28</div></div><div class="amazlet-detail">バンダイビジュアル (2010-12-03)<br>売り上げランキング: 9,677<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B003ZSH2PA/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>WOWOWを再契約して集中的に映画を録画しているので、棚卸し的に溜まっていた録画を観ている。アウトレイジは劇場公開時に一度観ていただけだったと思うけど再見してみると感触とか生理的な感覚に訴える部分が大きい映画だなと思った。痛そうとかだけじゃなくて、たけしが革靴で銭湯に突入するあのシーンにある生理的な違和感などは他の映画では味わえないものがある。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201607/research-of-nihon-kaigi" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -109,558 +583,9 @@
 
 
   
-    <article id="post-201607/boyhood" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/17/201607/boyhood/" class="article-date">
-  <time datetime="2016-07-16T15:00:00.000Z" itemprop="datePublished">Jul 17 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/17/201607/boyhood/">リチャード・リンクレーター『6才のボクが、大人になるまで。』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00RGDPCAM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61B9f8fL72L._SL160_.jpg" alt="6才のボクが、大人になるまで。 ブルーレイ+DVDセット [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00RGDPCAM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">6才のボクが、大人になるまで。 ブルーレイ+DVDセット [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.20</div></div><div class="amazlet-detail">NBCユニバーサル・エンターテイメントジャパン (2015-08-05)<br>売り上げランキング: 36,121<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00RGDPCAM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>12年間にわたり断続的に撮影されたというある少年とその家族の物語。通常の劇映画の役作りとしてではなく、映された人物が実際に成長しているのをフィルムのつながりの中で目撃するのって独特のものがあって面白かった。</p>
-<p>ここのところアメリカの家族を扱った映画をいくつも観てるけど離婚やシングルマザーの環境、あと車の扱われ方とかがアメリカの家族の物語とは切り離せないものなんだな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/genron-niconico-kaigi-beta" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/16/201607/genron-niconico-kaigi-beta/" class="article-date">
-  <time datetime="2016-07-15T15:00:00.000Z" itemprop="datePublished">Jul 16 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/16/201607/genron-niconico-kaigi-beta/">ゲンロンカフェ『江渡浩一郎 × くとの × 東浩紀 学問とニコニコの交差点 ──『ニコニコ学会βのつくりかた』刊行記念イベント』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="%20http://genron-cafe.jp/event/20160716/">学問とニコニコの交差点 | ゲンロンカフェ</a></p>
-<p>会場行きたかったんだけど（参加者少なかったようだし）、土曜日だったので子供を寝かせながらニコ生で聴いた。それにしてもニコニコ動画/生放送のアプリはいらいらするな。他のすべてに目をつぶるから視聴履歴をちゃんと残してほしい。</p>
-<p>盛り上げようと（？）硬軟するどくつっこむ東さんと、その東さんのコメントに「いい質問ですね」「めっちゃおもしろいですね」と言いつつめっちゃ冷静な感じの江渡さん、という二人だけだとけっこう息の詰まるやり取りになりそうなところ、異性装や口調や問題意識など総合的にいい意味で「研究室にいる元気のいい学生」ぽい（実際には僕と同じくらいの年齢だそうなので学生という立場でもないんだと思いますが）くとのさんが混ざることで適度なかたさのいいイベントになってたと思った。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/genron-cafe/">genron-cafe</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/outline-processing-nyumon" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/14/201607/outline-processing-nyumon/" class="article-date">
-  <time datetime="2016-07-13T15:00:00.000Z" itemprop="datePublished">Jul 14 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/14/201607/outline-processing-nyumon/">Tak.『アウトライン・プロセッシング入門: アウトライナーで文章を書き、考える技術』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/41WikKyn%2BuL._SL160_.jpg" alt="アウトライン・プロセッシング入門: アウトライナーで文章を書き、考える技術" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">アウトライン・プロセッシング入門: アウトライナーで文章を書き、考える技術</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.29</div></div><div class="amazlet-detail"> (2015-05-07)<br>売り上げランキング: 806<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00XCIETIG/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>アウトライナーについてのブログを書いているTak.さんについては以前から目に触れていてサイトにまとまっている記事（「<a href="http://www012.upp.so-net.ne.jp/renjitalk/outliners/index.html" target="_blank" rel="external">Happy Outlining!</a>」）は読んでいたので本はいいかなと思っていたんだけど、増補版の本（<a href="https://www.amazon.co.jp/dp/4774182850" target="_blank" rel="external">『アウトライナー実践入門 〜「書く・考える・生活する」創造的アウトライン・プロセッシングの技術〜』</a>）が出たというのでじゃあ買ってみようかなと思ったところ、とりあえず前のKindle版にしよう（やすいし）と思って読んだ。</p>
-<p>内容的にはそうだよねと思いつつさっと読み終えたけど、ボトムアップのアウトラインプロセッシング（短時間集中して頭にあることをひとまず書き出し（フリーライティング）、書き出されたテキストを眺めて構造やテーマをあぶり出すという順序でアウトラインを構成する方法）ってあんまりうまくできたことがないなと改めて思ったので今度意識的にやってみよう。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/sing-street" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/13/201607/sing-street/" class="article-date">
-  <time datetime="2016-07-12T15:00:00.000Z" itemprop="datePublished">Jul 13 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/13/201607/sing-street/">ジョン・カーニー『シング・ストリート 未来へのうた』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://gaga.ne.jp/singstreet/%20" target="_blank" rel="external">映画『シング・ストリート 未来へのうた』公式サイト</a></p>
-<p>シネクイントはまえの『エクス・マキナ』で見納めかなと思ってたけどこれも観にきた。素晴らしかったな。音楽で青春を結晶させるタイプの映画のなかでも最高峰だと思う。あの曲作りのシーンの高揚感。</p>
-<p>家族の、とくに兄弟の映画でもあって年かさのお兄さんの役どころにもぐっと来すぎた。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/kuuki-koudan-double" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/11/201607/kuuki-koudan-double/" class="article-date">
-  <time datetime="2016-07-10T15:00:00.000Z" itemprop="datePublished">Jul 11 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/11/201607/kuuki-koudan-double/">空気公団『ダブル』</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://ototoy.jp/_/default/p/63418" target="_blank" rel="external">空気公団 / ダブル - OTOTOY</a></p>
-<p>久しぶりに音楽買った（OTOTOYで）。空気公団しばらく買ってなかったんだど今回のはポップな感じでよかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/elephant-song" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/10/201607/elephant-song/" class="article-date">
-  <time datetime="2016-07-09T15:00:00.000Z" itemprop="datePublished">Jul 10 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/10/201607/elephant-song/">シャルル・ビナメ『エレファント・ソング』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B014R1EF94/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/511ts3KggSL._SL160_.jpg" alt="エレファント・ソング [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B014R1EF94/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">エレファント・ソング [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.14</div></div><div class="amazlet-detail">TCエンタテインメント (2015-12-02)<br>売り上げランキング: 29,668<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B014R1EF94/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>『MOMMY/マミー』監督のグザヴィエ・ドラン主演作というので観たやつ。たしかに役者としても才気ばしっていてすごいなと思ったけどこの映画自体は話も話法も盛り込みすぎという感じでなかなかつらかった（眠かっただけかも）。</p>
-<p>あと最後の幕切れの原因（ネタバレだけどアレルギー反応が関係する）があんまり見ないものでちょっとなにそれと思った。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/drive" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/09/201607/drive/" class="article-date">
-  <time datetime="2016-07-08T15:00:00.000Z" itemprop="datePublished">Jul 9 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/09/201607/drive/">ニコラス・ウインディング・レフン『ドライヴ』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B008KX1TWM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51WZxHlC8dL._SL160_.jpg" alt="ドライヴ [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B008KX1TWM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ドライヴ [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.12</div></div><div class="amazlet-detail">バップ (2012-09-19)<br>売り上げランキング: 13,112<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B008KX1TWM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>まえにiTunesレンタルで借りてみかけてたんだけど、そのときは子供が起きたかなんかで最後まで観れてなかったやつ。ただ、見逃してた後半は作品として失速してた印象だった。ライアン・ゴズリング演じる主人公の前半でのあの異常な寡黙さを後半も保ってほしかった感じ。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/switch-kikikirin" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/07/201607/switch-kikikirin/" class="article-date">
-  <time datetime="2016-07-06T15:00:00.000Z" itemprop="datePublished">Jul 7 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/07/201607/switch-kikikirin/">『SWITCH Vol.34 No.6 樹木希林といっしょ。』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4884184815/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51nhfYrV6%2BL._SL160_.jpg" alt="SWITCH Vol.34 No.6 樹木希林といっしょ。" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4884184815/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">SWITCH Vol.34 No.6 樹木希林といっしょ。</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.07.14</div></div><div class="amazlet-detail"><br>スイッチパブリッシング (2016-05-20)<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4884184815/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p><a href="http://www.excite.co.jp/News/reviewmov/20160527/E1464280383484.html" target="_blank" rel="external">よねみつさんのレビュー</a>を見て読んでみたんだけど、たしかにこれおもしろかった。役者が体術としての演技のディテールをここまで語っているものって読んだことがなかった気がする。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201607/soundcloud-2016-first-half-best-8tracks" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/07/06/201607/soundcloud-2016-first-half-best-8tracks/" class="article-date">
-  <time datetime="2016-07-05T15:00:00.000Z" itemprop="datePublished">Jul 6 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/07/06/201607/soundcloud-2016-first-half-best-8tracks/">Soundcloud 2016 first half best 8tracks</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>最近音楽はほぼSoundcloudでしか聴いていなくて、followを増やしたらトラックがどんどん上がってくるので順番に聴いていくだけであっぷあっぷ。ちょうど2016年も上半期が終わったことだし上半期聴いた曲でよかったのを選出してみようかなと思い、likeした曲を遡って公開も半年以内のものを集めてみたら300曲くらいあった。mixとか長いやつを除き、あらためて聴き直していいなと思うのをさらってもまだ100曲くらい…　もともと8tracksにならってベスト8曲にしようかと思ってたんだけどとてもとても選べないのでボーカルインスト8曲づつをえいやで並べた。Soundcloudのプレイリストって曲順は変えられないのね。</p>
-<p>で、Soundcloudの恐ろしいところは流れてきたものを聴いてlikeしてるだけでアーティストが有名か無名かどこのどういう人かとかいった情報に触れない（し、ので、せっかく選んだ作品についてはちょっと調べてみようかと。</p>
-<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/238765333&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-
-<ul>
-<li><p><a href="https://soundcloud.com/kelotti/robotic-girl?in=doppac/sets/2016_first_half_8tracks_vocal%0A" target="_blank" rel="external">Yunomi - ロボティックガール (feat. Nicamoq) Kelotti Remix by Kelotti</a></p>
-<ul>
-<li>Yunomiさん（札幌のプロデューサーとのこと）の『ロボティックガール』のリミックスはいっぱい流れてきたけどいちばん好きだったやつ。Kelottiさんは高校生で2012年からDTMをしてる（てことは中学とかで始めた感じなんだろうか）人みたい。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/pinkfeathers/ghosts-bahner-cheerleader-remix?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">Ghosts (Bahner Cheerleader Remix) by Pink Feathers</a></p>
-<ul>
-<li>Pink FeathersはポートランドのLiz Anjosさん（ランナーらしい）のプロジェクトなのかな？　リミックスしてるBahner Cheerleaderさんは色んな曲のリミックスをしてる人みたい。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/dzzmusic/the-voice-in-the-forest-nest-hq-premiere/s-VPUqf?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">The Voice In The Forest NEST HQ PREMIERE by DZZ</a></p>
-<ul>
-<li>DZZさんはなんとなく有名なひとなのかな。USのひとか。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/trekkie-trax/chelmico-love-is-over-prod-mikeneko-homeless/s-VPUqf?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">chelmico - Love is Over (Prod. Mikeneko Homeless) by TREKKIE TRAX</a></p>
-<ul>
-<li>chelmicoは「チェルミコ」と読むラップユニットだそう。三毛猫ホームレスはマルチネレコーズとかでも出してるかたですね。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/matzo/mat-zo-the-enemy-feat-sinead-egan/s-VPUqf?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">The Enemy (feat. Sinead Egan) by Mat Zo</a></p>
-<ul>
-<li>Mat ZoはイギリスのDJ/プロデューサーか。Sinead Eganは情報あんまない。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/thewrld/lights-slow-down-wrld/s-VPUqf?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">LIGHTS // Slow Down (WRLD Remix) by WRLD</a></p>
-<ul>
-<li>WRLDは前も調べたけど18歳のUSのプロデューサーっぽい。他の曲もいいんだけどこのLIGHTS「Slow Down」のリミックスがいちばん好きだった。LIGHTSの元曲はもっと遅い曲でびっくり。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/billain/billain-mc-d2-runshin-gia/s-GKFR9?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">BILLAIN &amp; MC D2 - RUNSHIN GIA by Billain</a></p>
-<ul>
-<li>女性ボーカルの曲のわりとソフトな曲ばっかりなのでハードな曲もまぜたやつ。こういうのDRUM’N BASE MCっていうのか。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/sssshawnnnn/22-shawn-wasabi-bootleg?in=doppac/sets/2016_first_half_8tracks_vocal" target="_blank" rel="external">22 (shawn wasabi bootleg) by Shawn Wasabi</a></p>
-<ul>
-<li>Shawn Wasabiさんもわりとネット的にゆうめいな気がする。元曲はテイラー・スウィフトなのね（知らなかった…）</li>
-</ul>
-</li>
-</ul>
-<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/238765413&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-
-<ul>
-<li><p><a href="https://soundcloud.com/fatimayamaha/fatima-yamaha-whats-a-girl-to-do?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">Fatima Yamaha - What’s A Girl To Do by Fatima Yamaha</a></p>
-<ul>
-<li>Fatima Yamahaはオランダのユニットなのかな。「What’s A Girl To Do」自体はぜんぜん古い曲(2004年）らしい。昔っぽいのが好きなだけかもしれない。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/gregdebicki/robot-love-filament-woulg-remix?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">Robot Love - Filament (Woulg Remix) by woulg</a></p>
-<ul>
-<li>woulg(Greg Debicki)さんはカナダのトラックメーカーみたいですね。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/rechip1987/fcvrc6etrian-odyssey-iii-battle1?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">世界樹の迷宮Ⅲ - 戦場 初陣 FC+VRC6アレンジEtrian Odyssey iii Battle1 by hydden(ハイデン)</a></p>
-<ul>
-<li>元曲知らないけど古代祐三さんなんですかね。hyddenさんは横浜のweb開発者で趣味でFC音源のアレンジをつくってる人。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/monstercat/nitro-fun-hyper-potions-checkpoint?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">Nitro Fun &amp; Hyper Potions - Checkpoint by Monstercat</a></p>
-<ul>
-<li>これはゲームのサントラなのかと思ったら違った（ジャケがそれぽいだけなのか）。でもNitro FunもHyper Potionsもゲームミュージックっぽい曲をつくるトラックメイカーみたい。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/akaobi/rf-squeak-show?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">RF Squeak Show by akaobi</a></p>
-<ul>
-<li>akaobiさんは日本でチップチューンに関する翻訳や論考発表をされているかたですね。SoundcloudにはiOS版のnanoloopのサンプル的な曲をアップされていてどれもすごく好き。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/nyankobrq/nyankobrq-little-devil?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">nyankobrq - Little Devil by nyankobrq</a></p>
-<ul>
-<li>こういうのがFuture Base？　nyankobrqさんも18歳のトラックメーカーっぽい。</li>
-</ul>
-</li>
-<li><p><a href="https://soundcloud.com/platform/bicep-hammer-aracari-boiler-room-debuts?in=doppac/sets/2016_first_half_8tracks_inst" target="_blank" rel="external">Bicep &amp; Hammer “ARACARI” - Boiler Room Debuts by BOILER ROOM</a></p>
-<ul>
-<li>BOILER ROOMはDOMMUNEみたいな音楽ストリームメディアなんですな。UKあたりのクラブかと思ってた。Bicep And HammerはUKのユニットかな？</li>
-</ul>
-</li>
-</ul>
-<p>選びきれなかった<a href="https://soundcloud.com/doppac/sets/2016_first_half_other" target="_blank" rel="external">のこりのベスト29曲はこれ</a>。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soundcloud/">soundcloud</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/29/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/100/">100</a><a class="extend next" rel="next" href="/page/31/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/29/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/101/">101</a><a class="extend next" rel="next" href="/page/31/">Next &raquo;</a>
     </nav>
   
 
