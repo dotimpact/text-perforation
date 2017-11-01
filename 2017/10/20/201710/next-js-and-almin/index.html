@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Almin on Next.js | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="いまつくってる新しいアプリで、せっかくなので新しいフレームワーク使おうとAlminとNext.jsを使っている。 最初のころNext.jsのクライアントレンダリングとサーバサイドレンダリングの違いの意味がよくわかってなくて、Alminとどう連携させればいいのか試行錯誤が続いたんだけど、ようやくこうすればいいというのがわかった。 12345678910111213141516171819202122">
+<meta name="keywords" content="blog,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Almin on Next.js">
+<meta property="og:url" content="http://text-perforation.doppac.cc/2017/10/20/201710/next-js-and-almin/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta property="og:description" content="いまつくってる新しいアプリで、せっかくなので新しいフレームワーク使おうとAlminとNext.jsを使っている。 最初のころNext.jsのクライアントレンダリングとサーバサイドレンダリングの違いの意味がよくわかってなくて、Alminとどう連携させればいいのか試行錯誤が続いたんだけど、ようやくこうすればいいというのがわかった。 12345678910111213141516171819202122">
+<meta property="og:updated_time" content="2017-11-01T02:59:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Almin on Next.js">
+<meta name="twitter:description" content="いまつくってる新しいアプリで、せっかくなので新しいフレームワーク使おうとAlminとNext.jsを使っている。 最初のころNext.jsのクライアントレンダリングとサーバサイドレンダリングの違いの意味がよくわかってなくて、Alminとどう連携させればいいのか試行錯誤が続いたんだけど、ようやくこうすればいいというのがわかった。 12345678910111213141516171819202122">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-201710/next-js-and-almin" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/10/20/201710/next-js-and-almin/" class="article-date">
+  <time datetime="2017-10-19T15:00:00.000Z" itemprop="datePublished">Oct 20 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Almin on Next.js
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>いまつくってる新しいアプリで、せっかくなので新しいフレームワーク使おうと<a href="https://github.com/almin/almin" target="_blank" rel="external">Almin</a>と<a href="https://github.com/zeit/next.js/" target="_blank" rel="external">Next.js</a>を使っている。</p>
+<p>最初のころNext.jsのクライアントレンダリングとサーバサイドレンダリングの違いの意味がよくわかってなくて、Alminとどう連携させればいいのか試行錯誤が続いたんだけど、ようやくこうすればいいというのがわかった。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> dispatcher = <span class="keyword">new</span> Dispatcher()</div><div class="line"><span class="keyword">const</span> storeGroup = <span class="keyword">new</span> StoreGroup(&#123;</div><div class="line">  DataState: <span class="keyword">new</span> DataStore(dataRepository)</div><div class="line">&#125;)</div><div class="line"><span class="keyword">const</span> appContext = <span class="keyword">new</span> Context(&#123;</div><div class="line">  dispatcher,</div><div class="line">  store: storeGroup,</div><div class="line">  options: &#123;</div><div class="line">    strict: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">loadData</span>(<span class="params">req</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span>(req) &#123;</div><div class="line">      <span class="comment">// サーバサイドだったらdbから読む</span></div><div class="line">      <span class="keyword">const</span> data = db.data.find().toArray()</div><div class="line">      resolve(data)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="comment">// クライアントサイドだったらapiから取得</span></div><div class="line">      axios(<span class="string">'/api/data.json'</span>)</div><div class="line">      .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">          resolve(response)</div><div class="line">        &#125;)</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">static</span> <span class="keyword">async</span> getInitialProps (&#123;req&#125;) &#123;</div><div class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> loadData(req)</div><div class="line">    <span class="keyword">return</span> &#123; data &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line">  componentWillMount () &#123;</div><div class="line">    <span class="comment">// Alminにデータを渡すのはgetInitialPropsではなくここで</span></div><div class="line">   <span class="keyword">if</span> (<span class="keyword">this</span>.props.data) &#123;</div><div class="line">     appContext.useCase(LoadDataUseCase.create()).execute(<span class="keyword">this</span>.props.data)</div><div class="line">   &#125;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/20/201710/doi-hosoma-animation-talk/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/10/19/201710/sisters-of-in-a-corner-of-the-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          細馬宏通『2つのこの世界の片隅に』を読んだ
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

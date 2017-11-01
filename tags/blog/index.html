@@ -56,6 +56,55 @@
     <div id="main">
       
   
+    <article id="post-201710/super-mario-galaxy" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/10/29/201710/super-mario-galaxy/" class="article-date">
+  <time datetime="2017-10-28T15:00:00.000Z" itemprop="datePublished">Oct 29 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/10/29/201710/super-mario-galaxy/">スーパーマリオギャラクシー</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>発売日に買って、例によって自分はプレイしないまま子供たちがプレイしているのを見ている。2コンでキャッピーが操作できるおすそわけプレイモードはゲームしたいけど操作はうまくできない年少の子がプレイに参加するのには最適なつくりになっていてものすごくありがたい。内容もゲームがおもしろいのは当然として、デザインの力をフル活用してリッチでスムーズなプレイ体験を提供するというSwitch以降の（あるいは『Splatoon』以降の）「クールな任天堂」のラインがキープされていて恐ろしい。他方一連の任天堂スマホゲーでは旧来の「ダサい任天堂」の体験がキープされているのも興味深いのだけど。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201710/olafur-eliasson-space-is-process" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -107,6 +156,57 @@
 
 
   
+    <article id="post-201710/next-js-and-almin" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/10/20/201710/next-js-and-almin/" class="article-date">
+  <time datetime="2017-10-19T15:00:00.000Z" itemprop="datePublished">Oct 20 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/10/20/201710/next-js-and-almin/">Almin on Next.js</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>いまつくってる新しいアプリで、せっかくなので新しいフレームワーク使おうと<a href="https://github.com/almin/almin" target="_blank" rel="external">Almin</a>と<a href="https://github.com/zeit/next.js/" target="_blank" rel="external">Next.js</a>を使っている。</p>
+<p>最初のころNext.jsのクライアントレンダリングとサーバサイドレンダリングの違いの意味がよくわかってなくて、Alminとどう連携させればいいのか試行錯誤が続いたんだけど、ようやくこうすればいいというのがわかった。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> dispatcher = <span class="keyword">new</span> Dispatcher()</div><div class="line"><span class="keyword">const</span> storeGroup = <span class="keyword">new</span> StoreGroup(&#123;</div><div class="line">  DataState: <span class="keyword">new</span> DataStore(dataRepository)</div><div class="line">&#125;)</div><div class="line"><span class="keyword">const</span> appContext = <span class="keyword">new</span> Context(&#123;</div><div class="line">  dispatcher,</div><div class="line">  store: storeGroup,</div><div class="line">  options: &#123;</div><div class="line">    strict: <span class="literal">true</span></div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">loadData</span>(<span class="params">req</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span>(req) &#123;</div><div class="line">      <span class="comment">// サーバサイドだったらdbから読む</span></div><div class="line">      <span class="keyword">const</span> data = db.data.find().toArray()</div><div class="line">      resolve(data)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="comment">// クライアントサイドだったらapiから取得</span></div><div class="line">      axios(<span class="string">'/api/data.json'</span>)</div><div class="line">      .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</div><div class="line">          resolve(response)</div><div class="line">        &#125;)</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">static</span> <span class="keyword">async</span> getInitialProps (&#123;req&#125;) &#123;</div><div class="line">    <span class="keyword">const</span> data = <span class="keyword">await</span> loadData(req)</div><div class="line">    <span class="keyword">return</span> &#123; data &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line">  componentWillMount () &#123;</div><div class="line">    <span class="comment">// Alminにデータを渡すのはgetInitialPropsではなくここで</span></div><div class="line">   <span class="keyword">if</span> (<span class="keyword">this</span>.props.data) &#123;</div><div class="line">     appContext.useCase(LoadDataUseCase.create()).execute(<span class="keyword">this</span>.props.data)</div><div class="line">   &#125;</div><div class="line"> &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201710/doi-hosoma-animation-talk" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -144,6 +244,57 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201710/war-for-the-planet-of-the-apes" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/10/19/201710/war-for-the-planet-of-the-apes/" class="article-date">
+  <time datetime="2017-10-18T15:00:00.000Z" itemprop="datePublished">Oct 19 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/10/19/201710/war-for-the-planet-of-the-apes/">マット・リーブス『猿の惑星: 聖戦記』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.foxmovies-jp.com/saruwaku-g/" target="_blank" rel="external">映画『猿の惑星：聖戦記（グレート・ウォー）』オフィシャルサイト</a></p>
+<hr>
+<p>猿の惑星新三部作のなかでは第一作がかなり好きで二作目はかなりぼんやりした印象しかないけど、今回は堂々たる完結編でとてもよかった。一作目から観直したい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
 
 			</span>
 		</div>
@@ -260,6 +411,110 @@
 
 
   
+    <article id="post-201710/tower" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/10/18/201710/tower/" class="article-date">
+  <time datetime="2017-10-17T15:00:00.000Z" itemprop="datePublished">Oct 18 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/10/18/201710/tower/">ロロイ『塔』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><script src="//bccks.jp/bcck/129020/embed?size=tiny" type="text/javascript"></script><br><a href="https://bccks.jp/bcck/129020/info" title="塔" target="_blank">『<strong>塔</strong>』　ロロイ著</a></p>
+<hr>
+<p>不思議な塔を上っていく、という体の超超短編集。電子書籍のショートショート集をスマホで読むとそうそうこういうのでいいんだよなーと思うけど（BCCKSだとヨシカワシオさんの『<a href="https://bccks.jp/bcck/148851/info" target="_blank" rel="external">懐中小話</a>』もいい）、このロロイさんの『塔』は「不思議な塔の各階の描写」というルールになってるのが本全体としてもフレッシュでとてもいい。ショートショート版『100かいだてのいえ』っていうか。ちょっとゲームブック感もあるし。</p>
+<p>他の人もこのルールで本をつくったのも読みたい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bccks/">bccks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selfpublish/">selfpublish</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201710/arte-on-mozc" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/10/18/201710/arte-on-mozc/" class="article-date">
+  <time datetime="2017-10-17T15:00:00.000Z" itemprop="datePublished">Oct 18 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/10/18/201710/arte-on-mozc/">アルテ on Mozc</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://www.keyboard-arte.com/" target="_blank" rel="external">アルテ on Mozc 日本語入力キーボード</a></p>
+<hr>
+<p>最近Androidで使っているIME。かなり意欲的な開発が行われているようで経緯がわかりにくいんだけど、まず、ローマ字入力をテンキー＋フリックでの入力に合わせて再構築した新しい日本語入力メソッド「アルテ(ARTE)」というのを実装したAndroid用のIMEが開発されて、それの変換エンジンを<a href="https://github.com/google/mozc" target="_blank" rel="external">Mozc</a>（Google日本語変換のエンジンがオープンソース化されたもの）にした最新版が『アルテ on Mozc』。で、このアルテのローマ字入力とは別に選択できる日本語入力メソッドとしてフリック入力を拡張した「ターンフリック入力」というのも別途実装されているということみたい。<a href="https://www.keyboard-arte.com/note" target="_blank" rel="external">アルテの開発趣旨</a>を読んでもとても実直にスマホでの日本語入力環境を整えることを考えていることがうかがえてとても好ましい。無料版の「動画広告を見ると4時間拡張入力が使えます」という大胆なシステムもおもしろかったんだけど、いまは課金してフル版を使っている。</p>
+<p>ターンフリックでの濁点小文字シフトはわりとすんなり慣れたのでいまはアルテローマ字入力に慣れてみようかと切り替えてみている。なかなか新鮮。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201710/guang-daao" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -303,269 +558,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bccks/">bccks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selfpublish/">selfpublish</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201710/ring-world" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/10/13/201710/ring-world/" class="article-date">
-  <time datetime="2017-10-12T15:00:00.000Z" itemprop="datePublished">Oct 13 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/10/13/201710/ring-world/">ラリイ・ニーブン『リングワールド』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4150106169/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/51qzFqBTkkL._SL160_.jpg" alt="リングワールド (ハヤカワ文庫 SF (616))" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4150106169/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">リングワールド (ハヤカワ文庫 SF (616))</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 17.10.16</div></div><div class="amazlet-detail">ラリイ・ニーヴン <br>早川書房 <br>売り上げランキング: 319,581<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4150106169/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>これもSF仕事関係で今回初めて触れてみて、いわゆるスペースオペラ的な小説に触れてこなかったせいかさわりを読んだら非常に新鮮でおもしろかったので、せっかくだからちゃんと読もうと図書館で借りて読み切った。けっこう長いしいちいち描写から地球人の常識から離れた宇宙人の容姿とか世界の様子を思い浮かべるのが大変で、読み切る前に返却期限が来てしまって何度か借り直したりしつつなんとかという感じだったけど、ちゃんと最後（広げた風呂敷は何一つ畳まれてないけど小説の終わりとしてはここしかない、というラスト）までおもしろかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201710/braava" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/10/11/201710/braava/" class="article-date">
-  <time datetime="2017-10-10T15:00:00.000Z" itemprop="datePublished">Oct 11 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/10/11/201710/braava/">ブラーバを借りた</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>床ふきロボットのブラーバを同僚のクロカワさんが買ったけどあんまり使っていないというので借りて試用している。2週間ほど日常的に使ってみての感想としては、これはけっこううちの生活に合っている気がするな。子供や猫がいる家だといずれにせよ1日おきくらいでは床掃除をしないと部屋が大変なことになり気分もすさんでいくという悪循環に陥っていくけど、定期的に水拭きされて床が目に見えてきれいだと他のことももうちょっとちゃんとしようという気がわいてくる。試用期間が終わったら買おうと思った。</p>
-<p>から拭きも試したけど、使っていくうちにとりあえず水拭き一択だということがわかってきた。水拭きクロスは専用のものが付属してるけど借り物だということもあり使ってなくて、使い古しのタオルをサイズを合わせて適当に切ってつけたら使えたのでそれにしている。ルンバと比較してよく言われることだけどブラーバは動作音がほぼなくて床拭き中も生活の妨げにならないのがいいというのも実際その通りで、子供が宿題してるときに掃除機をかけると子供の気が散るので掃除できない、的なことがないのが地味にいい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gadget/">gadget</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201710/asian-art-award" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/10/07/201710/asian-art-award/" class="article-date">
-  <time datetime="2017-10-07T01:48:00.000Z" itemprop="datePublished">Oct 7 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/10/07/201710/asian-art-award/">『Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展』を見た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://asianartaward.com/201707-1/" target="_blank" rel="external">「Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展」</a></p>
-<hr>
-<p>見てきた。谷口さんの作品を見るのが目的だったんだけど、他の作品もおもしろく見た。</p>
-<p>大賞だという山城知佳子さんの『土の人』映像作品っていうか映画なのでは…と思って見ていたら腰掛けだと思って座っていた箱がマルチチャンネルのスピーカーで、足下からのうめき声を鑑賞者が感じながら（というか、踏みつけながら）観る作品になっていてなるほどと思った。山本高之さんの『Lie to Me』もおもしろくて、ていうかタイトルの通りおそらく「自分（カメラ）にウソの自己紹介をしてくれ」というようなお願いをして収録した市民の映像を編集した映像作品なんだけど、「ウソ」という行為のネガティブなイメージを解きほぐしてくれるようなピースフルな作品であり、演劇性というのかな、ひとがかりそめにフィクションをはらむときの身体の反応みたいなものが映されていて目が離せなかった。</p>
-<p><a href="https://vimeo.com/takayukiyamamoto" target="_blank" rel="external">VimeoTakayuki Yamamoto</a><br>山本さんの映像作品ほかのもおもしろそう</p>
-<p>谷口さんの『何も起きない』はゲームエンジンで「『何も起きない』の世界」が作り起こされて動作している、という作品で、僕なんかが見るとどうしてもゲームのこととかを考えてしまうけど（室内の作品には『ルーマニア203』とかを思い出した）、そこをよけても考えしろの多い作品でおもしろく見た。contact Gonzoもファイナリスト展の並びのなかでの乱暴さが痛快でなんかよかった（小銭がなくてガチャは回せなかった）。</p>
-<p>Tokyo Art Book Fairもちょっと見ようというもくろみだったんだけど、寺田倉庫は施設の性質上人が殺到すると破綻する、というのが先にこっちを見たことでよくわかったので（エレベーターが人間を各階に効率的に運ぶようにできていない）、大変なことになってる行列だけ冷やかして帰った。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201710/hidden-figures" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/10/05/201710/hidden-figures/" class="article-date">
-  <time datetime="2017-10-04T15:00:00.000Z" itemprop="datePublished">Oct 5 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/10/05/201710/hidden-figures/">『ドリーム』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.foxmovies-jp.com/dreammovie/" target="_blank" rel="external">映画『ドリーム』オフィシャルサイト - 20世紀フォックス</a></p>
-<hr>
-<p>素晴らしかった。TOHOシネマズ新宿では超でかいスクリーンでかかってて最高。早めに観に行くべき。</p>
-<p>しかしやっぱり少なくとも「ドリーム」ではないな。リアリストたちの話で、宇宙というリアリズムの世界でリアリストたちが席を見つけたという話なんだと思う。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201710/alan-kay 2" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/10/03/201710/alan-kay 2/" class="article-date">
-  <time datetime="2017-10-02T15:00:00.000Z" itemprop="datePublished">Oct 3 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/10/03/201710/alan-kay 2/">アラン・ケイ『アラン・ケイ』を再読した</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4756101070/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/21UZSW50iaL._SL160_.jpg" alt="アラン・ケイ (Ascii books)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4756101070/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">アラン・ケイ (Ascii books)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 17.10.16</div></div><div class="amazlet-detail">アラン・C. ケイ <br>アスキー <br>売り上げランキング: 122,923<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4756101070/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p><a href="http://ekrits.jp/2017/08/2343/" target="_blank" rel="external">エクリの水野勝仁さんの連載</a>を読んでいて、ふとアラン・ケイの本を読み直してみようと思ったので図書館で借りてきた。前読んだのはあんまり定かじゃないけど、Oh!Xに荻窪圭さんの書評かなんかで知って発売当時に買ってたはずなので高校２年か３年の春休みとかに読んだんだと思う。地元のスキー場で雪が融けた後のグラススキー用のリフトの監視みたいなバイトがあって、それをしながら読んでた記憶があるので。</p>
-<p>で読み返してみたら、言うまでもないけど今読んでもまったく古びていないインターフェイスの思想が語られた論文群で、あらためて読んでもこのころにこういうことを言っていたのかと新鮮な発見が多かった（「コンピュータ・ソフトウェア」のなかでスプレッドシートについて「セル宇宙のシミュレーションをするもの」だと説明するところとかは今回よんで初めてなるほどと思った）。</p>
-<p>最後の講演録「教育技術における共立の対立」はたぶん前読んだときは読み飛ばしてた気がするんだけど、今回読んでここが一番おもしろかった。アランケイいわく、成功する製品は「人間の深奥の欲求にこたえる“増幅装置（アンプ）”になるもの」である必要があるが、その人間の欲求とは大別して「夢想したい」と「コミュニケート」したいに分けられると。この２つの定義は欲求の定義が（あまり細かくは語られないものの）独特で、たとえば飛行機のような時空間を圧縮するテクノロジーは「コミュニケートしたい」欲求をかなえるものになるのだという。では「夢想したい」はどういう欲求なのかというと、これは「自分だけのファンタジーを制御したい」という欲求だと考えればよい。ファンタジーとは、例えば言語、スポーツ、ゲーム、音楽、コンピュータシミュレーションなど「単純明快で制御可能な世界」のことで、つまり世界を単純で制御可能なものに見せてくれるテクノロジーが人々の心をつかむのだと説明されていて、この説明は非常におもしろかった。この定義でいくとSNSは「コミュニケートしたい」欲求に応えるようでいて「夢想したい」のほうの欲求に応えているんだな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li></ul>
 
 			</span>
 		</div>
