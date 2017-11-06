@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://text-perforation.doppac.cc/"/>
-  <updated>2017-11-01T02:54:49.000Z</updated>
+  <updated>2017-11-06T04:01:28.000Z</updated>
   <id>http://text-perforation.doppac.cc/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ルチアーノ・フロリディ『第四の革命 情報圏（インフォスフィア）が世界をつくりかえる』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/11/02/201711/the-4th-revolution/"/>
+    <id>http://text-perforation.doppac.cc/2017/11/02/201711/the-4th-revolution/</id>
+    <published>2017-11-01T15:00:00.000Z</published>
+    <updated>2017-11-06T04:01:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.shin-yo-sha.co.jp/mokuroku/books/978-4-7885-1522-2.htm" target="_blank" rel="external">第四の革命</a></p><hr><p>弊社代表石橋の推し哲学者ルチアーノ・フロリディの単著としては初の邦訳（でいいのかな？）。フロリディさんは「有形無形問わずあらゆるものは情報であり、情報の『よさ』を中心とする情報倫理を構築すべき」という非常にラジカルな世界観を提唱する情報哲学者なんだそうだけど（参考：<a href="https://ja.ishibashihideto.net/activity/2013/08/22/luciano-floridi-study-2013-08-20.html" target="_blank" rel="external">情報／ITアーキテクトのための「使える！フロリディ情報哲学」</a>）『第四の革命』はその情報哲学の入門編ともいえる内容で、ドライブ感ある文体や独特の（センスオブワンダーを感じる）造語が読みやすく訳されていてたいへん楽しめた。</p><p>この本のいう「第四の革命」とは、コペルニクス、ダーウィン、フロイトに次ぐ第四の脱人間中心パラダイム（の転換期）として、昨今のITC技術による情報爆発とその自律エージェント化を位置づけるもの。創発的な過程で生み出される人工物を「新しい自然」と見なしたり、IoTやスマートエージェント技術の描く未来像に人間中心主義の終わりを見いだすような発想はとりわけ新しいというわけでもないかなと思いながら読んでいたんだけど、人間を情報エージェントととらえたとき、これまで「人間性」を基礎づけてきたシステム（たとえばプライバシー、たとえば政治）がどのような物理的制約のもとで成り立ってきたのか、そしてすでにわれわれが手にしている高度に発展し民主化されたICTが、そうした「人間性」をどのように作り替えているのか、つまり、すでに情報エージェントであるわれわれが、いま「人間性」とは実際には何だと思っているのかをここまで詳細に網羅的に分析していると説得力が違うなと思う。そしてやっぱり数々繰り出されるキャッチーな造語が「第四の革命」感あって最高。inforg（情報有機体）！ e-mortal（e-不死）！ 情報摩擦！ 政治的アポトーシス！</p><p>「世界の見方を変える」という意味ではまさしく哲学書なんだろうけど、いわゆる「哲学書」的な語彙は少なく前提知識も不用だし、むしろIT技術書のようなプラクティカルなセンスにあふれている（「社会契約説では人は法的にオプトアウト」みたいなパンチラインがぼんぼん出てくる）のでまあ分厚いけど恐れずにノリでどんどん読んで本の内容を<ruby>情報圏<rt>インフォスフィア</rt></ruby>に取り込んで作り替えていくといいと思う。</p><div class="video-container"><iframe src="//www.youtube.com/embed/rQKC12hxihI" frameborder="0" allowfullscreen></iframe></div><p>石橋さんとオーバーキャスト大林さんのフロリディ対談は、あんまり本書の内容に触れてなくて残念だったな。この本の内容にこだわった読書会的なやつ希望。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.shin-yo-sha.co.jp/mokuroku/books/978-4-7885-1522-2.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四の革命&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;弊社代表石橋の推
+      
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="media" scheme="http://text-perforation.doppac.cc/tags/media/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017年10月のまとめ</title>
     <link href="http://text-perforation.doppac.cc/2017/10/31/201710/201710-summary/"/>
     <id>http://text-perforation.doppac.cc/2017/10/31/201710/201710-summary/</id>
     <published>2017-10-30T15:00:00.000Z</published>
     <updated>2017-11-01T02:54:49.000Z</updated>
     
-    <content type="html"><![CDATA[<p>18エントリ。新規開発案件に没頭してたのもあり10月短すぎだろと思ってたけど、まとめてみるとけっこういろんなことしてたな。</p><ul><li><a href="/2017/10/01/201710/eureka-seven-high-evolution-1/">『交響詩篇エウレカセブン　ハイエボリューション 1』を観た [10/01]</a></li><li><a href="/2017/10/02/201710/dog-watermeron-suger/">吉田棒一『犬ウォーターメロンシュガー』を読んだ [10/02]</a></li><li><a href="/2017/10/03/201710/alan-kay 2/">アラン・ケイ『アラン・ケイ』を再読した [10/03]</a></li><li><a href="/2017/10/05/201710/hidden-figures/">セオドア・メルフィ『ドリーム』を観た [10/05]</a></li><li><a href="/2017/10/07/201710/asian-art-award/">『Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展』を見た [10/07]</a></li><li><a href="/2017/10/11/201710/braava/">ブラーバを借りた [10/11]</a></li><li><a href="/2017/10/13/201710/ring-world/">ラリイ・ニーブン『リングワールド』を読んだ [10/13]</a></li><li><a href="/2017/10/15/201710/bose-soundlink-revolve/">Bose SoundLink Revolveを買った [10/15]</a></li><li><a href="/2017/10/18/201710/guang-daao/">Duang-Daao『ドゥアン・ダーオのトムヤムクン』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/animations-of-era-of-ours/">土居伸彰『21世紀のアニメーションがわかる本』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/arte-on-mozc/">アルテ on Mozc [10/18]</a></li><li><a href="/2017/10/18/201710/tower/">ロロイ『塔』を読んだ [10/18]</a></li><li><a href="/2017/10/19/201710/war-for-the-planet-of-the-apes/">マット・リーブス『猿の惑星: 聖戦記』を観た [10/19]</a></li><li><a href="/2017/10/19/201710/sisters-of-in-a-corner-of-the-world/">細馬宏通『2つのこの世界の片隅に』を読んだ [10/19]</a></li><li><a href="/2017/10/20/201710/doi-hosoma-animation-talk/">「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた [10/20]</a></li><li><a href="/2017/10/20/201710/next-js-and-almin/">Almin on Next.js [10/20]</a></li><li><a href="/2017/10/21/201710/olafur-eliasson-space-is-process/">ヘンリク・ルンデ、ヤコブ・イェルゲンセン『オラファー･エリアソン 視覚と知覚』を観た [10/21]</a></li><li><a href="/2017/10/29/201710/super-mario-galaxy/">スーパーマリオギャラクシー [10/29]</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>18エントリ。新規開発案件に没頭してたのもあり10月短すぎだろと思ってたけど、まとめてみるとけっこういろんなことしてたな。</p><ul><li><a href="/2017/10/01/201710/eureka-seven-high-evolution-1/">『交響詩篇エウレカセブン　ハイエボリューション 1』を観た [10/01]</a></li><li><a href="/2017/10/02/201710/dog-watermeron-suger/">吉田棒一『犬ウォーターメロンシュガー』を読んだ [10/02]</a></li><li><a href="/2017/10/03/201710/alan-kay 2/">アラン・ケイ『アラン・ケイ』を再読した [10/03]</a></li><li><a href="/2017/10/05/201710/hidden-figures/">セオドア・メルフィ『ドリーム』を観た [10/05]</a></li><li><a href="/2017/10/07/201710/asian-art-award/">『Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展』を見た [10/07]</a></li><li><a href="/2017/10/11/201710/braava/">ブラーバを借りた [10/11]</a></li><li><a href="/2017/10/13/201710/ring-world/">ラリイ・ニーブン『リングワールド』を読んだ [10/13]</a></li><li><a href="/2017/10/15/201710/bose-soundlink-revolve/">Bose SoundLink Revolveを買った [10/15]</a></li><li><a href="/2017/10/18/201710/animations-of-era-of-ours/">土居伸彰『21世紀のアニメーションがわかる本』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/arte-on-mozc/">アルテ on Mozc [10/18]</a></li><li><a href="/2017/10/18/201710/guang-daao/">Duang-Daao『ドゥアン・ダーオのトムヤムクン』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/tower/">ロロイ『塔』を読んだ [10/18]</a></li><li><a href="/2017/10/19/201710/sisters-of-in-a-corner-of-the-world/">細馬宏通『2つのこの世界の片隅に』を読んだ [10/19]</a></li><li><a href="/2017/10/19/201710/war-for-the-planet-of-the-apes/">マット・リーブス『猿の惑星: 聖戦記』を観た [10/19]</a></li><li><a href="/2017/10/20/201710/next-js-and-almin/">Almin on Next.js [10/20]</a></li><li><a href="/2017/10/20/201710/doi-hosoma-animation-talk/">「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた [10/20]</a></li><li><a href="/2017/10/21/201710/olafur-eliasson-space-is-process/">ヘンリク・ルンデ、ヤコブ・イェルゲンセン『オラファー･エリアソン 視覚と知覚』を観た [10/21]</a></li><li><a href="/2017/10/29/201710/super-mario-galaxy/">スーパーマリオギャラクシー [10/29]</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -93,33 +122,6 @@
   </entry>
   
   <entry>
-    <title>「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/20/201710/doi-hosoma-animation-talk/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/20/201710/doi-hosoma-animation-talk/</id>
-    <published>2017-10-19T15:00:00.000Z</published>
-    <updated>2017-10-26T03:47:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>というわけで2冊読んだうえでブックファースト新宿での土居さんと細馬さんのトークを聞いてきた。ブックファーストの書店イベントって初めて参加したと思うけど思ったよりこぢんまりした会場で、司会からの各人紹介みたいな手続きもなくわりといきなり細馬さんから核心の質問が飛ぶようなガチ感のあるイベントだった。ゲンロンカフェで『個人的なハーモニー』についての土居さんと佐々木敦さんがトークしたときに冒頭のプレゼンを受けての佐々木さんの第一声が「なんかいきなり学会発表ぽくなりましたね」だったけど、今回も別の意味でイベントというよりも学会感があった。僕はまだ観てないのいまいち判断できないけど、『21世紀〜』での『聲の形』の扱いをについては異論が多い（『聲の形』という作品を「『私たち』の時代の作品」として捉えるのは捨てるものが多くないか、という）ところのようでトークはかなりの部分その評価ポイントのすりあわせに修正していた。</p><p>お二人の著書にサインももらったけど（土居さんにはようやく挨拶できた。以前土居さんがBCCKSで個人的に自身のアニメーション評論集をまとめて紙本を発注してくれたことがあって、そのときにネット上でやりとりして以来初めての対面だった）、細馬さんに『CupHead』を見たか聞いてみようと思ってわすれてしまった。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;というわけで2冊読んだうえでブックファースト新宿での土居さんと細馬さんのトークを聞いてきた。ブックファーストの書店イベントって初めて参加したと思うけど思ったよりこぢんまりした会場で、司会からの各人紹介みたいな手続きもなくわりといきなり細馬さんから核心の質問が飛ぶようなガチ感
-      
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="event" scheme="http://text-perforation.doppac.cc/tags/event/"/>
-    
-      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Almin on Next.js</title>
     <link href="http://text-perforation.doppac.cc/2017/10/20/201710/next-js-and-almin/"/>
     <id>http://text-perforation.doppac.cc/2017/10/20/201710/next-js-and-almin/</id>
@@ -145,21 +147,19 @@
   </entry>
   
   <entry>
-    <title>マット・リーブス『猿の惑星: 聖戦記』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/19/201710/war-for-the-planet-of-the-apes/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/19/201710/war-for-the-planet-of-the-apes/</id>
-    <published>2017-10-18T15:00:00.000Z</published>
-    <updated>2017-11-01T02:06:55.000Z</updated>
+    <title>「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた</title>
+    <link href="http://text-perforation.doppac.cc/2017/10/20/201710/doi-hosoma-animation-talk/"/>
+    <id>http://text-perforation.doppac.cc/2017/10/20/201710/doi-hosoma-animation-talk/</id>
+    <published>2017-10-19T15:00:00.000Z</published>
+    <updated>2017-10-26T03:47:31.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://www.foxmovies-jp.com/saruwaku-g/" target="_blank" rel="external">映画『猿の惑星：聖戦記（グレート・ウォー）』オフィシャルサイト</a></p><hr><p>猿の惑星新三部作のなかでは第一作がかなり好きで二作目はかなりぼんやりした印象しかないけど、今回は堂々たる完結編でとてもよかった。一作目から観直したい。</p>]]></content>
+    <content type="html"><![CDATA[<p>というわけで2冊読んだうえでブックファースト新宿での土居さんと細馬さんのトークを聞いてきた。ブックファーストの書店イベントって初めて参加したと思うけど思ったよりこぢんまりした会場で、司会からの各人紹介みたいな手続きもなくわりといきなり細馬さんから核心の質問が飛ぶようなガチ感のあるイベントだった。ゲンロンカフェで『個人的なハーモニー』についての土居さんと佐々木敦さんがトークしたときに冒頭のプレゼンを受けての佐々木さんの第一声が「なんかいきなり学会発表ぽくなりましたね」だったけど、今回も別の意味でイベントというよりも学会感があった。僕はまだ観てないのいまいち判断できないけど、『21世紀〜』での『聲の形』の扱いをについては異論が多い（『聲の形』という作品を「『私たち』の時代の作品」として捉えるのは捨てるものが多くないか、という）ところのようでトークはかなりの部分その評価ポイントのすりあわせに修正していた。</p><p>お二人の著書にサインももらったけど（土居さんにはようやく挨拶できた。以前土居さんがBCCKSで個人的に自身のアニメーション評論集をまとめて紙本を発注してくれたことがあって、そのときにネット上でやりとりして以来初めての対面だった）、細馬さんに『CupHead』を見たか聞いてみようと思ってわすれてしまった。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;http://www.foxmovies-jp.com/saruwaku-g/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『猿の惑星：聖戦記（グレート・ウォー）』オフィシャルサイト&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;猿の惑星新三部作
+        &lt;p&gt;というわけで2冊読んだうえでブックファースト新宿での土居さんと細馬さんのトークを聞いてきた。ブックファーストの書店イベントって初めて参加したと思うけど思ったよりこぢんまりした会場で、司会からの各人紹介みたいな手続きもなくわりといきなり細馬さんから核心の質問が飛ぶようなガチ感
       
     
     </summary>
@@ -167,7 +167,9 @@
     
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+      <category term="event" scheme="http://text-perforation.doppac.cc/tags/event/"/>
+    
+      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
     
   </entry>
   
@@ -201,30 +203,29 @@
   </entry>
   
   <entry>
-    <title>土居伸彰『21世紀のアニメーションがわかる本』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/</id>
-    <published>2017-10-17T15:00:00.000Z</published>
-    <updated>2017-10-25T02:00:36.000Z</updated>
+    <title>マット・リーブス『猿の惑星: 聖戦記』を観た</title>
+    <link href="http://text-perforation.doppac.cc/2017/10/19/201710/war-for-the-planet-of-the-apes/"/>
+    <id>http://text-perforation.doppac.cc/2017/10/19/201710/war-for-the-planet-of-the-apes/</id>
+    <published>2017-10-18T15:00:00.000Z</published>
+    <updated>2017-11-01T02:06:55.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="http://filmart.co.jp/books/review/21seiki_anime/" target="_blank" rel="external">21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社</a></p><hr><p>トークショーの前にと思って。アニメーションドキュメンタリーというジャンルの重要性の話など土居さんの前著『<a href="/2017/02/06/201702/personal-hermony/">個人的なハーモニー</a>』のおさらい的な部分もありつつ、本書の要旨である「21世紀のアニメーション」がどこに向かっているかいう議論はかなりアクロバティックというか乱暴ともいえる整理が炸裂していた。個別の作品の扱いがこれでいいのかという話は多そうだけど（僕はそこまで気にはならなかった）、「『私たち』の時代」の作品とは何かという定義については腑に落ちたというか、いわゆるポストインターネットの世界観とか、インディーゲームのナラティブとか、気になっているものを同じ枠組みで見ることができるんじゃないかと思った。</p><p>つまり『動物化したポストモダン』なんじゃないかという気もちょっとしたけど。</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="http://www.foxmovies-jp.com/saruwaku-g/" target="_blank" rel="external">映画『猿の惑星：聖戦記（グレート・ウォー）』オフィシャルサイト</a></p><hr><p>猿の惑星新三部作のなかでは第一作がかなり好きで二作目はかなりぼんやりした印象しかないけど、今回は堂々たる完結編でとてもよかった。一作目から観直したい。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;http://filmart.co.jp/books/review/21seiki_anime/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.foxmovies-jp.com/saruwaku-g/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『猿の惑星：聖戦記（グレート・ウォー）』オフィシャルサイト&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;猿の惑星新三部作
       
     
     </summary>
     
     
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
-      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -283,6 +284,34 @@
       <category term="android" scheme="http://text-perforation.doppac.cc/tags/android/"/>
     
       <category term="software" scheme="http://text-perforation.doppac.cc/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>土居伸彰『21世紀のアニメーションがわかる本』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/"/>
+    <id>http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/</id>
+    <published>2017-10-17T15:00:00.000Z</published>
+    <updated>2017-10-25T02:00:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://filmart.co.jp/books/review/21seiki_anime/" target="_blank" rel="external">21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社</a></p><hr><p>トークショーの前にと思って。アニメーションドキュメンタリーというジャンルの重要性の話など土居さんの前著『<a href="/2017/02/06/201702/personal-hermony/">個人的なハーモニー</a>』のおさらい的な部分もありつつ、本書の要旨である「21世紀のアニメーション」がどこに向かっているかいう議論はかなりアクロバティックというか乱暴ともいえる整理が炸裂していた。個別の作品の扱いがこれでいいのかという話は多そうだけど（僕はそこまで気にはならなかった）、「『私たち』の時代」の作品とは何かという定義については腑に落ちたというか、いわゆるポストインターネットの世界観とか、インディーゲームのナラティブとか、気になっているものを同じ枠組みで見ることができるんじゃないかと思った。</p><p>つまり『動物化したポストモダン』なんじゃないかという気もちょっとしたけど。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://filmart.co.jp/books/review/21seiki_anime/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
     
   </entry>
   
@@ -523,29 +552,6 @@
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
       <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017年９月のまとめ</title>
-    <link href="http://text-perforation.doppac.cc/2017/09/30/201709/201709-summary/"/>
-    <id>http://text-perforation.doppac.cc/2017/09/30/201709/201709-summary/</id>
-    <published>2017-09-29T15:00:00.000Z</published>
-    <updated>2017-10-02T11:20:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>15エントリ。あんまり書けなかった。今月は青山さんの『幸福はなぜ哲学の問題になるのか』を読めたのがよかったな。青山さんの本は『タイムトラベルの哲学』をたまたま手に取って読んで感銘を受けてそのことをネットに書いたら青山さんご本人からのレスポンスがつくことがあったりして出会いが思い出深いのだけど、今回の本は『タイムトラベル〜』とは文体もスタイルも全く違うものの、青山さんの本だなと思えてはやり感銘を受けた。</p><ul><li><a href="/2017/09/01/201709/cedec-timeshift-student/">CEDECをタイムシフト受講してみた [09/01]</a></li><li><a href="/2017/09/02/201709/fuchi-ni-tatsu/">深田晃司『淵に立つ』を観た [09/02]</a></li><li><a href="/2017/09/04/201709/minor-sf-movies/">マイナーなSF映画 [09/04]</a></li><li><a href="/2017/09/05/201709/atok-2017/">ATOK 2017 for Mac [09/05]</a></li><li><a href="/2017/09/08/201709/cedec-zelda-presentations/">CEDECでのゼルダの伝説開発セッション [09/08]</a></li><li><a href="/2017/09/11/201709/wonder-women/">パティ・ジェンキンス『ワンダーウーマン』を観た [09/11]</a></li><li><a href="/2017/09/12/201709/baby-driver/">エドガー・ライト『ベイビー・ドライバー』を観た [09/12]</a></li><li><a href="/2017/09/14/201709/why-is-hapiness-a-matter-of-philosophy/">青山拓央『幸福はなぜ哲学の問題になるのか』を読んだ [09/14]</a></li><li><a href="/2017/09/15/201709/hard-boiled-muromachi-era-and-frontier-of-the-world/">高野秀行×清水克行『世界の辺境とハードボイルド室町時代』を読んだ [09/15]</a></li><li><a href="/2017/09/17/201709/visit/">M・ナイト・シャマラン『ヴィジット』を観た [09/17]</a></li><li><a href="/2017/09/19/201709/dankirk/">クリストファー・ノーラン『ダンケルク』を観た [09/19]</a></li><li><a href="/2017/09/21/201709/train-to-busan/">ヨン・サンホ『新感染 ファイナル・エクスプレス』を観た [09/21]</a></li><li><a href="/2017/09/23/201709/siaf-2017/">札幌国際芸術祭2017を見てきた [09/23]</a></li><li><a href="/2017/09/24/201709/asahiyama-zoo/">旭山動物園に行った [09/24]</a></li><li><a href="/2017/09/27/201709/media-art-festival-2016/">『第20回メディア芸術祭 受賞作品展』を見た [09/27]</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;15エントリ。あんまり書けなかった。今月は青山さんの『幸福はなぜ哲学の問題になるのか』を読めたのがよかったな。青山さんの本は『タイムトラベルの哲学』をたまたま手に取って読んで感銘を受けてそのことをネットに書いたら青山さんご本人からのレスポンスがつくことがあったりして出会いが
-      
-    
-    </summary>
-    
-    
-      <category term="summary" scheme="http://text-perforation.doppac.cc/tags/summary/"/>
     
   </entry>
   

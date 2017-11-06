@@ -56,6 +56,57 @@
     <div id="main">
       
   
+    <article id="post-201602/apple-wwdr-certificate-expired" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/02/16/201602/apple-wwdr-certificate-expired/" class="article-date">
+  <time datetime="2016-02-15T15:00:00.000Z" itemprop="datePublished">Feb 16 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/02/16/201602/apple-wwdr-certificate-expired/">Apple World Wide Developer Relation証明書の期限切れ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Adhocビルドをdeploygateで配信しようとしたら、有効なiPhone Distribution　 Certificateがないというエラーに。先週末は問題なかったのにと思いつつ調べてみると、Apple Developerライセンス自体が切れているわけではなく、iPhone Distributionで発行している証明書もまだ有効期限内。しかしKeyChainアプリで証明書を見ると「証明書の発行者が無効」というエラーになっていた。証明書のプロファイルを見ると、中間証明書であるApple World Wide Developer Relation Certificateが期限切れになってた。調べてみると2/14に切れてAppleDevで発行した証明書が一斉に無効になったらしい。こんなことがあるのか。</p>
+<p><a href="http://qiita.com/anchen/items/7febe30dc24aed0827c0" target="_blank" rel="external">【注意】Apple Worldwide Developer Relationsの期限切れ - Qiita</a><a href=""></a><br><a href="https://forums.developer.apple.com/message/114003" target="_blank" rel="external">Uploading archive error: “Missing iOS Distribut… | Apple Developer Forums</a></p>
+<p>新しい中間証明書は2023-02-07までなので、前に切れたのも7年前だったならiOS開発者は初めて期限切れを経験したとかなのかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201602/degital-media-and-japanese-graphic-design" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -508,59 +559,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201602/simple-rack-app-for-api-mocking" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/02/04/201602/simple-rack-app-for-api-mocking/" class="article-date">
-  <time datetime="2016-02-03T15:00:00.000Z" itemprop="datePublished">Feb 4 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/02/04/201602/simple-rack-app-for-api-mocking/">rackアプリでモックAPIをつくる</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>新規開発するiOSアプリの開発フェーズに入ったのでいろいろ準備したり新しいことを覚えたりしている。今回はSwiftで開発することにしたのでSwift向きのライブラリ環境を模索しているところ。</p>
-<p>別チームが開発しているAPIが用意されるまでダミーの応答で初期開発をすすめるためのAPIモックもなんかやり方かえようかなと思ったけど、ここはどうせ作り捨てなのでいつものにした。いつものというのはリクエストに応じてjsonファイルを読んで返すだけのrackアプリを<a href="http://pow.cx/" target="_blank" rel="external">pow</a>でローカルサーバにするやつ。</p>
-<script src="https://gist.github.com/dotimpact/2d92bc940017030bc1b1.js"></script>
-
-<p>これが一番楽な気がしている。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li></ul>
 
 			</span>
 		</div>

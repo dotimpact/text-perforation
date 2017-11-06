@@ -56,6 +56,57 @@
     <div id="main">
       
   
+    <article id="post-201511/about-this-game" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/11/29/201511/about-this-game/" class="article-date">
+  <time datetime="2015-11-28T15:00:00.000Z" itemprop="datePublished">Nov 29 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/11/29/201511/about-this-game/">About This Game</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="/2015/11/24/201511/videogames-as-simuration-of-action/">「行為のシミュレーションとしてのビデオゲーム」</a>の虚構的行為文についての解説を読んで連想したんだけど、ゲームの記事とかリリースに出てくるゲームの説明の奇妙さが好きで、前から集めていた。集めたのを本にしようと思って編集しかけたのが頓挫してたので、せっかくなので公開しとこう。</p>
+<hr>
+<p><script src="http://bccks.jp/bcck/119843/embed" type="text/javascript"></script><br><a href="http://bccks.jp/bcck/119843/info" title="About This Game" target="_blank">『<strong>About This Game</strong>』　doppac著</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bccks/">bccks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selfpublishing/">selfpublishing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201511/yotsubato-13" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -520,71 +571,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/art/">art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201511/aspect-mock-return-generator-issue" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/11/19/201511/aspect-mock-return-generator-issue/" class="article-date">
-  <time datetime="2015-11-18T15:00:00.000Z" itemprop="datePublished">Nov 19 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/11/19/201511/aspect-mock-return-generator-issue/">AspectMockを使うクラスでyieldを使ってるとき</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>AspectMockでモッキングするクラス（に依存するクラス）でyieldを使ってると、AspectMockが注入するコードがreturnで値を返そうとするためエラーになる。</p>
-<pre><code>PHP Fatal error:  Generators cannot return values using &quot;return&quot; in /...
-</code></pre><p>とりあえずキャッシュコードのreturnをyieldに変えて動かしてたけど、もうissueになっててdev-masterでは解消されているっぽい。</p>
-<p><a href="https://github.com/Codeception/AspectMock/issues/50%0A" target="_blank" rel="external">Generators result in fatal error · Issue #50 · Codeception/AspectMock</a></p>
-<p>Composerでdev-masterのモジュールをインストールする（”minimum-stability”: “dev”にしてもいいけどこれだと全モジュールのdev-masterが入る）</p>
-<pre><code>&quot;require-dev&quot;: {
-   ...
-   &quot;codeception/aspect-mock&quot;: &quot;dev-master&quot;
-   ...
-}
-</code></pre><p>上記修正は返り値のキーワードをPHPDOCの@returnで判別するものなので、AspectMockのキャッシュを消して、yieldを使ってるメソッドのPHPDOCの@returnに <code>\Generator</code> を書く（<code>Generator</code>だけだとだめだった）</p>
-<pre><code>/**
- * @param $name
- * @return \Generator
- */
-public function generatorMethod($name)
-</code></pre><p>これで動いた。AspectMock黒魔術感あってハマると苦しい…。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
 
 			</span>
 		</div>

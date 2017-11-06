@@ -56,6 +56,56 @@
     <div id="main">
       
   
+    <article id="post-201611/realm-init-hang-because-of-getter-method-conflict" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/11/14/201611/realm-init-hang-because-of-getter-method-conflict/" class="article-date">
+  <time datetime="2016-11-13T15:00:00.000Z" itemprop="datePublished">Nov 14 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/11/14/201611/realm-init-hang-because-of-getter-method-conflict/">モデルオブジェクトのプロパティgetterメソッドと同名のメソッドを作り込んでいるとRealmの初期化時にアプリが固まる</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>ちょっと前まで動いていた開発中のアプリが突然スプラッシュで固まるようになってしまい、Realmの初期化でなにかトラブルが起きることは把握したけど理由がぜんぜんわからず、あせってPodのアップデートをしたり過去のリビジョンと比較したり大騒ぎしてしまったんだけど、原因はRealmのモデルオブジェクトクラスに作っていたメソッドの名前を何の気なしにリネームしたら、それがモデルのRealmで永続化されるプロパティのgetterと衝突しており、そのせいでRealmを起動できず固まるという状態になっていた。</p>
+<p>ドキュメントには「<a href="https://realm.io/jp/docs/swift/latest/#settergetter" target="_blank" rel="external">モデルクラスのsetterおよびgetterメソッドはオーバーライドできません</a>」とは書いてあるけどそんな致命的な状態になるのはなんか別の原因があったのかな。Objective-Cそのもののgetter/setterの挙動で同じようにハマったこともあったような…ともかくあせった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realm/">realm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201611/in-this-corner-of-the-world" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -387,57 +437,6 @@
 
 
   
-    <article id="post-201611/sugita-oosawa-azuma" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/11/03/201611/sugita-oosawa-azuma/" class="article-date">
-  <time datetime="2016-11-02T15:00:00.000Z" itemprop="datePublished">Nov 3 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/11/03/201611/sugita-oosawa-azuma/">『大澤聡×杉田俊介×東浩紀「批評と運動のあいだで——ゼロ年代、ロスジェネ、非モテ」【論壇の現在地</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://genron-cafe.jp/event/20161029/" target="_blank" rel="external">批評と運動のあいだで | ゲンロンカフェ</a></p>
-<p>これニコ生で観た。柄谷行人の評価の話とか今年のアニメ映画の評価の話とかもあって興味深かったけど、メインの本質的な話題がおもしろかった。</p>
-<p>本来はマジョリティも持っている「弱さ」にいかに言葉を与え、個別的に救いうるかについて考えず、マイノリティがその当事者性のみを訴えることが続くと、結果的にマジョリティによる決断主義的な逆ギレが起き、マイノリティさえ救えなくなる。当事者性を離れた「弱さ」の擁護に、文学や批評の本来の役割があるのではないか、と繰り返す東さんの話はもっともで、杉田さんの本『非モテの品格』のタイトルのなんとのな感じとは別の内容があるようなので読んでみたい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/genron-cafe/">genron-cafe</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
     <article id="post-201611/jack-reacher" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -490,6 +489,57 @@
 
 
   
+    <article id="post-201611/sugita-oosawa-azuma" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/11/03/201611/sugita-oosawa-azuma/" class="article-date">
+  <time datetime="2016-11-02T15:00:00.000Z" itemprop="datePublished">Nov 3 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/11/03/201611/sugita-oosawa-azuma/">『大澤聡×杉田俊介×東浩紀「批評と運動のあいだで——ゼロ年代、ロスジェネ、非モテ」【論壇の現在地</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://genron-cafe.jp/event/20161029/" target="_blank" rel="external">批評と運動のあいだで | ゲンロンカフェ</a></p>
+<p>これニコ生で観た。柄谷行人の評価の話とか今年のアニメ映画の評価の話とかもあって興味深かったけど、メインの本質的な話題がおもしろかった。</p>
+<p>本来はマジョリティも持っている「弱さ」にいかに言葉を与え、個別的に救いうるかについて考えず、マイノリティがその当事者性のみを訴えることが続くと、結果的にマジョリティによる決断主義的な逆ギレが起き、マイノリティさえ救えなくなる。当事者性を離れた「弱さ」の擁護に、文学や批評の本来の役割があるのではないか、と繰り返す東さんの話はもっともで、杉田さんの本『非モテの品格』のタイトルのなんとのな感じとは別の内容があるようなので読んでみたい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/genron-cafe/">genron-cafe</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201611/nanimono" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -517,57 +567,6 @@
     	<p><a href="http://nanimono-movie.com/" target="_blank" rel="external">映画「何者」公式サイト</a></p>
 <p> 『何者』も充実したいい映画だったと思うんだけど、ちょっと事前情報で期待度が高くなりすぎちゃった感があった。</p>
 <p>あとやっぱり前半の部分が単調に過ぎるというか、上辺だけのコミュニケーションが演じられていることが明白な「就活作戦本部」のパートと、それ以外のところにもうちょっと温度差があったほうがよかった気がしたな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201611/scoop" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/11/01/201611/scoop/" class="article-date">
-  <time datetime="2016-10-31T15:00:00.000Z" itemprop="datePublished">Nov 1 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/11/01/201611/scoop/">大根仁『SCOOP!』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://scoop-movie.jp/" target="_blank" rel="external">映画『SCOOP!』公式サイト</a></p>
-<hr>
-<p>映画の日に『SCOOP!』と『何者』を観たんだけど、『SCOOP!』のほうが楽しく観れた。「何者かであること」の挫折をめぐる話という意味では共通する部分のある両作品だけど若者の就活話よりは老兵の末路の話のほうに感情移入できるということかな…</p>
 
     
 	</div>

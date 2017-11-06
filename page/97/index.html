@@ -56,6 +56,159 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2005-11-19" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/19/1_collisions/2005-11-19/" class="article-date">
+  <time datetime="2005-11-18T15:00:00.000Z" itemprop="datePublished">Nov 19 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/19/1_collisions/2005-11-19/">Piccy ver.001</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/piccy001.png" alt="piccy001.png"></p>
+<p>■先日公開した<a href="http://collisions.dotimpac.to/works.web/piccy.html" target="_blank" rel="external">Piccy</a>を、問題の修正や新機能を追加してバージョン001として公開します。</p>
+<p>バージョン001では動作の不具合の修正と以下の機能を追加しました。</p>
+<ul>
+<li>管理者認証機能</li>
+<li>写真、フォルダ、タグへのコメント</li>
+<li>GPS携帯からの位置情報通知、ロケーションタグ機能</li>
+<li>GoogleMapsによるロケーションタグ一覧</li>
+</ul>
+<p>サンプルサイトをごらんください。サンプルサイトはパスワード「guest」で管理者ログインできます。</p>
+<ul>
+<li><a href="http://piccy.dotimpac.to/" target="_blank" rel="external">http://piccy.dotimpac.to/</a></li>
+</ul>
+<p>■ロケーションタグとGoogleMapsAPIもフォトアルバムを考えていた当初からやってみたかったので、とりあえず作ってみましたがどうでしょうか。</p>
+<p>ちなみに写真と位置情報については、以前増井&#8221;富豪家&#8221;俊之さんとお話してたときに（Wikiばなですな）、「位置情報と時間の関連データが取れてれば後からどうにでもなるんだから位置情報をいちいち写真に添付するのはナンセンスだ」という話をしてて、もっともだなーと思っていたので、そういうものをつくってみたいなと前から思ってたんでした。</p>
+<p>■［追記］</p>
+<ul>
+<li>バグを修正したpiccy002をリリースしました。</li>
+<li><a href="http://processing.dotimpac.to/?PiccySupport" target="_blank" rel="external">piccyサポートwikiページを用意しました</a></li>
+</ul>
+<h1 id="Piccyとは"><a href="#Piccyとは" class="headerlink" title="Piccyとは"></a>Piccyとは</h1><p>■Ajaxを採用したオンラインフォトアルバムです。 気軽に管理できてストレスなく閲覧できる画像ビュアーを目指して開発しています。</p>
+<p>詳しくは以下の解説ページもごらんください。</p>
+<ul>
+<li><a href="http://collisions.dotimpac.to/works/web/piccy.html" target="_blank" rel="external">http://collisions.dotimpac.to/works/web/piccy.html</a></li>
+</ul>
+<h1 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h1><ul>
+<li><a href="http://piccy.dotimpac.to/release/piccy002_20051118.zip" target="_blank" rel="external">http://piccy.dotimpac.to/release/piccy002_20051118.zip</a></li>
+</ul>
+<h1 id="設置方法"><a href="#設置方法" class="headerlink" title="設置方法"></a>設置方法</h1><ul>
+<li>圧縮ファイルを展開する。</li>
+<li>info.txt のadminpassを必ず変更する。</li>
+<li>info.txt の site_name や url などを編集する。</li>
+<li>index.rb 先頭行のRubyのPATHをサーバーに合わせる。</li>
+<li>サーバに転送する。</li>
+<li>dot_htaccessは「.httaccess」に名前を変える。</li>
+<li>index.rb に実行属性を付加する。他の属性は良きに計らう。 <ul>
+<li>data以下のディレクトリに書き込み属性が必要かもしれません。</li>
+</ul>
+</li>
+</ul>
+<h2 id="サムネイル作成機能を使う"><a href="#サムネイル作成機能を使う" class="headerlink" title="サムネイル作成機能を使う"></a>サムネイル作成機能を使う</h2><p>ImageMagick/RMagickを使用することで、画像のサムネイルを作成することができます。 デフォルトでは機能はオフにされています。</p>
+<ul>
+<li>info.txtのmakethumnailをtrueにする。スペースで区切ってください。  <blockquote>
+<p>makethumnail true</p>
+</blockquote>
+</li>
+<li>ImageMagickとRMagickをインストールしてください。<br>　必要ならば、thumnail.rbのrequireのパスを変更してください</li>
+</ul>
+<h2 id="位置情報記録機能を使う"><a href="#位置情報記録機能を使う" class="headerlink" title="位置情報記録機能を使う"></a>位置情報記録機能を使う</h2><p>auのGPS機能のある携帯電話からアクセスすることで、位置情報のあるタグを使用できます。 デフォルトでは機能はオフにされています。</p>
+<ul>
+<li>info.txtのlocationをtrueにする。スペースで区切ってください。  <blockquote>
+<p>location true</p>
+</blockquote>
+</li>
+<li>ezwebからpiccyを置いたURLにアクセスしてください。  <blockquote>
+<p><a href="http://（自分のサイトURL）/index.rb?cmd=location" target="_blank" rel="external">http://（自分のサイトURL）/index.rb?cmd=location</a></p>
+</blockquote>
+</li>
+<li>位置情報通知ページが出ますので、「位置情報を通知する」をクリックします。</li>
+<li>位置情報をが得られればフォームが出ますので、場所の名前を入力して送信してください。<br>　（場所の名前は入力しなくてもかまいません）</li>
+</ul>
+<p>※現仕様では位置情報通知は誰からでもできてしまいますので注意してください。</p>
+<h2 id="GoogleMaps機能を使う"><a href="#GoogleMaps機能を使う" class="headerlink" title="GoogleMaps機能を使う"></a>GoogleMaps機能を使う</h2><p>GoogleMapsに位置情報タグをマッピングしてみることができます。</p>
+<ul>
+<li>GoogleMaps APIのキーを取得します。 <ul>
+<li><a href="http://www.google.com/apis/maps/signup.html" target="_blank" rel="external">http://www.google.com/apis/maps/signup.html</a></li>
+</ul>
+</li>
+<li>info.txtのgmapkeyをにAPIキーを入れる。スペースで区切ってください。  <blockquote>
+<p>location ABQIAAAAgf6OSxrgd3QJC98-sUWrXBT6rMgtMUOAl&#8230;</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="謝辞、同梱ライブラリについて"><a href="#謝辞、同梱ライブラリについて" class="headerlink" title="謝辞、同梱ライブラリについて"></a>謝辞、同梱ライブラリについて</h1><p>以下のライブラリ、モジュールを使用しています。関係者の開発と提供に感謝します。</p>
+<ul>
+<li>ruby-jsonをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://sourceforge.net/projects/json" target="_blank" rel="external">http://sourceforge.net/projects/json</a></li>
+</ul>
+</li>
+<li>imagesize.rbをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://tociyuki.cool.ne.jp/clife/comp/rubyimagesize.html" target="_blank" rel="external">http://tociyuki.cool.ne.jp/clife/comp/rubyimagesize.html</a></li>
+</ul>
+</li>
+<li>PhotoXPのexifパースモジュールexifcodec一式をアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://www.daifukuya.com/photoxp/" target="_blank" rel="external">http://www.daifukuya.com/photoxp/</a></li>
+</ul>
+</li>
+<li>javascriptライブラリscript.aculo.usをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://script.aculo.us/" target="_blank" rel="external">http://script.aculo.us/</a></li>
+</ul>
+</li>
+<li>GoogleMaps用測地系変換ライブラリwgsgmap.15.jsをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://d.hatena.ne.jp/tociyuki/20050731/1122823117" target="_blank" rel="external">http://d.hatena.ne.jp/tociyuki/20050731/1122823117</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="動作について"><a href="#動作について" class="headerlink" title="動作について"></a>動作について</h1><ul>
+<li>動作についてはFirefox1.0.7、InternetExplorer6で行っています。</li>
+<li>Opera,Safariなどのブラウザでの動作検証は行っていません。問題がありましたらフィーとバックいただけると助かります。</li>
+<li>報告はこの記事のコメントなどにどうぞ。</li>
+</ul>
+<h1 id="ライセンス"><a href="#ライセンス" class="headerlink" title="ライセンス"></a>ライセンス</h1><ul>
+<li>piccy は、<a href="http://www.gnu.org/philosophy/free-sw.ja.html" target="_blank" rel="external">フリーソフトウェア</a>です。</li>
+<li>完全に無保証です。</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2005-11-11" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -783,100 +936,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-08-28" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/08/28/1_collisions/2005-08-28/" class="article-date">
-  <time datetime="2005-08-27T15:00:00.000Z" itemprop="datePublished">Aug 28 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/08/28/1_collisions/2005-08-28/">スケジュール指向webメモツール：Calki　ver.002</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/calki002.png" alt="calki002.png"></p>
-<p>■夏の自由研究がわりに<a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">calki</a>に手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。</p>
-<p><a href="http://prototype.conio.net/" target="_blank" rel="external">prototype.js</a>を使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。</p>
-<ul>
-<li><a href="http://calki.dotimpac.to/" target="_blank" rel="external">http://calki.dotimpac.to/</a>　サンプルサイト</li>
-</ul>
-<h1 id="Calkiとは"><a href="#Calkiとは" class="headerlink" title="Calkiとは"></a>Calkiとは</h1><p>■日付管理、簡易スケジュール機能のあるWiki風のメモツールです。<a href="http://ninjinix.x0.com/rn/" target="_blank" rel="external">RandomNote</a>がベースになっています。詳しくは以下のページをごらんください。</p>
-<ul>
-<li><a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">スケジュール指向Wiki風メモツール：Calki</a> <ul>
-<li>前バージョンの記事</li>
-</ul>
-</li>
-<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">Calkiとは</a> <ul>
-<li>CalkiのAboutPage</li>
-</ul>
-</li>
-</ul>
-<h1 id="新機能"><a href="#新機能" class="headerlink" title="新機能"></a>新機能</h1><p>■最近になって<a href="http://book.mycom.co.jp/wd/" target="_blank" rel="external">WebDesigning</a>の今月号を立ち読みしてたら、JavaScript/Ajaxの特集に<a href="http://collisions.dotimpac.to/works/web/kaiwarecotonoha.html" target="_blank" rel="external">kaiwarecotonoha</a>が紹介されてて驚いて、それでAjaxの検索が多かったのかー、あれすごい適当だしメンテもしてないしその後Ajaxもとくに触ってないから恐縮だなー、などと思いまして、じゃあprototype.jsでもちょっと触ってみるかと思ったんですな。せっかくだからとcalkiにいろいろ機能をつけていったら、インターフェイスの部分がかなり刷新されてしまいました。おおむね使いやすくなってると思います。</p>
-<h2 id="JavaScriptによる動的なページ操作"><a href="#JavaScriptによる動的なページ操作" class="headerlink" title="JavaScriptによる動的なページ操作"></a>JavaScriptによる動的なページ操作</h2><ul>
-<li>日付ページへのマウスオーバーでその日付ページに対するツールバーが出ます。直感的な操作が可能です。</li>
-<li>見出しをクリックすることで、メモを畳んで隠すことができます。</li>
-<li>開いている日付から「前の日」「次の週」のように順番に日付ページを開くことができます。</li>
-</ul>
-<p>JavaScriptでの動的なスタイル操作で、見たくない情報は隠せてちょっと気持ちがいいです。まだ開いてないメモを開いたり、日付を進めたり戻したりするときは、Ajax式の非同期ロードをします。</p>
-<h2 id="非同期ロード／セーブによるシームレス編集"><a href="#非同期ロード／セーブによるシームレス編集" class="headerlink" title="非同期ロード／セーブによるシームレス編集"></a>非同期ロード／セーブによるシームレス編集</h2><ul>
-<li>以前までは画面が切り替わっていたメモの編集がその場でできるようになりました。</li>
-<li>追記の書き込みもその場で非同期に行います。</li>
-<li>編集時にほかのメモが参照できるので、コピー＆ペーストが簡単です。</li>
-</ul>
-<p><a href="http://www.tiddlywiki.com/" target="_blank" rel="external">TiddlyWiki</a>のサクサク感を目指してみました。やや重いので待ち時間なしとはいきませんが。使ってみて編集時にほかのメモが見られる（そのメモも編集状態にしてwikiフォーマットでコピペできる）ってのがわりと重要だなと思ったんですが、それは後で書きます。</p>
-<h2 id="MM-memoインポート機能"><a href="#MM-memoインポート機能" class="headerlink" title="MM/memoインポート機能"></a><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>インポート機能</h2><ul>
-<li><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>から自分のブックマークを日付ごとに取得してメモを作れます。</li>
-<li>ちゃんとタグをキーワードリンクにするので、うれしいかも</li>
-</ul>
-<p>おまけというか、自分が欲しかったのでつけました。ほんとは毎日自動取得したほうがいいかもしれないけど。</p>
-<h1 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h1><p>■Ruby1.8.1の環境が必須です。また、非同期編集とMM/memoインポートは、別途Uconvをインストールしないと使えなくなっちゃったんで、デフォルトでは無効になっています。そのあたりご了承のうえ設置・使用してください。もちろん無保証です。</p>
-<ul>
-<li><a href="http://calki.dotimpac.to/release/calki002_20050829.zip" target="_blank" rel="external">http://calki.dotimpac.to/release/calki002_20050829.zip</a></li>
-</ul>
-<p>設置方法はAboutPageをごらんください。</p>
-<ul>
-<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">http://calki.dotimpac.to/?AboutPage.txt</a></li>
-</ul>
-<h1 id="雑談：シームレス編集とwikiページの再統合"><a href="#雑談：シームレス編集とwikiページの再統合" class="headerlink" title="雑談：シームレス編集とwikiページの再統合"></a>雑談：シームレス編集とwikiページの再統合</h1><p>■上にもちょっと書きましたが自分でちょっと使ってみて、シームレス編集（というかJavaScriptでエレメントを差し替えてその場で編集できる機能）とwikiはかなり相性がいいんじゃないかと思いましたね（TiddlyWikiはもともとそれを狙っているのかもしれませんが）。とくに、編集しながらほかのページを見たり、そのページから（しかもWiki書式で）コピーしたりできるのがwiki的にうれしい。wikiエンジンによるアジャイルなコンテンツ作りには、方針の変更とか内容の再統合というプロセスが絶対に避けられないわけで、長くなりすぎたページの株分けとか、よく参照する内容を集めた新しいページの作成みたいなことが極力やりやすくないといけないのではと思いました。</p>
-<p>CalkiにはRandomNoteから継承した検索キーワードリンク機能があって、この検索結果の一番上に「このキーワードの新しいメモを作る」というフォームを前バージョンからつけてたんですが、使ってるうちにあんまり便利じゃないんではずしたりしてたんですな。ところが、これが今バージョンからはかなり威力を発揮します。たとえば「JavaScript」を検索すると、いままでメモしたJavaScriptのメモが一覧されますが、この中にはよく見るメモもあればぜんぜん見ないメモもあるわけです。そこでよく見るメモをそれぞれ編集状態にしてコピーして、新しいフォームに入れて別のキーワードをつけてメモを作成すれば、いままでより情報が簡単に引き出せるようになるというわけ。これかなり便利じゃないすか？　便利だと思うんですが、どうでしょう。</p>
-<p>というわけで、もし興味があったら使ってみてください。たぶんバグはたくさんあると思いますが。バグがあったらサンプルサイトに［［バグ］］とか検索キーワードをつけてメモを作っておいていただけるとたすかります。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
 
 			</span>
 		</div>
