@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://text-perforation.doppac.cc/"/>
-  <updated>2017-11-06T04:15:31.000Z</updated>
+  <updated>2017-11-07T02:14:48.000Z</updated>
   <id>http://text-perforation.doppac.cc/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>google sheetsのimage関数</title>
+    <link href="http://text-perforation.doppac.cc/2017/11/03/201711/google-sheets-image-function/"/>
+    <id>http://text-perforation.doppac.cc/2017/11/03/201711/google-sheets-image-function/</id>
+    <published>2017-11-02T15:00:00.000Z</published>
+    <updated>2017-11-07T02:14:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://support.google.com/docs/answer/3093333?hl=ja" target="_blank" rel="external">IMAGE - ドキュメント エディタ ヘルプ</a></p><hr><p>google sheet作ってて、こういうのあったら便利なのになと思って調べたらあった、セルの内容をソースとしてロードした画像をセルに表示する関数。表示モード（セル内にfitさせるか、サイズを指定するかなど）も選択できる。Excelでは同様の機能を関数のような簡単な手順ではできなそう。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://support.google.com/docs/answer/3093333?hl=ja&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;IMAGE - ドキュメント エディタ ヘルプ&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;goo
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="webservice" scheme="http://text-perforation.doppac.cc/tags/webservice/"/>
+    
+      <category term="software" scheme="http://text-perforation.doppac.cc/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ルチアーノ・フロリディ『第四の革命 情報圏（インフォスフィア）が世界をつくりかえる』を読んだ</title>
     <link href="http://text-perforation.doppac.cc/2017/11/02/201711/the-4th-revolution/"/>
     <id>http://text-perforation.doppac.cc/2017/11/02/201711/the-4th-revolution/</id>
     <published>2017-11-01T15:00:00.000Z</published>
-    <updated>2017-11-06T04:15:31.000Z</updated>
+    <updated>2017-11-06T04:15:49.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="http://www.shin-yo-sha.co.jp/mokuroku/books/978-4-7885-1522-2.htm" target="_blank" rel="external">第四の革命</a></p><hr><p>弊社代表石橋の推し哲学者ルチアーノ・フロリディの単著としては初の邦訳（でいいのかな？）。フロリディさんは「有形無形問わずあらゆるものは情報であり、情報の『よさ』を中心とする情報倫理を構築すべき」という非常にラジカルな世界観を提唱する情報哲学者なんだそうだけど（参考：<a href="https://ja.ishibashihideto.net/activity/2013/08/22/luciano-floridi-study-2013-08-20.html" target="_blank" rel="external">情報／ITアーキテクトのための「使える！フロリディ情報哲学」</a>）『第四の革命』はその情報哲学の入門編ともいえる内容で、ドライブ感ある文体や独特の（センスオブワンダーを感じる）造語が読みやすく訳されていてたいへん楽しめた。</p><p>この本のいう「第四の革命」とは、コペルニクス、ダーウィン、フロイトに次ぐ第四の脱人間中心パラダイム（の転換期）として、昨今のITC技術による情報爆発とその自律エージェント化を位置づけるもの。人間環境のデフォルトと化した人工物を「新しい自然」と見なしたり、IoTやスマートエージェント技術の描く未来像に人間中心主義の終わりを見いだすような発想はとりわけ新しいというわけでもないかなと思いながら読んでいたんだけど、人間を情報エージェントととらえたとき、これまで「人間性」を基礎づけてきたシステム（たとえばプライバシー、たとえば政治）がどのような物理的制約のもとで成り立ってきたのか、そしてすでにわれわれが手にしている高度に発展し民主化されたICTが、そうした「人間性」をどのように作り替えているのか、つまり、すでに情報エージェントであるわれわれが、いま「人間性」とは実際には何だと思っているのかをここまで詳細に網羅的に分析していると説得力が違うなと思う。そしてやっぱり数々繰り出されるキャッチーな造語が「第四の革命」感あって最高。inforg（情報有機体）！ e-mortal（e-不死）！ 情報摩擦！ 政治的アポトーシス！</p><p>「世界の見方を変える」という意味ではまさしく哲学書なんだろうけど、いわゆる「哲学書」的な語彙は少なく前提知識も不用だし、むしろIT技術書のようなプラクティカルなセンスにあふれている（「社会契約説では人は法的にオプトアウト」みたいなパンチラインがぼんぼん出てくる）のでまあ分厚いけど恐れずにノリでどんどん読んで<ruby>情報圏<rt>インフォスフィア</rt></ruby>に取り込んで作り替えていくといいと思う。</p><div class="video-container"><iframe src="//www.youtube.com/embed/rQKC12hxihI" frameborder="0" allowfullscreen></iframe></div><p>石橋さんとオーバーキャスト大林さんのフロリディ対談は、あんまり本書の内容に触れてなくて残念だったな。この本の内容にこだわった読書会的なやつ希望。</p>]]></content>
     
@@ -46,13 +75,40 @@
   </entry>
   
   <entry>
+    <title>ドゥニ・ヴィルヌーヴ『ブレードランナー2049』を観た</title>
+    <link href="http://text-perforation.doppac.cc/2017/11/01/201711/blade-runner-2049/"/>
+    <id>http://text-perforation.doppac.cc/2017/11/01/201711/blade-runner-2049/</id>
+    <published>2017-10-31T15:00:00.000Z</published>
+    <updated>2017-11-07T10:47:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.bladerunner2049.jp/" target="_blank" rel="external">映画『ブレードランナー2049』 | オフィシャルサイト | ソニー・ピクチャーズ</a></p><hr><p>ブレードランナーはなんというか先輩の映画って感じで、LDで何度も見せてもらったなーという思い出はあるけどあんまり個人的な思い入れはなく、どちらかというとヴィルヌーヴ監督の前作『メッセージ』がよかったのでそっちの期待が大きかった。それでいうと僕は映画としては『メッセージ』のほうが好きかなという感じだけど、とりあえずこの映画の話を先輩としなきゃって感じかな。</p><p>ブレードランナー的なヴィジョンは僕なんかはアニメやゲームでおもにインストールしているわけだけど、『ブレードランナー2049』は映画として際立つヴィジョンが提示されてたのはよかったと思う。ラブシーンのとこ3Dで観てみたいのでIMAX3Dやってるうちにもう一度観たい。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.bladerunner2049.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『ブレードランナー2049』 | オフィシャルサイト | ソニー・ピクチャーズ&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ブレードランナ
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017年10月のまとめ</title>
     <link href="http://text-perforation.doppac.cc/2017/10/31/201710/201710-summary/"/>
     <id>http://text-perforation.doppac.cc/2017/10/31/201710/201710-summary/</id>
     <published>2017-10-30T15:00:00.000Z</published>
     <updated>2017-11-01T02:54:49.000Z</updated>
     
-    <content type="html"><![CDATA[<p>18エントリ。新規開発案件に没頭してたのもあり10月短すぎだろと思ってたけど、まとめてみるとけっこういろんなことしてたな。</p><ul><li><a href="/2017/10/01/201710/eureka-seven-high-evolution-1/">『交響詩篇エウレカセブン　ハイエボリューション 1』を観た [10/01]</a></li><li><a href="/2017/10/02/201710/dog-watermeron-suger/">吉田棒一『犬ウォーターメロンシュガー』を読んだ [10/02]</a></li><li><a href="/2017/10/03/201710/alan-kay 2/">アラン・ケイ『アラン・ケイ』を再読した [10/03]</a></li><li><a href="/2017/10/05/201710/hidden-figures/">セオドア・メルフィ『ドリーム』を観た [10/05]</a></li><li><a href="/2017/10/07/201710/asian-art-award/">『Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展』を見た [10/07]</a></li><li><a href="/2017/10/11/201710/braava/">ブラーバを借りた [10/11]</a></li><li><a href="/2017/10/13/201710/ring-world/">ラリイ・ニーブン『リングワールド』を読んだ [10/13]</a></li><li><a href="/2017/10/15/201710/bose-soundlink-revolve/">Bose SoundLink Revolveを買った [10/15]</a></li><li><a href="/2017/10/18/201710/animations-of-era-of-ours/">土居伸彰『21世紀のアニメーションがわかる本』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/arte-on-mozc/">アルテ on Mozc [10/18]</a></li><li><a href="/2017/10/18/201710/tower/">ロロイ『塔』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/guang-daao/">Duang-Daao『ドゥアン・ダーオのトムヤムクン』を読んだ [10/18]</a></li><li><a href="/2017/10/19/201710/sisters-of-in-a-corner-of-the-world/">細馬宏通『2つのこの世界の片隅に』を読んだ [10/19]</a></li><li><a href="/2017/10/19/201710/war-for-the-planet-of-the-apes/">マット・リーブス『猿の惑星: 聖戦記』を観た [10/19]</a></li><li><a href="/2017/10/20/201710/next-js-and-almin/">Almin on Next.js [10/20]</a></li><li><a href="/2017/10/20/201710/doi-hosoma-animation-talk/">「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた [10/20]</a></li><li><a href="/2017/10/21/201710/olafur-eliasson-space-is-process/">ヘンリク・ルンデ、ヤコブ・イェルゲンセン『オラファー･エリアソン 視覚と知覚』を観た [10/21]</a></li><li><a href="/2017/10/29/201710/super-mario-galaxy/">スーパーマリオギャラクシー [10/29]</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>18エントリ。新規開発案件に没頭してたのもあり10月短すぎだろと思ってたけど、まとめてみるとけっこういろんなことしてたな。</p><ul><li><a href="/2017/10/01/201710/eureka-seven-high-evolution-1/">『交響詩篇エウレカセブン　ハイエボリューション 1』を観た [10/01]</a></li><li><a href="/2017/10/02/201710/dog-watermeron-suger/">吉田棒一『犬ウォーターメロンシュガー』を読んだ [10/02]</a></li><li><a href="/2017/10/03/201710/alan-kay 2/">アラン・ケイ『アラン・ケイ』を再読した [10/03]</a></li><li><a href="/2017/10/05/201710/hidden-figures/">セオドア・メルフィ『ドリーム』を観た [10/05]</a></li><li><a href="/2017/10/07/201710/asian-art-award/">『Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展』を見た [10/07]</a></li><li><a href="/2017/10/11/201710/braava/">ブラーバを借りた [10/11]</a></li><li><a href="/2017/10/13/201710/ring-world/">ラリイ・ニーブン『リングワールド』を読んだ [10/13]</a></li><li><a href="/2017/10/15/201710/bose-soundlink-revolve/">Bose SoundLink Revolveを買った [10/15]</a></li><li><a href="/2017/10/18/201710/tower/">ロロイ『塔』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/arte-on-mozc/">アルテ on Mozc [10/18]</a></li><li><a href="/2017/10/18/201710/guang-daao/">Duang-Daao『ドゥアン・ダーオのトムヤムクン』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/animations-of-era-of-ours/">土居伸彰『21世紀のアニメーションがわかる本』を読んだ [10/18]</a></li><li><a href="/2017/10/19/201710/sisters-of-in-a-corner-of-the-world/">細馬宏通『2つのこの世界の片隅に』を読んだ [10/19]</a></li><li><a href="/2017/10/19/201710/war-for-the-planet-of-the-apes/">マット・リーブス『猿の惑星: 聖戦記』を観た [10/19]</a></li><li><a href="/2017/10/20/201710/next-js-and-almin/">Almin on Next.js [10/20]</a></li><li><a href="/2017/10/20/201710/doi-hosoma-animation-talk/">「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた [10/20]</a></li><li><a href="/2017/10/21/201710/olafur-eliasson-space-is-process/">ヘンリク・ルンデ、ヤコブ・イェルゲンセン『オラファー･エリアソン 視覚と知覚』を観た [10/21]</a></li><li><a href="/2017/10/29/201710/super-mario-galaxy/">スーパーマリオギャラクシー [10/29]</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -167,9 +223,9 @@
     
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
-      <category term="event" scheme="http://text-perforation.doppac.cc/tags/event/"/>
-    
       <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
+    
+      <category term="event" scheme="http://text-perforation.doppac.cc/tags/event/"/>
     
   </entry>
   
@@ -230,6 +286,63 @@
   </entry>
   
   <entry>
+    <title>土居伸彰『21世紀のアニメーションがわかる本』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/"/>
+    <id>http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/</id>
+    <published>2017-10-17T15:00:00.000Z</published>
+    <updated>2017-10-25T02:00:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://filmart.co.jp/books/review/21seiki_anime/" target="_blank" rel="external">21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社</a></p><hr><p>トークショーの前にと思って。アニメーションドキュメンタリーというジャンルの重要性の話など土居さんの前著『<a href="/2017/02/06/201702/personal-hermony/">個人的なハーモニー</a>』のおさらい的な部分もありつつ、本書の要旨である「21世紀のアニメーション」がどこに向かっているかいう議論はかなりアクロバティックというか乱暴ともいえる整理が炸裂していた。個別の作品の扱いがこれでいいのかという話は多そうだけど（僕はそこまで気にはならなかった）、「『私たち』の時代」の作品とは何かという定義については腑に落ちたというか、いわゆるポストインターネットの世界観とか、インディーゲームのナラティブとか、気になっているものを同じ枠組みで見ることができるんじゃないかと思った。</p><p>つまり『動物化したポストモダン』なんじゃないかという気もちょっとしたけど。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://filmart.co.jp/books/review/21seiki_anime/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>アルテ on Mozc</title>
+    <link href="http://text-perforation.doppac.cc/2017/10/18/201710/arte-on-mozc/"/>
+    <id>http://text-perforation.doppac.cc/2017/10/18/201710/arte-on-mozc/</id>
+    <published>2017-10-17T15:00:00.000Z</published>
+    <updated>2017-11-01T01:57:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.keyboard-arte.com/" target="_blank" rel="external">アルテ on Mozc 日本語入力キーボード</a></p><hr><p>最近Androidで使っているIME。かなり意欲的な開発が行われているようで経緯がわかりにくいんだけど、まず、ローマ字入力をテンキー＋フリックでの入力に合わせて再構築した新しい日本語入力メソッド「アルテ(ARTE)」というのを実装したAndroid用のIMEが開発されて、それの変換エンジンを<a href="https://github.com/google/mozc" target="_blank" rel="external">Mozc</a>（Google日本語変換のエンジンがオープンソース化されたもの）にした最新版が『アルテ on Mozc』。で、このアルテのローマ字入力とは別に選択できる日本語入力メソッドとしてフリック入力を拡張した「ターンフリック入力」というのも別途実装されているということみたい。<a href="https://www.keyboard-arte.com/note" target="_blank" rel="external">アルテの開発趣旨</a>を読んでもとても実直にスマホでの日本語入力環境を整えることを考えていることがうかがえてとても好ましい。無料版の「動画広告を見ると4時間拡張入力が使えます」という大胆なシステムもおもしろかったんだけど、いまは課金してフル版を使っている。</p><p>ターンフリックでの濁点小文字シフトはわりとすんなり慣れたのでいまはアルテローマ字入力に慣れてみようかと切り替えてみている。なかなか新鮮。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.keyboard-arte.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;アルテ on Mozc 日本語入力キーボード&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;最近Androidで使っているIME。かなり意欲的な
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="android" scheme="http://text-perforation.doppac.cc/tags/android/"/>
+    
+      <category term="software" scheme="http://text-perforation.doppac.cc/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ロロイ『塔』を読んだ</title>
     <link href="http://text-perforation.doppac.cc/2017/10/18/201710/tower/"/>
     <id>http://text-perforation.doppac.cc/2017/10/18/201710/tower/</id>
@@ -284,63 +397,6 @@
       <category term="bccks" scheme="http://text-perforation.doppac.cc/tags/bccks/"/>
     
       <category term="selfpublish" scheme="http://text-perforation.doppac.cc/tags/selfpublish/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>土居伸彰『21世紀のアニメーションがわかる本』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/18/201710/animations-of-era-of-ours/</id>
-    <published>2017-10-17T15:00:00.000Z</published>
-    <updated>2017-10-25T02:00:36.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://filmart.co.jp/books/review/21seiki_anime/" target="_blank" rel="external">21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社</a></p><hr><p>トークショーの前にと思って。アニメーションドキュメンタリーというジャンルの重要性の話など土居さんの前著『<a href="/2017/02/06/201702/personal-hermony/">個人的なハーモニー</a>』のおさらい的な部分もありつつ、本書の要旨である「21世紀のアニメーション」がどこに向かっているかいう議論はかなりアクロバティックというか乱暴ともいえる整理が炸裂していた。個別の作品の扱いがこれでいいのかという話は多そうだけど（僕はそこまで気にはならなかった）、「『私たち』の時代」の作品とは何かという定義については腑に落ちたというか、いわゆるポストインターネットの世界観とか、インディーゲームのナラティブとか、気になっているものを同じ枠組みで見ることができるんじゃないかと思った。</p><p>つまり『動物化したポストモダン』なんじゃないかという気もちょっとしたけど。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://filmart.co.jp/books/review/21seiki_anime/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;21世紀のアニメーションがわかる本 | 動く出版社 フィルムアート社&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>アルテ on Mozc</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/18/201710/arte-on-mozc/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/18/201710/arte-on-mozc/</id>
-    <published>2017-10-17T15:00:00.000Z</published>
-    <updated>2017-11-01T01:57:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.keyboard-arte.com/" target="_blank" rel="external">アルテ on Mozc 日本語入力キーボード</a></p><hr><p>最近Androidで使っているIME。かなり意欲的な開発が行われているようで経緯がわかりにくいんだけど、まず、ローマ字入力をテンキー＋フリックでの入力に合わせて再構築した新しい日本語入力メソッド「アルテ(ARTE)」というのを実装したAndroid用のIMEが開発されて、それの変換エンジンを<a href="https://github.com/google/mozc" target="_blank" rel="external">Mozc</a>（Google日本語変換のエンジンがオープンソース化されたもの）にした最新版が『アルテ on Mozc』。で、このアルテのローマ字入力とは別に選択できる日本語入力メソッドとしてフリック入力を拡張した「ターンフリック入力」というのも別途実装されているということみたい。<a href="https://www.keyboard-arte.com/note" target="_blank" rel="external">アルテの開発趣旨</a>を読んでもとても実直にスマホでの日本語入力環境を整えることを考えていることがうかがえてとても好ましい。無料版の「動画広告を見ると4時間拡張入力が使えます」という大胆なシステムもおもしろかったんだけど、いまは課金してフル版を使っている。</p><p>ターンフリックでの濁点小文字シフトはわりとすんなり慣れたのでいまはアルテローマ字入力に慣れてみようかと切り替えてみている。なかなか新鮮。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.keyboard-arte.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;アルテ on Mozc 日本語入力キーボード&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;最近Androidで使っているIME。かなり意欲的な
-      
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="android" scheme="http://text-perforation.doppac.cc/tags/android/"/>
-    
-      <category term="software" scheme="http://text-perforation.doppac.cc/tags/software/"/>
     
   </entry>
   
@@ -495,63 +551,6 @@
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
       <category term="media" scheme="http://text-perforation.doppac.cc/tags/media/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>吉田棒一『犬ウォーターメロンシュガー』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/02/201710/dog-watermeron-suger/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/02/201710/dog-watermeron-suger/</id>
-    <published>2017-10-01T15:00:00.000Z</published>
-    <updated>2017-10-26T01:54:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><script src="//bccks.jp/bcck/150462/embed" type="text/javascript"></script><br><a href="https://bccks.jp/bcck/150462/info" title="犬ウォーターメロンシュガー" target="_blank">『<strong>犬ウォーターメロンシュガー</strong>』　吉田　棒一著</a></p><hr><p>かなり前からBCCKSでエッセイというかなんというか、ひとことでいうと「テキスト系個人サイトの文章」みたいなのを出版されている吉田棒ーさんの新作。「テキスト系個人サイトの文章」みたいなのが好きな人なら間違いなく楽しめるし、「テキスト系個人サイトの文章」みたいなのが好きな人はもう結構な年なんだからこういうものにちゃんと324円払ってほしい。</p><p>僕はBCCKSの電子版で読んだけどまったくもって頭から順番に読んだりするタイプの文章ではないので紙の本でトイレとかに置いて雑に読み始めて適当に閉じるくらいのほうがいい。紙本はこちらのその名も<a href="http://ycd.thebase.in/items/6901259" target="_blank" rel="external">チンポシステムズ出版</a>で1200円で買える。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;script src=&quot;//bccks.jp/bcck/150462/embed&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;a href=&quot;https://bccks.jp/bcck/150462/info&quot; title=&quot;犬ウォーターメ
-      
-    
-    </summary>
-    
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="bccks" scheme="http://text-perforation.doppac.cc/tags/bccks/"/>
-    
-      <category term="selfpublish" scheme="http://text-perforation.doppac.cc/tags/selfpublish/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『交響詩篇エウレカセブン　ハイエボリューション 1』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/01/201710/eureka-seven-high-evolution-1/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/01/201710/eureka-seven-high-evolution-1/</id>
-    <published>2017-09-30T15:00:00.000Z</published>
-    <updated>2017-10-06T02:03:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://eurekaseven.jp/" target="_blank" rel="external">映画『交響詩篇エウレカセブン　ハイエボリューション』</a></p><div class="video-container"><iframe src="//www.youtube.com/embed/nit-F9woH9Q" frameborder="0" allowfullscreen></iframe></div><hr><p>映画の日に。ダンケルクかベイビードライバーもっかい観ようかなと思いつつ時間が合わなかったので観れるやつのなかから選んだ映画だったんだけど、これは劇場で観てよかった。冒頭から30分ほどのテンションの高い新作パートの福眼感の高さと、アホかと思うような構成のTVシリーズ再編集パート。奇をてらっているというよりも純粋に作りたいものを精度高く作ったというベテランDJのロングミックスになってて楽しかった。</p><div class="video-container"><iframe src="//www.youtube.com/embed/ARXhxgwcn6A" frameborder="0" allowfullscreen></iframe></div><p>こっちのアクスペリエンス7MVのほうが作品の印象に近い</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://eurekaseven.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『交響詩篇エウレカセブン　ハイエボリューション』&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;video-container&quot;&gt;&lt;iframe s
-      
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
-      <category term="animation" scheme="http://text-perforation.doppac.cc/tags/animation/"/>
     
   </entry>
   

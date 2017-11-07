@@ -56,6 +56,115 @@
     <div id="main">
       
   
+    <article id="post-201604/realm-crash-on-physical-iphone-device" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/05/201604/realm-crash-on-physical-iphone-device/" class="article-date">
+  <time datetime="2016-04-04T15:00:00.000Z" itemprop="datePublished">Apr 5 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/05/201604/realm-crash-on-physical-iphone-device/">RealmがiPhone実機でだけクラッシュする（ことがあるらしい）</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>iOS開発が佳境で、そろそろ結合テストというタイミングのころ、iPhoneのいくつかの実機でだけアプリが起動直後にクラッシュするという現象が起きた。当該機種でもシミュレータでは再現しないし、手持ちの端末実機でも再現しない。しょうがないのでその機種を借りにいってその場で調べたら確かにクラッシュしてて、なにかと思ったらjsonファイルでバンドルしているマスタデータを初回起動時にまとめてインサートしてるとこで</p>
+<p>json.forEach { v in<br>    let master = Master()<br>    try relam.write {<br>        master.import(v)<br>    }<br>}</p>
+<p>的なコードで個別にトランザクションを張ってデータを入れてたら機種によっては（手持ちのiPhone5だと大丈夫でiPhone6だとだめだったりしたので、パフォーマンスの問題なのかも）クラッシュしてしまうらしかった。トランザクションをループの外で張るようにしたら大丈夫になった。ただあとでバグなら報告しようと思って後で戻して再度実行したらクラッシュしなくなってたのでなにか別の要因もあるのかも。</p>
+<p>Realm使い心地としてはかなり最高だし次のプロジェクトでも絶対導入したいけど、初期データを投入したDBファイルを作っておくみたいなことはしにくいのはなんとかならないかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realm/">realm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201604/why-are-vide-games-so-interesting" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/04/201604/why-are-vide-games-so-interesting/" class="article-date">
+  <time datetime="2016-04-03T15:00:00.000Z" itemprop="datePublished">Apr 4 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/04/201604/why-are-vide-games-so-interesting/">アスキー総研（編）『ゲームってなんでおもしろい？』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048996053/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/519hW03HgRL._SL160_.jpg" alt="ゲームってなんでおもしろい?" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048996053/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ゲームってなんでおもしろい?</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.04.08</div></div><div class="amazlet-detail"><br>KADOKAWA (2016-03-09)<br>売り上げランキング: 13,448<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048996053/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>「GAME ON」展の図録的な扱いの本なのでもっと資料価値重視の本かと思っていたけどわりと読み応えのある内容で、「ゲームってなんでおもしろい？」というより「ゲームをおもしろく感じることは人間にとってどういう意味をもつのか」というテーマに多角的にアプローチする本なんだなと思えておもしろかった。「GAME ON」の展示ではゲームの未来として象徴的に扱われていたのはPSVRだったけど、もうひとつの未来は「プレイヤーをおもしろくさせ続けるAIとしてのゲーム」なんだろうな。</p>
+<blockquote><p>ある人が『テトリス』の版権をとりに、ロシア（当時のソ連）に行き、テトリスの作者に「すごく面白いゲームだ」と言ったら怒られたそうなんです。「あれはゲームじゃない、科学なんだ」と。どういう科学かというと、人間はささいなギミックを連続的にあたえることで、いつまでも作業を続けることができる。そのことを実証するための実験だった。どれだけ単純作業を我慢できるのかという目的でテトリスが作られていた、という。</p>
+<footer><strong>『ゲームってなんでおもしろい？」 - 川上量生インタビュー</strong></footer></blockquote>
+<blockquote><p>似たようなところでは、ビットコインがありますが、あれは（ある種の）ゲームなんだけど、ちょっと違うんですよ。いまは発掘できませんが、努力すれば発掘できてゲーム臭くなかったのが良くて。”意味のない壁”がちょっと高めに設定されていて、ちょっと頑張れば超えられるのが、人類のハマるゲームだと思うんです。安易にハマるゲームほど、資本主義のサブセットみたいになっていて、それって現象として面白いなと思いますね。</p>
+<footer><strong>『ゲームってなんでおもしろい？」 - 落合陽一×真鍋大度 メディアアーティスト対談（落合陽一発言）</strong></footer></blockquote>
+<p>あ、あともう一つゲームの未来あって、本のなかで最新のゲームとして一番言及されているのが『ねこあつめ』だっていう。生かさず殺さず楽しませてくれるAIが猫の姿してるのがゲームの未来っぽい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201604/mogura-no-uta" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -490,110 +599,9 @@
 
 
   
-    <article id="post-201603/the-boy-and-the-world" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/27/201603/the-boy-and-the-world/" class="article-date">
-  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/27/201603/the-boy-and-the-world/">アレ・アブレウ『父を探して』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://newdeer.net/sagashite/" target="_blank" rel="external">映画『父を探して』公式ホームページ</a></p>
-<p>突発的一人暮らしの週末にやっぱり大学生みたいにミニシアターで海外アニメを観た。『父を探して』、あんまり情報あつめないまま観に行ったんだけどとてもよかった。</p>
-<p>画用紙を思わせる白ベースの背景に、色鉛筆やクレヨンなどで生々しいタッチの残る描線による落書きのような線画のキャラクター。抑制された動きと鮮烈なレイアウト（これが特によかったと思う）。そして音楽。最低限の最良のものだけを使ってできるかぎり大きな円を描いた。というような気持ちのいい映画。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/hitori-gurashi" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/26/201603/hitori-gurashi/" class="article-date">
-  <time datetime="2016-03-25T15:00:00.000Z" itemprop="datePublished">Mar 26 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/26/201603/hitori-gurashi/">突発的一人暮らし</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>奥さんが春休みに入った子供たちを連れて実家に帰省することになったので突発的に一人で週末過ごすことになった。どのくらいぶりだろう、次男が生まれてからはあまり覚えがないので4年くらいかな。</p>
-<p>といって特に行くべきところもなかったのでものすごく久しぶりに秋葉原に行ってみた。行ったことがなかった<a href="http://www.beep-shop.com/" target="_blank" rel="external">BEEP</a>とか<a href="http://www.t-tax.net/natuge/" target="_blank" rel="external">ナツゲーミュージアム</a>でいくらかお金を落としてみたり意味もなく家電屋をうろついてみたり夜遅くまで本屋で立ち読みしたりした。大学生かという感じの行動パターンだったけど久しぶりだったのでかなり充実感あった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/blog/page/36/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/35/">35</a><a class="page-number" href="/tags/blog/page/36/">36</a><span class="page-number current">37</span><a class="page-number" href="/tags/blog/page/38/">38</a><a class="page-number" href="/tags/blog/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/69/">69</a><a class="extend next" rel="next" href="/tags/blog/page/38/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/tags/blog/page/36/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/35/">35</a><a class="page-number" href="/tags/blog/page/36/">36</a><span class="page-number current">37</span><a class="page-number" href="/tags/blog/page/38/">38</a><a class="page-number" href="/tags/blog/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/70/">70</a><a class="extend next" rel="next" href="/tags/blog/page/38/">Next &raquo;</a>
     </nav>
   
 
