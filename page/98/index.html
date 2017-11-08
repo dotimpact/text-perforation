@@ -56,6 +56,124 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2005-10-14" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/10/14/1_collisions/2005-10-14/" class="article-date">
+  <time datetime="2005-10-13T15:00:00.000Z" itemprop="datePublished">Oct 14 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/10/14/1_collisions/2005-10-14/">Piccy : Ajax photo album</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/piccy.png" alt="piccy.png"></p>
+<p>■ブラウザ上で気持ちよく使えることを目指した写真ビュアーを作ってみました。かなりのピュアAjax アプリケーションでもあります。</p>
+<ul>
+<li><p>おもな機能</p>
+<ul>
+<li>JavaScriptによる画面更新なしの写真閲覧</li>
+<li>スライドバーで画像サイズの動的変更</li>
+<li>画像のドラッグ＆ドロップによるタグ管理</li>
+<li>写真タイトルなどのテキストをその場で編集（in-place-edit)</li>
+</ul>
+</li>
+<li><p>こちらでお試しください（アクセス集中すると重いかも…）</p>
+<ul>
+<li><a href="http://piccy.dotimpac.to/" target="_blank" rel="external">http://piccy.dotimpac.to/</a></li>
+</ul>
+</li>
+</ul>
+<p>■[追記]　公開後の問題を修正し機能を追加したver.001をリリースしました。 &#8211; <a href="http://collisions.dotimpac.to/works/web/piccy001.html" target="_blank" rel="external">http://collisions.dotimpac.to/works/web/piccy001.html</a></p>
+<h1 id="これはなにか"><a href="#これはなにか" class="headerlink" title="これはなにか"></a>これはなにか</h1><p>■ブラウザで使用するweb上のフォトアルバムソフトです。管理が簡単でストレスなく見られる、というものを目指しています。</p>
+<p>以前、旅行写真を公開するような機会があって、管理がらくちんでかっこよく見られるアルバムソフトというのを探していたんですが、探しかたが悪いのかうまく見つけられませんでした。そのときは結局<a href="http://spgm.sourceforge.net/" target="_blank" rel="external">SPGM</a>を使ってみて、フォルダに画像をコピーするだけでアルバムを表示してくれるのは楽でよかったんですが、画面遷移がかったるかったり、プラグインを入れないといけなかったり細かい情報をテキストで書いてディレクトリに置かなければならなかったりとなかなかうざったい思いをしました。</p>
+<p>いっぽう、ストレスなくきれいに見せるという意味では、たとえば<a href="http://namazu.org/~satoru/zphoto/" target="_blank" rel="external">zphoto</a>のようなコンパイルしてflashファイルにするようなものもいいんですが、写真を増やしたり差し替えたりといった場合の手間があるのでちょっとなー…と。</p>
+<p>で、その中間というと、やはりAjaxなのではないかと。ちょうど<a href="http://www.tiddlywiki.com/" target="_blank" rel="external">TiddlyWiki</a>や<a href="http://lesserwiki.org/" target="_blank" rel="external">LesserWiki</a>のUIをほかのものに使えないかなと考えていたところだったので、思い立って作りました。</p>
+<h1 id="機能の詳細"><a href="#機能の詳細" class="headerlink" title="機能の詳細"></a>機能の詳細</h1><p>■基本的にはデモサイトで触ってもらえばわかるかと思います。</p>
+<ul>
+<li><a href="http://piccy.dotimpac.to/" target="_blank" rel="external">http://piccy.dotimpac.to/</a></li>
+</ul>
+<h2 id="フォルダウインドウのオープン／クローズ"><a href="#フォルダウインドウのオープン／クローズ" class="headerlink" title="フォルダウインドウのオープン／クローズ"></a>フォルダウインドウのオープン／クローズ</h2><p>TiddlyWikiスタイルと思ってもらっていいです。フォルダを開くと中にある写真画像が一覧できるウインドウが開き、写真をクリックするとそのウインドウの下に大きな画像を見るウインドウが開きます。それぞれのウインドウは個別に開閉できます。</p>
+<h2 id="ズームスライドバー"><a href="#ズームスライドバー" class="headerlink" title="ズームスライドバー"></a>ズームスライドバー</h2><p>写真ウインドウにはそれぞれスライドバーがついていて、表示画像の大きさを変えることができます。</p>
+<h2 id="フォルダ／写真タイトルのin-place-edit"><a href="#フォルダ／写真タイトルのin-place-edit" class="headerlink" title="フォルダ／写真タイトルのin-place-edit"></a>フォルダ／写真タイトルのin-place-edit</h2><p>フォルダと写真のタイトルは編集することができます。タイトルの文字をクリックすると編集フォームに切り替わり、その場で編集できます。</p>
+<h2 id="ドラッグ＆ドロップによるタグ編集機能"><a href="#ドラッグ＆ドロップによるタグ編集機能" class="headerlink" title="ドラッグ＆ドロップによるタグ編集機能"></a>ドラッグ＆ドロップによるタグ編集機能</h2><p>いわゆるタグというか、いくつかのフォルダから写真を選んで別のアルバムをつくることができます。</p>
+<p>タグの編集は写真をドラッグ＆ドロップすることで行えます。タグのウインドウに写真をドロップすると、非同期リクエストを行い情報を自動的に保存します。</p>
+<h1 id="script-aculo-usを使ってみた"><a href="#script-aculo-usを使ってみた" class="headerlink" title="script.aculo.usを使ってみた"></a>script.aculo.usを使ってみた</h1><p>■ご覧のとおり、JavaScriptをふんだんに使用していてスゲー感じになってますが、見栄えの部分では<a href="http://script.aculo.us/" target="_blank" rel="external">script.aculo.us</a>というJavaScriptユーティリティライブラリを全面的に利用しています。使いかたについてはLesserWikiをものすごく参考にしました。</p>
+<p>具体的にどのあたりを使っているかというと、</p>
+<ul>
+<li><a href="http://wiki.script.aculo.us/scriptaculous/show/Effect.Appear" target="_blank" rel="external">Effect.Appear</a> <ul>
+<li>ウインドウや写真がフェードインしてくるところに使用してます。これがあると見栄えがだいぶ違いますよね。</li>
+</ul>
+</li>
+<li><a href="http://wiki.script.aculo.us/scriptaculous/show/Effect.Highlight" target="_blank" rel="external">Effect.HighLight</a> <ul>
+<li>mouseoverでのハイライティングに。</li>
+</ul>
+</li>
+<li><a href="http://wiki.script.aculo.us/scriptaculous/show/Draggable" target="_blank" rel="external">Draggable</a> <ul>
+<li>写真をドラッグさせるために使っています（スライドバーも）。やったことある人はご存知の通り、JavaScriptでのマウスポインタ位置とレイヤーの相対位置を調停するのは死ぬほど面倒なんですが、  <blockquote>
+<p>new Draggable(&#8216;id<em>of</em>element&#8217;,[options]);<br>とかエレメントを指定してやるとそれだけでドラッグできるようになるという。とはいえ、ワナがいろいろあって面倒なことをしてますが…。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href="http://wiki.script.aculo.us/scriptaculous/show/Droppables.add" target="_blank" rel="external">Droppables.add</a> <ul>
+<li>こっちはタグウインドウのドロップイベントリスナ。ライブラリがなければ絶対にやろうと思わなかっただろう処理です。</li>
+</ul>
+</li>
+<li><a href="http://wiki.script.aculo.us/scriptaculous/show/Ajax.InPlaceEditor" target="_blank" rel="external">Ajax.inPlaceEditor</a> <ul>
+<li>タイトル編集のその場で編集モードを自動設定してくれます。すげえ便利。</li>
+</ul>
+</li>
+</ul>
+<p>といったところです。ただデメリットとして、script.aculo.usフルセットとprototype.js（必須）でファイルサイズが130KBくらいなので、ページのロードがちょっと遅くなるかなと。</p>
+<p>それとあと、データ関係は全面的にJSONを採用してみました。なるほど便利かもと思いました。</p>
+<h1 id="今後"><a href="#今後" class="headerlink" title="今後"></a>今後</h1><p>■まだつくりたてほやほやでひどいものなので、もうちょっとなんとかしてからサポートしたいと思います。</p>
+<ul>
+<li>IEだとときどき表示がくずれます。謎です。</li>
+<li>IEだとドラッグ座標がずれます。これも謎です。</li>
+<li>ユーザ管理をして、タグ編集はログインしないとできないようにします。</li>
+</ul>
+<p>使えるかどうかわからないですが、いちおう現状のアーカイブも置いておきます。ドキュメントはありません。ご参考に。</p>
+<ul>
+<li><a href="http://piccy.dotimpac.to/release/piccy_20050926.zip" target="_blank" rel="external">http://piccy.dotimpac.to/release/piccy_20050926.zip</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2005-10-08" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -734,81 +852,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-02-07" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/02/07/1_collisions/2005-02-07/" class="article-date">
-  <time datetime="2005-02-06T15:00:00.000Z" itemprop="datePublished">Feb 7 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/02/07/1_collisions/2005-02-07/">Network tangram</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>■えーと、ずいぶん遅くなってしまいましたが2005年正月に公開した年賀flashについて。</p>
-<p>そもそも去年までは年賀状も出さない自堕落な正月だったんですが、去年から紙年賀状と、同じデザインでちょっと遊べるflashオンライン年賀状をつくるようにしています。ちなみに去年は <a href="http://www.kaisoku.com/dotimpact/2004.html" target="_blank" rel="external">こんな感じ</a> 。今年はサーバ通信のあるflashをつくってみたかったので、タングラム（正方形を６つのピースに切り出し、形を作って遊ぶパズル）のピースをみんなで動かして酉を作ろう！　というものに。正月のヒマなときにほかの人がピースを動かしてるのがわかるのはちょっと楽しいかも！　と思ったわけですけども、そもそも正月からだと同時につなぐ人が少なすぎてあんまり成立しなかったですな。だめじゃん。</p>
-<ul>
-<li><a href="http://www.dotimpac.to/work/nettangram/" target="_blank" rel="external">http://www.dotimpac.to/work/nettangram/</a></li>
-</ul>
-<h1 id="flashによるサーバ通信"><a href="#flashによるサーバ通信" class="headerlink" title="flashによるサーバ通信"></a>flashによるサーバ通信</h1><p>■ちなみに「同時接続でステージのパーツを動かして遊ぶ」というのは、<a href="http://web.okaygo.co.uk/apps/letters/flashcom/" target="_blank" rel="external">Just Letters</a>というflashをみてそのの自由さ（ルールがなんにもないのに、ただ多人数がアルファベットを動かしてるだけで遊べる！）に感銘を受けたんで、自分でもつくってみたくなったものです。flashでサーバ通信が絡むものってそんな簡単に作れるのか？　と思いきや、増井 俊之さんのUnix Magazine連載「インターフェイスの街角」で触れられていたサンプルを利用したらサーバ、クライアントともあっけなく動いて拍子抜けしました。勉強になった。もちろんパフォーマンスとか同時接続人数とかを考えるとFCSとかを使うべきなのかな。</p>
-<ul>
-<li>Just Letters <ul>
-<li><a href="http://web.okaygo.co.uk/apps/letters/flashcom/" target="_blank" rel="external">http://web.okaygo.co.uk/apps/letters/flashcom/</a></li>
-</ul>
-</li>
-<li>インターフェイスの街角「flashによるサーバ通信」(PDF) <ul>
-<li><a href="http://pitecan.com/UnixMagazine/PDF/if0302.pdf" target="_blank" rel="external">http://pitecan.com/UnixMagazine/PDF/if0302.pdf</a></li>
-</ul>
-</li>
-<li>実際に使ったサーバ用スクリプト <ul>
-<li><a href="http://processing.dotimpac.to/index.php?sample%2FRuby%2FnetTangramSrv" target="_blank" rel="external">http://processing.dotimpac.to/index.php?sample%2FRuby%2FnetTangramSrv</a></li>
-</ul>
-</li>
-</ul>
-<p>タングラムの問題（影絵）やタングラムによるアルファベットフォントなどは「日曜日のタングラム」のものを使用させていただきました。</p>
-<ul>
-<li>日曜日のタングラム <ul>
-<li><a href="http://www1.kamakuranet.ne.jp/usasan/" target="_blank" rel="external">http://www1.kamakuranet.ne.jp/usasan/</a></li>
-</ul>
-</li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flash/">flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
 
 			</span>
 		</div>

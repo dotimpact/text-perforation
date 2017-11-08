@@ -56,6 +56,71 @@
     <div id="main">
       
   
+    <article id="post-201609/symbolicatecrash-never-finish" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/09/28/201609/symbolicatecrash-never-finish/" class="article-date">
+  <time datetime="2016-09-27T15:00:00.000Z" itemprop="datePublished">Sep 28 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/09/28/201609/symbolicatecrash-never-finish/">symbolicatecrashの処理が終わらないクラッシュレポート</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>iOSアプリのクラッシュ時に吐き出されるクラッシュレポートのメモリイメージをシンボルテーブルと引き合わせてヒューマンリーダブルなスタックトレースを得るsynbolicateというのをいままでやったことなかったんだけど、今回再現しないクラッシュの原因究明のためにやってみた。んだけど、なんか処理が終わらないように見える。初めてだったのでこういうもんかなとずっと待ってみたんだけど、やっぱり終わらない。perlスクリプトだというsymbolicatecrash（<a href="https://github.com/bitstadium/QuincyKit/blob/develop/server/local/symbolicatecrash.pl" target="_blank" rel="external">ここ</a>のを落とした）をいじって動作状況をみてみたところ、クラッシュリポートのメモリイメージに循環参照（？　じゃなくて、単に同じメモリイメージの項目が大量にあるので処理に時間んがかかるだけかな）があってそこでシンボル検索が無限ループになって終わらないようになっているっぽかった。</p>
+<pre><code>while ( length($nextIDKey) ) {
+    last if ( !length($images{$nextIDKey}{nextID}) );
+    $nextIDKey = $images{$nextIDKey}{nextID};
+}
+</code></pre><p>というとこを、</p>
+<pre><code>while ( length($nextIDKey) ) {
+    last if ( !length($images{$nextIDKey}{nextID}) );
+    $nextIDKey = $images{$nextIDKey}{nextID};
+    last if ( $nextIDKey == $images{$nextIDKey}{nextID} );
+}
+</code></pre><p>とかしたらとりあえず出力された。</p>
+<p>同様の症状についての記事。クラッシュレポートのライブラリアドレステーブルが変になるのはiOS9からの現象らしい。</p>
+<ul>
+<li><a href="https://groups.google.com/forum/#!msg/plcrashreporter/i6rYc2f4yBo/G8uBTEnMAgAJ" target="_blank" rel="external">PLCR 1.2 and problematic crash logs generated under iOS 9 - Google グループ</a></li>
+<li><a href="http://stackoverflow.com/questions/31920423/ios9-duplicated-lines-in-crash-reports-are-causing-symbolicatecrash-to-get-stuc" target="_blank" rel="external">ios - iOS9: duplicated lines in crash reports are causing symbolicatecrash to get stuck - Stack Overflow</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201609/look-for-ito-seiko" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -520,59 +585,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201609/re-zero" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/09/14/201609/re-zero/" class="article-date">
-  <time datetime="2016-09-13T15:00:00.000Z" itemprop="datePublished">Sep 14 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/09/14/201609/re-zero/">amazonビデオで『Re:ゼロから始める異世界生活』を観る</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01KZSGOCY/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51bcXjPgRDL._SL160_.jpg" alt="Re:ゼロから始める異世界生活" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01KZSGOCY/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Re:ゼロから始める異世界生活</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.09.21</div></div><div class="amazlet-detail"> <br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01KZSGOCY/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>なんとなく信頼できる筋で評判な雰囲気を感じたのでamazonビデオで観た。いわゆる「なろう系」の作品に触れるの初めてかな。なろう系がなろう系を生むような純血化が進みすぎてなろう系の主人公が自分がなろう系の主人公であることに自覚的な感じなのかーと思っていたらそこは導入で（というか導入を気持ちよくショートカットする方便で）、そこから先はキャラクターのアンサンブルと見事なシリーズ構成でぐいぐいおもしろくしてあって一気に22話まで観た。</p>
-<p>あれだな、いわゆる死に戻り能力設定は時間的空間的に展開を発散させないで限られた登場人物のキャラ描写だけを重ね書きできるところがいいんだなといまさらのことを思った。原作のほうも読んでみようかな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
 
 			</span>
 		</div>

@@ -56,6 +56,57 @@
     <div id="main">
       
   
+    <article id="post-201610/ikari" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/10/14/201610/ikari/" class="article-date">
+  <time datetime="2016-10-13T15:00:00.000Z" itemprop="datePublished">Oct 14 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/10/14/201610/ikari/">李相日『怒り』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.ikari-movie.com/%20" target="_blank" rel="external">映画『怒り』公式サイト</a></p>
+<hr>
+<p>『ハドソン川の奇跡』『SCOOP!』あたりも観たかったけど上映時刻的にちょうどよかった『怒り』を観た。邦画現行スター俳優の見ごたえある映画だったけど、エンドロールの俳優の出る順が映画前編観たあとだと納得感と意外感両方ある感じがあっておもしろかった。あそこちょっと観た人と語りたいな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201610/thinking-method-of-chara" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -518,71 +569,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201609/symbolicatecrash-never-finish" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/09/28/201609/symbolicatecrash-never-finish/" class="article-date">
-  <time datetime="2016-09-27T15:00:00.000Z" itemprop="datePublished">Sep 28 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/09/28/201609/symbolicatecrash-never-finish/">symbolicatecrashの処理が終わらないクラッシュレポート</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>iOSアプリのクラッシュ時に吐き出されるクラッシュレポートのメモリイメージをシンボルテーブルと引き合わせてヒューマンリーダブルなスタックトレースを得るsynbolicateというのをいままでやったことなかったんだけど、今回再現しないクラッシュの原因究明のためにやってみた。んだけど、なんか処理が終わらないように見える。初めてだったのでこういうもんかなとずっと待ってみたんだけど、やっぱり終わらない。perlスクリプトだというsymbolicatecrash（<a href="https://github.com/bitstadium/QuincyKit/blob/develop/server/local/symbolicatecrash.pl" target="_blank" rel="external">ここ</a>のを落とした）をいじって動作状況をみてみたところ、クラッシュリポートのメモリイメージに循環参照（？　じゃなくて、単に同じメモリイメージの項目が大量にあるので処理に時間んがかかるだけかな）があってそこでシンボル検索が無限ループになって終わらないようになっているっぽかった。</p>
-<pre><code>while ( length($nextIDKey) ) {
-    last if ( !length($images{$nextIDKey}{nextID}) );
-    $nextIDKey = $images{$nextIDKey}{nextID};
-}
-</code></pre><p>というとこを、</p>
-<pre><code>while ( length($nextIDKey) ) {
-    last if ( !length($images{$nextIDKey}{nextID}) );
-    $nextIDKey = $images{$nextIDKey}{nextID};
-    last if ( $nextIDKey == $images{$nextIDKey}{nextID} );
-}
-</code></pre><p>とかしたらとりあえず出力された。</p>
-<p>同様の症状についての記事。クラッシュレポートのライブラリアドレステーブルが変になるのはiOS9からの現象らしい。</p>
-<ul>
-<li><a href="https://groups.google.com/forum/#!msg/plcrashreporter/i6rYc2f4yBo/G8uBTEnMAgAJ" target="_blank" rel="external">PLCR 1.2 and problematic crash logs generated under iOS 9 - Google グループ</a></li>
-<li><a href="http://stackoverflow.com/questions/31920423/ios9-duplicated-lines-in-crash-reports-are-causing-symbolicatecrash-to-get-stuc" target="_blank" rel="external">ios - iOS9: duplicated lines in crash reports are causing symbolicatecrash to get stuck - Stack Overflow</a></li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
 
 			</span>
 		</div>

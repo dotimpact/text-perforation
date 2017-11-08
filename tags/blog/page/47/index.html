@@ -56,6 +56,57 @@
     <div id="main">
       
   
+    <article id="post-201512/cupnoodle-museum" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/12/09/201512/cupnoodle-museum/" class="article-date">
+  <time datetime="2015-12-08T15:00:00.000Z" itemprop="datePublished">Dec 9 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/12/09/201512/cupnoodle-museum/">カップヌードルミュージアムに行った</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.cupnoodles-museum.jp/" target="_blank" rel="external">!!! CUPNOODLES MUSEUM</a></p>
+<p>こないだの週末に飛び込みで行ってみた。最近まで知らなかったんだけど2011年にできたものなのね。最近できただけあって施設としてはおしゃれで子供も楽しめるようになっててなかなかよいのだけど、カップヌードルを発明した安藤百福の発想力に学んでクリエイティブになろうという趣旨の体験型展示「クリエイティブシンキング・ボックス」は美術作品からインスピレーションを受けてテンマナを変えてアイデアを展開しましたというような広告代理店的な発想でつくられた展示ばっかりで、永続性のある記念館的な施設でこういうもの出せる無神経さ悪い意味ですごいなと思って見た。</p>
+<p>とくに微速で動くLED光源が床に置かれたオブジェの影を暗室全体に大きく映すというどこかで見たような特徴的なアイデアをほかに何の工夫もなくそのまま使った展示（確認してないけど制作協力とかではないと思う）のテーマは「発明はひとりじめせずみんなにつかってもらったほうがよい」というもので、おそらく安藤百福の言葉であるらしいその言葉が書かれたオブジェの影をLEDが部屋いっぱいに映し出すようになっていた。最高に皮肉である意味必見。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kosodate/">kosodate</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201512/devd-multi-platform-local-server-app" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -530,63 +581,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manga/">manga</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201511/xcode7-build-scheme-issue" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/11/27/201511/xcode7-build-scheme-issue/" class="article-date">
-  <time datetime="2015-11-26T15:00:00.000Z" itemprop="datePublished">Nov 27 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/11/27/201511/xcode7-build-scheme-issue/">XCode7でビルド関連の名前にカッコやスペースを使っているとリンクに失敗する</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>アプリ申請を控えているのでアップデートしないつもりがうっかりしてXCode7を入れてしまい、仕方がなく7での開発をしているときにぶち当たった問題。</p>
-<p>Adhocビルドをアーカイブして配信しようとすると、</p>
-<p>warning: (armv7) /Users/…/BuildProductsPath/Adhoc-iphoneos/libPods-JockeyJS.a(Jockey.o) unable to open object file: No such file or directory</p>
-<p>みたいな感じのwarningが大量に出て、どうやらCocoapods含め使っているライブラリ全部で出てる様子。ビルド設定をあれこれ変えても変わらず、同様の設定でwarningが出ないビルドターゲットやプロジェクトとの差もよくわからないという中で見つけた情報がこれ。</p>
-<p><a href="https://github.com/CocoaPods/CocoaPods/issues/4237" target="_blank" rel="external">hundreds of warnings during Archive in Xcode 7 · Issue #4237 · CocoaPods/CocoaPods</a></p>
-<blockquote>
-<p>we had build schemes named things like<br>App Name (Debug)<br>App Name (App Store)<br>And we were getting the errors as well, removing the parenthesis fixed it for us as well.</p>
-</blockquote>
-<p>僕のプロジェクトではschemeの名前を「anyApp(dev)」みたいにしてたののビルドで問題がおきてたのでカッコを取り除いたらwarningが出なくなった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
 
 			</span>
 		</div>

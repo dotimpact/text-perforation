@@ -56,6 +56,56 @@
     <div id="main">
       
   
+    <article id="post-201503/fumiaki-aono-exhibition" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/13/201503/fumiaki-aono-exhibition/" class="article-date">
+  <time datetime="2015-03-13T13:22:00.000Z" itemprop="datePublished">Mar 13 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/13/201503/fumiaki-aono-exhibition/">gallery αM『パランプセスト ―記憶の重ね書き　vol.7 青野文昭」を見た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://gallery-alpham.com/exhibition/2014-7/" target="_blank" rel="external">vol.7 青野文昭 Fumiaki AONO | gallery αM</a></p>
+<p>浜辺に流れ着いたり道端で拾った廃材や家具をつなぎ合わせ、もともとそうであったかのように「なおす」という手法で作品を作る青野文昭さんの個展。3.11に合わせての企画で東日本大震災の津波で流れた素材を使った大きな作品が多かった。実物を近くでみると色んな意味ですごくて、「恐い」という感情を強く感じた。なんだろう、津波の被害を生々しく感じるみたいなのもあるんだけど、タンスとか机とかいった本来なめらかな平らな面を持つはずの製品がちょっと有機的なメタモルフォーゼを経て他の素材（鉄とかプラスチックとか）と接合してることの気持ち悪さなのかなあ。レタッチソフトの「コピースタンプツール」とかスティッチングツールによる自動補完みたいな「自然な不自然さ」みたいなのもあった。この恐さがどこからくるのだろうかとまじまじと見てしまった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/art/">art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201503/melting-interfaces" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -525,68 +575,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201503/xcode-fatal-error" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/03/03/201503/xcode-fatal-error/" class="article-date">
-  <time datetime="2015-03-02T15:00:00.000Z" itemprop="datePublished">Mar 3 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/03/03/201503/xcode-fatal-error/">XCodeプロジェクトに「Resources」というFolder referenceを作るとiOSシミュレータでのアプリ起動に失敗する</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<img src="/images/201503/xcode-fatal-error.png">
-<p>XCodeで新規プロジェクトをつくってとあるアプリのプロトタイプをつくっていたら、突然ビルド後に「Unable to run app in simulator」というエラーが出るようになって困った。</p>
-<p>試行錯誤してわかったのは、</p>
-<ul>
-<li>プロジェクトに「Resouces」というFolder referenceを作ると、以後アプリ起動できなくなる<ul>
-<li>エラーは「LaunchServiceErrorDomain, Code=0」だったり「NS POSIX ErrorDomain, Code=22」だったりいろいろっぽい</li>
-<li>Folder referenceじゃなくてGroupだったら問題ない</li>
-<li>「Resources」 iOS/OSXのアプリコンテナのディレクトリで使用される名前なのでそれと衝突する名前だとだめっぽい</li>
-</ul>
-</li>
-<li>一度上記の症状になると「Resouces」のreferenceを削除しただけではエラーは消えない</li>
-<li>~/Library/Developer/Xcode/DerivedData内の該当プロジェクトのビルドフォルダを削除してから再度ビルドすると治る</li>
-</ul>
-<p>ということらしかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
 
 			</span>
 		</div>

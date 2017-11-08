@@ -6,7 +6,7 @@
   <title>nibnameなしでViewControllerをinitするとiOS8だけでクラッシュする | text perforation</title>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="配信したアプリがログイン後に落ちたりスプラッシュで落ちたりする、という報告を受けて、自分のところでは起きていなかったのでなんだろうと思って調べたら、画面の初期化時に読み込んでいるカスタムViewControllerのinitが間違っていて、しかもそれでもiOS9は動くためだった。 対応するnibを持つSubViewControllerを、 override func viewDidLoad() {">
-<meta name="keywords" content="blog,swift,iosdev">
+<meta name="keywords" content="blog,iosdev,swift">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nibnameなしでViewControllerをinitするとiOS8だけでクラッシュする">
 <meta property="og:url" content="http://text-perforation.doppac.cc/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/index.html">
