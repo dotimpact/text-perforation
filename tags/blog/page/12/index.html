@@ -56,6 +56,281 @@
     <div id="main">
       
   
+    <article id="post-201704/lzw-archiving-unplugged" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/18/201704/lzw-archiving-unplugged/" class="article-date">
+  <time datetime="2017-04-17T15:00:00.000Z" itemprop="datePublished">Apr 18 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/18/201704/lzw-archiving-unplugged/">人力LZW圧縮/展開/グリッチ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>授業第２回。<a href="/2016/04/19/201604/easy-6502-and-sando">去年</a>は山本さんに『算道』の実演をしてもらったりeasy6502を使った授業をしてたんだけど、今年はプログラムを書く体験の前の「プログラムを実行する体験」として、圧縮/展開アルゴリズムを受講生の手で実行してもらう授業をやってみた。</p>
+<p>もともとは<a href="http://csunplugged.org/" target="_blank" rel="external">Computer Science Unplugged</a>を見てたなかでText Compressionのアクティビティが見た目楽しそうで、こういう「テキストが圧縮（コーディング）される」という結果が得られるアルゴリズムが題材なら、コンピュータとプログラムがすることを実感して興味を持ってもらえるイントロダクションの授業ができるんじゃないかと思ったことがきっかけ。</p>
+<img src="https://i.gyazo.com/a388fe81d1357d3e3e67897b4e75cae4.png" width="400">
+<p>CS Unpluggedの「Text Compression」アクティビティの解説pdfより</p>
+<p>でもよく考えたら圧縮アルゴリズムの内容ってよく知らなくてハフマン圧縮とかでできるのかなーと思いながら思って調べているうちに、テキストの圧縮過程を実感できそうでかつ学生も常々お世話になってるだろうLZW圧縮に決めた（検討には<a href="http://www.snap-tck.com/room03/c02/comp/comp.html" target="_blank" rel="external">データ圧縮法概説</a>がとても参考になった。最終的に例文にした早口言葉もこの概説の実演で使用されていたもの）。</p>
+<p>当初「受講生の好きな歌の歌詞を圧縮させて、圧縮データを他の受講生と交換して展開する授業にしよう」と思っていたんだけど、実際に自分の手でLZW圧縮のアルゴリズムを実行してみると思った以上に時間がかかる（2,30文字の処理に20分以上）うえ、意図的に歌詞の繰り返しの多い歌を選ばないかぎりは圧縮のおもしろみも味わえない単なる作業になってしまうことが予想できたので、後ろ髪をひかれつつ元テキストは圧縮が効きやすい早口言葉（「カエルピョコピョコ…」）に固定して、プログラム手実行の過程を理解するところにフォーカスできるように手順やワークシートをまとめて授業に臨んだ。</p>
+<img src="https://i.gyazo.com/4e55efa73cbe358b38f7d9106390ea59.png" width="400">
+<p>ワークシートその１（入力・出力）(<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVQVpoRldDRDdfYXc/view" target="_blank" rel="external">pdf</a>)</p>
+<img src="https://i.gyazo.com/e556239d8bd2508bb3090425f3aa9c42.png" width="400">
+<p>ワークシートその２（ワークメモリ：圧縮用辞書）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVVFdfUUZiTmtHV2M/view" target="_blank" rel="external">pdf</a>）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVbUZWT1JFSUdvWU0/view?usp=sharing" target="_blank" rel="external">亜展開用辞書（内容は同じです）</a>）</p>
+<img src="https://i.gyazo.com/ae9c142adb824fc26e9dac923bbdbe06.png" width="400">
+<p>圧縮手順書（プログラム部）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVOVdYRDF5bWZWZ0U/view?usp=sharing" target="_blank" rel="external">pdf</a> ）（<a href="https://drive.google.com/file/d/0B2XJUKfO5hQVY1V3MkNzdER6c0U/view?usp=sharing" target="_blank" rel="external">展開手順pdf</a>）</p>
+<p>実行時のポインタの役割をするものとして色ごとに役割を決めた付箋を配って使ってもらうようにしたんだけど、これはなかなかうまくいったような気がする。実際に学生（8人）にやってもらったらやってるうちに手順を飛ばしてしまうことが続出したので、もう一つ付箋を配っていま実行している手順を指す（つまりプログラムポインタ）ようにしたほうがよかったかもしれない。手違いで途中からやり直しになってしまった人もいたけど、見たところみんな最初の意味のわからないことをやらされている、という感じから途中でこのアルゴリズムの巧妙さにはっと気づき、最後まで興味を持って作業してもらえていたように思う。</p>
+<p><blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BS-xuD9g-js/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">デバッグ中</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">kotaro tanakaさん(@doppac)がシェアした投稿 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-04-17T09:08:43+00:00">2017  4月 17 2:08午前 PDT</time></p></div></blockquote></p>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+<p>そして、LZW圧縮といえばGIF画像の圧縮アルゴリズムであり、アーカイブデータのコードをいくつかスワップさせれば簡単にグリッチさせることができる。今回圧縮しているのは文字単位のテキストなので、「カエルピョコピョコミピョコピョコアワセテピョコピョコムピョコピョコ」が「エカルピョピョココミココアココワセココアョピテョムコ」になったりする。というのを、受講生にそれぞれ好きなところでグリッチしたデータを展開させて結果を見てもらった。これ、正常データとグリッチデータを両方手で展開してみると、データの入れ替えが辞書にどのように波及していくかがよくわかってとてもおもしろい。（4,5箇所グリッチするよう指示したけど、2つくらいでもいいのかも）。</p>
+<p>というわけで、僕がこれまでいろいろ試したなかでも一番手応えのある授業になってよかった。来週からは普通のプログラミングの授業に入っていくけど、今回やったことがプログラム言語の諸概念の参照（変数は人力圧縮でいうところのワークシートのところだよとか）にできるはずなので、そこの飲み込みやすさにもつながるといいなと思う。あと以前からデバッガのおもしろさをプログラミング入門の文脈で使えないものかなと思ってたんだけど、考えてみると今回のはその点にもかなっている面があって個人的な満足度が高い。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sentan-prog-2017/">sentan-prog-2017</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201704/magical-girl" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/16/201704/magical-girl/" class="article-date">
+  <time datetime="2017-04-15T15:00:00.000Z" itemprop="datePublished">Apr 16 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/16/201704/magical-girl/">カルロス・ベルムト『マジカル・ガール』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.bitters.co.jp/magicalgirl/" target="_blank" rel="external">映画『マジカル・ガール』公式サイト</a></p>
+<hr>
+<p>劇場で見逃してたやつをWOWOWの録画で観たけど、ものすごい美しい映画で、これはやっぱ劇場で観たかったな。抑制された演出も素晴らしかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201704/scrapbox-for-class-groupware" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/11/201704/scrapbox-for-class-groupware/" class="article-date">
+  <time datetime="2017-04-10T15:00:00.000Z" itemprop="datePublished">Apr 11 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/11/201704/scrapbox-for-class-groupware/">Scrapboxを授業グループウェアに使う</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>2017年の授業第１回。ここのところの定番になっている<a href="/2015/04/08/201504/regexp-workshop/">正規表現ワークショップ</a>をした。</p>
+<p>新機軸としては授業の情報共有用のグループウェアに<a href="http://scrapbox.io" target="_blank" rel="external">Scrapbox</a>を使うことにしたこと。去年のSlackは発言の敷居がとても低かったり絵文字が使えたりする点はとてもよかったんだけど、情報をストックするのが困難なのはどうにもならなそうだったのでやめた。scrapboxはチャットみたいに気軽に書いてもらうのは無理とはいえ、今のところいい感じ。受講者をプロジェクトに参加してもらう手順を楽に組めた（参加URLをgoo.glで短くしたurlを打ち込んでもらう）のは助かった。Googleアカウントを持ってない学生も今年はいなかった。</p>
+<p><code>CTRL-I</code> で自分のプロフィールページの画像がアイコンがわりにおける機能がなかなかいいので、活用できないかなと思っている</p>
+<img src="https://i.gyazo.com/5d0e0acd3377a200689c84110527f0fd.png" width="400">
+<p>出席者一覧として</p>
+<img src="https://i.gyazo.com/eb126bf4cf8edaa4b5fd5099d057369c.png" width="400">
+<p>アンケート</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sentan-prog-2017/">sentan-prog-2017</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201704/let-it-solves-with-the-money-also-tonight" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/10/201704/let-it-solves-with-the-money-also-tonight/" class="article-date">
+  <time datetime="2017-04-09T15:00:00.000Z" itemprop="datePublished">Apr 10 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/10/201704/let-it-solves-with-the-money-also-tonight/">ジェーン・スー『今夜もカネで解決だ』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://publications.asahi.com/ecs/detail/?item_id=18926" target="_blank" rel="external">朝日新聞出版　最新刊行物：書籍：今夜もカネで解決だ</a></p>
+<hr>
+<p>なにをカネで解決するかというと、日々の仕事による疲労からくる体のコリや各部のエステティックのことで、帯の「女性版『孤独のグルメ』マッサージ編」という野宮真貴のコピーは確かにその通りだった。食欲（あとこの本でも何度も例えられる性欲）と同じように「コリ」といういまここにあるやりきれなさを抱えて放浪した末の行きずりの出会いにどう救われたか（あるいは救われなかったか）が綴られるコラム集で、僕はあんまり体が凝らないのでマッサージ系のサービス業にあまり寄りついたことがなく（10年前くらいに首が回らなくなって鍼灸院に1,2度行ったくらい）、サービス内容や施術の当たり外れ、価格の相場感など知らないことだらけで新鮮だった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201704/cloud-atlus" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/04/09/201704/cloud-atlus/" class="article-date">
+  <time datetime="2017-04-08T15:00:00.000Z" itemprop="datePublished">Apr 9 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/04/09/201704/cloud-atlus/">ラナ・ウォシャウスキー／トム・ティクヴァ／アンディ・ウォシャウスキー『クラウドアトラス』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00EUITENM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/61FvEIzfv7L._SL160_.jpg" alt="クラウド アトラス (字幕版)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00EUITENM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">クラウド アトラス (字幕版)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 17.04.12</div></div><div class="amazlet-detail"> (2013-11-26)<br>売り上げランキング: 54,874<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00EUITENM/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>アマゾンプライムで観たやつ。劇場公開時あんまりどういう映画か把握せずに、なんとなく（たぶん欧米資本の映画にアジア人女優が出るみたいな共通点から）『バベル』みたいな感じの映画を想像してたんだけどぜんぜん違った。1849年から2321年まで全然別の6つの年代の話を、共通の俳優が別々の役を演じ分けるというほとんどギャグというか、新春隠し芸大会みたいな荒唐無稽な映画なんだけど俳優の奮闘によるものか編集のテンポなのか不思議な調和があって楽しめた（結局は学芸会的な楽しさだったのかもしれないけど）。役名の集合が俳優でくくられてるエンドクレジットも笑った。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201704/famitsu-zelda-botw-issue" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -317,264 +592,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201703/the-wailing" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/03/31/201703/the-wailing/" class="article-date">
-  <time datetime="2017-03-30T15:00:00.000Z" itemprop="datePublished">Mar 31 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/03/31/201703/the-wailing/">ナ・ホンジン『哭声／コクソン』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://kokuson.com/" target="_blank" rel="external">『哭声／コクソン』公式サイト</a></p>
-<hr>
-<p>シネマート新宿で会員料金で鑑賞。映像のレベルがものすごく高くてびっくりした。最初2,30年昔の話なのかと思ったほど（スマホ使うシーンがあるので一応現代なんだと思う）の韓国の山村の寂れた風景は、実際にあんな感じなのかもしれないけど、その時間の止まったような家々のなかで、やりすぎなほどに凄惨な殺害現場が不自然に見えないのがすごい。物語のなりゆきにはこの結末を避ける方法はあったのだろうかと考えてしまった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201703/sing" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/03/29/201703/sing/" class="article-date">
-  <time datetime="2017-03-28T15:00:00.000Z" itemprop="datePublished">Mar 29 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/03/29/201703/sing/">ガース・ジェニングス『SING／シング』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://sing-movie.jp/" target="_blank" rel="external">映画『SING／シング』公式サイト 大ヒット上映中！</a></p>
-<hr>
-<p>評判を聞いて観てみた。たしかによくできた内容で笑ったし感動もしたんだけど、冴えない日常と輝かしい表舞台の対比のなかで日常の冴えなさ（とお金の問題）がうやむやなまま解消されないのはたしかに弱点ではあるなと思った。ラ・ラ・ランドにも共通する時代の雰囲気なのだろうか。</p>
-<p>吹き替え版で観たけど一つも文句のない出来で素晴らしかった。なるほどと思ったのは最後に「字幕版もよろしく！」的なメッセージが出て（たぶん字幕版にも吹き替え版についての案内が出るんだろう）映画をバージョン違いで複数回観る行動が当然のこととして促されるようになったんだなということ。あと劇中時間経過を示す演出としてCGアニメなのにいわゆる実写タイムラプス作品風の映像が使われてたのもなるほどだった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201703/dr-haradas-room-of-curiosities" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/03/25/201703/dr-haradas-room-of-curiosities/" class="article-date">
-  <time datetime="2017-03-24T15:00:00.000Z" itemprop="datePublished">Mar 25 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/03/25/201703/dr-haradas-room-of-curiosities/">こども科学センター・ハチラボ『はらだ博士の驚きの部屋　コンピュータとこの世界のおもしろがり方研究』を見た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://canvas.ws/workshop/12661" target="_blank" rel="external">はらだ博士の驚きの部屋　コンピュータとこの世界のおもしろがり方研究 | CANVAS | 遊びと学びのヒミツ基地</a></p>
-<hr>
-<p>ソフトウェア開発者をメインにフィーチャーした、と考えると科学センターの企画展としてなかなか異色なのかもしれない展示、終わりそうだったので子供を連れて行ってきた。</p>
-<p>ビスケットは概要は知っていたけど子供に遊ばせたり自分で触ったりするのは初めてでなるほどこうなるのかーと思っていたら小三児はさくさく使い始めてアップルやパイナップルやペンが飛び交いランダムにPPAPになるオブジェクトを作っていた。5歳の次男もしっくりきたらしく、一回に終わらず2度3度と絵を描いて横が上に動かして楽しんでいた。さすがの取っつきやすさに加え、「水族館にきみの作った魚をいれよう！」というつくるものの誘導も（ありがちではあるけど）上手だなーと思った。展示としてはアニメと動きがつくれるバージョンのビスケット以外にもインタラクション（クリック）がつけられるバージョン、音楽がつくれるバージョン、3Dスピログラフを作れるアプリ、フラクタル的なパターンが作れるアプリなどがあったけど、子供ふたりはいちばん単純なアニメバージョン以外には食指が動かなかったみたい。展示やアプリの見た目があんまり違いがなかったので同じものかと思ったのかも。</p>
-<p>授業でビスケット使ってみようかな。「毎週別々のプログラミング言語を入門させてプログラミングの不偏項だけを理解してもらう」というのを一度やってみようと思ってたのでやるなら今年しかないな。絶対大変だけど…</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201703/scout-guide-to-the-zombie-apocalypse" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/03/25/201703/scout-guide-to-the-zombie-apocalypse/" class="article-date">
-  <time datetime="2017-03-24T15:00:00.000Z" itemprop="datePublished">Mar 25 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/03/25/201703/scout-guide-to-the-zombie-apocalypse/">クリストファー・B・ランドン『ゾンビーワールドへようこそ』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://db2.nbcuni.co.jp/contents/hp0002/list.php?CNo=2&amp;AgentProCon=33202" target="_blank" rel="external">ゾンビーワールドへようこそ | NBCユニバーサル・エンターテイメントジャパン</a></p>
-<hr>
-<p>WOWOWで録画してたのを観たけど、もともとDVDスルーの劇場未公開作品なのかな。高校生にもなってボーイスカウトをやっているモテない三人組がゾンビアポカリプスに巻き込まれて…という映画で、中学生のときにボーイスカウトに所属してたのでボーイスカウトあるあるはおもしろかったけどもっと徹底的なのも観たいと思った。Steamに「スカウトシミュレータ」とかありそうと思ったけど調べた限りではなさそう。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201703/golden-kamuy" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/03/24/201703/golden-kamuy/" class="article-date">
-  <time datetime="2017-03-23T15:00:00.000Z" itemprop="datePublished">Mar 24 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/03/24/201703/golden-kamuy/">野田サトル『ゴールデンカムイ』を読み始める</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://youngjump.jp/goldenkamuy/" target="_blank" rel="external">『ゴールデンカムイ』公式サイト│集英社</a></p>
-<hr>
-<p>電子書籍でとりあえず1巻を（無料だったので）。なるほどこれかーと読んでたんだけど、途中で違和感を感じて手が止まった。なんかおかしいなと考えてみたところ、この漫画は見開きを横に割ったコマ割りが多用されていて、タブレットを縦に持った片ページづつの閲覧だとかなり印象が削がれていることがわかった。これまでほとんどすべての電子書籍漫画は片ページで読んできて、これほど違和感を感じたことはなかったんだけど、この手の少年漫画系のアクション漫画を読むことが少なかったから気づかなかっただけかな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manga/">manga</a></li></ul>
 
 			</span>
 		</div>
