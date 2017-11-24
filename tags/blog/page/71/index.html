@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: blog | text perforation</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="text perforation">
+<meta property="og:url" content="http://text-perforation.doppac.cc/tags/blog/page/71/index.html">
+<meta property="og:site_name" content="text perforation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="text perforation">
+  
+    <link rel="alternative" href="/atom.xml" title="text perforation" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3661969-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/about">About</a></li><li><a href="/">Home</a></li><li><a href="/highlights">Highlights</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://text-perforation.doppac.cc"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-201503/xcode-fatal-error" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/03/201503/xcode-fatal-error/" class="article-date">
+  <time datetime="2015-03-02T15:00:00.000Z" itemprop="datePublished">Mar 3 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/03/201503/xcode-fatal-error/">XCodeプロジェクトに「Resources」というFolder referenceを作るとiOSシミュレータでのアプリ起動に失敗する</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/201503/xcode-fatal-error.png">
+<p>XCodeで新規プロジェクトをつくってとあるアプリのプロトタイプをつくっていたら、突然ビルド後に「Unable to run app in simulator」というエラーが出るようになって困った。</p>
+<p>試行錯誤してわかったのは、</p>
+<ul>
+<li>プロジェクトに「Resouces」というFolder referenceを作ると、以後アプリ起動できなくなる<ul>
+<li>エラーは「LaunchServiceErrorDomain, Code=0」だったり「NS POSIX ErrorDomain, Code=22」だったりいろいろっぽい</li>
+<li>Folder referenceじゃなくてGroupだったら問題ない</li>
+<li>「Resources」 iOS/OSXのアプリコンテナのディレクトリで使用される名前なのでそれと衝突する名前だとだめっぽい</li>
+</ul>
+</li>
+<li>一度上記の症状になると「Resouces」のreferenceを削除しただけではエラーは消えない</li>
+<li>~/Library/Developer/Xcode/DerivedData内の該当プロジェクトのビルドフォルダを削除してから再度ビルドすると治る</li>
+</ul>
+<p>ということらしかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/hexo-3-upgrade" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/02/201503/hexo-3-upgrade/" class="article-date">
+  <time datetime="2015-03-01T15:00:00.000Z" itemprop="datePublished">Mar 2 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/02/201503/hexo-3-upgrade/">Hexoを3.0.0-rc.4にアップグレードした</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>なぜかいつのまにかHexoが動かなくなっていたので勢いで3.0.0-rc.4にしてみたら、けっこう各部が動かなくて困った。</p>
+<p>archive画面でget_postsで記事をリスティングしてたのが動かなくなってて（v3ではヘルパーのget_postsが廃止されたそうだ）、しかもその代替コードがいまいちよくわからなったのだが、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\&lt;% site.tags.find(&#123;name: &apos;work&apos;&#125;).data[0].posts.sort(&apos;date&apos;, -1).forEach(function(item)&#123; %\&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;&lt;%- config.root %&gt;&lt;%- item.path %&gt;&quot;&gt;&lt;%= item.title %&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">\&lt;% &#125;); %\&gt;</div></pre></td></tr></table></figure>
+<p>にしたらひとまず動いた（postsを取るもっといいインターフェイスがないとおかしい気がするのだが）。</p>
+<p>あとhexo-generator-feedがnpmにあるのだとv3に対応してないので、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install git+https://git@github.com/hexojs/hexo-generator-feed.git --save</div></pre></td></tr></table></figure>
+<p>とgitのを入れて間に合わせた。</p>
+<p>今日はとりあえずここまで。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201502/writing-wishlist" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/02/01/201502/writing-wishlist/" class="article-date">
+  <time datetime="2015-01-31T15:00:00.000Z" itemprop="datePublished">Feb 1 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/02/01/201502/writing-wishlist/">ブログに書こうと思っていることリストを共有する</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>このブログは日々なにがしかアウトプットするのを習慣化すべく内容にあんまり頓着せず毎日書くことを目的としている。１月は欠かさずエントリを書けた。</p>
+<p>習慣化するなかで、ブログに書いておこうかなと思うことをストックするようになったんだけど、それもぜんぶオープンにしておくと、それらを書かないといけない気分になるんではないかと思った。現状このブログぜんぜん告知してないので数人くらいしか見てなくてそんなの公開しても意味はないんですけども。</p>
+<p>で、そういう公開リストをつくるのに向いたサービスないかなと考えてみて、<a href="https://workflowy.com/" target="_blank" rel="external">workflowy</a>を使ってみることにした。workflowyはいわゆるアウトラインプロセッサのwebサービスで、けっこう使いごこちがいいのとノード単位で公開したり共有したりできるのが特徴。</p>
+<p>というわけでここに公開して今後も更新していきます。</p>
+<ul>
+<li><a href="https://workflowy.com/s/k0wRrZuRzS" target="_blank" rel="external">text-perforation書きたいことリスト</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">productivity</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201501/refine-archives-page" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/01/28/201501/refine-archives-page/" class="article-date">
+  <time datetime="2015-01-27T15:00:00.000Z" itemprop="datePublished">Jan 28 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/01/28/201501/refine-archives-page/">archivesページを整える</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>デフォルトのままだった<a href="/archives">archivesページ</a>を多少見通しのいい形にした。といっても相変わらず10年以上前のエントリがほとんどみたいな感じではあるけど…もうちょっとなんとかするにはHexoに手を入れないといけないみたいなので今日はここまで（裏でジェネレータがarchivesページのページネート分も生成しちゃうっぽいけど気にしない）。</p>
+<p>自分の行動からすると、ひとのブログを見て気になったらaboutのページを見に行くものだし（はてなブログのaboutページのなんの意味もなさはいつも見てすごいなと思う）、さらに気になればarchiveから全エントリを見ようとするものなので、この２つはちゃんと見たいものを用意してあげるべきだと思っている。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201501/import-old-posts" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/01/16/201501/import-old-posts/" class="article-date">
+  <time datetime="2015-01-16T14:57:05.000Z" itemprop="datePublished">Jan 16 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/01/16/201501/import-old-posts/">昔のブログエントリをインポート</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>レンタルサーバを整理するため、過去のブログ（2年前で更新が止まっている）のWordPressからポストをここにインポートした。もはや過去の遺物としか言いようがないものだけどいちおう矜持として。191本。</p>
+<p>WordPressからの吸い出しは<a href="http://nomnel.net/blog/wordpress-to-octopress/" target="_blank" rel="external">WordpressからOctopressに移行する - 飲んだり寝たり</a>を参考にしてカテゴリをtagにしたりdateをオリジナルのにしたりするスクリプトで処理して取り込んだ。あとで気づいたけど<a href="https://github.com/hexojs/hexo-migrator-wordpress" target="_blank" rel="external">hexojs/hexo-migrator-wordpress</a>のほうがよかったのかもしれない。</p>
+<p>合わせて去年末から先行して試していたtumblrのブログに書いてたポストもこっちにまとめた。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/tags/blog/page/70/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/69/">69</a><a class="page-number" href="/tags/blog/page/70/">70</a><span class="page-number current">71</span>
+    </nav>
+  
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:text-perforation.doppac.cc">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">text perforation</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 doppac<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

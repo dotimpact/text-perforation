@@ -56,6 +56,467 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2004-04-12" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2004/04/12/1_collisions/2004-04-12/" class="article-date">
+  <time datetime="2004-04-11T15:00:00.000Z" itemprop="datePublished">Apr 12 2004</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2004/04/12/1_collisions/2004-04-12/">弾幕webブラウザ　BulletSurf</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/bulletsurf.gif" alt="bulletsurf.gif"></p>
+<ul>
+<li>もう普通の弾幕では歯ごたえがなくてやってられない！</li>
+<li>もう普通のブラウザでは歯ごたえがなくてヲチしてられないよママン…</li>
+<li>もうゲームロートルで弾避けも満足にできんわい、ていうかネットが気になってゲームがプレイしてられません</li>
+</ul>
+<p>というあなたに送る弾幕対応webブラウザ。ネット巡回を弾幕がこしゃくに演出します。</p>
+<h1 id="これはなにか"><a href="#これはなにか" class="headerlink" title="これはなにか"></a>これはなにか</h1><ul>
+<li>表示中のwebページの画像で弾幕を生成し、プレイヤーのポインタを襲います。</li>
+<li>弾に当たるとページバック！　スリルに満ちたwebブラウズが可能です。</li>
+<li>弾幕記述言語 <a href="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/" target="_blank" rel="external">BulletML</a> に対応しており、bulletmlのリソースを利用して順次拡張予定です。</li>
+</ul>
+<h1 id="プレイ方法"><a href="#プレイ方法" class="headerlink" title="プレイ方法"></a>プレイ方法</h1><ul>
+<li>下の「launch BulletSurf」というリンク(bookmarklet)をブックマークしてください。</li>
+<li>お好きなページで「launch BulletSurf」のブックマークを選択してください。</li>
+<li>ページのローディングが完了すると弾幕がせまってくるはずです。表示されたページはふつう通りスクロール／リンクジャンプができます。 <ul>
+<li>機構上((インラインフレーム上のマウスイベントをひろうために、強引にも透明レイヤーを出したり消したりしています…))リンククリックの反応が悪いので、根気づよくクリックしてみてください。</li>
+<li>ジャンプすると別ウインドウが表示されちゃったり、BulletSurfページから移動してしまう場合もあります。そのへんは多めに見ていただけるとありがたりです。</li>
+</ul>
+</li>
+<li>弾幕（というか画像）に被弾するとウインドウが振動してひとつ前のページに戻ります。 <ul>
+<li>実際のマウスポインタをブラウザ上のダミーポインタが追う仕組みになっていますが、被弾するのは&#8221;本物の&#8221;マウスポインタのほうです。</li>
+<li>被弾後ダミーポインタにフレームが表示されている間は無敵時間です。フレームが小さくなり表示が消えるとアタリ判定が再発生します。</li>
+<li>最初にBulletSurfを開いたページに戻ってから被弾するとダイアログがでて一応ゲームオーバーです。</li>
+</ul>
+</li>
+<li>リンクジャンプ数が５つ増えるたびに、弾幕パターンが変更されます（超暫定仕様）</li>
+</ul>
+<h1 id="launch-BulletSurf"><a href="#launch-BulletSurf" class="headerlink" title="launch BulletSurf!"></a>launch BulletSurf!</h1><p>[launch bulletSurf!!(bookmarklet)][2]</p>
+<p>[Asahi.comからbulletSurf][3]</p>
+<p>[GoogleNews日本版からbulletSurf][4]</p>
+<h1 id="動作環境"><a href="#動作環境" class="headerlink" title="動作環境"></a>動作環境</h1><ul>
+<li>動作確認OS:WindowsXP, MacOSX(非推奨)</li>
+<li>JavaScriptで記述されています。JavaScript対応ブラウザでJavaScript動作を有効にしてください。</li>
+<li>かなり重いです。それなりのスペックのマシンをご用意ください</li>
+</ul>
+<h2 id="対応ブラウザ"><a href="#対応ブラウザ" class="headerlink" title="対応ブラウザ"></a>対応ブラウザ</h2><ul>
+<li>(Win)Mozilla 1.6/Firefox 0.8 <ul>
+<li>推奨ブラウザです。</li>
+</ul>
+</li>
+<li>(Win)InternetExplorer6.0 <ul>
+<li>バージョンアップ後それなりに動くようになりました。準推奨ブラウザです。</li>
+</ul>
+</li>
+<li>(MacOSX)Mozilla/IE <ul>
+<li>ものすごく遅いですが、いちおう動くかもしれません。</li>
+</ul>
+</li>
+</ul>
+<h2 id="非対応ブラウザ"><a href="#非対応ブラウザ" class="headerlink" title="非対応ブラウザ"></a>非対応ブラウザ</h2><ul>
+<li>(Win)Opera <ul>
+<li>Iframeの上位にレイヤーが描画できないバグがあるようです。</li>
+</ul>
+</li>
+<li>(MaxOSX)Safari <ul>
+<li>弾幕が表示されないみたいですね。</li>
+</ul>
+</li>
+</ul>
+<h1 id="参考など"><a href="#参考など" class="headerlink" title="参考など"></a>参考など</h1><ul>
+<li>BulletMLのレンダリング部は <a href="http://www.asahi-net.or.jp/~cs8k-cyu/" target="_blank" rel="external">ABA</a>さんの <a href="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml/index.html" target="_blank" rel="external">BulletMLデモJavaapplet</a> のソースをほぼそのままJavascriptに移植しています。また弾幕サンプルも使用させていただいています。</li>
+<li>JavaScriptのXMLパーザには <a href="http://www.jeremie.com/" target="_blank" rel="external">Jeremie</a>氏の<a href="http://www2.airnet.ne.jp/sardine/docs/fesija/docja/html/xparse.txt" target="_blank" rel="external">xparse</a> をほぼそのまま使用しています。</li>
+</ul>
+<h1 id="履歴"><a href="#履歴" class="headerlink" title="履歴"></a>履歴</h1><ul>
+<li>2004-04-01 <ul>
+<li>超アルファ版をエイプリルフールリリース</li>
+</ul>
+</li>
+<li>2004-04-02 <ul>
+<li>bookmarkletをつけた</li>
+<li>やっぱりリンクがクリックしずらかったのでちょっと改善した</li>
+<li>プロキシのUAをちょっと変更（つーかUAちゃんと送れてるのかな。確認してない）</li>
+</ul>
+</li>
+</ul>
+<p> [2]: javascript:(function(){window.open(“<a href="http://doppac.cc/work/bulletSurf/bulletSurf.html?&quot;+location.href,&quot;BulletSurf" target="_blank" rel="external">http://doppac.cc/work/bulletSurf/bulletSurf.html?&quot;+location.href,&quot;BulletSurf</a>“, “width=645px,height=700px, directories=no,status=no,menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no”);})();<br> [3]: javascript:(function(){window.open(“<a href="http://doppac.cc/work/bulletSurf/bulletSurf.html?http://www.asahi.com/&quot;,&quot;BulletSurf" target="_blank" rel="external">http://doppac.cc/work/bulletSurf/bulletSurf.html?http://www.asahi.com/&quot;,&quot;BulletSurf</a>“, “width=645px,height=700px, directories=no,status=no,menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no”);})();<br> [4]: javascript:(function(){window.open(“<a href="http://doppac.cc/work/bulletSurf/bulletSurf.html?http://news.google.co.jp/&quot;,&quot;BulletSurf" target="_blank" rel="external">http://doppac.cc/work/bulletSurf/bulletSurf.html?http://news.google.co.jp/&quot;,&quot;BulletSurf</a>“, “width=645px,height=700px, directories=no,status=no,menubar=no,toolbar=no,location=no,resizable=no,scrollbars=no”);})();</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-0_think-routine/2003-11-10" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2003/11/10/0_think-routine/2003-11-10/" class="article-date">
+  <time datetime="2003-11-09T15:00:00.000Z" itemprop="datePublished">Nov 10 2003</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2003/11/10/0_think-routine/2003-11-10/">think-routine #26 「妹みたいなもの」について</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>■<a href="https://web.archive.org/web/20040804175626/http://www.acaciasoft.jp/index.html" target="_blank" rel="external">シスターコントラスト！</a>（<a href="https://web.archive.org/web/20040809004540/http://www.acaciasoft.jp/" target="_blank" rel="external">AcaciaSoft</a>）　ストーリー概要より </p>
+<blockquote>
+<p>ある日突然、パラレルワールドに飛ばされた主人公。<br>一見何の変わりもない世界でただひとつ違っていたのは、<br>その世界では主人公に４人の妹がいたということ。<br>主人公を兄と慕う妹たちとひとつ屋根の下で、<br>唐突にはじまった新しい生活。<br>つぎつぎと襲いかかる、ちょっとＨなハプニングの嵐。<br>以前より魅力的になった兄(?)にドキドキの妹たち……。 </p>
+</blockquote>
+<p>■「妹みたいなもの」、について考えてみたい。</p>
+<p>■たとえば、となりの家に住む年下の幼なじみだとか、歳の近い従妹だとか、母親の大学時代の友人の娘で、毎日のように親に連れられてどちらかの家に行っては、話に夢中の親たちを尻目に二人で遊んでいたんだよ。…どちらかというと、俺の家にあいつが遊びに来ることが多かったかもしれないかな…とか、そういった関係によって、その年下の少女との間に傍目には不思議な親密さが生まれていたりするとき、その親密さを暗にいぶかしむような目から身をかわすように、「だからその、」と彼は急いで言葉を継ぐのである。「あいつは俺の妹みたいなものなんだよね」。 </p>
+<p>■「妹みたいなもの」。そのあわてて言い繕った印象のとおり、それがはたして正しく「妹」だったためしは、現在のところ報告されていない。当たり前のようだが、「妹みたいなもの」は「妹」ではないのだ。しかしでは、だからといって、「妹みたいなもの」というのが、彼の意に反した言いかたかといえば、おそらくそうでもないだろう。言ってみれば、その彼女との間には、単なる血縁関係である「妹」よりも、もっと複雑で微妙な関係があるべきであると彼は考えているのであり、そのニュアンスが、「妹みたいなもの」という言いかたによって探られている。彼は、彼女との複雑で微妙な関係を、複雑で微妙なまま自らに課そうとするのであり、つまり彼は、「妹みたいなもの」を、「妹みたいなもの」であるがゆえに、愛するのである。 </p>
+<p>■さて、秋葉原で「お兄ちゃ〜ん！」とでも叫べば、聞き耳を立てた<a href="https://web.archive.org/web/20040813044618/http://www.geocities.co.jp/Playtown-King/4566/textking/textking2000/kowai.html" target="_blank" rel="external">動物たちが振り返る</a>、そんな妹萌え全盛の世の中である。しかしこの「妹」というのは、血縁という無根拠で身もフタもない関係で先天的に決定されるものであり、しかもその関係が進行も発展もしないという、きわめて作劇が困難な題材であり、そのような不自由な属性に多くの動物が無条件で反応するというのは、いささか考えにくいと言えるのではないだろうか。動物たちは本当に「妹」に萌えているのか？　そうではない。私の観察では、動物たちは「妹みたいなもの」に萌えているのだ。 </p>
+<p>■冒頭に挙げた<a href="https://web.archive.org/web/20040804175626/http://www.acaciasoft.jp/index.html" target="_blank" rel="external">シスターコントラスト！</a>ストーリー概略に注目していただきたい。突然のパラレルワールドへのスリップにより主人公に４人の妹ができる、というのはいかにもご都合主義的なストーリーのように思えるのだが、しかしこの設定によって、<strong>このゲームに登場する「妹」たちが、「妹みたいなもの」たちへと、巧妙にすりかえられている</strong>ことがお分かりだろうか。もし動物たちが単純に「妹」に萌えるのだとしたら、ゲームのストーリーに単に主人公の妹たちを登場させればいいのであって、あえて強引なパラレルワールドを設定する必要はないのだ。動物たちが反応し、萌えるのは、そうした身もフタもない「妹」ではない。彼自身が、彼女が本当に「妹」なのではないか、と錯覚してしまえるような、「妹みたいなもの」がそこには必要なのであり、そのためには、たとえばパラレルワールドへのスリップのような、ある種のプロセスが必要になるである。 </p>
+<p>■「妹」を偽装した「妹みたいなもの」たち。そして「妹」に萌えているようでいてじっさいには「妹みたいなもの」に萌える動物たち。単純に見える動物の世界にも、動物たちの論理がひそかに存在し、ジャングルのようなデータベースを織り成しているのである。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-0_think-routine/2003-10-06" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2003/10/06/0_think-routine/2003-10-06/" class="article-date">
+  <time datetime="2003-10-05T15:00:00.000Z" itemprop="datePublished">Oct 6 2003</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2003/10/06/0_think-routine/2003-10-06/">think-routine #25　特権の剥奪について −いまさらの「ファウスト」と「新現実」ー</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<p>■ごたぶんに洩れず僕も<a href="https://web.archive.org/web/20031203140657/http://shop.kodansha.jp/bc/magazines/faust/" target="_blank" rel="external">小説現代10月増刊号「ファウスト」</a>を購入して、<a href="https://web.archive.org/web/20031228003213/http://www.hirokiazuma.com/" target="_blank" rel="external">東浩紀</a>「メタリアル・フィクションの誕生」を読んでみていたりするわけです。個人的には、東さんのゲームに関する言及ではじめて納得できる内容の文章だったような。「YU-NO」とノベル系ゲームのシステムの対比とかはもしかしたらおもしろいのかもしれない。あと「<a href="https://web.archive.org/web/20031203034907/http://www.kid-game.co.jp/kid/game/game_galkid/infinity/ever17/top.html" target="_blank" rel="external">Ever17</a>」もおもしろそうだからやってみよう。</p>
+<p>■さて、しかしこの東さんの「メタリアル〜」でのゲームに関する論旨の多くは、「新現実」Vol.2の佐藤心さんの論文を整理したものらしく、その論文にいまさらながら興味を持ったのでした。ということで、Vol.1は買ったけどVol.2は買ってなかった（わかりやすいな）「新現実」を買ってきて佐藤さんのギャルゲー論文を読んでみました。そして反論をちょっと。</p>
+			
+				<p class="article-more-link">
+					<a href="/2003/10/06/0_think-routine/2003-10-06/#more">Read More</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-0_think-routine/2002-02-24" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2002/02/24/0_think-routine/2002-02-24/" class="article-date">
+  <time datetime="2002-02-23T15:00:00.000Z" itemprop="datePublished">Feb 24 2002</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2002/02/24/0_think-routine/2002-02-24/">think-routine#23　ハイパーリンクの縦糸について</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<ul>
+<li>featuring 「DT 　Loads of Genomes」</li>
+</ul>
+<p>初出：<a href="http://web.archive.org/web/*/http://www.kaisoku.com/dotimpact/think_23.html" target="_blank" rel="external">2002-02-24 &#8211; http://www.kaisoku.com/dotimpact/think_23.html</a><br>&#8211; dpi. #02『第２集 クリックすると次のページに進みます』所収文章を（かなり）加筆訂正のうえ再構成しました。</p>
+			
+				<p class="article-more-link">
+					<a href="/2002/02/24/0_think-routine/2002-02-24/#more">Read More</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-0_think-routine/2001-10-21" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2001/10/21/0_think-routine/2001-10-21/" class="article-date">
+  <time datetime="2001-10-20T15:00:00.000Z" itemprop="datePublished">Oct 21 2001</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2001/10/21/0_think-routine/2001-10-21/">think-routine #22　アフォーダンスと宮本茂とコードについて</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<ul>
+<li>featuring ローレンス・レッシグ「CODE」</li>
+</ul>
+<p>初出：<a href="http://web.archive.org/web/*/http://www.kaisoku.com/dotimpact/think_22.html" target="_blank" rel="external">2001-10-21 &#8211; http://www.kaisoku.com/dotimpact/think_22.html</a></p>
+			
+				<p class="article-more-link">
+					<a href="/2001/10/21/0_think-routine/2001-10-21/#more">Read More</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-0_think-routine/2000-12-19" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2000/12/19/0_think-routine/2000-12-19/" class="article-date">
+  <time datetime="2000-12-18T15:00:00.000Z" itemprop="datePublished">Dec 19 2000</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2000/12/19/0_think-routine/2000-12-19/">think-routine #19　チャンス・オペレーション</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<ul>
+<li>featuring 「ルーマニア203」</li>
+</ul>
+<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_19.html" target="_blank" rel="external">2000-12-19 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_19.html</a></p>
+			
+				<p class="article-more-link">
+					<a href="/2000/12/19/0_think-routine/2000-12-19/#more">Read More</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-0_think-routine/2000-12-04" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2000/12/04/0_think-routine/2000-12-04/" class="article-date">
+  <time datetime="2000-12-03T15:00:00.000Z" itemprop="datePublished">Dec 4 2000</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2000/12/04/0_think-routine/2000-12-04/">think-routine #20　コンピュータゲームの２０００年について</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<ul>
+<li>featuring 「巨人のドシン１」</li>
+</ul>
+<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_03.html" target="_blank" rel="external">2000-12-04 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_03.html</a></p>
+			
+				<p class="article-more-link">
+					<a href="/2000/12/04/0_think-routine/2000-12-04/#more">Read More</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-0_think-routine/2000-11-13" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -221,398 +682,9 @@
 
 
   
-    <article id="post-0_think-routine/2000-06-09" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2000/06/09/0_think-routine/2000-06-09/" class="article-date">
-  <time datetime="2000-06-08T15:00:00.000Z" itemprop="datePublished">Jun 9 2000</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2000/06/09/0_think-routine/2000-06-09/">think-routine #21　時間管理される物語について</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「Air」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_21.html" target="_blank" rel="external">2000-06-09 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_21.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/2000/06/09/0_think-routine/2000-06-09/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/2000-03-25" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2000/03/25/0_think-routine/2000-03-25/" class="article-date">
-  <time datetime="2000-03-24T15:00:00.000Z" itemprop="datePublished">Mar 25 2000</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2000/03/25/0_think-routine/2000-03-25/">think-routine #15　キンダー・ブック</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 五味太郎・小野明「絵本をよんでみる」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_15.html" target="_blank" rel="external">2000-03-25 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_15.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/2000/03/25/0_think-routine/2000-03-25/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/1999-12-04" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/1999/12/04/0_think-routine/1999-12-04/" class="article-date">
-  <time datetime="1999-12-03T15:00:00.000Z" itemprop="datePublished">Dec 4 1999</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/1999/12/04/0_think-routine/1999-12-04/">think-routine #14　ビデオゲーム : 1999</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_14.html" target="_blank" rel="external">1999-12-4 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_14.html</a>
-			
-				<p class="article-more-link">
-					<a href="/1999/12/04/0_think-routine/1999-12-04/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/1999-11-11" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/1999/11/11/0_think-routine/1999-11-11/" class="article-date">
-  <time datetime="1999-11-10T15:00:00.000Z" itemprop="datePublished">Nov 11 1999</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/1999/11/11/0_think-routine/1999-11-11/">think-routine #13　インダイレクト・コマンド</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「ときめきメモリアル」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_13.html" target="_blank" rel="external">1999-11-11 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_13.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/1999/11/11/0_think-routine/1999-11-11/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/1999-10-22" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/1999/10/22/0_think-routine/1999-10-22/" class="article-date">
-  <time datetime="1999-10-21T15:00:00.000Z" itemprop="datePublished">Oct 22 1999</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/1999/10/22/0_think-routine/1999-10-22/">think-routine #12　フォーマル・イクスプレッション</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「ラン・ローラ・ラン」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_12.html" target="_blank" rel="external">1999-10-22 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_12.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/1999/10/22/0_think-routine/1999-10-22/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/1999-10-05" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/1999/10/05/0_think-routine/1999-10-05/" class="article-date">
-  <time datetime="1999-10-04T15:00:00.000Z" itemprop="datePublished">Oct 5 1999</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/1999/10/05/0_think-routine/1999-10-05/">think-routine #11　シーケンシャル・コンシステンシー</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「街」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_11.html" target="_blank" rel="external">1999-10-05 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_11.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/1999/10/05/0_think-routine/1999-10-05/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/1999-06-22" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/1999/06/22/0_think-routine/1999-06-22/" class="article-date">
-  <time datetime="1999-06-21T15:00:00.000Z" itemprop="datePublished">Jun 22 1999</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/1999/06/22/0_think-routine/1999-06-22/">think-routine #10　トランス・スクリプト</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「ToHeart」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_10.html" target="_blank" rel="external">1999-06-22 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_10.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/1999/06/22/0_think-routine/1999-06-22/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/100/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/99/">99</a><a class="page-number" href="/page/100/">100</a><span class="page-number current">101</span><a class="page-number" href="/page/102/">102</a><a class="extend next" rel="next" href="/page/102/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/100/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/99/">99</a><a class="page-number" href="/page/100/">100</a><span class="page-number current">101</span><a class="page-number" href="/page/102/">102</a><a class="page-number" href="/page/103/">103</a><a class="extend next" rel="next" href="/page/102/">Next &raquo;</a>
     </nav>
   
 
