@@ -56,6 +56,223 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2006-07-31" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2006/07/31/1_collisions/2006-07-31/" class="article-date">
+  <time datetime="2006-07-30T15:00:00.000Z" itemprop="datePublished">Jul 31 2006</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2006/07/31/1_collisions/2006-07-31/">Tokyo Estate Height Map</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/tehm.png" alt="tehm.png"></p>
+<p>■<a href="http://realtimemachine.sakura.ne.jp/mashup/tokyoheightmap/" target="_blank" rel="external">http://realtimemachine.sakura.ne.jp/mashup/tokyoheightmap/</a></p>
+<p>■<a href="http://www.recruit.jp/mashup2006/" target="_blank" rel="external">Sun×RECRUITマッシュアップアワード</a>応募作品です。</p>
+<p><a href="http://realtimemachine.sakura.ne.jp/collisions/works/web/dice.html" target="_blank" rel="external">桃鉄ネタ</a>につづく、GoogleMaps×ゲームインターフェイスのマッシュアップ（？）でもあります。</p>
+<h1 id="これはなにか"><a href="#これはなにか" class="headerlink" title="これはなにか"></a>これはなにか</h1><p>■<a href="http://www.smatch.jp/edit/api/reference.html" target="_blank" rel="external">Smatch物件検索API</a>で取得した物件情報を、価格を「高さ」で表しながらGoogleMapsにマッピングします。東京周辺の地価情報がグラフィカルに一望できます。</p>
+<p>詳しくは<a href="http://realtimemachine.sakura.ne.jp/mashup/tokyoheightmap/about.html" target="_blank" rel="external">解説ページ</a>を見てください。</p>
+<p>つーか内部的には<a href="http://www.tatamilab.jp/rnd/archives/000251.html" target="_blank" rel="external">たたみラボ</a>のサンプルをほとんどそのままなんですけど。あんま時間かけてなくてすいません。でも、あんまやられてないけどGoogleMapsのマーカーアイコンの切り替えをうまくすると、けっこういろんなことできるんじゃないかなーと思いまして。</p>
+<h1 id="GoogleMaps×スプライト"><a href="#GoogleMaps×スプライト" class="headerlink" title="GoogleMaps×スプライト"></a>GoogleMaps×スプライト</h1><p>■あとGoogleMapsのマーカーをスプライト的に動かしたかったので（今回でいうと雲ですね）、APIv2でどうするか調べました。</p>
+<p>v1のときは<a href="http://d.hatena.ne.jp/ABA/20051205#p1" target="_blank" rel="external">ABAさんがやってた</a>みたいにGMarker.point.x/yを触ってGMarker.redraw(true)、とかだったんですが、このへんががらっと変わってます。Gmarker.setpoint(latlng)というメソッド（非公開）がありました。実際のとこ、内部的には今までと変わらないみたい。ちゃんと表示順位をいじってくれるし、影も管理してくれるんで、けっこうスプライトとしてうれしいですよね。重いけど。</p>
+<p>APIv2の非公開命令については、<a href="//www.econym.demon.co.uk/googlemaps/reference.htm">Unofficial API 2 Referencehttp</a>がくわしいです。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2006-07-08" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2006/07/08/1_collisions/2006-07-08/" class="article-date">
+  <time datetime="2006-07-07T15:00:00.000Z" itemprop="datePublished">Jul 8 2006</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2006/07/08/1_collisions/2006-07-08/">iOdorokiban for ProcessingBETA</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/iodorokiban_beta.jpg" alt="iodorokiban_beta.jpg"></p>
+<p>■2年前にオープンキャンパスの子供向けワークショップで使うために作っていた「iOdorokiban」というソフトがあるんですが、また使いたいとのことで、ProcessingBETAで動くよう修正したので、公開しておきます。</p>
+<p>久しぶりに遊んでみたけど、いまでもけっこう楽しい。</p>
+<ul>
+<li>iOdorokiban for ProcessingBeta <ul>
+<li><a href="http://processing.dotimpac.to/?sample%2FProcessing%2FiOdorokiban" target="_blank" rel="external">http://processing.dotimpac.to/?sample%2FProcessing%2FiOdorokiban</a></li>
+</ul>
+</li>
+<li>iOdorokibanと映像ワークショップ <ul>
+<li><a href="http://collisions.dotimpac.to/project/iOdorokiban.html" target="_blank" rel="external">http://collisions.dotimpac.to/project/iOdorokiban.html</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="実行形式アーカイブ"><a href="#実行形式アーカイブ" class="headerlink" title="実行形式アーカイブ"></a>実行形式アーカイブ</h1><p>■せっかく実行形式でのexportをProcessingがサポートしてるので、バイナリでも置いておきます。</p>
+<ul>
+<li>iOdorokibanアプリケーション（Windows/MacOSX/Linux) <ul>
+<li><a href="http://processing.dotimpac.to/sketchbook/iOdorokiban/iOdorokiban_app.zip" target="_blank" rel="external">http://processing.dotimpac.to/sketchbook/iOdorokiban/iOdorokiban_app.zip</a></li>
+<li>実行にはUSBカメラ（MacならDVカメラでも）が必要です。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Windowsでの使用方法"><a href="#Windowsでの使用方法" class="headerlink" title="Windowsでの使用方法"></a>Windowsでの使用方法</h2><p>WinVDIG（USBカメラをQuickTime(forJava)で制御出来るようにするソフト）をインストールする必要があります。</p>
+<ul>
+<li>iOdorokibanをダウンロードして展開します。</li>
+<li><a href="http://www.vdig.com/WinVDIG/rel_notes.html" target="_blank" rel="external">WinVDIG Release Notes</a>からWinVDIG ver 1.0.1をダウンロードしてインストールしてください。 <ul>
+<li>WinVDIGは1.0.5が最新ですが、不具合があり、前バージョンでないと正常に動作しません</li>
+</ul>
+</li>
+<li>展開フォルダの&#8221;application.windows&#8221;内にある&#8221;iOdorokiban.exe&#8221;を実行してください。</li>
+<li>ウインドウが出て、カメラの画像が動いていれば正常に動作しています。</li>
+</ul>
+<h2 id="MacOSXでの使用方法"><a href="#MacOSXでの使用方法" class="headerlink" title="MacOSXでの使用方法"></a>MacOSXでの使用方法</h2><p>Macでは特にソフトのインストールなしに、使用できると思います（が、未確認です。キャプチャデバイスの選択でこける可能性大なので、できなかったら教えてください）</p>
+<ul>
+<li>iOdorokibanをダウンロードして展開します。</li>
+<li>展開フォルダの&#8221;application.windows&#8221;内にある&#8221;iOdorokiban.app&#8221;を実行してください。</li>
+<li>ウインドウが出て、カメラの画像が動いていれば正常に動作しています。</li>
+</ul>
+<h2 id="動かない場合の注意点"><a href="#動かない場合の注意点" class="headerlink" title="動かない場合の注意点"></a>動かない場合の注意点</h2><ul>
+<li>QuickTime7.1 + WinVDIG1.0.1の環境でのみ動作確認してます。QuickTimeのバージョンなど確認してください。</li>
+<li>キャプチャデバイスの選択でさぼっています。デバイス名に&#8221;cam&#8221;/&#8221;CAM&#8221;が含まれるものを探すので、接続したデバイスによっては失敗します。その場合は、ソースにデバイス名直接描いて、Processingで実行するとうまくいくかもしれません。</li>
+</ul>
+<h1 id="あそびかた"><a href="#あそびかた" class="headerlink" title="あそびかた"></a>あそびかた</h1><p>ビデオ画像で驚き盤をつくります。</p>
+<p>キーボード、マウスボタンで操作します。</p>
+<ul>
+<li>スペースキー：映像を撮影し、コマを進めます。</li>
+<li>バックスペースキー：前のコマを削除し、戻します。</li>
+<li>マウスボタン：押している間、驚き盤を回転させて動きを確認します</li>
+<li>pキー：画面をjpgで保存します。印刷すれば驚き盤になります。</li>
+<li>cキー：画面をクリアして、驚き盤を作り直します。</li>
+<li>!キー：デモモードです。自動的に撮影を繰り返して驚き盤風のアニメーションが表示されます。</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/processing/">processing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2006-06-11" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2006/06/11/1_collisions/2006-06-11/" class="article-date">
+  <time datetime="2006-06-10T15:00:00.000Z" itemprop="datePublished">Jun 11 2006</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2006/06/11/1_collisions/2006-06-11/">梅田望夫「ウェブ進化論」</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>■梅田望夫「<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4480062858/dotimpact-22/ref=nosim/" target="_blank" rel="external">ウェブ進化論　本当の大変化はこれから始まる</a>」を読んだ。当然ながら、基本的には知ってたりわかったつもりになっている話が書いてあったという感じだったんだけど、それでも十分わくわくしながら読めた。意味ありげな図とか表とかグラフの類はいっさいない（URLはあるけど。こういうのわざわざ入力して見ないよなー。どっかにリンク集ないんかしらん）。あくまでいま起きていることと、これから10年以内に起きるかもしれないことをそれぞれ読者に想像してもらおうということなんだろう。</p>
+<p>個人的におもしろかったのはこのあたり。</p>
+<blockquote>
+<p>　私は、日本のメディア企業の幹部から公演を頼まれると必ず、（…）ウィキペディア日本版のそのメディア企業の項目に何が書かれているかを、幹部皆に見てもらう。（…）大概の質問は、誰が何の資格でこれを書いているのかということと、間違いも一部にあるから信用できないじゃないか、というところに落ち着く。そこで私は、幹部たちにどこが間違っているかを聞き、講演会場からリアルタイムでこの項目に修正を入れてしまう。</p>
+</blockquote>
+<p>なーるほど。</p>
+<p>■しかしこの本を読んでいてあらためて思ったのは、いまの状況で痛快なのは、よりによって<a href="http://www.google.com/" target="_blank" rel="external">google</a>なんて綴りも響きもいいかげんナメた名前の会社が、「IBM（International Business Machine）」とか「Microsoft」とかいったまがりなりにも通りのいい名前の巨大な会社を振り切って世界に君臨しつつあるってとこなんだよなー、と。したがって、「あちら側」の「本当の大変化」に備えてとりあえずわれわれは、googleよりもっとナメた社名を早急に考えていく必要がありそうだ。もうなんか、発音できないとか。コンピュータしか読めないとか。<a href="http://www.geocities.jp/poloniumrecord/" target="_blank" rel="external">音がバンド名</a>みたいな。あるいは社名がだれでも編集可能とか。</p>
+<p>それでいうとさすがなのは、「<a href="http://hatena.ne.jp/" target="_blank" rel="external">はてな</a>」ってやっぱわりといい線いってるのであった。梅田望夫も言っている。</p>
+<blockquote>
+<p>　二〇〇五年三月二八日に「（株）はてな」という変な名前の会社の取締役（非常勤）になった。</p>
+</blockquote>
+<p>変な名前なのである。「はてなは日本のグーグルである（社名のセンスが）」と言っても過言ではないのかもしれない。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2006-04-27" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -200,7 +417,7 @@
 <p>■flickrのグループに「<a href="http://www.flickr.com/groups/laptopstickers/" target="_blank" rel="external">Laptop Stickers</a>」というのがあって、どうやらノートパソコンにところかまわずステッカーをべたべたと貼り付ける幼稚な人たちのコミュニティなのだが、しかしflickrは画像の位置を指定してアノテーションができるので、なんか楽しそうなのだった。</p>
 <p>ので、自分のもやってみた。いえー。（幼稚）</p>
 <ul>
-<li><a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#104;&#116;&#x74;&#x70;&#x3a;&#x2f;&#47;&#x77;&#119;&#119;&#x2e;&#102;&#108;&#x69;&#x63;&#x6b;&#114;&#x2e;&#x63;&#111;&#x6d;&#47;&#x70;&#x68;&#111;&#116;&#111;&#115;&#47;&#x34;&#x34;&#52;&#48;&#51;&#x36;&#54;&#x33;&#64;&#78;&#x30;&#48;&#x2f;&#49;&#x33;&#x30;&#x38;&#x30;&#48;&#x35;&#x38;&#52;&#47;">&#104;&#116;&#x74;&#x70;&#x3a;&#x2f;&#47;&#x77;&#119;&#119;&#x2e;&#102;&#108;&#x69;&#x63;&#x6b;&#114;&#x2e;&#x63;&#111;&#x6d;&#47;&#x70;&#x68;&#111;&#116;&#111;&#115;&#47;&#x34;&#x34;&#52;&#48;&#51;&#x36;&#54;&#x33;&#64;&#78;&#x30;&#48;&#x2f;&#49;&#x33;&#x30;&#x38;&#x30;&#48;&#x35;&#x38;&#52;&#47;</a></li>
+<li><a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#104;&#x74;&#x74;&#112;&#x3a;&#x2f;&#47;&#119;&#x77;&#119;&#x2e;&#102;&#108;&#105;&#99;&#x6b;&#x72;&#x2e;&#x63;&#x6f;&#x6d;&#x2f;&#112;&#104;&#x6f;&#116;&#111;&#x73;&#x2f;&#52;&#x34;&#x34;&#x30;&#x33;&#54;&#54;&#51;&#64;&#78;&#48;&#48;&#x2f;&#49;&#51;&#x30;&#56;&#x30;&#48;&#x35;&#x38;&#x34;&#x2f;">&#104;&#x74;&#x74;&#112;&#x3a;&#x2f;&#47;&#119;&#x77;&#119;&#x2e;&#102;&#108;&#105;&#99;&#x6b;&#x72;&#x2e;&#x63;&#x6f;&#x6d;&#x2f;&#112;&#104;&#x6f;&#116;&#111;&#x73;&#x2f;&#52;&#x34;&#x34;&#x30;&#x33;&#54;&#54;&#51;&#64;&#78;&#48;&#48;&#x2f;&#49;&#51;&#x30;&#56;&#x30;&#48;&#x35;&#x38;&#x34;&#x2f;</a></li>
 </ul>
 <p>マイノートＰＣは今や生産中止になってるHPのタブレットPC「<a href="http://h50146.www5.hp.com/products/tabletpc/tc1100/" target="_blank" rel="external">TC1100</a>」で、キーボードを外してスレートスタイルでも使えるというものだけど、このスレート本体の裏面のパネルラインとか排気スリットの配置とかメカっぽくて大変かっこよく、ステッカーを貼ってさらにレーシーにしたくなるのである。もっとバリエーションがあるとよいんだけど、でもステッカーってそれこそタワレコの限定特典ぐらいでしかあんまりもらわないからねー。</p>
 <p>なので、ステッカー作った人とか、いらないステッカーを持ってる人がいたら欲しいなー。新しいのを貼ったらまた写真をアップしてリンクをはるので、これはちょっとした広告と言えるのではないだろうか。ステッカー2.0!（ていうか、ステッカーが広告ってめちゃめちゃふつうの話ですが）</p>
@@ -495,223 +712,6 @@
 </ul>
 <p>■せっかくなので書いておくと、<a href="http://realtimemachine.sakura.ne.jp/collisions/works/web/dice.html" target="_blank" rel="external">エイプリルフールネタ</a>で使ったサイコロの画像は<a href="http://www.povray.org/" target="_blank" rel="external">POV-Ray</a>というフリーのレンダラでかなり適当に作ったもの。シーン記述言語に慣れれば簡単な形ならわりと楽にCGを作れるので絵心のないプログラマが絵の必要なネタをやったりするには便利なのだ。今回のサイコロのデータは<a href="http://processing.dotimpac.to/index.php?sample%2FPOVray%2Fdice.pov" target="_blank" rel="external">こんな感じ</a>。</p>
 <p>ひさしぶりにPOVRayを触ったんだけど、ちなみに前つくったものも公開しておくと、<a href="http://dotimpac.to/work/pinserver/pinspot.html" target="_blank" rel="external">こんなもの</a>。ほんとうに役に立たないものばかり作っているということがよくわかる。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2006-04-02" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2006/04/02/1_collisions/2006-04-02/" class="article-date">
-  <time datetime="2006-04-01T15:00:00.000Z" itemprop="datePublished">Apr 2 2006</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2006/04/02/1_collisions/2006-04-02/">Webページでダイスを振るbookmarklet</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/dice.jpg" alt="dice.jpg"></p>
-<p>■<a href="http://realtimemachine.sakura.ne.jp/collisions/event/af2006.html" target="_blank" rel="external">エイプリルフールエントリ</a>はなんかもっともらしいこと書いときゃいいだろ、と思って書いたらぜんぜんウソになってなかった。来年の4/1までにはもうちょっとウソがつけるようになっておかないと。</p>
-<p>そんなわけで、「GoogleMaps上でサイコロが振れると桃太郎電鉄みたいでいいなー」というまえまえから暖めていたアイデアをあわてて作ってみたものです。</p>
-<p>[このページでダイスを振る][2]</p>
-<p><a href="http://dotimpac.to/work/dice/dice.html" target="_blank" rel="external">GoogleMaps上での使用例</a></p>
-<p>bookmarkletとしても動作するようにしました。以下のスクリプトを任意のwebページを開いてアドレスバーかブックマークに登録しておいて実行すると、そのページでサイコロが転がります。</p>
-<blockquote>
-<p>javascript:(function(){var d=document;var h=&#8217;<a href="http://realtimemachine.sakura.ne.jp/dice/js/&#39;;var" target="_blank" rel="external">http://realtimemachine.sakura.ne.jp/dice/js/&#39;;var</a> s=d.createElement(&#8216;script&#8217;);s.src=h+&#8217;dice.js’;d.body.appendChild(s);var s=d.createElement(&#8216;script&#8217;);s.src=h+&#8217;dicebm.js’;d.body.appendChild(s);})(); </p>
-</blockquote>
-<p>まあネタ以外のなにものでもないですが、桃鉄のあのゲーム画面にサイコロが転がる感じはいまだに好きなんで、なんかこういう感じがWebにもあるといいよなーと思っているところです。</p>
-<p> [2]: javascript:(function(){var d=document;var h=’<a href="http://realtimemachine.sakura.ne.jp/dice/js/&#39;;var" target="_blank" rel="external">http://realtimemachine.sakura.ne.jp/dice/js/&#39;;var</a> s=d.createElement(‘script’);s.src=h+’dice.js’;d.body.appendChild(s);var s=d.createElement(‘script’);s.src=h+’dicebm.js’;d.body.appendChild(s);})();</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2006-04-01" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2006/04/01/1_collisions/2006-04-01/" class="article-date">
-  <time datetime="2006-03-31T15:00:00.000Z" itemprop="datePublished">Apr 1 2006</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2006/04/01/1_collisions/2006-04-01/">Make Your Saving Roll</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/af2006.jpg" alt="af2006.jpg"></p>
-<p>■個別の利便性よりもそのサービスを使うユーザの（のみならずサービス開発者自身の！）「体験」を重視し、サービスでのユーザの活動がそのサービスそのものの内容や性格をゆるやかに決定づけ、それ自体を成長させていくという、いわゆる「Web2.0」の世界観が、コンピュータゲームと親和性があるのではないか、いやどうかな、ていうかでもそれわりと当たり前じゃない？　という指摘が、すでに多くの識者によって指摘されている。</p>
-<ul>
-<li><a href="http://iandeth.dyndns.org/mt/ian/archives/000607.html" target="_blank" rel="external">ETech 06 WEBサイトにゲーム要素を取り入れる &#8211; Amy Jo Kim女史講演</a></li>
-<li><a href="http://amanoudume.s41.xrea.com/2005/10/post_56.html" target="_blank" rel="external">Game Design 2.0</a></li>
-<li><a href="http://n-styles.com/main/archives/2005/11/01-073000.php" target="_blank" rel="external">GAME2.0について考える</a></li>
-<li><a href="http://d.hatena.ne.jp/ConquestArrow/20051221/1135137576" target="_blank" rel="external">安易にWebの流行に流される人は、「web 2.0 = game 0.5」である可能性に留意しておいた方がよい</a></li>
-</ul>
-<p>現在のところWeb2.0と呼ばれるものが何を指すのかがはっきりしておらず、はっきりする目処もなく、各人が好きな結論を導けるようにはっきりさせないことが望ましいという雰囲気もあるため、ここでは筆者も断固としてWeb2.0を好きなように解釈するが、そもそもなぜWeb2.0とゲームが同じまな板に載せられがちなのかといえば、そもそもWeb2.0を代表するような各種サービスが、すでに「なんとなくゲームっぽい」からであり、さらにそれはなぜかといえば、単純にコンピュータゲーム直撃世代の若者が特有の軽いノリでサービスをざっくり作って好きな色で塗っているからに他ならない。</p>
-<p>いわゆるWeb2.0的サイトの多くが、ムダに名称が凝ってたりとか、ムダにロゴが凝ってたりとか、なんか妙にポップでハイコントラストな色使いであったりとか、ちっこいアイコンとかドット絵が好きそうであったりとか、アニメーションしたりフラッシュしたりスクロールしたりズームしたりしがちなのは、そのためだ。それが好きなのだ。</p>
-<p>したがってこの状勢において、よくわかんないけどとりあえずWeb2.0たらんとする者がいるとして、その者がWeb2.0らしくふるまうための方法を導くことができる。ゲームっぽくすればいいのである。これで現状ならばわれわれは「やっぱWeb2.0ってこうでしょ」と言うことができる。とはいえこれも、さほど容易なことではないだろう。ここでいう「ゲームっぽさ」は、これまでコンピュータゲームに親しんできた者の皮膚感覚として共有されているに過ぎないからだ。ともかくわれわれは、ここから出発しなければならない。われわれの考える「ゲームっぽさ」を、Webに実装する必要があるのだ。</p>
-<p>なので、ひとつ作ってみた。ご覧のとおりである。ダイスをクリックすると投げることができる。出た目に特に意味はない。<a href="http://doppac.cc/work/dice/dice.html" target="_blank" rel="external">GoogleMaps上での使用</a>を想定しているが、やっぱり特に意味はない。</p>
-<p>bookmarkletとしての利用も可能にした。以下のスクリプトをアドレスバーで実行するか、新規ブックマークとして登録すれば、任意のサイトでダイスを転がすことができる。そのことの意味するところは自分自身で見つけてほしい。Web2.0がそうであるように。</p>
-<blockquote>
-<p>javascript:(function(){var d=document;var h=&#8217;<a href="http://realtimemachine.sakura.ne.jp/dice/js/&#39;;var" target="_blank" rel="external">http://realtimemachine.sakura.ne.jp/dice/js/&#39;;var</a> s=d.createElement(&#8216;script&#8217;);s.src=h+&#8217;dice.js’;d.body.appendChild(s);var s=d.createElement(&#8216;script&#8217;);s.src=h+&#8217;dicebm.js’;d.body.appendChild(s);})();</p>
-</blockquote>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2006-03-26" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2006/03/26/1_collisions/2006-03-26/" class="article-date">
-  <time datetime="2006-03-25T15:00:00.000Z" itemprop="datePublished">Mar 26 2006</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2006/03/26/1_collisions/2006-03-26/">あの扉の音</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>■「<a href="http://www.nintendo.co.jp/ds/admj/" target="_blank" rel="external">どうぶつの森</a>」シリーズのディレクター江口勝也さんのGDC講演のレポートがほうぼうで公開されてるけど、ここで江口さんが、「どうぶつの森」はもともと64DD向けの企画として立ち上がっていた、という話をされてたのに興味を引かれた。たぶんそうなんだろうなーと思っていたんだけど、あんまり今まで言われていなかったことだったような（雑誌のインタビューとか攻略本とかをチェックしてないけど、今までも公言されたことだったのかな？）。<a href="http://www.nintendo.co.jp/n08/a3uj/index.html" target="_blank" rel="external">MOTHER3</a>もふくめて、Nintendo64（64DD）では出なかった芽が今になって咲いている、というような話ができそう。</p>
-<ul>
-<li><a href="http://www.famitsu.com/game/news/2006/03/24/103,1143201496,50568,0,0.html" target="_blank" rel="external">レボリューション版『どうぶつの森』の計画も明らかに！　任天堂の江口氏が講演 （ファミ通.com）</a></li>
-<li><a href="http://plusd.itmedia.co.jp/games/articles/0603/25/news008.html" target="_blank" rel="external">レボリューションでの開発を表明——ポケットの中のフランチャイズ？　「おいでよ どうぶつの森」のケーススタディ（ITmedia）</a></li>
-</ul>
-<p>「どうぶつの森」については、DS版を買ったときにmixi日記に書いていたものがあったので、この際で公開しておきます。</p>
-<h1 id="2005年12月19日のmixi日記"><a href="#2005年12月19日のmixi日記" class="headerlink" title="2005年12月19日のmixi日記"></a>2005年12月19日のmixi日記</h1><p>■「おいでよ　どうぶつの森」をようやく手に入れました。これからですよ。みんなもう飽きてる？</p>
-<p>プレイを始めてまず、あーそうだったそうだったと思い出したのは、このシリーズ、音がいいんですよ、とても。音楽はもちろんのこと、みじかいファンファーレから効果音まで、「どうぶつの森の音」というものが、ほんとうにていねいに作りこまれている。これはもう、めったにないくらいに。</p>
-<p>このシリーズを愛することになるプレイヤーは、どうぶつの森の、たとえばあの扉の音を、これから先ずっとどこかで覚えていることになるでしょう。じじつ僕はキューブ版はやってなくて64版をずいぶん前にプレイしてたきりだったんだけど、それを改めて聞いた瞬間に、ものすごく鮮明にどうぶつの森のことを思い出しましたもの。</p>
-<p>ついでに余計なことも思い出しましたよ。このDS版「おいでよ〜」の元祖、Nintendo64版の「どうぶつの森」って、これ完全に僕の憶測からなる妄想ですが、もともと当時任天堂が64を使って世界を書き換えたりそれを交換したりできるような（当時としてはわりと）画期的なゲームソフトを提供するために長い間暖めていた（そして結果としてその羽化に失敗した）64DDと呼ばれるハード向けに、おそらくかなり長ーい期間を経て開発されてたソフトだったんじゃなかったかと思うんですな（繰り返し言いますが本当に知らないので完全に憶測です）。</p>
-<p>ややムリヤリ発売されたふしのある64版やそれ用のアドオンプログラムプレゼントキャンペーン、キューブ版もeカードでしたっけ、へんな実験ぽいことをいろいろやってましたよね。どうぶつの森で実験って、おだやかじゃないですけども。</p>
-<p>ともかく、そういう出自を持つ（とかいって憶測を根拠にする陰謀説のロジックですが）「どうぶつの森」が、ついに理想的なネットワーク環境を持つハードで発売されたってのは、なーんか、よかったね！　という気が非常にしますな。泣けますよ、場合によっては。</p>
-<p>そりゃ「おいでよ」！　って、言いたくなるよね。</p>
-<h1 id="今日聞いたpodcast"><a href="#今日聞いたpodcast" class="headerlink" title="今日聞いたpodcast"></a>今日聞いたpodcast</h1><p>またさぼってしまったので大量に。</p>
-<ul>
-<li><a href="http://sweet.podcast.jp/home/shashin/archives/release/main/2006/02/07_011607.html" target="_blank" rel="external">デジオ＋写真「[podcast.jp] デジオ＋写真　爪コンシャス」</a></li>
-<li><a href="http://science.nasa.gov/headlines/y2006/10mar_stormwarning.htm" target="_blank" rel="external">Science @ NASA Feature Stories Podcast「Solar Storm Warning」</a>（Dr. Tony Phillips）</li>
-<li><a href="http://dpz.cocolog-nifty.com/dpr/2006/03/31__8d9e.html" target="_blank" rel="external">デイリーポータルＺラジオ「第31回 機材がそろった！」</a></li>
-<li><a href="http://www.4colorrebellion.com/archives/2006/03/20/4cr-podcast-0320/" target="_blank" rel="external">4 color rebellion「4cr Podcast 03.20」</a>（4 color rebellion）</li>
-<li>[seedmagazine.com &#8220;In Focus&#8221; Podcasts「Week in Science]( 2/17 &#8211; 2/23」:<a href="http://www.seedmagazine.com/news/2006/02/new*notable*217_223.php)（Seed" target="_blank" rel="external">http://www.seedmagazine.com/news/2006/02/new*notable*217_223.php)（Seed</a> Magazine）</li>
-<li><a href="http://www.makezine.com/blog/archive/2006/02/make_video_podcast_pablos_from.html" target="_blank" rel="external">MAKE Magazine「MAKE VIDEO PODCAST &#8211; Pablos from Komposite」</a></li>
-<li>[MAKE Magazine「MAKE VIDEO PODCAST]( Shapelock and Magnets that defy gravity」:<a href="http://www.makezine.com/blog/archive/2006/03/make*video*podcast*shapelock*a.html" target="_blank" rel="external">http://www.makezine.com/blog/archive/2006/03/make*video*podcast*shapelock*a.html</a>)</li>
-<li><a href="http://www.cnet.com/4520-11455_1-6333605-1.html" target="_blank" rel="external">Buzz Out Loud from CNET「BuzzCast 03/21/06 &#8211; G-men on Gmail?」</a>（Tom Merritt and Molly Wood）</li>
-<li>[NHK World Radio Japan &#8211; English News「NHK World Radio Japan &#8211; English News at 23](00(JST), Mar.21」:<a href="http://www.nhk.or.jp/english/)（NHK" target="_blank" rel="external">http://www.nhk.or.jp/english/)（NHK</a> (Japan Broadcasting Coproration)）</li>
-<li>[Audible Ajax「Audible Ajax Show 16]( State of Ajax」:<a href="http://www.loomia.com/media/audio?cp=1322222)（Dion" target="_blank" rel="external">http://www.loomia.com/media/audio?cp=1322222)（Dion</a> and Ben of Ajaxian.com）</li>
-<li><a href="http://www.nasa.gov/multimedia/podcasting/twan_transcript_030306.html" target="_blank" rel="external">NASAcast「NASATV&#8217;s This Week at NASA, February 25 &#8211; March 3」</a>（NASA TV）</li>
-<li><a href="http://sweet.podcast.jp/home/numa/archives/release/main/2006/03/20_150440.html" target="_blank" rel="external">ラジオ 沼「[podcast.jp] 沼：308 リヴァーブを抜けて」</a> <ul>
-<li>東京ステーションホテルの騒音。</li>
-</ul>
-</li>
-<li><a href="http://cs.nxpress.net/podcast_sjp/" target="_blank" rel="external">スキー・ジャンプ・ペアでジンギスカン「スキー・ジャンプ・ペアでジンギスカン第1回(延長戦)」</a>（国際スキージャンプ・ペア連盟） <ul>
-<li>ビドヘルツルのもみあげに関する衝撃的な告発。</li>
-</ul>
-</li>
-<li><a href="http://sweet.podcast.jp/home/numa/archives/release/main/2006/03/20_150728.html" target="_blank" rel="external">ラジオ 沼「[podcast.jp] 沼：309 ギターを買った」</a> <ul>
-<li>「ふなずしの唄」はいいな。</li>
-</ul>
-</li>
-<li><a href="http://sweet.podcast.jp/home/numa/archives/release/main/2006/03/24_135721.html" target="_blank" rel="external">ラジオ 沼「[podcast.jp] 沼：310 コバルトアワーの行き先」</a> <ul>
-<li>「自分の経験していない青春を追憶する」という形式はけっこういくつもあるような気がする。「青春」はそれを可能にするワープゾーンなのかも。</li>
-</ul>
-</li>
-<li><a href="http://www.nasa.gov/multimedia/podcasting/twan_transcript_031706.html" target="_blank" rel="external">NASAcast「NASATV&#8217;s This Week at NASA, March 11 &#8211; 17」</a>（NASA TV）</li>
-<li>[NHK World Radio Japan &#8211; English News「NHK World Radio Japan &#8211; English News at 20](00(JST), Mar.24」:<a href="http://www.nhk.or.jp/english/)（NHK" target="_blank" rel="external">http://www.nhk.or.jp/english/)（NHK</a> (Japan Broadcasting Coproration)）</li>
-<li>ファミ通WaveDVD Podcasting「第10回配信分」（ファミ通WaveDVD編集部）</li>
-</ul>
 
     
 	</div>
