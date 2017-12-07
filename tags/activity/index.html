@@ -56,6 +56,65 @@
     <div id="main">
       
   
+    <article id="post-201712/scrapbox-user-script-and-style-for-outliner-user" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/06/201712/scrapbox-user-script-and-style-for-outliner-user/" class="article-date">
+  <time datetime="2017-12-05T15:00:00.000Z" itemprop="datePublished">Dec 6 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/06/201712/scrapbox-user-script-and-style-for-outliner-user/">Scrapboxをアウトライナーぽく使う人むけのuserScript/Style</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>とりあえず不満だったとこに対応したやつ</p>
+<h4 id="行の付加情報用の文字修飾UserStyle"><a href="#行の付加情報用の文字修飾UserStyle" class="headerlink" title="行の付加情報用の文字修飾UserStyle"></a>行の付加情報用の文字修飾UserStyle</h4><img src="https://i.gyazo.com/f8d7985b5705b5eae358ab71eebd015e.png">
+<p>noteのあるアウトラインを持ってきたりするときに、強弱がなくてごちゃごちゃするのでほしかった。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">code</span><span class="selector-pseudo">:style.css</span></div><div class="line">  <span class="selector-class">.deco-</span>\~ &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">0.8em</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#999</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>リンクをコピーする用に<a href="https://chrome.google.com/webstore/detail/create-link/gcmghdmnkfdbncmnmlkkglmnnhagajbm?hl=ja" target="_blank" rel="external">Copy Link</a>に<code>%text% [~ %url%]</code>というのを追加して使っている。文字全体をリンクにすると青色ばっかりになってこれまたうるさいので。</p>
+<img src="https://i.gyazo.com/1942d0864d72da70ddb006662220ae7b.png" width="400">
+<img src="https://i.gyazo.com/7a8469e83268df55727835cf3d24f94b.png" width="600">
+<h4 id="選択テキストの検索結果にリンクするUserScript"><a href="#選択テキストの検索結果にリンクするUserScript" class="headerlink" title="選択テキストの検索結果にリンクするUserScript"></a>選択テキストの検索結果にリンクするUserScript</h4><img src="https://i.gyazo.com/0125455bc73b897c80af7a6e8fbebd5d.gif" width="500">
+<hr>
+<p><a href="https://scrapbox.io/customize/%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6Scrapbox%E5%86%85%E6%A4%9C%E7%B4%A2" target="_blank" rel="external">文字列を選択してScrapbox内検索</a>から発展したもの。Scrapboxのダイナミックリンク楽しいんだけど、行の情報に対するタグ的に使うと一覧性がなくて、検索結果のほうがみたいと思うことが多いのでそうするやつ。個人的にはハッシュ形式のリンククリックの挙動が変えられるなら検索結果のほうにしたい。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">code:script.js</div><div class="line">  scrapbox.PopupMenu.addButton(&#123;</div><div class="line">    title: <span class="string">'検索リンク'</span>,</div><div class="line">    onClick: <span class="function"><span class="keyword">function</span> (<span class="params">text</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> projectName = <span class="string">'YOUR PROJECT NAME'</span>;</div><div class="line">      <span class="keyword">return</span> <span class="string">'['</span> + text + <span class="string">' https://scrapbox.io/'</span>+ projectName +<span class="string">'/search/page?q='</span> + <span class="built_in">encodeURIComponent</span>(text) + <span class="string">']'</span>;</div><div class="line">    &#125;</div><div class="line">   &#125;);</div><div class="line"> </div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapbox/">scrapbox</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201712/scrapbox-alfred-workflow" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -517,66 +576,6 @@
 	<div class="entry-content">
 		
     	<p>第14回で、前期最終課題の制作日。学生の出してきた企画を軌道修正しながら、プログラムの制作に入ってもらうんだけど、やっぱりプログラムをどこから手をつけるか、という問題分割の考えかたはうまく伝えられていないようで、最初から乱数を使うプログラムを作ろうとして悩みはじめたり、直近習ったプログラムの書きかた（ファイルを分けた複雑な関数の使いかたや、配列など）に縛られてしまっていたりした。うーむ。ちゃんと完成形のプログラムの前段階のプロトタイプを制作することを課題に盛り込んだり、ワークシートに書き出させたりするようなフレームワーク化をしたほうがよさそうなので来年度はそうしていきたい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog2015/">geidai-prog2015</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201507/variation-genelate-study" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/07/08/201507/variation-genelate-study/" class="article-date">
-  <time datetime="2015-07-07T15:00:00.000Z" itemprop="datePublished">Jul 8 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/07/08/201507/variation-genelate-study/">モチーフのバリエーションを生成するプログラムとそれによる写真集</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>前回休講してしまったけど、第13回。ほんとは前回から始めたかった前期の最後の課題のオリエンテーションと企画制作。最終課題はいろいろ思いを巡らしたのだけど結局授業開始以来続けている「モチーフのバリエーションを生成するプログラムを作り、そのプログラムで生まれたバリエーションを素材に写真集をつくる」という課題そのままにした。</p>
-<p>「モチーフ」というのは椅子とか自転車とかマークとか、ある（物理的、機能的な）規則によって構成される形態をもったモノで、課題のために決めたモチーフについて調査してそのモチーフを構成する規則（椅子であれば足の本数の制約や足の長さ、座面の大きさ、背板のありなし、高さ、傾き、肘掛けのありなし…などなど）を抽象化してそれらをパラメータとしてランダムないしUIで調節可能にしてモチーフのバリエーションが生み出せるようなプログラムを制作する。このプログラムが提出物その１で、その２がこのプログラムで生み出せる（はず）のモチーフバリエーションを最低100パターンの画像などで書き出し、それを素材としてBCCKSで写真集をつくるというものにしている。現実世界のモチーフからルールを抽象化してプログラムの形で実装するというプログラミングに関する基礎技能に対するおさらいと、乱数的に生み出されるバリエーションで事故的にうまれる「作品」の面白さ、というコンピュータの使いかたに触れてもらうのと、プログラムは道具として制作してそこから生み出されたもので別の制作物をつくるという職業プログラマー以外の人がプログラム技術を活用するかたちの提案、というあたりがねらい。以前は提出物その２はポスターにしてたんだけど、せっかくなのでBCCKSで写真集をつくるというものにしている。</p>
-<ul>
-<li><a href="https://goo.gl/photos/ADyHjLDVzL9pifXf6" target="_blank" rel="external">むかしのこの課題作品はこんなかんじ</a></li>
-<li>BCCKS写真集に以降してからのやつ<ul>
-<li><a href="http://bccks.jp/search/programming2012" target="_blank" rel="external">http://bccks.jp/search/programming2012</a></li>
-<li><a href="http://bccks.jp/search/programming2013" target="_blank" rel="external">http://bccks.jp/search/programming2013</a></li>
-<li><a href="http://bccks.jp/search/programming2014" target="_blank" rel="external">http://bccks.jp/search/programming2014</a></li>
-</ul>
-</li>
-</ul>
-<p>さて今年はどんなものができるか。</p>
 
     
 	</div>

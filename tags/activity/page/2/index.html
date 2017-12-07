@@ -56,6 +56,66 @@
     <div id="main">
       
   
+    <article id="post-201507/variation-genelate-study" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/07/08/201507/variation-genelate-study/" class="article-date">
+  <time datetime="2015-07-07T15:00:00.000Z" itemprop="datePublished">Jul 8 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/07/08/201507/variation-genelate-study/">モチーフのバリエーションを生成するプログラムとそれによる写真集</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>前回休講してしまったけど、第13回。ほんとは前回から始めたかった前期の最後の課題のオリエンテーションと企画制作。最終課題はいろいろ思いを巡らしたのだけど結局授業開始以来続けている「モチーフのバリエーションを生成するプログラムを作り、そのプログラムで生まれたバリエーションを素材に写真集をつくる」という課題そのままにした。</p>
+<p>「モチーフ」というのは椅子とか自転車とかマークとか、ある（物理的、機能的な）規則によって構成される形態をもったモノで、課題のために決めたモチーフについて調査してそのモチーフを構成する規則（椅子であれば足の本数の制約や足の長さ、座面の大きさ、背板のありなし、高さ、傾き、肘掛けのありなし…などなど）を抽象化してそれらをパラメータとしてランダムないしUIで調節可能にしてモチーフのバリエーションが生み出せるようなプログラムを制作する。このプログラムが提出物その１で、その２がこのプログラムで生み出せる（はず）のモチーフバリエーションを最低100パターンの画像などで書き出し、それを素材としてBCCKSで写真集をつくるというものにしている。現実世界のモチーフからルールを抽象化してプログラムの形で実装するというプログラミングに関する基礎技能に対するおさらいと、乱数的に生み出されるバリエーションで事故的にうまれる「作品」の面白さ、というコンピュータの使いかたに触れてもらうのと、プログラムは道具として制作してそこから生み出されたもので別の制作物をつくるという職業プログラマー以外の人がプログラム技術を活用するかたちの提案、というあたりがねらい。以前は提出物その２はポスターにしてたんだけど、せっかくなのでBCCKSで写真集をつくるというものにしている。</p>
+<ul>
+<li><a href="https://goo.gl/photos/ADyHjLDVzL9pifXf6" target="_blank" rel="external">むかしのこの課題作品はこんなかんじ</a></li>
+<li>BCCKS写真集に以降してからのやつ<ul>
+<li><a href="http://bccks.jp/search/programming2012" target="_blank" rel="external">http://bccks.jp/search/programming2012</a></li>
+<li><a href="http://bccks.jp/search/programming2013" target="_blank" rel="external">http://bccks.jp/search/programming2013</a></li>
+<li><a href="http://bccks.jp/search/programming2014" target="_blank" rel="external">http://bccks.jp/search/programming2014</a></li>
+</ul>
+</li>
+</ul>
+<p>さて今年はどんなものができるか。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog2015/">geidai-prog2015</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201506/hackers-champloo-2015-conference" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -486,57 +546,6 @@
     	<p>第５回。今回は条件分岐（if文）の解説をさらっとして（今回は残念ながらコンピュータ雑学をからめる余裕がなかった）、「プログラムによるパターンの模写」の課題に入った。テキスタイルパターンなど線や図案が規則的に敷き詰められたパターン画像を探して、Processingの図形描画命令とfor文、if文をつかってそのパターンを再現するプログラムをつくってみるという課題。次回も制作時間に充てて今回はサンプルプログラムなしで自分でゼロからプログラムを制作してもらう形。</p>
 <p>プログラムの学習のための「パターンの模写」というお題は「Built with Processing」の本のなかでも紹介していた。たとえばデザイン科とかだと雑誌の紙面デザインのスキャン画像をイラレの下レイヤーに敷いて、そのうえにグリッド線やエレメントを配置して元デザインを可能なかぎり再現するデータを作るような演習したりすると思うんだけど、そういうなにかを学ぶための練習として「お手本を自分の手で完コピしてみる」訓練をプログラムでもするといいんじゃないかと考えて、でもこの場合お手本プログラムを写経してもあんまり意味ないので、自分の好きな繰り返しパターンをプログラムで再現するという課題にしてみている。</p>
 <p>ほんとはパターンみたいな漠然としたものじゃなくて、プログラムを学びたいような人にとってモチベーションを感じるようなものを模写する課題にできるといいんだけど、パターン以外でちょうどいいモチーフはいまのところ見つけられていない。ちなみに『<a href="http://text-perforation.doppac.cc/201504/2015/04/18/programming-lesson-for-changing-world/">世界が変わるプログラム入門</a>』ではそれに当たるモチーフを（昔の）ゲームにしていて、それはひとつの形だなとおもった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog2015/">geidai-prog2015</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201504/jump-instruction-in-program" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/04/30/201504/jump-instruction-in-program/" class="article-date">
-  <time datetime="2015-04-29T15:00:00.000Z" itemprop="datePublished">Apr 30 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/04/30/201504/jump-instruction-in-program/">プログラムの流れとジャンプ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>第４回はfor文のレクチャで、はじめてプログラムに実行行のジャンプやそれによる繰り返しがでてくるところなので、コンピュータにおいてメモリ上のプログラムが逐次実行される流れとそのジャンプでなにが起きるのかということと、ちょっと間違うと無限ループになったりへんなとこにジャンプしてブルースクリーンになったりするよという話をして、Ben fryの<a href="http://benfry.com/dismap/" target="_blank" rel="external">disMap</a>を紹介したり<a href="http://tasvideos.org/3957S.html" target="_blank" rel="external">スーパーマリオワールドTAS glitch</a>（あるバグを引き起こすことでプレイヤースプライト管理データ部のデータがプログラムとして読み出されることを利用して特殊なプレイによってスプライト管理データ部にエンディングシーケンスにジャンプするコードを作ってゲームプレイのみによってゲームの状態を変更するデモ）を見せたりした。</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/HHErkex2tXg" frameborder="0" allowfullscreen></iframe></div>
-<p>ところで現代のプログラミングにおいてfor文をどのタイミングで教えるべきかってわりと悩ましい気がしていて（LLだとforってもうほぼ使わないしね）、今回も関数とif文を教えるのを先にしようかぎりぎりまで考えていたんだけど、結局forを先にした。前書いた２冊めの本（ \<a href="http://www.amazon.co.jp/exec/obidos/ASIN/477414715X/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank" \="">Processing アニメーションプログラミング入門\ ）では配列データの処理のところまでfor文を教えるのを送ったりしたんだけど。</a></p>
 
     
 	</div>
