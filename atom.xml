@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://text-perforation.doppac.cc/"/>
-  <updated>2017-12-01T02:29:53.000Z</updated>
+  <updated>2017-12-07T02:53:16.000Z</updated>
   <id>http://text-perforation.doppac.cc/</id>
   
   <author>
@@ -17,13 +17,95 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>scrapboxを検索して開くalfred workflow</title>
+    <link href="http://text-perforation.doppac.cc/2017/12/05/201712/scrapbox-alfred-workflow/"/>
+    <id>http://text-perforation.doppac.cc/2017/12/05/201712/scrapbox-alfred-workflow/</id>
+    <published>2017-12-04T15:00:00.000Z</published>
+    <updated>2017-12-07T02:53:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/dotimpact/scrapbox-alfred-workflow/" target="_blank" rel="external">dotimpact/scrapbox-alfred-workflow: scrapbox alfred workflow</a></p><hr><p>ご多分にもれず、情報集約に<a href="https://scrapbox.io/product" target="_blank" rel="external">Scrapbox</a>を使い始めて、ちびちびと環境整備をしている。</p><p>githubで検索していたら、<a href="https://github.com/ohtomi/scrapbox" target="_blank" rel="external">go製の検索cli</a>をみつけたので、これを呼び出すalfred workflowを書いた。</p><hr><img src="https://i.gyazo.com/6a5b23660e0d2964f65b7ed29a0d33bb.gif" width="600"><hr><p>cliでプライベートprojectにアクセスするためのトークンは、ログインしたブラウザのクッキーが持ってる値を渡せばいいみたい。</p><hr><img src="https://i.gyazo.com/3553f45c0718e488a72703a0f299a110.png0" width="600">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://github.com/dotimpact/scrapbox-alfred-workflow/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dotimpact/scrapbox-alfred-workflow: scrap
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="activity" scheme="http://text-perforation.doppac.cc/tags/activity/"/>
+    
+      <category term="scrapbox" scheme="http://text-perforation.doppac.cc/tags/scrapbox/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>入江悠『太陽』を観た</title>
+    <link href="http://text-perforation.doppac.cc/2017/12/02/201712/yu-irie-taiyo/"/>
+    <id>http://text-perforation.doppac.cc/2017/12/02/201712/yu-irie-taiyo/</id>
+    <published>2017-12-01T15:00:00.000Z</published>
+    <updated>2017-12-07T02:11:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://eiga-taiyo.jp/" target="_blank" rel="external">映画『太陽』公式サイト 2016年4月23日、「沁みる」ロードショー</a></p><hr><p>WOWOWで録画してたやつ。SFというアリバイで日本の限界集落を舞台にした自壊目前のムラ社会の話を真っ向から撮るという映画。演劇っぽい寓話的な話が映画としてもぎりぎり成立していてよかった。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://eiga-taiyo.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『太陽』公式サイト 2016年4月23日、「沁みる」ロードショー&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;WOWOWで録画してたやつ。SFというアリバイ
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>デヴィッド・リーチ『アトミック・ブロンド』を観た</title>
+    <link href="http://text-perforation.doppac.cc/2017/12/01/201712/atmic-blonde/"/>
+    <id>http://text-perforation.doppac.cc/2017/12/01/201712/atmic-blonde/</id>
+    <published>2017-11-30T15:00:00.000Z</published>
+    <updated>2017-12-04T02:29:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://atomic-blonde.jp/" target="_blank" rel="external">映画「アトミックブロンド」公式サイト</a></p><hr><p>映画の日に見逃してたのを観てきた。角川シネマ満員だった。</p><p>前半はなんか聞いてたのよりゆるいなーと思ってたんだけど後半の長回し（実際にはワンカットではないらしいけど）アクションからの恐ろしいほど緊迫感のある展開に顎が落ちた。ふつう前半にもうちょっとピリッとしたシーンがありそうなもんだけど温度差がすごい。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://atomic-blonde.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画「アトミックブロンド」公式サイト&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;映画の日に見逃してたのを観てきた。角川シネマ満員だった。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2017年11月のまとめ</title>
     <link href="http://text-perforation.doppac.cc/2017/11/30/201711/201711-summary/"/>
     <id>http://text-perforation.doppac.cc/2017/11/30/201711/201711-summary/</id>
     <published>2017-11-29T15:00:00.000Z</published>
     <updated>2017-12-01T02:29:53.000Z</updated>
     
-    <content type="html"><![CDATA[<p>18エントリ。後半あんまり書けなかった。</p><ul><li><a href="/2017/11/01/201711/blade-runner-2049/">ドゥニ・ヴィルヌーヴ『ブレードランナー2049』を観た [11/01]</a></li><li><a href="/2017/11/02/201711/the-4th-revolution/">ルチアーノ・フロリディ『第四の革命 情報圏（インフォスフィア）が世界をつくりかえる』を読んだ [11/02]</a></li><li><a href="/2017/11/03/201711/google-sheets-image-function/">google sheetsのimage関数 [11/03]</a></li><li><a href="/2017/11/04/201711/trans-books/">TRANS BOOKSに参加した [11/04]</a></li><li><a href="/2017/11/05/201711/bleeding-girl/">仲川麻子『飼育少女』を読んだ [11/05]</a></li><li><a href="/2017/11/06/201711/nothing-happens-photobook/">Akihiko Taniguchi/Chie Taniguchi『nothing happens』 [11/06]</a></li><li><a href="/2017/11/07/201711/iot-smart-plug/">電源プラグの位置から考えるIoT/スマートホームデバイス [11/07]</a></li><li><a href="/2017/11/08/201711/intellij-idea-hands-on/">山本裕介・今井勝信『IntelliJ IDEAハンズオン──基本操作からプロジェクト管理までマスター』を読んだ [11/08]</a></li><li><a href="/2017/11/11/201711/katsuragi-case/">赤堀雅秋『葛城事件』を観た [11/11]</a></li><li><a href="/2017/11/14/201711/jodorowskys-dune/">フランク・パヴィッチ『ホドロフスキーのDUNE』を観た [11/14]</a></li><li><a href="/2017/11/16/201711/tomoko-oshima-solo-exhibition/">『大島智子 個展 パルコでもロイホでもラブホでもいいよ』を見た [11/16]</a></li><li><a href="/2017/11/19/201711/their-finest/">ロネ・シェルフィグ『人生はシネマティック!』を観た [11/19]</a></li><li><a href="/2017/11/20/201711/twisted-justice/">白石和彌『日本で一番悪い奴ら』を観た [11/20]</a></li><li><a href="/2017/11/21/201711/the-idea-tool-dictionary/">読書猿『アイデア大全』を読んだ [11/21]</a></li><li><a href="/2017/11/21/201711/script-doctors-presentation-method/">三宅隆太『スクリプトドクターのプレゼンテーション術』を読んだ [11/21]</a></li><li><a href="/2017/11/24/201711/do-android-dream-of-electric-sheep/">フィリップ・Ｋ・ディック『アンドロイドは電気羊の夢を見るか？』を読んだ [11/24]</a></li><li><a href="/2017/11/24/201711/the-time-in-black-soil/">青柳菜摘『黒い土の時間』を読んだ [11/24]</a></li><li><a href="/2017/11/28/201711/web-media-rss-availability/">『第2回Webメディアびっくりセール』参加WebメディアのRSS配信状況を調べた [11/28]</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>18エントリ。後半あんまり書けなかった。</p><ul><li><a href="/2017/11/01/201711/blade-runner-2049/">ドゥニ・ヴィルヌーヴ『ブレードランナー2049』を観た [11/01]</a></li><li><a href="/2017/11/02/201711/the-4th-revolution/">ルチアーノ・フロリディ『第四の革命 情報圏（インフォスフィア）が世界をつくりかえる』を読んだ [11/02]</a></li><li><a href="/2017/11/03/201711/google-sheets-image-function/">google sheetsのimage関数 [11/03]</a></li><li><a href="/2017/11/04/201711/trans-books/">TRANS BOOKSに参加した [11/04]</a></li><li><a href="/2017/11/05/201711/bleeding-girl/">仲川麻子『飼育少女』を読んだ [11/05]</a></li><li><a href="/2017/11/06/201711/nothing-happens-photobook/">Akihiko Taniguchi/Chie Taniguchi『nothing happens』 [11/06]</a></li><li><a href="/2017/11/07/201711/iot-smart-plug/">電源プラグの位置から考えるIoT/スマートホームデバイス [11/07]</a></li><li><a href="/2017/11/08/201711/intellij-idea-hands-on/">山本裕介・今井勝信『IntelliJ IDEAハンズオン──基本操作からプロジェクト管理までマスター』を読んだ [11/08]</a></li><li><a href="/2017/11/11/201711/katsuragi-case/">赤堀雅秋『葛城事件』を観た [11/11]</a></li><li><a href="/2017/11/14/201711/jodorowskys-dune/">フランク・パヴィッチ『ホドロフスキーのDUNE』を観た [11/14]</a></li><li><a href="/2017/11/16/201711/tomoko-oshima-solo-exhibition/">『大島智子 個展 パルコでもロイホでもラブホでもいいよ』を見た [11/16]</a></li><li><a href="/2017/11/19/201711/their-finest/">ロネ・シェルフィグ『人生はシネマティック!』を観た [11/19]</a></li><li><a href="/2017/11/20/201711/twisted-justice/">白石和彌『日本で一番悪い奴ら』を観た [11/20]</a></li><li><a href="/2017/11/21/201711/script-doctors-presentation-method/">三宅隆太『スクリプトドクターのプレゼンテーション術』を読んだ [11/21]</a></li><li><a href="/2017/11/21/201711/the-idea-tool-dictionary/">読書猿『アイデア大全』を読んだ [11/21]</a></li><li><a href="/2017/11/24/201711/do-android-dream-of-electric-sheep/">フィリップ・Ｋ・ディック『アンドロイドは電気羊の夢を見るか？』を読んだ [11/24]</a></li><li><a href="/2017/11/24/201711/the-time-in-black-soil/">青柳菜摘『黒い土の時間』を読んだ [11/24]</a></li><li><a href="/2017/11/28/201711/web-media-rss-availability/">『第2回Webメディアびっくりセール』参加WebメディアのRSS配信状況を調べた [11/28]</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -122,33 +204,6 @@
   </entry>
   
   <entry>
-    <title>三宅隆太『スクリプトドクターのプレゼンテーション術』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/21/201711/script-doctors-presentation-method/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/21/201711/script-doctors-presentation-method/</id>
-    <published>2017-11-20T15:00:00.000Z</published>
-    <updated>2017-11-22T02:22:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.small-light.com/books/book049.html" target="_blank" rel="external">商品一覧：スクリプトドクターのプレゼンテーション術</a></p><hr><p>奥さん（三宅隆太さんのファン）が買って貸してくれたのでさくっと読んだ。ここまで露骨に「タマフルファン向けの本」だと思わなかったなー。逆に言うと「タマフルのファンが買う」というだけで出版が成立するくらいの厚い支持層があるというのはすごい。この本の理論でいうところの「転調」がある質疑の部分とあとがきがよかった。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.small-light.com/books/book049.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;商品一覧：スクリプトドクターのプレゼンテーション術&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;奥さん（三宅隆太
-      
-    
-    </summary>
-    
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
     <title>読書猿『アイデア大全』を読んだ</title>
     <link href="http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/"/>
     <id>http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/</id>
@@ -174,6 +229,33 @@
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
       <category term="ebook" scheme="http://text-perforation.doppac.cc/tags/ebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三宅隆太『スクリプトドクターのプレゼンテーション術』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/11/21/201711/script-doctors-presentation-method/"/>
+    <id>http://text-perforation.doppac.cc/2017/11/21/201711/script-doctors-presentation-method/</id>
+    <published>2017-11-20T15:00:00.000Z</published>
+    <updated>2017-11-22T02:22:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="http://www.small-light.com/books/book049.html" target="_blank" rel="external">商品一覧：スクリプトドクターのプレゼンテーション術</a></p><hr><p>奥さん（三宅隆太さんのファン）が買って貸してくれたのでさくっと読んだ。ここまで露骨に「タマフルファン向けの本」だと思わなかったなー。逆に言うと「タマフルのファンが買う」というだけで出版が成立するくらいの厚い支持層があるというのはすごい。この本の理論でいうところの「転調」がある質疑の部分とあとがきがよかった。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;http://www.small-light.com/books/book049.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;商品一覧：スクリプトドクターのプレゼンテーション術&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;奥さん（三宅隆太
+      
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -255,9 +337,9 @@
     
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
-      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
-    
       <category term="exhibition" scheme="http://text-perforation.doppac.cc/tags/exhibition/"/>
+    
+      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
     
       <category term="art" scheme="http://text-perforation.doppac.cc/tags/art/"/>
     
@@ -449,9 +531,9 @@
     
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
-      <category term="bccks" scheme="http://text-perforation.doppac.cc/tags/bccks/"/>
-    
       <category term="event" scheme="http://text-perforation.doppac.cc/tags/event/"/>
+    
+      <category term="bccks" scheme="http://text-perforation.doppac.cc/tags/bccks/"/>
     
   </entry>
   
@@ -481,86 +563,6 @@
       <category term="webservice" scheme="http://text-perforation.doppac.cc/tags/webservice/"/>
     
       <category term="software" scheme="http://text-perforation.doppac.cc/tags/software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ルチアーノ・フロリディ『第四の革命 情報圏（インフォスフィア）が世界をつくりかえる』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/02/201711/the-4th-revolution/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/02/201711/the-4th-revolution/</id>
-    <published>2017-11-01T15:00:00.000Z</published>
-    <updated>2017-11-06T04:15:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.shin-yo-sha.co.jp/mokuroku/books/978-4-7885-1522-2.htm" target="_blank" rel="external">第四の革命</a></p><hr><p>弊社代表石橋の推し哲学者ルチアーノ・フロリディの単著としては初の邦訳（でいいのかな？）。フロリディさんは「有形無形問わずあらゆるものは情報であり、情報の『よさ』を中心とする情報倫理を構築すべき」という非常にラジカルな世界観を提唱する情報哲学者なんだそうだけど（参考：<a href="https://ja.ishibashihideto.net/activity/2013/08/22/luciano-floridi-study-2013-08-20.html" target="_blank" rel="external">情報／ITアーキテクトのための「使える！フロリディ情報哲学」</a>）『第四の革命』はその情報哲学の入門編ともいえる内容で、ドライブ感ある文体や独特の（センスオブワンダーを感じる）造語が読みやすく訳されていてたいへん楽しめた。</p><p>この本のいう「第四の革命」とは、コペルニクス、ダーウィン、フロイトに次ぐ第四の脱人間中心パラダイム（の転換期）として、昨今のITC技術による情報爆発とその自律エージェント化を位置づけるもの。人間環境のデフォルトと化した人工物を「新しい自然」と見なしたり、IoTやスマートエージェント技術の描く未来像に人間中心主義の終わりを見いだすような発想はとりわけ新しいというわけでもないかなと思いながら読んでいたんだけど、人間を情報エージェントととらえたとき、これまで「人間性」を基礎づけてきたシステム（たとえばプライバシー、たとえば政治）がどのような物理的制約のもとで成り立ってきたのか、そしてすでにわれわれが手にしている高度に発展し民主化されたICTが、そうした「人間性」をどのように作り替えているのか、つまり、すでに情報エージェントであるわれわれが、いま「人間性」とは実際には何だと思っているのかをここまで詳細に網羅的に分析していると説得力が違うなと思う。そしてやっぱり数々繰り出されるキャッチーな造語が「第四の革命」感あって最高。inforg（情報有機体）！ e-mortal（e-不死）！ 情報摩擦！ 政治的アポトーシス！</p><p>「世界の見方を変える」という意味ではまさしく哲学書なんだろうけど、いわゆる「哲学書」的な語彙は少なく前提知識も不用だし、むしろIT技術書のようなプラクティカルなセンスにあふれている（「社会契約説では人は法的にオプトアウト」みたいなパンチラインがぼんぼん出てくる）のでまあ分厚いけど恐れずにノリでどんどん読んで<ruby>情報圏<rt>インフォスフィア</rt></ruby>に取り込んで作り替えていくといいと思う。</p><div class="video-container"><iframe src="//www.youtube.com/embed/rQKC12hxihI" frameborder="0" allowfullscreen></iframe></div><p>石橋さんとオーバーキャスト大林さんのフロリディ対談は、あんまり本書の内容に触れてなくて残念だったな。この本の内容にこだわった読書会的なやつ希望。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.shin-yo-sha.co.jp/mokuroku/books/978-4-7885-1522-2.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;第四の革命&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;弊社代表石橋の推
-      
-    
-    </summary>
-    
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="media" scheme="http://text-perforation.doppac.cc/tags/media/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ドゥニ・ヴィルヌーヴ『ブレードランナー2049』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/01/201711/blade-runner-2049/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/01/201711/blade-runner-2049/</id>
-    <published>2017-10-31T15:00:00.000Z</published>
-    <updated>2017-11-07T10:47:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.bladerunner2049.jp/" target="_blank" rel="external">映画『ブレードランナー2049』 | オフィシャルサイト | ソニー・ピクチャーズ</a></p><hr><p>ブレードランナーはなんというか先輩の映画って感じで、LDで何度も見せてもらったなーという思い出はあるけどあんまり個人的な思い入れはなく、どちらかというとヴィルヌーヴ監督の前作『メッセージ』がよかったのでそっちの期待が大きかった。それでいうと僕は映画としては『メッセージ』のほうが好きかなという感じだけど、とりあえずこの映画の話を先輩としなきゃって感じかな。</p><p>ブレードランナー的なヴィジョンは僕なんかはアニメやゲームでおもにインストールしているわけだけど、『ブレードランナー2049』は映画として際立つヴィジョンが提示されてたのはよかったと思う。ラブシーンのとこ3Dで観てみたいのでIMAX3Dやってるうちにもう一度観たい。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.bladerunner2049.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『ブレードランナー2049』 | オフィシャルサイト | ソニー・ピクチャーズ&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;ブレードランナ
-      
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2017年10月のまとめ</title>
-    <link href="http://text-perforation.doppac.cc/2017/10/31/201710/201710-summary/"/>
-    <id>http://text-perforation.doppac.cc/2017/10/31/201710/201710-summary/</id>
-    <published>2017-10-30T15:00:00.000Z</published>
-    <updated>2017-11-01T02:54:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>18エントリ。新規開発案件に没頭してたのもあり10月短すぎだろと思ってたけど、まとめてみるとけっこういろんなことしてたな。</p><ul><li><a href="/2017/10/01/201710/eureka-seven-high-evolution-1/">『交響詩篇エウレカセブン　ハイエボリューション 1』を観た [10/01]</a></li><li><a href="/2017/10/02/201710/dog-watermeron-suger/">吉田棒一『犬ウォーターメロンシュガー』を読んだ [10/02]</a></li><li><a href="/2017/10/03/201710/alan-kay 2/">アラン・ケイ『アラン・ケイ』を再読した [10/03]</a></li><li><a href="/2017/10/05/201710/hidden-figures/">セオドア・メルフィ『ドリーム』を観た [10/05]</a></li><li><a href="/2017/10/07/201710/asian-art-award/">『Asian Art Award 2017 supported by Warehouse TERRADA – ファイナリスト展』を見た [10/07]</a></li><li><a href="/2017/10/11/201710/braava/">ブラーバを借りた [10/11]</a></li><li><a href="/2017/10/13/201710/ring-world/">ラリイ・ニーブン『リングワールド』を読んだ [10/13]</a></li><li><a href="/2017/10/15/201710/bose-soundlink-revolve/">Bose SoundLink Revolveを買った [10/15]</a></li><li><a href="/2017/10/18/201710/arte-on-mozc/">アルテ on Mozc [10/18]</a></li><li><a href="/2017/10/18/201710/animations-of-era-of-ours/">土居伸彰『21世紀のアニメーションがわかる本』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/tower/">ロロイ『塔』を読んだ [10/18]</a></li><li><a href="/2017/10/18/201710/guang-daao/">Duang-Daao『ドゥアン・ダーオのトムヤムクン』を読んだ [10/18]</a></li><li><a href="/2017/10/19/201710/sisters-of-in-a-corner-of-the-world/">細馬宏通『2つのこの世界の片隅に』を読んだ [10/19]</a></li><li><a href="/2017/10/19/201710/war-for-the-planet-of-the-apes/">マット・リーブス『猿の惑星: 聖戦記』を観た [10/19]</a></li><li><a href="/2017/10/20/201710/next-js-and-almin/">Almin on Next.js [10/20]</a></li><li><a href="/2017/10/20/201710/doi-hosoma-animation-talk/">「『21世紀のアニメーションがわかる本』刊行記念　土居伸彰×細馬宏通トーク」を聞いてきた [10/20]</a></li><li><a href="/2017/10/21/201710/olafur-eliasson-space-is-process/">ヘンリク・ルンデ、ヤコブ・イェルゲンセン『オラファー･エリアソン 視覚と知覚』を観た [10/21]</a></li><li><a href="/2017/10/29/201710/super-mario-galaxy/">スーパーマリオギャラクシー [10/29]</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;18エントリ。新規開発案件に没頭してたのもあり10月短すぎだろと思ってたけど、まとめてみるとけっこういろんなことしてたな。&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/2017/10/01/201710/eureka-seven-high-evolution-1/&quot;&gt;『交響
-      
-    
-    </summary>
-    
-    
-      <category term="summary" scheme="http://text-perforation.doppac.cc/tags/summary/"/>
     
   </entry>
   
