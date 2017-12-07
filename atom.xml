@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://text-perforation.doppac.cc/"/>
-  <updated>2017-12-07T02:53:16.000Z</updated>
+  <updated>2017-12-07T03:01:05.000Z</updated>
   <id>http://text-perforation.doppac.cc/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://text-perforation.doppac.cc/2017/12/05/201712/scrapbox-alfred-workflow/"/>
     <id>http://text-perforation.doppac.cc/2017/12/05/201712/scrapbox-alfred-workflow/</id>
     <published>2017-12-04T15:00:00.000Z</published>
-    <updated>2017-12-07T02:53:16.000Z</updated>
+    <updated>2017-12-07T03:01:05.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/dotimpact/scrapbox-alfred-workflow/" target="_blank" rel="external">dotimpact/scrapbox-alfred-workflow: scrapbox alfred workflow</a></p><hr><p>ご多分にもれず、情報集約に<a href="https://scrapbox.io/product" target="_blank" rel="external">Scrapbox</a>を使い始めて、ちびちびと環境整備をしている。</p><p>githubで検索していたら、<a href="https://github.com/ohtomi/scrapbox" target="_blank" rel="external">go製の検索cli</a>をみつけたので、これを呼び出すalfred workflowを書いた。</p><hr><img src="https://i.gyazo.com/6a5b23660e0d2964f65b7ed29a0d33bb.gif" width="600"><hr><p>cliでプライベートprojectにアクセスするためのトークンは、ログインしたブラウザのクッキーが持ってる値を渡せばいいみたい。</p><hr><img src="https://i.gyazo.com/3553f45c0718e488a72703a0f299a110.png0" width="600">]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/dotimpact/scrapbox-alfred-workflow/" target="_blank" rel="external">dotimpact/scrapbox-alfred-workflow: scrapbox alfred workflow</a></p><hr><p>ご多分にもれず、情報集約に<a href="https://scrapbox.io/product" target="_blank" rel="external">Scrapbox</a>を使い始めて、ちびちびと環境整備をしている。</p><p>githubで検索していたら、<a href="https://github.com/ohtomi/scrapbox" target="_blank" rel="external">go製の検索cli</a>をみつけたので、これを呼び出すalfred workflowを書いた。</p><hr><img src="https://i.gyazo.com/6a5b23660e0d2964f65b7ed29a0d33bb.gif" width="600"><hr><p>cliでプライベートprojectにアクセスするためのトークンは、ログインしたブラウザのクッキーが持ってる値を渡せばいいみたい。</p><hr><img src="https://i.gyazo.com/3553f45c0718e488a72703a0f299a110.png0" width="300">]]></content>
     
     <summary type="html">
     
@@ -64,9 +64,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -92,9 +92,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -168,9 +168,9 @@
     </summary>
     
     
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
       <category term="art" scheme="http://text-perforation.doppac.cc/tags/art/"/>
     
@@ -197,38 +197,9 @@
     </summary>
     
     
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
-  </entry>
-  
-  <entry>
-    <title>読書猿『アイデア大全』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/</id>
-    <published>2017-11-20T15:00:00.000Z</published>
-    <updated>2017-11-22T02:10:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.forestpub.co.jp/author/dokushozaru/lp/idea/" target="_blank" rel="external">『アイデア大全』</a></p><hr><p>もともとは電子書籍版（<a href="http://amzn.to/2B0elTY" target="_blank" rel="external">Kindle</a>/<a href="https://books.rakuten.co.jp/rk/d71e8f15c3683297b20fec0076129b81/" target="_blank" rel="external">KOBO</a>）の出来がよいという話をきいたのでKindleで買ってみて読んだんだけど、すごい面白かった。古今東西の発想法を紹介しつつ、それら発想法のルーツや他の発想法、学問、人文知とのつながりを探ること、つまり発想法的な手法で発想法そのものについての視点を変え、視野をひろげ、新たな発想へと導くための本になっている。<a href="http://readingmonkey.blog45.fc2.com/blog-entry-780.html" target="_blank" rel="external">読書猿さんのblogでの解説</a>も素晴らしかった。</p><p>電子書籍としての出来のほうは、紙本の黄色い塊のような装丁を再現しようとたしかに頑張ってる…のは確かだけどこの方向（Kindleでできる限り凝る）はやっぱり限界あるなーと思った。</p><img src="/images/201711/idea-dictionary-kindle1.png" width="300"><img src="/images/201711/idea-dictionary-kindle2.png" width="300"><img src="/images/201711/idea-dictionary-kindle3.png" width="300"><img src="/images/201711/idea-dictionary-kindle4.png" width="300"><img src="/images/201711/idea-dictionary-kindle5.png" width="300">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.forestpub.co.jp/author/dokushozaru/lp/idea/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『アイデア大全』&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;もともとは電子書籍版（&lt;a h
-      
-    
-    </summary>
-    
-    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="ebook" scheme="http://text-perforation.doppac.cc/tags/ebook/"/>
     
   </entry>
   
@@ -253,9 +224,38 @@
     </summary>
     
     
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
+  </entry>
+  
+  <entry>
+    <title>読書猿『アイデア大全』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/"/>
+    <id>http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/</id>
+    <published>2017-11-20T15:00:00.000Z</published>
+    <updated>2017-11-22T02:10:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.forestpub.co.jp/author/dokushozaru/lp/idea/" target="_blank" rel="external">『アイデア大全』</a></p><hr><p>もともとは電子書籍版（<a href="http://amzn.to/2B0elTY" target="_blank" rel="external">Kindle</a>/<a href="https://books.rakuten.co.jp/rk/d71e8f15c3683297b20fec0076129b81/" target="_blank" rel="external">KOBO</a>）の出来がよいという話をきいたのでKindleで買ってみて読んだんだけど、すごい面白かった。古今東西の発想法を紹介しつつ、それら発想法のルーツや他の発想法、学問、人文知とのつながりを探ること、つまり発想法的な手法で発想法そのものについての視点を変え、視野をひろげ、新たな発想へと導くための本になっている。<a href="http://readingmonkey.blog45.fc2.com/blog-entry-780.html" target="_blank" rel="external">読書猿さんのblogでの解説</a>も素晴らしかった。</p><p>電子書籍としての出来のほうは、紙本の黄色い塊のような装丁を再現しようとたしかに頑張ってる…のは確かだけどこの方向（Kindleでできる限り凝る）はやっぱり限界あるなーと思った。</p><img src="/images/201711/idea-dictionary-kindle1.png" width="300"><img src="/images/201711/idea-dictionary-kindle2.png" width="300"><img src="/images/201711/idea-dictionary-kindle3.png" width="300"><img src="/images/201711/idea-dictionary-kindle4.png" width="300"><img src="/images/201711/idea-dictionary-kindle5.png" width="300">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.forestpub.co.jp/author/dokushozaru/lp/idea/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『アイデア大全』&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;もともとは電子書籍版（&lt;a h
+      
+    
+    </summary>
+    
+    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="ebook" scheme="http://text-perforation.doppac.cc/tags/ebook/"/>
     
   </entry>
   
@@ -280,9 +280,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -308,9 +308,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -366,9 +366,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -393,9 +393,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
@@ -418,9 +418,9 @@
     </summary>
     
     
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
       <category term="dev" scheme="http://text-perforation.doppac.cc/tags/dev/"/>
     
@@ -473,9 +473,9 @@
     </summary>
     
     
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
       <category term="media" scheme="http://text-perforation.doppac.cc/tags/media/"/>
     
@@ -527,9 +527,9 @@
     </summary>
     
     
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
       <category term="event" scheme="http://text-perforation.doppac.cc/tags/event/"/>
     
