@@ -56,6 +56,110 @@
     <div id="main">
       
   
+    <article id="post-201601/worlds-end" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/30/201601/worlds-end/" class="article-date">
+  <time datetime="2016-01-29T15:00:00.000Z" itemprop="datePublished">Jan 30 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/30/201601/worlds-end/">エドガー・ライト『ワールズ・エンド/酔っぱらいが世界を救う!』</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00S9K5F9Y/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61qD6FfP%2BzL._SL160_.jpg" alt="ワールズ・エンド/酔っぱらいが世界を救う! [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00S9K5F9Y/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ワールズ・エンド/酔っぱらいが世界を救う! [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.02.01</div></div><div class="amazlet-detail">NBCユニバーサル・エンターテイメントジャパン (2015-04-08)<br>売り上げランキング: 15,466<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00S9K5F9Y/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>１週間近くひきづった風邪から回復したてで観たので、エドガー・ライトのキレキレの演出に若返るような感覚を得た。最高。いいタイミングで観れてよかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/deploygate-cli" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/29/201601/deploygate-cli/" class="article-date">
+  <time datetime="2016-01-28T15:00:00.000Z" itemprop="datePublished">Jan 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/29/201601/deploygate-cli/">deploygateのコマンドラインツールを使ってみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://deploygate.com/docs?locale=ja" target="_blank" rel="external">DeployGate コマンドラインツール</a></p>
+<p>去年コンテンツ違いで9つ作ったiOSアプリのバージョンアップの準備をしている。ファーストリリースのときは１本づつそれなりの時間をかけて出していたのでまあよかったけど、まとめて作業するとなると9本は流石にごつい数で、しかも実際にはそれぞれプロビジョニングとかAPIを切り替えた2バージョン（つまり全18バージョンとか）を扱わねばならないため、それぞれビルドしたりアドホック版の配布作業をするのがかなり大変。ということで、アドホック版のテスターへの配布に使っているdeploygateが提供しているデプロイツールを試してみた。</p>
+<p>deploygateのデプロイ用cliツールは、ipaファイルをコマンドラインからアップロードしてくれるだけでなく、ちゃんとコマンドラインからの自動ビルド〜アーカイブ〜ipa書き出し（これもXCodeでやるとけっこう手間取る）や、あのレジェンド級にめんどくさいApple Dev CenterへのUDID登録からプロビジョニングダウンロード後のipa再作成も1コマンドでお願いできるというもの。ちょっとホントかいなと思っていたけど導入してみたらちゃんとやってくれた。iOSアプリのXCode外ビルドってなんとなくそんなにすんなり行かなそうな気がしていたけど、（最近は？）意外とすんなりいくものらしい。上記の通り異常にビルドターゲットがたくさんあるプロジェクトなんだけど、deployコマンドをたたくとビルドターゲットが列挙されて使うターゲットを選べるし問題なかった。とりあえずこれで配信作業はかなり楽になる。</p>
+<p>ただこのcliツールはかなり使い方に制限を設けているのか、Build ConfigurationがRelease固定だったりとか（deployするんだからReleaseだろということか。とりあえずgemのソースを書き換えてAdhocコンフィグでビルドするようにした）、あとコマンドからのUDID登録もたしかにできるんだけど、コマンドから更新されたプロビジョニングには登録されたデバイスが全部追加されるっぽいのでけっこう困る。簡単コマンドは単純なユースケースを対象にして複雑なのは自前でビルドタスクをつくれということかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201601/how-to-living-to-draw-pictures" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -473,117 +577,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201601/inner-space" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/19/201601/inner-space/" class="article-date">
-  <time datetime="2016-01-18T15:00:00.000Z" itemprop="datePublished">Jan 19 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/19/201601/inner-space/">ジョー・ダンテ『インナースペース』を見た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0000C9VD7/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51GAWDS6WEL._SL160_.jpg" alt="インナースペース [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0000C9VD7/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">インナースペース [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.19</div></div><div class="amazlet-detail">ワーナー・ホーム・ビデオ (2003-10-03)<br>売り上げランキング: 162,647<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0000C9VD7/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>週末に見たWOWOWの録画。1987年公開か。昔B級映画として面白いという評判（Beepのらくしょ＝にしぢま氏のコラム連載でロボコップと同時上映で観たと書いてたと思う）を聞いて見てみようと思っていたのがようやく観れた。</p>
-<p>終始今はこういう雑さのある作品ないよなーと思いながら観た。あとメグ・ライアンのファッションのピーキーな80年代感もすごかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201601/profiling-washing-machine" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/18/201601/profiling-washing-machine/" class="article-date">
-  <time datetime="2016-01-17T15:00:00.000Z" itemprop="datePublished">Jan 18 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/18/201601/profiling-washing-machine/">ドラム型洗濯機の故障</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>自宅で使っているドラム型洗濯乾燥機（<a href="http://panasonic.jp/wash/p-db/NA-VR1100.html" target="_blank" rel="external">NA-VR1100</a>）が脱水の途中で止まってエラー（U13 エラー：ドラムのアンバランス検出）が出るようになった。洗濯物の量を減らしたりしてもかわらず、手でドラムを回してもひっかかりがあり音も明らかにおかしい。日々生産されるこどもの洗濯物が洗えないとかなり詰むのであわててPanasonicのサービスマンを呼んで修理をお願いした。</p>
-<p>Panasonicのサービスマンは洗濯機を「この子」と呼ぶ感じの丁寧な方でいろいろ状況を教えてもらった。</p>
-<ul>
-<li>故障状況としてはドラムの軸受けベアリングが摩滅してドラムが傾いている状態で、裏を開けてみてもすでに軸から漏水してモーターが錆かけていた（＝要モーター、ドラム交換）</li>
-<li>だいぶ前から脱水時の音と振動がかなり大きかったはずとのこと。確かに…</li>
-<li>運転回数（見てなかったけどどうにかすると調べられるらしい）がすでに4000回を超えていて、8年でこれはかなり酷使している。同じような状態での故障で見たことがあるのは警察寮で柔道着をガンガン洗ってる洗濯機くらいとのこと。</li>
-<li>メーカーの立場としては、ドラムを乾燥させてメンテナンスする意味合いもあるので、「洗濯乾燥機はちゃんと乾燥も使ってほしい」というのが本音とのこと。うちはここ6年くらいはほぼ乾燥機として使ってなかった。また洗濯完了後の余熱乾燥運転もフィルターが目詰まりしていると効果が薄くなるので乾燥を使わなくてもフィルター掃除をこまめにするべきとのこと。</li>
-<li>モーター、ドラム交換は部品ふくめ4万前後でできるが、すでに8年経過した商品は補修部品が欠品しがち。モーター、ドラムは後継商品の部品を適用することもできるが、洗濯機の場合はフロントパネルのボタン部などで機種独自の補修部品が欠品すると修理ができなくなり、今回修理したとしても今後再度故障した際に修理できないリスクは高い。</li>
-</ul>
-<p>などなど。部品を取り寄せるのに2月まで待たないといけないのもあり、今回修理はキャンセルして洗濯機は買い換えることにした。次はドラム型じゃなくて縦型を選んだ（といっても今の縦型は簡易乾燥機能があるのが主流なのでそういうやつ）</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaku-doshi/">yaku-doshi</a></li></ul>
 
 			</span>
 		</div>

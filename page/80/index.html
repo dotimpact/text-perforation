@@ -56,6 +56,126 @@
     <div id="main">
       
   
+    <article id="post-201503/monthly_post_list" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/04/201503/monthly_post_list/" class="article-date">
+  <time datetime="2015-03-03T15:00:00.000Z" itemprop="datePublished">Mar 4 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/04/201503/monthly_post_list/">Hexoプラグインを試作した</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>せっかく毎日blogを書いているので、月末にまとめ記事を作れるようにしたいなと思っていて、それを実現するHexoプラグインを手探りでつくった。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;% monthly\_post\_list 201502 book %&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>とすると、2015年2月のbookタグを持ったポストの一覧が生成される。</p>
+<p>使ったページがこれ。</p>
+<ul>
+<li><a href="/2015/01/31/201501/201501-summary/">2015年1月のまとめ</a></li>
+<li><a href="/2015/02/28/201502/201502-summary/">2015年2月のまとめ</a></li>
+</ul>
+<script src="//gist.github.com/67957fd4d6db9323b503.js"></script>
+<p>とりあえずHexoのブログフォルダのscriptsに置けば動くけどあとで正式なプラグインにしよう。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/xcode-fatal-error" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/03/201503/xcode-fatal-error/" class="article-date">
+  <time datetime="2015-03-02T15:00:00.000Z" itemprop="datePublished">Mar 3 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/03/201503/xcode-fatal-error/">XCodeプロジェクトに「Resources」というFolder referenceを作るとiOSシミュレータでのアプリ起動に失敗する</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/201503/xcode-fatal-error.png">
+<p>XCodeで新規プロジェクトをつくってとあるアプリのプロトタイプをつくっていたら、突然ビルド後に「Unable to run app in simulator」というエラーが出るようになって困った。</p>
+<p>試行錯誤してわかったのは、</p>
+<ul>
+<li>プロジェクトに「Resouces」というFolder referenceを作ると、以後アプリ起動できなくなる<ul>
+<li>エラーは「LaunchServiceErrorDomain, Code=0」だったり「NS POSIX ErrorDomain, Code=22」だったりいろいろっぽい</li>
+<li>Folder referenceじゃなくてGroupだったら問題ない</li>
+<li>「Resources」 iOS/OSXのアプリコンテナのディレクトリで使用される名前なのでそれと衝突する名前だとだめっぽい</li>
+</ul>
+</li>
+<li>一度上記の症状になると「Resouces」のreferenceを削除しただけではエラーは消えない</li>
+<li>~/Library/Developer/Xcode/DerivedData内の該当プロジェクトのビルドフォルダを削除してから再度ビルドすると治る</li>
+</ul>
+<p>ということらしかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201503/hexo-3-upgrade" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -466,111 +586,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pebble/">pebble</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/child-favor-best-practice" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/23/201502/child-favor-best-practice/" class="article-date">
-  <time datetime="2015-02-22T15:00:00.000Z" itemprop="datePublished">Feb 23 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/23/201502/child-favor-best-practice/">子供の発熱ベストプラクティス</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>子供がひさしぶりに発熱したので、書き出しておく。ほかにもあったかな。</p>
-<h3 id="毎朝（休日も）熱を測る"><a href="#毎朝（休日も）熱を測る" class="headerlink" title="毎朝（休日も）熱を測る"></a>毎朝（休日も）熱を測る</h3><p>保育園の連絡帳に書くので平日はだいたい熱を測るんだけど週末は忘れがち。測らないで遊びに連れて行ったりするとだいたい夕方に熱が上がってきて月曜から休まざるをえないパターンになりがちなので、休みの朝にチェックするのが大事。</p>
-<h3 id="食欲がないときはだいたい熱が出る"><a href="#食欲がないときはだいたい熱が出る" class="headerlink" title="食欲がないときはだいたい熱が出る"></a>食欲がないときはだいたい熱が出る</h3><p>子どもの食欲がないときは喉が腫れて痛いから食が進まないパターンが多い。喉がいたいとか教えてくれないので気づきにくい。体調が悪いので食べられないパターンもあるかな。</p>
-<h3 id="機嫌が悪いときはだいたい熱が出る"><a href="#機嫌が悪いときはだいたい熱が出る" class="headerlink" title="機嫌が悪いときはだいたい熱が出る"></a>機嫌が悪いときはだいたい熱が出る</h3><p>起き抜けから機嫌がわるいときはだいたい体調が悪いっぽい。</p>
-<h3 id="冷えピタは脇と股に貼る"><a href="#冷えピタは脇と股に貼る" class="headerlink" title="冷えピタは脇と股に貼る"></a>冷えピタは脇と股に貼る</h3><p>おでこに貼っても気休めにもならないと言われる冷えピタだけど、半分に切って両脇および両内股に貼ってから寝させると翌日熱が取れていることがおおい（気がする） </p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kodomo/">kodomo</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/measuring-exhibition" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/22/201502/measuring-exhibition/" class="article-date">
-  <time datetime="2015-02-21T15:00:00.000Z" itemprop="datePublished">Feb 22 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/22/201502/measuring-exhibition/">21_21 DESIGN SIGHT 『単位展 ― あれくらい それくらい どれくらい？』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<img src="/images/201502/measuring-exibition.jpeg">
-<p> <a href="http://www.2121designsight.jp/program/measuring/" target="_blank" rel="external">単位展 ― あれくらい それくらい どれくらい？</a></p>
-<p>先週始まった単位展に長男と行ってきた。21_21 DESIGN SIGHTの企画展はすごい混むイメージがあったのでちょっと覚悟して行ったんだけど、まだそれほど混んでなかった。物販コーナーが充実していてオリジナルグッズや関連書籍はもちろん、<a href="http://www.nakadai.co.jp/" target="_blank" rel="external">ナカダイ</a> とのコラボ（？）で産廃マテリアルのはかり売りをしていて、子供は素材感あふれるマテリアルに興味津々なようだった。</p>
-<p>展示のほうも１時間では見きれないくらいいろんな角度から「単位」を表現した展示が揃っててあますところなく見たいところだったのだけど子連れでそうもいかず断念。今度あらためて見たい。長男は奥田透也＋菅 俊一「命の単位　ゾウ・ヒト・ネズミの鼓動」が気に入ったみたいだった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/">design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
 
 			</span>
 		</div>

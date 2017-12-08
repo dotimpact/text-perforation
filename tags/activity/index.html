@@ -56,6 +56,61 @@
     <div id="main">
       
   
+    <article id="post-201712/pdf-to-combined-image-autometor-service" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/07/201712/pdf-to-combined-image-autometor-service/" class="article-date">
+  <time datetime="2017-12-06T15:00:00.000Z" itemprop="datePublished">Dec 7 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/07/201712/pdf-to-combined-image-autometor-service/">PDfのページを一覧する画像を作ってgyazoに投げるautometorサービス</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>scansnapでスキャンしたメモがまとまったpdfとか、pdf開かなくても全ページまとまった画像になってるといいなーと思ったのでつくった。</p>
+<img src="https://i.gyazo.com/48d3d5c3fefd2ae899d646d38dcbdeb0.png" width="600">
+<p>imagemagickと<a href="https://github.com/uiureo/gyazo-cli" target="_blank" rel="external">uiureo/gyazo-cli</a>が必要。gyazoのcliはGO製の<a href="https://github.com/Tomohiro/gyazo-cli" target="_blank" rel="external">Tomohiro/gyazo-cli</a>もあるみたいだけど前者は<code>--quiet</code>があったのでそっちで。</p>
+<p>montage(画像を連結するimagemagickのツールのひとつ)はノーオプションだとサムネイルサイズの画像を作ってしまうので、入力画像をそのまま連結する<code>-mode concatenate</code>にする（参考：<a href="https://superuser.com/questions/290656/combine-multiple-images-using-imagemagick" target="_blank" rel="external">Combine multiple images using ImageMagick - Super User</a>）。</p>
+<p>こういうのができる。</p>
+<img src="https://i.gyazo.com/e7e29300103a7e52041c0b3bc5f2e651.png" width="600">
+<p>論文とか自炊した本とかページ数が多いpdfだとgyazoに画像がでかすぎると怒られるので、最初の数ページだけにするとか、ほかにも工夫のしがいがありそう。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/autometor/">autometor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201712/scrapbox-user-script-and-style-for-outliner-user" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -538,55 +593,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog-2015/">geidai-prog-2015</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201507/variations-work-in-progress" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/07/15/201507/variations-work-in-progress/" class="article-date">
-  <time datetime="2015-07-14T15:00:00.000Z" itemprop="datePublished">Jul 15 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/07/15/201507/variations-work-in-progress/">フレームワーク化が必要</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>第14回で、前期最終課題の制作日。学生の出してきた企画を軌道修正しながら、プログラムの制作に入ってもらうんだけど、やっぱりプログラムをどこから手をつけるか、という問題分割の考えかたはうまく伝えられていないようで、最初から乱数を使うプログラムを作ろうとして悩みはじめたり、直近習ったプログラムの書きかた（ファイルを分けた複雑な関数の使いかたや、配列など）に縛られてしまっていたりした。うーむ。ちゃんと完成形のプログラムの前段階のプロトタイプを制作することを課題に盛り込んだり、ワークシートに書き出させたりするようなフレームワーク化をしたほうがよさそうなので来年度はそうしていきたい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/education/">education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/geidai-prog2015/">geidai-prog2015</a></li></ul>
 
 			</span>
 		</div>
