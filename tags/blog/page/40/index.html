@@ -56,6 +56,73 @@
     <div id="main">
       
   
+    <article id="post-201603/ios8-crash-with-viewcontroller-init-without-nibname" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/" class="article-date">
+  <time datetime="2016-03-29T15:00:00.000Z" itemprop="datePublished">Mar 30 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/30/201603/ios8-crash-with-viewcontroller-init-without-nibname/">nibnameなしでViewControllerをinitするとiOS8だけでクラッシュする</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>配信したアプリがログイン後に落ちたりスプラッシュで落ちたりする、という報告を受けて、自分のところでは起きていなかったのでなんだろうと思って調べたら、画面の初期化時に読み込んでいるカスタムViewControllerのinitが間違っていて、しかもそれでもiOS9は動くためだった。</p>
+<p>対応するnibを持つSubViewControllerを、</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController()<br>}</p>
+<p>と引数なしで生成すると、iOS9ではnibを探してロードしてくれるようで（ちゃんと調べてないけどそうなんだと思う）問題ないんだけど、iOS8は読み込まれないのでOutletのオブジェクトに触ろうとするとクラッシュする。</p>
+<p>override func viewDidLoad() {<br>…<br>self.subVC = SubViewController(nibname: “SubViewController”, bundle: nil)<br>}</p>
+<p>と正しく初期化すると問題ない。</p>
+<p><a href="http://stackoverflow.com/questions/34045998/addsubview-from-xib-ios-8-vs-ios-9" target="_blank" rel="external">swift - addSubview from xib - iOS 8 vs iOS 9 - Stack Overflow</a></p>
+<p>あと、</p>
+<p><a href="http://qiita.com/manji602/items/346226435594d36c2e9b" target="_blank" rel="external">iOS8系をサポートするなら、UILabelやUITextViewのフォントにHiraginoSansは使わないほうが良い - Qiita</a></p>
+<blockquote><ul>
+<li>Xcode7でiOS8系をサポートしたアプリを作成するときに、Interface Builder上(xibやstoryboard)で UILabel やUITextView のフォントに HiraginoSans を利用するViewControllerを作成すると、その画面ヘの遷移が遅くなる<ul>
+<li>体感では、1つの HiraginoSans フォントを利用したUIパーツを配置する毎に1秒弱ずつ遅くなる</li>
+<li>現象が発生するのはアプリ初回起動時のみ</li>
+</ul>
+</li>
+<li>これはフォントに依存する問題で、System FontやTimes New Romanなど他のフォントを利用すると再現しなかった</li>
+</ul>
+</blockquote>
+<p>こんな恐ろしい情報もあったので全部のUILabelのフォントを再設定した。  </p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swift/">swift</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201603/kyou-no-hi-ha-sayonara" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -95,6 +162,59 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201603/generative-design" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/29/201603/generative-design/" class="article-date">
+  <time datetime="2016-03-28T15:00:00.000Z" itemprop="datePublished">Mar 29 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/29/201603/generative-design/">Hartmut Bohnacker / Benedikt Gross / Julia Laub『Generative Design ―Processingで切り拓く、デザインの新たな地平』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51JdWtC96TL._SL160_.jpg" alt="Generative Design ―Processingで切り拓く、デザインの新たな地平" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Generative Design ―Processingで切り拓く、デザインの新たな地平</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.31</div></div><div class="amazlet-detail">Hartmut Bohnacker Benedikt Gross Julia Laub <br>ビー・エヌ・エヌ新社 (2016-02-25)<br>売り上げランキング: 31,699<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4802510136/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>そろそろ新学期も始まるので、授業の参考にと目を通した。もうなんというか、偉業としかいいようがないな。強いて言うと、重いので授業に持っていって学生に見せたりするのが困難。</p>
+<p>おもしろかったのが、「誤解を恐れずに言うと、この本のサンプルはプログラムを学ぶつもりがなくても活用することができます」みたいなことが明言されていて、つまりサンプルを実行させて操作したり、すこしパラメータやデータを変えてみるだけで十分すぎるほどのジェネラティブアートが生成できるので、ポスターグラフィックの素材くらいは作れるよという意味なんだろうけど、実際どのサンプルもそういうレベルなのがすごい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/processing/">processing</a></li></ul>
 
 			</span>
 		</div>
@@ -162,6 +282,57 @@
 
 
   
+    <article id="post-201603/the-boy-and-the-world" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/03/27/201603/the-boy-and-the-world/" class="article-date">
+  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/03/27/201603/the-boy-and-the-world/">アレ・アブレウ『父を探して』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://newdeer.net/sagashite/" target="_blank" rel="external">映画『父を探して』公式ホームページ</a></p>
+<p>突発的一人暮らしの週末にやっぱり大学生みたいにミニシアターで海外アニメを観た。『父を探して』、あんまり情報あつめないまま観に行ったんだけどとてもよかった。</p>
+<p>画用紙を思わせる白ベースの背景に、色鉛筆やクレヨンなどで生々しいタッチの残る描線による落書きのような線画のキャラクター。抑制された動きと鮮烈なレイアウト（これが特によかったと思う）。そして音楽。最低限の最良のものだけを使ってできるかぎり大きな円を描いた。というような気持ちのいい映画。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201603/no-country-for-old-men" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -191,57 +362,6 @@
 <hr>
 <p>見逃してた世評の高い作品だけど、これはたしかにすごかった。全編にわたって緊張感が途切れなかった。</p>
 <p>かっこよさと気持ち悪さが同居して、かつ気持ち悪さが強いみたいなところがコーエン兄弟らしさかな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/the-boy-and-the-world" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/27/201603/the-boy-and-the-world/" class="article-date">
-  <time datetime="2016-03-26T15:00:00.000Z" itemprop="datePublished">Mar 27 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/27/201603/the-boy-and-the-world/">アレ・アブレウ『父を探して』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://newdeer.net/sagashite/" target="_blank" rel="external">映画『父を探して』公式ホームページ</a></p>
-<p>突発的一人暮らしの週末にやっぱり大学生みたいにミニシアターで海外アニメを観た。『父を探して』、あんまり情報あつめないまま観に行ったんだけどとてもよかった。</p>
-<p>画用紙を思わせる白ベースの背景に、色鉛筆やクレヨンなどで生々しいタッチの残る描線による落書きのような線画のキャラクター。抑制された動きと鮮烈なレイアウト（これが特によかったと思う）。そして音楽。最低限の最良のものだけを使ってできるかぎり大きな円を描いた。というような気持ちのいい映画。</p>
 
     
 	</div>
@@ -460,117 +580,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/construction-and-destruction-in-game-design" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/19/201603/construction-and-destruction-in-game-design/" class="article-date">
-  <time datetime="2016-03-18T15:00:00.000Z" itemprop="datePublished">Mar 19 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/19/201603/construction-and-destruction-in-game-design/">渡辺訓章『組み立て×分解! ゲームデザイン ――ゲームが変わる「ルール」のパワー』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774179442/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51uDszavcNL._SL160_.jpg" alt="組み立て×分解! ゲームデザイン ――ゲームが変わる「ルール」のパワー" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774179442/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">組み立て×分解! ゲームデザイン ――ゲームが変わる「ルール」のパワー</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.23</div></div><div class="amazlet-detail">渡辺 訓章 <br>技術評論社 <br>売り上げランキング: 11,826<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4774179442/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>技術書っぽい内容なのかなと思って読み始めたんだけど、ものすごく変わった本だった。なんだろうこれは。</p>
-<p>タイトルの通りこれはゲームデザインについての本で、ゲーム開発者が試行錯誤しながらそのゲームに必要なルールを模索していく過程を詳細に解説したなかなか稀有な本になっていると思う。なんだけど、この本が想定している「ゲーム」ってちょっと特殊というか、一般的な「こういうゲームが作りたい」と考えて作るような、言ってしまえばイージーなものとはちょっと違うのではないか。</p>
-<p>本書の「はじめに」で、この本では既存のゲームの模倣や現実の出来事や行為の再現から出発しない、「抽象表現」としてのゲームを扱うことが宣言される。僕の理解だと、この本で目指されている「ゲーム」とは、人が楽しむ「道具」ではなく、限られたルールの自律によって成立した「環境」のようなもので、それはコンピュータゲームの、もっというとコンピュータそのものの特質と呼ぶべきものだ。昔からシミュレータ的性質の強いゲームを制作されてきた著者であるkuniこと渡辺訓章さんのコンピュータ観が反映された内容になっていて、その部分にとても共感する。</p>
-<p>第２章の</p>
-<blockquote><p>　ゲームを作る際の取っ掛かりについて考えると、「ルールはプレイヤーの行動と関連性が大きい」ため、そこからゲームを考え始めると、つい完成形まで思い浮かべてしまうことは避けられません。<br>　しかし、より細部のふるまいを作るアルゴリズムから考えるなら、当初は予想しなかった形にまで、完成形を持っていくことも可能でしょう。</p>
-</blockquote>
-<p>という一節が印象的で、「いや、ゲームを作ろうとしてるんだから完成形まで思い浮かべていいのでは」とつっこみを入れたくなったんだけど、おそらくここにはゲームとはそのように最初から最後まで決めて「作れる」ようなものではなく、プレイしながらルールをこねくりまわしているうちにいつしか「できる」ものなのだという、著者のゲーム制作者としての実感があるのだと思う。</p>
-<p>ただ、そうした著者のゲーム制作に関する実感や知恵の部分と、イージーなメソッドが求められる技術書フォーマットの本はそれほど取り合わせがよくなかったのかもしれない。抽象的すぎる内容を補う漫画風の挿絵も残念ながらあまり功を奏してないように見える。いっそ掛け合い漫談風のテキストになっていてもよかったのかな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201603/the-big-short-novel" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/03/18/201603/the-big-short-novel/" class="article-date">
-  <time datetime="2016-03-17T15:00:00.000Z" itemprop="datePublished">Mar 18 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/03/18/201603/the-big-short-novel/">マイケル・ルイス『世紀の空売り―世界経済の破綻に賭けた男たち』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4167651866/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/510eOe3PF5L._SL160_.jpg" alt="世紀の空売り―世界経済の破綻に賭けた男たち (文春文庫)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4167651866/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">世紀の空売り―世界経済の破綻に賭けた男たち (文春文庫)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.03.24</div></div><div class="amazlet-detail">マイケル・ルイス <br>文藝春秋 (2013-03-08)<br>売り上げランキング: 368<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4167651866/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>映画がおもしろかったので原作も読んだけどすごいおもしろかった。というかマイケル・ルイスがすごいのかな。映画では「とりあえずこれは詐欺」というレベルでしかわからなかったCDOやCDSの成り立ちがよりはっきりとわかり、映画の登場人物のモデルとなった実在の人物たち（や、映画では焦点が当てられなかった売り手サイドの人物たち）の描写もよかった。もう一度映画もしていろいろ確認したい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
 
 			</span>
 		</div>
