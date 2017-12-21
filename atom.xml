@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://text-perforation.doppac.cc/"/>
-  <updated>2017-12-18T04:14:15.000Z</updated>
+  <updated>2017-12-20T02:57:58.000Z</updated>
   <id>http://text-perforation.doppac.cc/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Drive File Streamを再インストール</title>
+    <link href="http://text-perforation.doppac.cc/2017/12/18/201712/drive-file-stream-reinstall/"/>
+    <id>http://text-perforation.doppac.cc/2017/12/18/201712/drive-file-stream-reinstall/</id>
+    <published>2017-12-17T15:00:00.000Z</published>
+    <updated>2017-12-20T02:57:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://support.google.com/a/answer/7491144?hl=ja" target="_blank" rel="external">ドライブ ファイル ストリームを導入する - G Suite 管理者 ヘルプ</a></p><hr><p>会社でだいぶ前にクラウドストレージをDropBoxの企業プランからGoogle Drive(G Guite)の有料プランに切り替えて以来、Google Driveクライアントの出来の悪さに辟易としていたのでDrive File Streamにはかなり期待していたんだけど、実際にリリースされてみたらクラウドドライブとしての機能がさらに下がってしまったのでGDriveはもうwebベースでしか使わなくなっていた。</p><p>いちばん困っていたのは仮想化されたファイルがロードされるときに仮想ドライブがアンマウントされてしまい、実質的にファイルが開けないとこで、これはさすがに何かの不具合じゃないかと思い立ってDrive File Streamクライアントを再ダウンロードして指示通りにサイレントインストールしてみた。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">% hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target &quot;/Volumes/Macintosh HD&quot;; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/</div></pre></td></tr></table></figure><p>再インストールしてみたら、入れ直したせいなのかサイレントインストールが必要だったのかそれとも使ってないうちにクライアントがアップデートされたのかわからないけど、ロード時にアンマウントされる現象は起きなくなった。</p><p>でも相変わらずフォルダをFinderの「よく使う項目」に登録してもアンマウント時に消えてしまうし、シンボリックリンクはできないしでアクティブなフォルダとしては使い物にならないと思う。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://support.google.com/a/answer/7491144?hl=ja&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ドライブ ファイル ストリームを導入する - G Suite 管理者 ヘルプ&lt;/a&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ストレートニュースの動画が連続再生できるAndroidアプリ</title>
+    <link href="http://text-perforation.doppac.cc/2017/12/14/201712/android-strait-news-broadcast-app/"/>
+    <id>http://text-perforation.doppac.cc/2017/12/14/201712/android-strait-news-broadcast-app/</id>
+    <published>2017-12-13T15:00:00.000Z</published>
+    <updated>2017-12-20T03:24:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>家にテレビがなくて（いちおうあるけどアンテナ線をつないでなくて）も別に不便ないなと思ってたんだけど、子供に「うちもニュース見たほうがいいんじゃないの？」と言われたので（学校で北朝鮮のミサイルの話題が出たときに知らなかったのがショックだったらしい）確かになと思って朝はAndroid内蔵のプロジェクターでニュースをつけておくようにしはじめた。とりあえずAmeba TVのニュースチャンネルでいいかと思ってたんだけど、実際は半分くらいが芸能ニュースで微妙な感じ。もうちょっとストレートニュースが流れるだけみたいな動画アプリないのかなとここのところ探っている。</p><p><a href="https://play.google.com/store/apps/details?id=jp.co.fenrir.tvAsahiNews&amp;hl=ja" target="_blank" rel="external">テレ朝news+ / いつでも「ニュース番組」が始まる！ - Google Play の Android アプリ</a></p><p>テレ朝提供のニュースリーダーアプリなんだけど、動画を連続再生する機能があって、15分くらいのニュース番組として見れる。実際はテレ朝がAbemaに提供してる「Abema News」そのものなので、Abemaニュースチャンネルの芸能ニュースなし版ともいえる。</p><p><a href="https://play.google.com/store/apps/details?id=jp.co.ntv.news24&amp;hl=ja" target="_blank" rel="external">日テレニュース24 - Google Play の Android アプリ</a></p><p>最近無料化された日テレのライブニュースストリームアプリ。いわゆるサイマル放送というのかな。こないだ見てたら地震のニュース速報が入っててなるほどと思ったけど、ライブといいつつニュースの頭出しができるのもいい（ただ後述する画面サイズの問題でこの頭出しボタンがなんかあんまり正常動作しない）。ニュースの分量がちょっと少ない感じ。</p><p>上記２つのアプリはどっちもサービスとしてはいい感じなんだけど、アプリとしては使っているAndroid内蔵のプロジェクターのレイアウト（横長）に対応してなくて、無理矢理動画だけ見る感じになってしまうのが残念。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;家にテレビがなくて（いちおうあるけどアンテナ線をつないでなくて）も別に不便ないなと思ってたんだけど、子供に「うちもニュース見たほうがいいんじゃないの？」と言われたので（学校で北朝鮮のミサイルの話題が出たときに知らなかったのがショックだったらしい）確かになと思って朝はAndr
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="android" scheme="http://text-perforation.doppac.cc/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>佐藤雅彦／菅俊一／高橋秀明『行動経済学まんが ヘンテコノミクス』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/12/12/201712/hent-economics/"/>
+    <id>http://text-perforation.doppac.cc/2017/12/12/201712/hent-economics/</id>
+    <published>2017-12-11T15:00:00.000Z</published>
+    <updated>2017-12-21T02:54:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://magazineworld.jp/books/paper/2972/" target="_blank" rel="external">『行動経済学まんが ヘンテコノミクス』 — 佐藤 雅彦 作 菅 俊一 作 高橋 秀明 画 — マガジンハウスの本</a></p><hr><p>行動経済学の知見のおもしろさを伝えるのに「トンチの利いた痛快まんが」というフォーマットを使うという「ザ・取り合わせの妙」という本。こないだ<a href="/2017/11/04/201711/trans-books/">TRANSBOOKS</a>の打ち上げ飲み会の席で菅さんと<a href="http://ekrits.jp/" target="_blank" rel="external">エクリ</a>の、っていうかここでは<a href="http://ekrits.jp/2015/09/1808/" target="_blank" rel="external">学習まんが アフォーダンス</a>の大林さんがいて話をする機会があり、『ヘンテコノミクス』とか『学習まんが アフォーダンス』みたいに、安易な企画や単なるパロディではなく、難しいことがらを漫画というメディアの特性をフル活用して伝えるという、新しい「学習まんが」というものが他にも生まれうるんじゃないかという話がちょっとできてうれしかったんだけど、その意味でも『ヘンテコノミクス』はいい本でこういう本がもっとあったらしいなーと思う。</p><p>ただちょっと、これは作画の高橋秀明さんが漫画家ではないからという事情が大きいせいもあるだろうけど、『ヘンテコノミクス』のまんがはちょっとまんが自体としての魅力には欠けている部分があって（いい感じの話もあって、代表制ヒューリスティックを説明する『「　　　　　　　　　」の巻』とかは人を食った内容とトーンがマッチしてた気がする）、別のまんが家が描いてたらどうなってたのかなーと感じなくもなかった。</p><p>でいうと、まんがとはあまり接点のない分野の世界をまんがを使って身近なものとして伝えるというコンセプトも、たまたまだろうけど判型も似ている高野文子『ドミトリーともきんす』と比べて考えてみるとおもしろいかもと思った。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://magazineworld.jp/books/paper/2972/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『行動経済学まんが ヘンテコノミクス』 — 佐藤 雅彦 作 菅 俊一 作 高橋 秀明 画 — マガジンハウ
+      
+    
+    </summary>
+    
+    
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
+    
+  </entry>
   
   <entry>
     <title>ケネス・ロナーガン『マンチェスター・バイ・ザ・シー』を観た</title>
@@ -37,9 +112,9 @@
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -255,9 +330,9 @@
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -283,9 +358,9 @@
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
     
   </entry>
   
@@ -359,9 +434,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
       <category term="art" scheme="http://text-perforation.doppac.cc/tags/art/"/>
     
@@ -388,38 +463,9 @@
     </summary>
     
     
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
     
-  </entry>
-  
-  <entry>
-    <title>読書猿『アイデア大全』を読んだ</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/</id>
-    <published>2017-11-20T15:00:00.000Z</published>
-    <updated>2017-11-22T02:10:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.forestpub.co.jp/author/dokushozaru/lp/idea/" target="_blank" rel="external">『アイデア大全』</a></p><hr><p>もともとは電子書籍版（<a href="http://amzn.to/2B0elTY" target="_blank" rel="external">Kindle</a>/<a href="https://books.rakuten.co.jp/rk/d71e8f15c3683297b20fec0076129b81/" target="_blank" rel="external">KOBO</a>）の出来がよいという話をきいたのでKindleで買ってみて読んだんだけど、すごい面白かった。古今東西の発想法を紹介しつつ、それら発想法のルーツや他の発想法、学問、人文知とのつながりを探ること、つまり発想法的な手法で発想法そのものについての視点を変え、視野をひろげ、新たな発想へと導くための本になっている。<a href="http://readingmonkey.blog45.fc2.com/blog-entry-780.html" target="_blank" rel="external">読書猿さんのblogでの解説</a>も素晴らしかった。</p><p>電子書籍としての出来のほうは、紙本の黄色い塊のような装丁を再現しようとたしかに頑張ってる…のは確かだけどこの方向（Kindleでできる限り凝る）はやっぱり限界あるなーと思った。</p><img src="/images/201711/idea-dictionary-kindle1.png" width="300"><img src="/images/201711/idea-dictionary-kindle2.png" width="300"><img src="/images/201711/idea-dictionary-kindle3.png" width="300"><img src="/images/201711/idea-dictionary-kindle4.png" width="300"><img src="/images/201711/idea-dictionary-kindle5.png" width="300">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://www.forestpub.co.jp/author/dokushozaru/lp/idea/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『アイデア大全』&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;もともとは電子書籍版（&lt;a h
-      
-    
-    </summary>
-    
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
-    
-      <category term="ebook" scheme="http://text-perforation.doppac.cc/tags/ebook/"/>
     
   </entry>
   
@@ -444,9 +490,38 @@
     </summary>
     
     
+      <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
+  </entry>
+  
+  <entry>
+    <title>読書猿『アイデア大全』を読んだ</title>
+    <link href="http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/"/>
+    <id>http://text-perforation.doppac.cc/2017/11/21/201711/the-idea-tool-dictionary/</id>
+    <published>2017-11-20T15:00:00.000Z</published>
+    <updated>2017-11-22T02:10:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.forestpub.co.jp/author/dokushozaru/lp/idea/" target="_blank" rel="external">『アイデア大全』</a></p><hr><p>もともとは電子書籍版（<a href="http://amzn.to/2B0elTY" target="_blank" rel="external">Kindle</a>/<a href="https://books.rakuten.co.jp/rk/d71e8f15c3683297b20fec0076129b81/" target="_blank" rel="external">KOBO</a>）の出来がよいという話をきいたのでKindleで買ってみて読んだんだけど、すごい面白かった。古今東西の発想法を紹介しつつ、それら発想法のルーツや他の発想法、学問、人文知とのつながりを探ること、つまり発想法的な手法で発想法そのものについての視点を変え、視野をひろげ、新たな発想へと導くための本になっている。<a href="http://readingmonkey.blog45.fc2.com/blog-entry-780.html" target="_blank" rel="external">読書猿さんのblogでの解説</a>も素晴らしかった。</p><p>電子書籍としての出来のほうは、紙本の黄色い塊のような装丁を再現しようとたしかに頑張ってる…のは確かだけどこの方向（Kindleでできる限り凝る）はやっぱり限界あるなーと思った。</p><img src="/images/201711/idea-dictionary-kindle1.png" width="300"><img src="/images/201711/idea-dictionary-kindle2.png" width="300"><img src="/images/201711/idea-dictionary-kindle3.png" width="300"><img src="/images/201711/idea-dictionary-kindle4.png" width="300"><img src="/images/201711/idea-dictionary-kindle5.png" width="300">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://www.forestpub.co.jp/author/dokushozaru/lp/idea/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;『アイデア大全』&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;もともとは電子書籍版（&lt;a h
+      
+    
+    </summary>
+    
+    
       <category term="book" scheme="http://text-perforation.doppac.cc/tags/book/"/>
+    
+      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
+    
+      <category term="ebook" scheme="http://text-perforation.doppac.cc/tags/ebook/"/>
     
   </entry>
   
@@ -471,95 +546,9 @@
     </summary>
     
     
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
       <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ロネ・シェルフィグ『人生はシネマティック!』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/19/201711/their-finest/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/19/201711/their-finest/</id>
-    <published>2017-11-18T15:00:00.000Z</published>
-    <updated>2017-11-24T02:32:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://jinsei-cinema.jp/" target="_blank" rel="external">映画『人生はシネマティック！』公式サイト</a></p><hr><p>添野知生さんの</p><div class="twitter-wrapper"><blockquote class="twitter-tweet"><a href="https://twitter.com/chise_soeno/status/929553219793043456" target="_blank" rel="external"></a></blockquote></div><script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script><p>というツイートを観て、それ大好物なのでは？ と思って観たんだけど果たして大好物だった。『ブレードランナー2048』の鈍重な話し運びにひたっていたのであまりにさくさくと進む序盤の展開にこんなんでいいんだっけと不安を覚えたんだけど、これでいいんだよな！</p><p>もちろん狙ってのことだろうけど、ダンケルク撤退についての新作映画を2作も観られるのは今年しかないと思うので観るなら今しかない。「女性と戦争」「女性と専門職」というポイントで『ワンダーウーマン』『ドリーム』にもつながりを感じた。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://jinsei-cinema.jp/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『人生はシネマティック！』公式サイト&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;添野知生さんの&lt;/p&gt;
-&lt;div class=&quot;twitter-wr
-      
-    
-    </summary>
-    
     
       <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『大島智子 個展 パルコでもロイホでもラブホでもいいよ』を見た</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/16/201711/tomoko-oshima-solo-exhibition/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/16/201711/tomoko-oshima-solo-exhibition/</id>
-    <published>2017-11-15T15:00:00.000Z</published>
-    <updated>2017-11-21T07:00:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://demoiiyo.tomoko-oshima.com/" target="_blank" rel="external">大島智子 個展 パルコでもロイホでもラブホでもいいよ</a></p><hr><p>見てきた。大島さんやその作品はtwitterなりtumblrなり、あるいはtofubeats『No.1』MVでの被写体なりである時期以降のインターネットにふわふわと漂っているものだったなという思いはありせど僕自身はそれほど好んだり追いかけたりしていなかったつもりだったので、個展があると聞いて行くでしょという気持ちになったところが自分でいちばん新鮮に思えた。</p><p>男性にとっての生理の話題みたいなもので彼女の作品を軽々しくいいとかわかるとか言うのは危険だという感覚があるけど、今回の展示は完成作品と彩色前の原画が並べてあったことと、フォントで組まれた（きわめて繊細で理知的に見える）テキストと（こういってはなんだが、とてもつたなく見える）彼女直筆の文字が重ねられた画集冒頭のページにつながりがあるように思えたのが発見だった。</p><div class="video-container"><iframe src="//www.youtube.com/embed/bQWxxdGsSSk" frameborder="0" allowfullscreen></iframe></div><p>それはそれとして『No.1』のMVはいまだに強度あるなー</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://demoiiyo.tomoko-oshima.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;大島智子 個展 パルコでもロイホでもラブホでもいいよ&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;見てきた。大島さんやその作品はtwi
-      
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
-    
-      <category term="manga" scheme="http://text-perforation.doppac.cc/tags/manga/"/>
-    
-      <category term="exhibition" scheme="http://text-perforation.doppac.cc/tags/exhibition/"/>
-    
-      <category term="art" scheme="http://text-perforation.doppac.cc/tags/art/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>フランク・パヴィッチ『ホドロフスキーのDUNE』を観た</title>
-    <link href="http://text-perforation.doppac.cc/2017/11/14/201711/jodorowskys-dune/"/>
-    <id>http://text-perforation.doppac.cc/2017/11/14/201711/jodorowskys-dune/</id>
-    <published>2017-11-13T15:00:00.000Z</published>
-    <updated>2017-11-21T05:27:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="http://www.uplink.co.jp/dune/" target="_blank" rel="external">映画『ホドロフスキーのDUNE』公式サイト</a></p><hr><p>Netflixにあるのを知ってようやく観た。DUNEという作品にもホドロフスキー監督にも思い入れがなくても（僕がそう）映画を見るだけでアガる、そしてホドロフスキーが好きになる作りになっていてドキュメンタリーとしてとてもよくできていた。</p><p>ホドロフスキー、弦人さんぽいよね？ という話を鍵っ子に振ったら同意してもらえた。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;http://www.uplink.co.jp/dune/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;映画『ホドロフスキーのDUNE』公式サイト&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Netflixにあるのを知ってようやく観た。DUNEとい
-      
-    
-    </summary>
-    
-    
-      <category term="movie" scheme="http://text-perforation.doppac.cc/tags/movie/"/>
-    
-      <category term="blog" scheme="http://text-perforation.doppac.cc/tags/blog/"/>
     
   </entry>
   
