@@ -56,6 +56,289 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2004-12-24" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2004/12/24/1_collisions/2004-12-24/" class="article-date">
+  <time datetime="2004-12-23T15:00:00.000Z" itemprop="datePublished">Dec 24 2004</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2004/12/24/1_collisions/2004-12-24/">GA的驚き盤作成ツール　GenekistiScope</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/genescope.gif" alt="genescope.gif"></p>
+<p>Genetic Algorithmで驚き盤の絵を進化させるflashアプリケーションです。</p>
+<h1 id="これは何か"><a href="#これは何か" class="headerlink" title="これは何か"></a>これは何か</h1><ul>
+<li>驚き盤のパターンを半自動生成するflashアプリケーションです。GA(Genetic Algorithm)によってパターン同士を交配し子孫を残すことで、独創的でありながら均整のある美しい驚き盤が作成できます（かも）。</li>
+<li>aiscript(Illustrator10用スクリプト)をflashに移植し、web上で作成できるようにしました。</li>
+</ul>
+<h2 id="GA-Genetic-Algorithm"><a href="#GA-Genetic-Algorithm" class="headerlink" title="GA(Genetic Algorithm)"></a>GA(Genetic Algorithm)</h2><p>遺伝的アルゴリズムと呼ばれます。ビット列で表されたパターンを遺伝子にみたて、二人の親の遺伝子を継承（時には突然変異）する世代交代を繰り返すことで、最適解へと収束させていくアルゴリズムです。今回は最適解というのは存在しないので、完全にランダムなパターンからユーザーの好みへとすり寄せていくための手法として使用しています。</p>
+<h2 id="GAによるパターン交配の例"><a href="#GAによるパターン交配の例" class="headerlink" title="GAによるパターン交配の例"></a>GAによるパターン交配の例</h2><ul>
+<li>親になるパターンを決めます。パターンにはそのパラメータをビットで表現したコードがあります（ここでは適当です）。</li>
+</ul>
+<p><img src="http://collisions.doppac.cc/wp-content/uploads/2008/02/genescope1.png" alt="genescope1.png"></p>
+<ul>
+<li><p>親パターンのコード（遺伝子）を交配します。具体的には任意の部分から先のコードを入れ替えます。</p>
+<ul>
+<li>親1：　01011011011　→　子1：　010110&#8221;10100&#8221;</li>
+<li>親2：　00011010100　→　子2：　000110&#8221;11011&#8221;</li>
+</ul>
+</li>
+<li><p>遺伝子の突然変異の表現として、決まった（低い）確率でビットが反転したりします。</p>
+<ul>
+<li>子1：　01011010100　→　0101101010&#8221;1&#8221;</li>
+</ul>
+</li>
+<li><p>このように交配すると、親の性質を受け継ぎながら親とは違うパターンが誕生します。</p>
+</li>
+</ul>
+<p><img src="http://collisions.doppac.cc/wp-content/uploads/2008/02/genescope2.png" alt="genescope2.png"></p>
+<h1 id="遊ぶ"><a href="#遊ぶ" class="headerlink" title="遊ぶ"></a>遊ぶ</h1><ul>
+<li>[<a href="http://work.dotimpac.to/geneScope/genekis.html" target="_blank" rel="external">flashのページへ</a></li>
+</ul>
+<p><img src="http://collisions.doppac.cc/wp-content/uploads/2008/02/genescope3.jpg" alt="genescope3.jpg"></p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul>
+<li>驚き盤本体 <ul>
+<li>ドラッグ：円盤を回転させ、動きを確認できます</li>
+<li>プレス（押しっぱなし）：回っている円盤を止めます</li>
+</ul>
+</li>
+<li>Genekis（円盤に配置されているオブジェクトをここではそう呼んでいきたい！） <ul>
+<li>ドラッグ：Genekisの配置位置変更（回転／拡大縮小）</li>
+<li>ダブルクリック：必要ないGenekisを消去</li>
+</ul>
+</li>
+<li>[Generate Now!]ボタン <ul>
+<li>クリック：円盤上のGenekisを交配し、子孫を作ります</li>
+</ul>
+</li>
+<li>[Auto Rotate]ボタン <ul>
+<li>クリック（トグル）：円盤が自動的に回転／停止します</li>
+</ul>
+</li>
+</ul>
+<h2 id="操作の流れ"><a href="#操作の流れ" class="headerlink" title="操作の流れ"></a>操作の流れ</h2><ol>
+<li>flashがロードされるとGenekisがランダムに生成されます</li>
+<li>生まれたGenekisから気に入らないものを消したり、位置を変えたりします</li>
+<li>円盤をまわして動きを確認します</li>
+<li>[Generate Now!]ボタンを押し、Genekisを進化させます</li>
+<li>気に入った動きができたら、プリントアウトして裏の黒い厚紙に張り、縁とスリットを切り抜きます。割りバシにピンで留めれば驚き盤の完成です</li>
+<li>鏡をスリット越しにのぞきながら円盤をまわして楽しみましょう</li>
+</ol>
+<h1 id="こまかい仕様とうまく作るコツ"><a href="#こまかい仕様とうまく作るコツ" class="headerlink" title="こまかい仕様とうまく作るコツ"></a>こまかい仕様とうまく作るコツ</h1><ul>
+<li>世代交代時、子供パターンは親パターンの数だけ生成されます。それだけでパターンの最大数（デフォルトだと８）が埋まらない場合は、ランダムパターンが充填されます。</li>
+<li>親を選ぶとき、ついつい奇抜なものばかり選んでしまいがちですが、違いすぎるのばかり親にしてるといつまでたってもパターンが収束しないので、ある程度目標とするパターンを軸にして考えたほうがよさそうです。</li>
+<li>パターンはほとんどが３制御点のベジェ曲線ですが、たまに２制御点のとか４制御点のとかが混ざるので、それらをうまく交配させてくとおもしろいかも。</li>
+<li>同様に、スリットよりフレーム数の少ない（多い）パターンが混ざります。これらは実際にのぞいたとき、パターン全体が右回転したり左回転したりするパターンです。</li>
+</ul>
+<h1 id="問題点、バグ"><a href="#問題点、バグ" class="headerlink" title="問題点、バグ"></a>問題点、バグ</h1><h1 id="謝辞"><a href="#謝辞" class="headerlink" title="謝辞"></a>謝辞</h1><ul>
+<li>GAや遺伝子コードの表現については森川幸人さんの『マッチ箱の脳　使える人工知能のお話』を参考にしました。ありがとうございます。</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flash/">flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2004-09-06" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2004/09/06/1_collisions/2004-09-06/" class="article-date">
+  <time datetime="2004-09-05T15:00:00.000Z" itemprop="datePublished">Sep 6 2004</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2004/09/06/1_collisions/2004-09-06/">dance and media 2004/TOKYO Opening party</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+			<ul>
+<li><a href="http://dance.pao.to/page/damj2004_party.htm" target="_blank" rel="external">http://dance.pao.to/page/damj2004_party.htm</a> <ul>
+<li>2004/07/26(mon)19:30-22:30 </li>
+<li>fee/ 1500yen with 1drink</li>
+<li>space/ BULLET&#8217;s（六本木）東京都港区西麻布1-7-11 B1F</li>
+</ul>
+</li>
+</ul>
+<p>■ニシモトタロウ氏のパフォーマンス発表にサポートで参加します。僕の担当はステージ（？）のライブ映像を15ピースのスライドパズルに分解して、それをライブで解くというパフォーマンス部分。仕事帰りに現場合わせで10分ほどやってみる感じなので、どうなるかいまいち予測がついてませんが、よろしければご覧になってください。</p>
+			
+				<p class="article-more-link">
+					<a href="/2004/09/06/1_collisions/2004-09-06/#more">Read More</a>
+				</p>
+      
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/info/">info</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2004-08-31" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2004/08/31/1_collisions/2004-08-31/" class="article-date">
+  <time datetime="2004-08-30T15:00:00.000Z" itemprop="datePublished">Aug 31 2004</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2004/08/31/1_collisions/2004-08-31/">広島国際アニメーションフェスティバルに行ってきた(2)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/hiroshimaanim2.jpg" alt="hiroshimaanim2.jpg"> ■<a href="http://collisions.doppac.cc/archives/33" target="_blank" rel="external">１日目</a>に続いて、２日目のイベントレポートです。</p>
+<h1 id="ポール・ブッシュ特集"><a href="#ポール・ブッシュ特集" class="headerlink" title="ポール・ブッシュ特集"></a>ポール・ブッシュ特集</h1><ul>
+<li><a href="http://www.paulbushfilms.com/" target="_blank" rel="external">http://www.paulbushfilms.com/</a></li>
+</ul>
+<p>■フェスティバルではコンペ作品上映以外にも、特別プログラムと呼ばれる企画上映がありまして、長編作品の記念上映とか、ある作家のレトロスペクティブ（過去作品の一挙上映）だとか、あと世界のフィルムスクール、アートスクールの学生が自主制作した作品から優れたものを集めたプログラムなどなど、いろんな企画がいくつかのホールで並行して上映されおり、どれを見に行くかで参加者を悩ませます。</p>
+<p>この日僕が見たのは今大会の国際審査委員であるポール・ブッシュさんのセミナーをまじえた特集上映。ポール・ブッシュさんの作品を僕は前回の大会で見てまして、その、「まったく同じ演技をした多数の役者のフィルムをフレームごとに入れ替えて、『多重人格を視覚的に表現』する」という、「ジキル博士とハイド氏」という作品のアイデアとアホらしいほどの労力のかけかたに感動していたんで今回のセッションもかなり楽しみでした。</p>
+<p>過去の作品も「ジキル博士とハイド氏」みたいなものばかりかとおもったらそうでもなく、ライブアクションの映像を元にすべてのコマをカリグラフィ（絵を感光させてフィルムを現像するんではなく、フィルムそのものを針などで削って、線を描き着色してアニメーションを製作するという非常に肩の凝る手法）で表現した長編（！）など、わりと手法（ただし、どれも手間がかかる）をとっかえひっかえして作ってるみたい。わりと学究肌っぽい感じもしました。</p>
+<h2 id="ダーウィンが眠っている間に-While-Darwin-Sleeps"><a href="#ダーウィンが眠っている間に-While-Darwin-Sleeps" class="headerlink" title="ダーウィンが眠っている間に　While Darwin Sleeps"></a>ダーウィンが眠っている間に　While Darwin Sleeps</h2><p>■そのポール・ブッシュの新作がこれ。昆虫標本の静止画がつぎつぎと切り替えられて、昆虫の進化のアニメーションのように見えるという。これはかなりかっこよかった。</p>
+<ul>
+<li>もう一回見たい度：★★★☆☆</li>
+</ul>
+<h1 id="リチャード・ウイリアム・セレクション"><a href="#リチャード・ウイリアム・セレクション" class="headerlink" title="リチャード・ウイリアム・セレクション"></a>リチャード・ウイリアム・セレクション</h1><ul>
+<li><a href="http://www.theanimatorssurvivalkit.com/" target="_blank" rel="external">http://www.theanimatorssurvivalkit.com/</a></li>
+</ul>
+<p>■つぎに見たプログラムがこれで、リチャード・ウィリアムは「ロジャー・ラビット」をはじめ、ハリウッドの重要なアニメーションを手がけた偉大なアニメーターにして、こないだ日本語翻訳版が出た「 <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4766114221/kaisokukagaku-22" target="_blank" rel="external">アニメーターズ・サバイバルキット</a> 」の著者。すいません、知りませんでした。仕事があまりに膨大なため、とくに重要な作品（ロジャー・ラビットやピンクパンサーのオープニングなど）をリチャードさんの解説つきで観られました。</p>
+<p>「アニメーターズ・サバイバルキット」（これ、動画を描くひとの教科書になるのはもちろん、テキストの部分にも動きやタイミングに関して示唆的なことがいっぱい書いてあってすごくおもしろいです。アニメーター以外のひとも必読です）にもあるんですが、リチャードさんは「リアルで正確」なアニメーションを本来身上としていて、トムとジェリーとかバックスバニーみたいな足が伸びたり体が縮んだりするようなアニメーションを認めつつもよしとしていなかったんですが、ロジャー・ラビットではそういうスタイルの、つまり1940年代のアニメーションを再現することを要求され、さまざまな研究のすえに（監督の要求も超えて）それを完璧に再現して、結果的にそれが一番有名な仕事になってしまった、ということらしいです。でも実際ロジャーラビットのオープニングは素晴らしいし、ロジャーラビットのキャラクターが過去作品のどういうリミックスのすえに成り立っているか、なんてこぼれ話はたいへん面白かった。</p>
+<h2 id="遥かなる戦場-The-Charge-of-Light-Brigade-（のアニメーションパート）"><a href="#遥かなる戦場-The-Charge-of-Light-Brigade-（のアニメーションパート）" class="headerlink" title="遥かなる戦場　The Charge of Light Brigade　（のアニメーションパート）"></a>遥かなる戦場　The Charge of Light Brigade　（のアニメーションパート）</h2><ul>
+<li><a href="http://www.imdb.com/title/tt0062790/" target="_blank" rel="external">http://www.imdb.com/title/tt0062790/</a></li>
+</ul>
+<p>■でそのリチャードさんのプログラムで見た、（あんまり有名でないらしい）映画のアニメーションパートが素晴らしかった。イギリスの新聞に載っているような外交や政治を揶揄する銅版画の１コマ漫画を動かしたような。かなりモンティパイソンのような。もっかい観たいですね。 きくところによると <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0002E4FPU/dotimpact-22" target="_blank" rel="external">DVDが出てる</a> らしい。</p>
+<ul>
+<li>もう一回見たい度：★★★★★</li>
+</ul>
+<h1 id="アニメーテッド・センチュリー-The-Animated-Century"><a href="#アニメーテッド・センチュリー-The-Animated-Century" class="headerlink" title="アニメーテッド・センチュリー　The Animated Century"></a>アニメーテッド・センチュリー　The Animated Century</h1><ul>
+<li><a href="http://www.imdb.com/title/tt0381883/" target="_blank" rel="external">http://www.imdb.com/title/tt0381883/</a></li>
+</ul>
+<p>■リチャードさんのプログラムが終わってからもぐりこんだ隣のホールで上映されてた作品。途中からだったんですけど、これもとんでもなかった。</p>
+<p>世界のアニメーション史を扱うTVの特別番組として作られたフィルムだそうですが、アニメーション史で重要な作品をあまさず触れたうえ、ちゃんと動画のクリップが収録されているんですな。フライシャーやディズニー、ワーナーから、トルンカやノルシュテインから、はては攻殻機動隊とかまで。その数120作品だって。</p>
+<p>どう考えてもDVDとかにはならないだろうなあ。こういうのはどこに向かって祈ればまた見れるんでしょうか。</p>
+<ul>
+<li>もう一回見たい度：★★★★★</li>
+</ul>
+<h1 id="２日目（８月２０日）-コンペ作品よりぬき"><a href="#２日目（８月２０日）-コンペ作品よりぬき" class="headerlink" title="２日目（８月２０日）　コンペ作品よりぬき"></a>２日目（８月２０日）　コンペ作品よりぬき</h1><h2 id="ストーミー・ナイト-Stormy-Night"><a href="#ストーミー・ナイト-Stormy-Night" class="headerlink" title="ストーミー・ナイト　Stormy Night"></a>ストーミー・ナイト　Stormy Night</h2><ul>
+<li><a href="http://www.kaisoku.com/index.php?HiroshimaAnime%2FCompe%2F0820#u2326579" target="_blank" rel="external">http://www.kaisoku.com/index.php?HiroshimaAnime%2FCompe%2F0820#u2326579</a></li>
+</ul>
+<p>■こちらもNFB（カナダ）の作品。自分が書いた本を原作にして映像化したらしいですが、えーとこれはもともとアニメーション作家で本も書いたってことだったのかな。逆だったらすごいけど。</p>
+<p>嵐の夜に眠れなくなった女の子が自分の存在とその不思議について物思いしはじめる、という思春期ストーリーがやわらかなタッチですっきり描かれた、気持ちのよい作品。ちょっと優等生すぎ？（なんつうのは、思春期もたいがい過ぎたおっさんの考えですな）</p>
+<p>こちらは審査委員特別賞受賞。マイケル・デュドク・デゥ・ヴィットさん（前回グランプリ「 <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B000095YQ8/dotimpact-22" target="_blank" rel="external">岸辺のふたり Father and Daughter</a> 」監督）がプレゼンターで、氏が推したとすれば納得。</p>
+<ul>
+<li>もう一回見たい度：★★★☆☆</li>
+</ul>
+<h2 id="サウス・オヴ・ザ・ノース-South-of-the-north"><a href="#サウス・オヴ・ザ・ノース-South-of-the-north" class="headerlink" title="サウス・オヴ・ザ・ノース　South of the north"></a>サウス・オヴ・ザ・ノース　South of the north</h2><ul>
+<li><a href="http://www.kaisoku.com/index.php?HiroshimaAnime%2FCompe%2F0820#m5c70901" target="_blank" rel="external">http://www.kaisoku.com/index.php?HiroshimaAnime%2FCompe%2F0820#m5c70901</a></li>
+</ul>
+<p>■じつは２日目のコンペ作品は全体的に低調だったのですが、そのなかで最も観客を沸かせていたのがこの作品（そのため票が集中したのかみごとコンペ観客賞を受賞しました）。ロシア発。</p>
+<p>性格が両極端のふたりのイヌイット（イヌイットネタってアニメにしやすいのかしらん）漁で争ったあげくふたりして難破してしまい、しぶしぶ二つの船をつなげて陸地をめざすも、さまざまなハプニングが待ち受けているのであります。細かいギャグや目配せの入れ方がとてもうまくて楽しめました。うますぎてなんだか普通のアニメを見た感じなんでもう一回見たい度は低めだ（受賞作品上映で２度目も見られたしね）。</p>
+<ul>
+<li>もう一回見たい度：★★☆☆☆</li>
+</ul>
+<h2 id="インスティンクト-Instinct"><a href="#インスティンクト-Instinct" class="headerlink" title="インスティンクト Instinct"></a>インスティンクト Instinct</h2><ul>
+<li><a href="http://www.kaisoku.com/index.php?HiroshimaAnime%2FCompe%2F0820#bacbbb7b" target="_blank" rel="external">http://www.kaisoku.com/index.php?HiroshimaAnime%2FCompe%2F0820#bacbbb7b</a></li>
+</ul>
+<p>■おのずとヘンな作品を期待してしまうエストニアからの、やっぱり変な作品。技術的にはすごく優れたクレイアニメです。</p>
+<p>設定からして全部変わってるから説明が大変なんですけど、えーと、白い神様と黒い神様（悪魔？）がいてですね、いわゆる大ガメが支えてる系のひらっぺたい世界で天地を創造してるわけですよ。泥からキリンとかゾウとかシマウマとかをささっとつくって、重りのついた長いひもを結んで、その重りをぽいっと世界の外に投げると、動物がその世界で活動するわけですな。活動つってもヒモに引っ張られてるだけだから世界のはしっこでつっかえちゃうんで神様あわててその動物の重りを世界の反対側に投げてやると。あと動物同士がひもに引っ掛かってこけたりするからヒモを持ち上げて動物を通してあげたり、手が空いたらアトリエに戻って次の動物を作ったりして大忙し。神様系のRTSをクレイアニメで見せてるような感じで、ここんとこがまずヘンに凝ってておもしろい。</p>
+<p>でまあ、その神様作業を白い神様はうまくやるんだけど、黒い神様のほうはどうも不器用で、人間をつくろうとしてついうっかりパルテノン宮殿とかストーンヘンジとか、余計なものをさんざん作った後にようやく人間ができたと思ったら・・・という。こっからのやり取りとかオチも妙に凝ってて、好きな作品でした。また見たいですねえ。</p>
+<ul>
+<li>もう一回見たい度：★★★★★</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2004-08-29" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -598,171 +881,6 @@
 
 
   
-    <article id="post-0_think-routine/2000-12-04" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2000/12/04/0_think-routine/2000-12-04/" class="article-date">
-  <time datetime="2000-12-03T15:00:00.000Z" itemprop="datePublished">Dec 4 2000</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2000/12/04/0_think-routine/2000-12-04/">think-routine #20　コンピュータゲームの２０００年について</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「巨人のドシン１」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_03.html" target="_blank" rel="external">2000-12-04 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_03.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/2000/12/04/0_think-routine/2000-12-04/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/2000-11-13" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2000/11/13/0_think-routine/2000-11-13/" class="article-date">
-  <time datetime="2000-11-12T15:00:00.000Z" itemprop="datePublished">Nov 13 2000</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2000/11/13/0_think-routine/2000-11-13/">think-routine #18　キャラクタリスティック・ビヘイビア</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_18.html" target="_blank" rel="external">2000-11-13 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_18.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/2000/11/13/0_think-routine/2000-11-13/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-0_think-routine/2000-09-12" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2000/09/12/0_think-routine/2000-09-12/" class="article-date">
-  <time datetime="2000-09-11T15:00:00.000Z" itemprop="datePublished">Sep 12 2000</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2000/09/12/0_think-routine/2000-09-12/">think-routine #17　フリー・フォール</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-			<ul>
-<li>featuring 「ミスタードリラー」</li>
-</ul>
-<p>初出：<a href="http://web.archive.org/web/*/http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_17.html" target="_blank" rel="external">2000-09-12 &#8211; http://para.tutics.tut.ac.jp/~kotaro/Dotimpact/think_17.html</a></p>
-			
-				<p class="article-more-link">
-					<a href="/2000/09/12/0_think-routine/2000-09-12/#more">Read More</a>
-				</p>
-      
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/think-routine/">think-routine</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/102/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/101/">101</a><a class="page-number" href="/page/102/">102</a><span class="page-number current">103</span><a class="page-number" href="/page/104/">104</a><a class="page-number" href="/page/105/">105</a><a class="extend next" rel="next" href="/page/104/">Next &raquo;</a>
@@ -782,7 +900,7 @@
 		<a href="/">text perforation</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 doppac<br>
+		&copy; 2018 doppac<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>
