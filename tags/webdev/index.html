@@ -56,6 +56,64 @@
     <div id="main">
       
   
+    <article id="post-201801/arrow-key-event-in-ios-browser" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/06/201801/arrow-key-event-in-ios-browser/" class="article-date">
+  <time datetime="2018-01-05T15:00:00.000Z" itemprop="datePublished">Jan 6 2018</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/06/201801/arrow-key-event-in-ios-browser/">iOSのブラウザでは外部キーボードのカーソルのキー入力イベントが出ない</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>菅さんが<a href="https://twitter.com/ssuge/status/949198854196310016" target="_blank" rel="external">iOSデバイスでscrapboxがうまく使えない</a>というツイートをしていて、自分はそんなに困ってないけどなとやりとりしていたら、菅さんはiPadに外部キーボードをつなげてscrapboxを使おうとしていて、カーソルキーを使った編集作業ができないので実質使えないのだそう。手元でiPhoneにbluetoothキーボードをつないで試してみたらたしかにそうだった。</p>
+<p>ネイティブアプリではカーソルキーが使えるのでどういうことなのかなと調べてみたら、どうやらiOSのブラウザでは（JavaScriptCoreでは？）外部キーボードのカーソルキー操作時のキーイベントが出ず、カーソルキーを使った操作の実装が不可能みたい。</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/30221024/how-to-detect-arrow-keys-using-javascript-on-ipad-with-bluetooth-keyboard" target="_blank" rel="external">jquery - How to detect arrow keys using JavaScript on iPad with Bluetooth keyboard - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/questions/14959048/how-to-detect-key-down-event-for-arrow-key-on-textarea" target="_blank" rel="external">javascript - How to detect key down event for arrow key on textarea? - Stack Overflow</a></li>
+</ul>
+<blockquote><p>Official answer from Apple:</p>
+<p>Thank you for contacting Apple Developer Technical Support (DTS). Our engineers have reviewed your request and have concluded that there is no supported way to achieve the desired functionality given the currently shipping system configurations.</p>
+</blockquote>
+<p>ぜんぜん知らなかった。カーソルキーはページスクロールにも関わるからタッチとの齟齬を考慮して殺してあるのかな。ちなみにAndroidは問題ないようだった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapbox/">scrapbox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201711/web-media-rss-availability" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
