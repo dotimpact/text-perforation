@@ -56,6 +56,62 @@
     <div id="main">
       
   
+    <article id="post-201503/hexo-3-upgrade" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/02/201503/hexo-3-upgrade/" class="article-date">
+  <time datetime="2015-03-01T15:00:00.000Z" itemprop="datePublished">Mar 2 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/02/201503/hexo-3-upgrade/">Hexoを3.0.0-rc.4にアップグレードした</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>なぜかいつのまにかHexoが動かなくなっていたので勢いで3.0.0-rc.4にしてみたら、けっこう各部が動かなくて困った。</p>
+<p>archive画面でget_postsで記事をリスティングしてたのが動かなくなってて（v3ではヘルパーのget_postsが廃止されたそうだ）、しかもその代替コードがいまいちよくわからなったのだが、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\&lt;% site.tags.find(&#123;name: &apos;work&apos;&#125;).data[0].posts.sort(&apos;date&apos;, -1).forEach(function(item)&#123; %\&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;&lt;%- config.root %&gt;&lt;%- item.path %&gt;&quot;&gt;&lt;%= item.title %&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">\&lt;% &#125;); %\&gt;</div></pre></td></tr></table></figure>
+<p>にしたらひとまず動いた（postsを取るもっといいインターフェイスがないとおかしい気がするのだが）。</p>
+<p>あとhexo-generator-feedがnpmにあるのだとv3に対応してないので、</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install git+https://git@github.com/hexojs/hexo-generator-feed.git --save</div></pre></td></tr></table></figure>
+<p>とgitのを入れて間に合わせた。</p>
+<p>今日はとりあえずここまで。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201503/its-complicated" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -515,58 +571,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/">design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/manga-anime-game-criticism" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/21/201502/manga-anime-game-criticism/" class="article-date">
-  <time datetime="2015-02-20T15:00:00.000Z" itemprop="datePublished">Feb 21 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/21/201502/manga-anime-game-criticism/">gacco『マンガ・アニメ・ゲーム論』 コンピューターゲーム講義を聴いた</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="https://lms.gacco.org/courses/gacco/ga021/2015_01/about" target="_blank" rel="external">マンガ・アニメ・ゲーム論 | gacco</a></p>
-<p><a href="http://gacco.org/" target="_blank" rel="external">gacco</a>というオンライン大学講座サイトで明治大学の開設する「マンガ・アニメ・ゲーム論」という講義を受講して、ゲームについての講義を聞いた。講師が明大准教授でゲームに造詣の深い<a href="http://fukuchi.org/index.html.ja" target="_blank" rel="external">福地健太郎</a>さんだったので、どんな授業をされるのかなと思って受けてみた。</p>
-<p>内容としてはほんとにインタラクティブメディアとしてのコンピュータゲームについての概論的な講義で、ゲームの歴史をある程度追ってきたひとだと新しい知識が得られるわけではなかったのだけど（画像資料などがなかったのも寂しかった）、70-80年代パソコンゲームでのメディア表現については妙に具体的に例を挙げて紹介していて、そのへんはおもしろかった。<a href="http://en.wikipedia.org/wiki/Phantasie" target="_blank" rel="external">Phantasie</a>シリーズでのゲーム内設定の扱いとストーリーテリングの工夫（ゲーム内で伝承される神話をアイテムとして手に入れて読むことができたり、ゲーム内での高貴な人物の葬儀に参加するところからストーリーが始まるなど）とか。</p>
-<p><a href="https://workflowy.com/s/wiMEBoKtWF" target="_blank" rel="external">講義メモ</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/game/">game</a></li></ul>
 
 			</span>
 		</div>
