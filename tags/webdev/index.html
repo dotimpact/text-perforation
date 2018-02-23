@@ -56,6 +56,110 @@
     <div id="main">
       
   
+    <article id="post-201802/how-to-develop-well-in-zend-framework-3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/02/201802/how-to-develop-well-in-zend-framework-3/" class="article-date">
+  <time datetime="2018-02-01T15:00:00.000Z" itemprop="datePublished">Feb 2 2018</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/02/201802/how-to-develop-well-in-zend-framework-3/">Zend Framework3で効率的に開発する方法</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef" target="_blank" rel="external">Personal Blocklist (by Google) - Chrome ウェブストア</a>で<code>framework.zend.com</code>をブロックする。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201802/pdf-db-spec" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/01/201802/pdf-db-spec/" class="article-date">
+  <time datetime="2018-01-31T15:00:00.000Z" itemprop="datePublished">Feb 1 2018</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/01/201802/pdf-db-spec/">Mysqlのスキーマと初期レコードをpdfのテーブル/マスタ定義書として書き出す</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/dotimpact/pdf-db-spec" target="_blank" rel="external">dotimpact/pdf-db-spec: mysqlの既存テーブルからpdfのドキュメントを作る</a></p>
+<hr>
+<p>いまやってる仕事（わりと堅い）で詳細仕様書の一部としてDBのテーブル定義書を作ることになり、手でつくるのは面倒なのでDBマイグレーションツールで作成したDBのテーブルと初期データをドキュメント化する方法をいろいろ試して、最終的にMysqlのXML/HTML出力を加工してpdfにするスクリプトを作ったので公開しておいた。Mysql限定で、wkhtmltopdfも必要。</p>
+<p>最初<a href="http://tk0miya.hatenablog.com/entry/2013/12/12/012054" target="_blank" rel="external">schema2rst</a>を試して、Htmlドキュメントとしてはなかなかよかったんだけど、ドキュメントとして共有するのにpdf化するにはあんまり向いてなかったので、<a href="http://mariyudu.hatenablog.com/entry/2015/02/01/200517" target="_blank" rel="external">続・MySQL データベースからテーブル定義書を生成する - 私と私の猫の他は誰でも隠し事を持っている</a>の出力をwkhtmltopdfでpdfにするアプローチにした（xsltとhtmlのスタイルはほぼそのまま使ってます。ありがとうございます）。wkhtmltopdfでレンダリングされるhtmlドキュメントのサイズがあんまりうまく制御できなかったので、<code>--zoom</code>で適当に拡大している。あと長いテーブルの途中で改行されるときにテーブルヘッドがちゃんと表示されるように</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">thead</span> &#123; <span class="attribute">display</span>: table-header-group &#125;</div><div class="line"><span class="selector-tag">tfoot</span> &#123; <span class="attribute">display</span>: table-row-group &#125;</div><div class="line"><span class="selector-tag">tr</span> &#123; <span class="attribute">page-break-inside</span>: avoid &#125;</div></pre></td></tr></table></figure>
+<p>を入れた。</p>
+<p>あと、今回DBマイグレーションツールに<a href="https://phinx.org/" target="_blank" rel="external">Phinx</a>を使ってみたらわりと便利でよかった。ほんとはこれのマイグレーションにフックしてドキュメントを生成できたるするといいのかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201801/arrow-key-event-in-ios-browser" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -521,57 +625,10 @@ public function generatorMethod($name)
 
 
   
-    <article id="post-201510/japanese-industry-meetup" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/10/25/201510/japanese-industry-meetup/" class="article-date">
-  <time datetime="2015-10-24T15:00:00.000Z" itemprop="datePublished">Oct 25 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
   
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/10/25/201510/japanese-industry-meetup/">Japanese Industry Meetupに参加した</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>W3Cの総会<a href="http://www.w3.org/2015/10/TPAC/" target="_blank" rel="external">TPAC 2015</a>のプレイベントとして、CSS WGメンバーとおもに日本語のレイアウトに関する話題をディスカッションするというイベント「Japanese Industry Meetup」にちょっとご縁がありBCCKSの人間として参加した。TPACは札幌で開催されるのでJIMも札幌に集まることになり、なぜかこの日だけ異常に寒く初雪の積もる札幌に向かった。</p>
-<p>MeetupではCSSの仕様ライターとして有名なfantasaiさんから<a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/process" target="_blank" rel="external">CSS WGの仕様決定プロセス</a>（W3Cの標準的プロセスに加え、CSS SpapshotなどCSS WG独自のプロセスがあるとのこと）についての説明があり、その後は日本語のテキストレイアウトに関する仕様が今後CSSにどう組み込まれるべきかを日本語ベースで意見を出してWGメンバーに翻訳して質問したり伝えたりできるといいよねという時間が持たれた。W3Cの日本語組版に関する技術資料である<a href="http://www.w3.org/TR/jlreq/ja/" target="_blank" rel="external">JLREQ(日本語組版処理の要件)</a>でいうとどういう仕様がCSSで標準化する優先度が高いと日本は考えるのかという主語が大きい話題で僕が発言することになったんだけど、そこでは基本版面の行位置を守るための<a href="http://www.w3.org/TR/jlreq/ja/#line_positioning_based_on_the_kihonhanmen_design" target="_blank" rel="external">行グリッド</a>の概念がCSSではどうなるのかという話題を出してけっきょくQ&amp;Aの時間はこの話題で終始した。そもそも日本にかぎらず欧文でもページ間の行位置を揃えるVertical rhythmという考え方があり、これに対応した<a href="https://drafts.csswg.org/css-line-grid/" target="_blank" rel="external">CSS Line Grid Module</a>というドラフトがある（石井宏治さんによると7〜8年前？にMSが推進していた頃からあるとのこと）が、CSS WGのエディターのリソース的に手が回らないこと、またブラウザベンダーが実装を進めるような動きもないことから後回しになっている現状があるというのが解答で、欲しいなら（これはW3Cの標準化推進で一般的に言えることだと思うけど）WGに積極的に関わって誰かが仕様を書くように頑張るか、あるいはブラウザベンダーに働きかけてその機能を実装面から推進するよう頑張るか、いずれかの動きがないと優先度は変わらないだろうとのこと（ですよねー）。<a href="http://www.w3.org/TR/2015/WD-clreq-20150723/" target="_blank" rel="external">中国語の組版要件</a>を進めているBobbyさんから中国の組版でも同様の原理はあり、中国ではさらに文字位置のグリッドも守る書式（日本でいうと原稿用紙みたいな）もCharacter Gridとして要件に含めているという話が出たりもして、行グリッド１つとってもあらゆる方面との整合性を保った仕様を書くのはひたすら大変だということはわかった。</p>
-<p>あとどうやったらCSS WGに関われるかという話題もあったんだけど、まあ英語でがんばって発言するしかないということと、発言できないとしてもせめてドラフトを読んで議論して日本側の意見をまとめるくらいはしたほうがいいというこれもまあ至極もっともな話があった。たしかにCSSの最新仕様を知るみたいな勉強会じゃなくて、まだ実装されてないドラフトをみんなで読んで足りない仕様がないか議論するみたいな集まりがあるといいだろうなと思った。今回のJIMがそういう今後の動きにつながるのかな？　せっかくなのでつなげたほうがいいですね。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bccks/">bccks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/webdev/page/2/">2</a><a class="extend next" rel="next" href="/tags/webdev/page/2/">Next &raquo;</a>
+    </nav>
   
 
 

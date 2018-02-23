@@ -56,11 +56,11 @@
     <div id="main">
       
   
-    <article id="post-201503/hexo-3-upgrade" class="post">
+    <article id="post-201503/melting-interfaces" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2015/03/02/201503/hexo-3-upgrade/" class="article-date">
-  <time datetime="2015-03-01T15:00:00.000Z" itemprop="datePublished">Mar 2 2015</time>
+			<a href="/2015/03/12/201503/melting-interfaces/" class="article-date">
+  <time datetime="2015-03-11T15:00:00.000Z" itemprop="datePublished">Mar 12 2015</time>
 </a>
 		</span>
 		<span class="meta-elements author">doppac</span>
@@ -73,83 +73,447 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/03/02/201503/hexo-3-upgrade/">Hexoを3.0.0-rc.4にアップグレードした</a>
+      <a class="article-title" href="/2015/03/12/201503/melting-interfaces/">渡邊恵太『融けるデザイン』</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<p>なぜかいつのまにかHexoが動かなくなっていたので勢いで3.0.0-rc.4にしてみたら、けっこう各部が動かなくて困った。</p>
-<p>archive画面でget_postsで記事をリスティングしてたのが動かなくなってて（v3ではヘルパーのget_postsが廃止されたそうだ）、しかもその代替コードがいまいちよくわからなったのだが、</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">\&lt;% site.tags.find(&#123;name: &apos;work&apos;&#125;).data[0].posts.sort(&apos;date&apos;, -1).forEach(function(item)&#123; %\&gt;</div><div class="line">&lt;li&gt;&lt;a href=&quot;&lt;%- config.root %&gt;&lt;%- item.path %&gt;&quot;&gt;&lt;%= item.title %&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">\&lt;% &#125;); %\&gt;</div></pre></td></tr></table></figure>
-<p>にしたらひとまず動いた（postsを取るもっといいインターフェイスがないとおかしい気がするのだが）。</p>
-<p>あとhexo-generator-feedがnpmにあるのだとv3に対応してないので、</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install git+https://git@github.com/hexojs/hexo-generator-feed.git --save</div></pre></td></tr></table></figure>
-<p>とgitのを入れて間に合わせた。</p>
-<p>今日はとりあえずここまで。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201503/its-complicated" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/03/01/201503/its-complicated/" class="article-date">
-  <time datetime="2015-02-28T15:00:00.000Z" itemprop="datePublished">Mar 1 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/03/01/201503/its-complicated/">ダナ・ボイド『つながりっぱなしの日常を生きる：ソーシャルメディアが若者にもたらしたもの』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4794220871/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61UiSBsShrL._SL160_.jpg" alt="つながりっぱなしの日常を生きる: ソーシャルメディアが若者にもたらしたもの" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4794220871/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">つながりっぱなしの日常を生きる: ソーシャルメディアが若者にもたらしたもの</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.03.02</div></div><div class="amazlet-detail">ダナ・ボイド <br>草思社 <br>売り上げランキング: 135,371<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4794220871/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4861009383/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/41AgS62PXgL._SL160_.jpg" alt="融けるデザイン ―ハード×ソフト×ネット時代の新たな設計論" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4861009383/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">融けるデザイン ―ハード×ソフト×ネット時代の新たな設計論</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.03.13</div></div><div class="amazlet-detail">渡邊恵太 <br>ビー・エヌ・エヌ新社 (2015-01-21)<br>売り上げランキング: 4,510<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4861009383/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
 
 <hr>
-<blockquote><p>　オンライン動画について共に語り、笑い、掘り下げるにつれ、マイクはふと動きを止め、真剣な表情で私の方を向いた。「お願いがあるんだけど」と、彼は言った。「ママに話してもらえるかな？　僕はインターネットで何も悪いことはしていないって」。私がすぐには答えなかったため、彼はさらに続けた。「つまり、ママはオンラインのものは何でも悪いと考えてる。あなたは話がわかるみたいだし、それに大人のひとだから、彼女に話してくれる？」<br>　私は微笑み、そうすると約束した。<br>　この本がまさにそれである。ティーン（13歳から19歳の若者）のネット上の営みを、彼らを心配する人々、すなわち親、教師、政治家、報道関係者、または他のティーンたちに説明する試みである。</p>
-<footer><strong>ダナ・ボイド</strong><cite>『つながりっぱなしの日常を生きる：ソーシャルメディアが若者にもたらしたもの』 - はじめに</cite></footer></blockquote>
-<p>素晴らしい本だった。</p>
-<p>膨大な当事者インタビューを通して、（とくにアメリカの）ティーンエージャーのソーシャルメディアの受容のかたちについて、大人たちの先入観からの誤解や恐れからの排除が見えなくしているものをていねいにひも解き、そこでティーンが本当はなにをしたくて、なにをしており、それに対して保護者である大人たちが本来はなにができるかを解説する本。</p>
-<p>なのだが、それよりなによりこの本は、大人になると誰もがその感覚を忘れてしまうため取るにたらないことに見える、しかし彼（女）らにとってはほんとうに切実でそれゆえかならず隠されてしまう、「ティーンにとっての『自由』」というものがとても感動的に描き出されている。そこが稀有な本だと思う。</p>
-<p>この本で強調されるのは、今も昔もティーンが求めるのは彼（女）らがティーンであること（保護され、監督され、主体的な行動が許されない）からつかの間離れられる「公的な場所」であり、かつて公園やモールがそうだったティーンにとっての「公的な場所」が、現在ではソーシャルメディアにしかないのだということで、それは大人たちが多くの選択肢のひとつとしてインターネットやソーシャルメディアを使うのとはまったく意味が異なる。べつにインターネットやソーシャルメディアが最適な場所だと思っているわけではないし、そのすべてを理解できているわけでもなく、自分たちがそうすることで親をはじめとする大人たちを心配させるのは本意ではないと考えているのだが、インターネットやソーシャルメディアがどういう場所であれ、自由にうろつき、いちゃつき、ふざけあい、自分たちのための空間をつくって社会と自分の関係を確かめられる場所がそこにあるのだとこの本の取材で多くのティーンは証言する。</p>
-<p>これはかつてティーンだった自分を振り返ればだれでもでも思い当たる感覚だろう。また、ティーンだった自分が依拠していた場所にくらべ、インターネットやソーシャルメディアという場所がたいへんに「複雑」な環境であることも理解できるはずだ。だから、大人たちはティーンのインターネットやソーシャルメディアでの活動を認め、監視や排除を強めるのとは別のかたちで、彼らのソーシャルメディアを通じた健やかな「成長」を見守り促す必要があるのだとこの本は言う。</p>
-<p>ティーンのネットリテラシーについて論じた章で、著者はWikipediaについて意外なほど紙面を割いている。ネットリテラシーの文脈でWikipediaについて大人（教師）がティーンに語ることといえばたいていその情報の不正確さや、鵜呑みにすることの安易さや紙の文献に当たることの大切さ止まりなのだが、それはティーンが手にしつつある新しい世界、「ネットワーク化されたパブリック」を理解する絶好の機会を手放しているのだと著者は言う。Wikipediaの各項目はさまざまな立場の人々がそれぞれの観点からその情報を高めるために参加し議論し、その経緯を履歴として記録しながら常に変化していく「公的な場所」として設計されている。ティーンの公共への切望をWikipediaのような可能性へと導いていくのが、あたらしい世界の「良識」になるんだろう。</p>
+<p>コンピュータのインターフェイス研究の世界ですごくユニークなスタンスで研究をされている渡邊恵太さんの待望のインターフェイスデザイン理論書。ようやく読めた。</p>
+<p>冒頭から宣言されるように、世界は既にすべての情報を飲み込んだ１つのメディアとしてのインターネットと、それに文字通り「触れる」ためのインターフェイスとしてのセンサーを持ったコンピュータとソフトウェアとが「融けた」環境にある。こうと決まった形をもたなくなった環境が「手ごたえ」を持つとき、そこで何が起きているのか。たとえばこの融けた環境を爆発的に広げたといってよいiPhoneのインターフェイスで、ユーザーはなにを経験しているのか。そうしたインターフェイスの身体論を「自己帰属感」というキーワードで解説していく。</p>
+<p>アフォーダンスについて紹介、解説する本は世にあまたある。デザインにおいてアフォーダンスの考え方が重要だとする本もたくさんある。しかしたぶんこの本はそうではなくて、 <strong>アフォーダンスに代表される生態心理学の世界観において、情報のデザインとはなんであるか</strong> を問いなおす本なんだと思う。身体性が重要だからといって「モノ」が重要なわけではない。情報であったとしてもその持続のあり方によって主観的なリアリティが生まれる（ここの議論は<a href="http://www.ntticc.or.jp/Exhibition/2012/Internet_Reality/index_j.html" target="_blank" rel="external">インターネット・リアリティ研究会</a>の話にも通じているなとおもった）。そのように発想することで、プロダクトデザインを超え、メタファに堕さない、まったりとしてコクのあるインターフェイスが生まれるのだろう。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interaction/">interaction</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/interface/">interface</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/nacun" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/11/201503/nacun/" class="article-date">
+  <time datetime="2015-03-11T14:08:00.000Z" itemprop="datePublished">Mar 11 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/11/201503/nacun/">都留泰作『ナチュン』1-3を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00IEBKLGK/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61fsqnwqVnL._SL160_.jpg" alt="ナチュン（１）" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00IEBKLGK/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ナチュン（１）</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.03.11</div></div><div class="amazlet-detail">講談社 (2014-02-21)<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00IEBKLGK/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>フリースタイル「このマンガを読め！2015」でこの作家の新作が取り上げられてて、そういえば「ナチュン」も面白いと聞いたなと思って読んでみた。アフタヌーンっぽいというか、よくこれ早々に打ち切られないで連載が続いたもんだなという感じ。３巻でようやく話が進み始めた。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manga/">manga</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/hint-de-pint-remix" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/10/201503/hint-de-pint-remix/" class="article-date">
+  <time datetime="2015-03-09T15:00:00.000Z" itemprop="datePublished">Mar 10 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/10/201503/hint-de-pint-remix/">SEXY SYNTHESIZER『象印クイズ ヒントでピント 16分割Remix』</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<iframe width="100%" height="160" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fsexy-synthesizer%2Fremix-quiz-show-theme-music-remix&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&color=ff5500&show_artwork=true"></iframe>
+<p>SEXY SYNTHESIZER氏による「象印クイズ ヒントでピント」テーマ曲のリミックス。ロングエディットバージョンがほしい。</p>
+<p>SEXY SYNTHESIZERさんのsoundcloud聞いて気に入ったので<a href="http://sexy-synthesizer.bandcamp.com/album/pop" target="_blank" rel="external">「POP ! 」</a> を買って聴いてる。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soundcloud/">soundcloud</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/life!" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/09/201503/life!/" class="article-date">
+  <time datetime="2015-03-08T15:00:00.000Z" itemprop="datePublished">Mar 9 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/09/201503/life!/">ベン・スティラー『LIFE!』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00HZZ5UGC/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61%2BnVDUvzcL._SL160_.jpg" alt="LIFE!/ライフ 2枚組ブルーレイ&DVD (初回生産限定)    [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00HZZ5UGC/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">LIFE!/ライフ 2枚組ブルーレイ&amp;DVD (初回生産限定)    [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.03.10</div></div><div class="amazlet-detail">20世紀フォックス・ホーム・エンターテイメント・ジャパン (2014-08-02)<br>売り上げランキング: 1,352<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00HZZ5UGC/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>グラフ雑誌「LIFE」の最終号の表紙を飾る「『LIFE』の真髄」を表すという紛失したネガをもとめてカメラマンを探す冒険の旅に出る…という話。去年 <a href="https://twitter.com/twamura" target="_blank" rel="external">@twamura</a>氏と飲んでいるときこの「LIFE!」の話になり、よく知らないで人間讃歌的な内容の映画かと思って「なんでそんなの観たの」と責めるようなことを言ってしまったのだけど、観てみたらわりと好きな映画だった…沢村君すまん。中盤で主人公がある決断に迷う場面で、そこにいるはずのないヒロインがアコギを抱えて突然現れ、主人公を励ます歌を歌うという場面があるのだけど、僕はこの手の音楽が劇中の文脈を超えて登場するタイプの演出が好きなのでここだけで五億点だった。</p>
+<p>あとこれを奥さんと夜中に観てたらクライマックス（ユキヒョウのところ）に差し掛かったところで寝ていた子供がギャン泣きしはじめたのはかなりLIFE感あった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/labeling-of-ordinary-feeling" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/08/201503/labeling-of-ordinary-feeling/" class="article-date">
+  <time datetime="2015-03-07T15:00:00.000Z" itemprop="datePublished">Mar 8 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/08/201503/labeling-of-ordinary-feeling/">日常のラベリング</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://text-perforation.doppac.cc/2015/02/14/201502/macrodroid-health-log/">MacroDroidで体調日記をつける [2015-02-14]</a>で始めたPebbleで体調日記をつけるの、いろいろ変えながら続けている。もはやぜんぜん体調日記ではないような気もしてるけど。</p>
+<h1 id="good-nice-bad期"><a href="#good-nice-bad期" class="headerlink" title="good / nice / bad期"></a>good / nice / bad期</h1><p>最初は「good!」「nice」「bad」の３段階で１時間ごとの自分の気分を入力することにしてたんだけど、平日の昼間は当然仕事中なわけで、仕事の途中だとgoodでもniceでもないよなーと思うタイミングが多かった。あとちょっと気が立ってるみたいなときもbadっていうのは選びにくかった。</p>
+<h1 id="happy-busy-bored-sigh-sad期"><a href="#happy-busy-bored-sigh-sad期" class="headerlink" title="happy / busy / bored / sigh / sad期"></a>happy / busy / bored / sigh / sad期</h1><p>ふつうに仕事してるときの「busy」と仕事してないときの「bored」という区別に変えてみたら選びやすくなった。さらにに気分がよいときの「happy」とすごく気分が悪いとき用の「sad」を作って（pebbleアプリで上下ボタンのダブルクリックに割り当てた）、あとちょっとなんかなーという気分をすくうための「sigh」を設けた。</p>
+<h1 id="happy-busy-relax-sigh-sad期"><a href="#happy-busy-relax-sigh-sad期" class="headerlink" title="happy / busy / relax / sigh / sad期"></a>happy / busy / relax / sigh / sad期</h1><p>ただしかし「bored」でもないな…と思って「relax」にしてみた。こっちのほうが選びやすい。というのが現在。</p>
+<p>happy / sigh / sadはほとんど押さなくて、ほとんどの気分はbusyかrelaxになってるんだけど、でも実際はbusyとrelaxの間に忙しいってほどはないけどなんかしてる、という気持ちの時があって（移動中とか）、ここをもう一段階分けてもいいのかなと考えている。でもなんてラベルにすればいいのかよくわからない。「usual」とかかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macrodroid/">macrodroid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">productivity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/place-beyond-the-pines" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/07/201503/place-beyond-the-pines/" class="article-date">
+  <time datetime="2015-03-06T15:00:00.000Z" itemprop="datePublished">Mar 7 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/07/201503/place-beyond-the-pines/">デレク・シアンフランス『プレイス・ビヨンド・ザ・パインズ/宿命』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00F938ATQ/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/5158IMPJ8cL._SL160_.jpg" alt="プレイス・ビヨンド・ザ・パインズ/宿命 [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00F938ATQ/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">プレイス・ビヨンド・ザ・パインズ/宿命 [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.03.09</div></div><div class="amazlet-detail">Happinet(SB)(D) (2014-01-07)<br>売り上げランキング: 44,878<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00F938ATQ/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>「プレイス・ビヨンド・ザ・パインズ」というなんかかっこいいタイトルのおかげでどういう映画なのか想像しづらいなと思ったまま観た。あとで調べたら映画の舞台になっているニューヨーク州の都市「スケネクタディ」の語源になったモホーク語の英訳にあたるのだそう。</p>
+<p>地味だけど惹きつけられる魅力のある作品でこういうのはちゃんと劇場で見たかったなと思った。前半のライアン・ゴスリングのやさぐれ純情っぷりと死に様が印象的。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/placebo-club" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/06/201503/placebo-club/" class="article-date">
+  <time datetime="2015-03-06T14:50:00.000Z" itemprop="datePublished">Mar 6 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/06/201503/placebo-club/">奥田亜紀子『ぷらせぼくらぶ』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4091886388/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51NuSnYB0mL._SL160_.jpg" alt="ぷらせぼくらぶ (IKKI COMIX)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4091886388/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ぷらせぼくらぶ (IKKI COMIX)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.03.06</div></div><div class="amazlet-detail">奥田 亜紀子 <br>小学館 (2013-11-29)<br>売り上げランキング: 46,834<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4091886388/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>「ぷらせぼくらぶ」というタイトルのわかるようなわからないような感じもふくめ、余計な部分がぐるんぐるん回っている学生時代の感じが収まりのわるさもそのままに描かれており、正直あまり気持ちは近づけなかったのだが、もっとやっちゃえという感じがしたな。１話め（「僕の望み」）がやっぱり一番いいかな。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manga/">manga</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/yebizo-2015" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/05/201503/yebizo-2015/" class="article-date">
+  <time datetime="2015-03-05T13:54:00.000Z" itemprop="datePublished">Mar 5 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/05/201503/yebizo-2015/">第７回恵比寿映像祭「惑星で会いましょう」を見てきた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.yebizo.com/" target="_blank" rel="external">恵比寿映像祭</a></p>
+<p>天気よいしもうすぐ終わっちゃいそうなので恵比寿映像祭に行ってきた。</p>
+<p>ジョナサン・ミナード＆ジェームズ・ジョージ「<a href="http://dpt.co/en/clouds/" target="_blank" rel="external">CLOUDS</a>」は3D空間に展開されるジェネラティブアートやその開発者たちを3Dカメラで撮影しながらインタビューした映像をOculus Riftで好きなように見て回れるというインタラクティブ・ドキュメンタリー（！）で、評判は聞いていたけど体験してみると想像以上に刺激的だった。ちゃんと作りこまれた没入型のコンテンツはものすごい可能性あるな。</p>
+<div class="video-container"><iframe src="//player.vimeo.com/video/89680830" frameborder="0" allowfullscreen></iframe></div>
+<p>一般にいわゆるVRコンテンツとされるライド的なものとか異世界体験ではなくて、ノンフィクションとかドキュメンタリーにカテゴライズされるような映像でも、3Dカメラで撮影された実在感のある人物がVRゴーグルで目の前で語る体験になると（CLOUDSもすごい技術で実現してるんではたぶんなくてKinect程度のカメラで3Dとしては破綻しまくってるんだけど、それでも）対象への興味や理解がまったく変わるのが感じられておもしろい。ジェネラティブアートの抽象的なビジュアルスケープとインタビューが交錯する構成もよくてこの作品は題材的にも（技術的にも）素晴らしいということなんだろうけど。ただ回転率的に週末は大変そう。</p>
+<p>あとやっぱり評判をきいていた瀬田なつき「<a href="http://www.boid-newcinema.com/5windows/" target="_blank" rel="external">5 windows</a> 恵比寿特別編」もよかった。</p>
+<div class="video-container"><iframe src="//www.youtube.com/embed/CShnjjjmNkc" frameborder="0" allowfullscreen></iframe></div>
+<p>会場に着いてガーデンプレイス中央の大型スクリーンで最初に１つめの作品を観た時は正直「あれ、これだけ？」という感想だったんだけど、ちゃんと各スポットの作品を見まわると散策の感覚や作品を見る場の雰囲気もあいまって非常に濃密な作品体験になった。今日の気候で観れたのは本当によかったなと。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201503/monthly_post_list" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/03/04/201503/monthly_post_list/" class="article-date">
+  <time datetime="2015-03-03T15:00:00.000Z" itemprop="datePublished">Mar 4 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/03/04/201503/monthly_post_list/">Hexoプラグインを試作した</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>せっかく毎日blogを書いているので、月末にまとめ記事を作れるようにしたいなと思っていて、それを実現するHexoプラグインを手探りでつくった。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&#123;% monthly\_post\_list 201502 book %&#125;</div><div class="line"></div></pre></td></tr></table></figure>
+<p>とすると、2015年2月のbookタグを持ったポストの一覧が生成される。</p>
+<p>使ったページがこれ。</p>
 <ul>
-<li><a href="https://workflowy.com/s/ZcLrTeEwXu" target="_blank" rel="external">読書ノート</a></li>
+<li><a href="/2015/01/31/201501/201501-summary/">2015年1月のまとめ</a></li>
+<li><a href="/2015/02/28/201502/201502-summary/">2015年2月のまとめ</a></li>
 </ul>
+<script src="//gist.github.com/67957fd4d6db9323b503.js"></script>
+<p>とりあえずHexoのブログフォルダのscriptsに置けば動くけどあとで正式なプラグインにしよう。</p>
 
     
 	</div>
@@ -160,7 +524,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/internet/">internet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugin/">plugin</a></li></ul>
 
 			</span>
 		</div>
@@ -174,11 +538,11 @@
 
 
   
-    <article id="post-201502/201502-summary" class="post">
+    <article id="post-201503/xcode-fatal-error" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2015/02/28/201502/201502-summary/" class="article-date">
-  <time datetime="2015-02-27T15:00:00.000Z" itemprop="datePublished">Feb 28 2015</time>
+			<a href="/2015/03/03/201503/xcode-fatal-error/" class="article-date">
+  <time datetime="2015-03-02T15:00:00.000Z" itemprop="datePublished">Mar 3 2015</time>
 </a>
 		</span>
 		<span class="meta-elements author">doppac</span>
@@ -191,14 +555,27 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/28/201502/201502-summary/">2015年2月のまとめ</a>
+      <a class="article-title" href="/2015/03/03/201503/xcode-fatal-error/">XCodeプロジェクトに「Resources」というFolder referenceを作るとiOSシミュレータでのアプリ起動に失敗する</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<h1 id="2月に読んだ本"><a href="#2月に読んだ本" class="headerlink" title="2月に読んだ本"></a>2月に読んだ本</h1><ul><li><a href="/2015/02/02/201502/yowai-robot/">岡田美智男『弱いロボット』を読んだ [02/02]</a></li><li><a href="/2015/02/05/201502/dungeon-meshi/">九井諒子『ダンジョン飯』１巻を読んだ [02/05]</a></li><li><a href="/2015/02/06/201502/appleseed-alpha/">黒田硫黄「アップルシードα」の１巻を読んだ [02/06]</a></li><li><a href="/2015/02/08/201502/kokkoku-4-8/">堀尾省太『刻刻』4〜8巻を読んだ [02/08]</a></li><li><a href="/2015/02/08/201502/henshin-no-news/">宮崎夏次系『変身のニュース』を読んだ [02/08]</a></li><li><a href="/2015/02/09/201502/tohyama-shigeki-artworks/">ゲー夢エリア51『遠山茂樹作品集・アートワークス編』を読んだ [02/09]</a></li><li><a href="/2015/02/11/201502/geijutsu-shincho-akasegawa-issue/">芸術新潮 2015年2月号『超芸術家赤瀬川原平の全宇宙』 [02/11]</a></li><li><a href="/2015/02/15/201502/forgery-scientist/">須田桃子『捏造の科学者 STAP細胞事件』を読んだ [02/15]</a></li><li><a href="/2015/02/17/201502/kadomatsu/">平松るい『かど松 2015 特集 ひつじ』を読んだ [02/17]</a></li><li><a href="/2015/02/20/201502/life-and-heavymetal/">渡邉泉『いのちと重金属』を読んだ [02/20]</a></li></ul>
+    	<img src="/images/201503/xcode-fatal-error.png">
+<p>XCodeで新規プロジェクトをつくってとあるアプリのプロトタイプをつくっていたら、突然ビルド後に「Unable to run app in simulator」というエラーが出るようになって困った。</p>
+<p>試行錯誤してわかったのは、</p>
+<ul>
+<li>プロジェクトに「Resouces」というFolder referenceを作ると、以後アプリ起動できなくなる<ul>
+<li>エラーは「LaunchServiceErrorDomain, Code=0」だったり「NS POSIX ErrorDomain, Code=22」だったりいろいろっぽい</li>
+<li>Folder referenceじゃなくてGroupだったら問題ない</li>
+<li>「Resources」 iOS/OSXのアプリコンテナのディレクトリで使用される名前なのでそれと衝突する名前だとだめっぽい</li>
+</ul>
+</li>
+<li>一度上記の症状になると「Resouces」のreferenceを削除しただけではエラーは消えない</li>
+<li>~/Library/Developer/Xcode/DerivedData内の該当プロジェクトのビルドフォルダを削除してから再度ビルドすると治る</li>
+</ul>
+<p>ということらしかった。</p>
 
     
 	</div>
@@ -209,368 +586,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/summary/">summary</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/falling-down" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/28/201502/falling-down/" class="article-date">
-  <time datetime="2015-02-27T15:00:00.000Z" itemprop="datePublished">Feb 28 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/28/201502/falling-down/">電気グルーヴ『Fallin&#39; Down』</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="video-container"><iframe src="//www.youtube.com/embed/oJBDCCpVno0" frameborder="0" allowfullscreen></iframe></div>
-<p>石野卓球は3月ごろにこういう情緒的な曲を書く癖があるな（Shangri-Laも3月だし「MARCH」という曲もあるし）。個人的には「STEREO NIGHTS」が3月に出たころはちょうど会社をやめるころだったので感傷的に聞いた記憶がある。「Fallin’ Down」もエンディングテーマ成分が高くてとてもよい。</p>
-<p>あとシングルに入ってた「Baby’s on Fire (((さらうんど))) Remix」がかっこいい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/denkigroove/">denkigroove</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/good-by-to-language" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/27/201502/good-by-to-language/" class="article-date">
-  <time datetime="2015-02-26T15:00:00.000Z" itemprop="datePublished">Feb 27 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/27/201502/good-by-to-language/">ジャン＝リュック・ゴダール『さらば、愛の言葉よ』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://peatix.com/event/75074" target="_blank" rel="external">細馬さんの出るゲンロンカフェでのゴダール3D対談</a> に行きたいからさすがに事前に見ておきたいなと思って無理やりシネスイッチ銀座でゴダールの3D映画『さらば、愛の言葉よ』を観た。タイムテーブル見たら2月中に終わっちゃうみたいだったから慌てたんだけど3/6までやってるみたい。</p>
-<p>シネスイッチ銀座の3D上映はシネコンなんかと方式が違うのか100円の3Dメガネか400円のメガネにクリップオンする3Dフィルターかを購入する方式になっていて、メガネフィルターは珍しいから買おうかと思ったんだけど、シネスイッチ銀座に来る機会はそうなさそうだし100円のほうを買った（100円メガネをメガネの上にかけてもそんなに問題なかった）。</p>
-<p>映画のほうはこんな不まじめな3D映画初めて観たという感じ。3D映像と既存の映画の演出技法の齟齬（とその可能性）は前から気になっていたので字幕が3Dで重なる手法とか片目だけカメラがパンする手法などは観ていて喝采したくなった。一回ではとても咀嚼しきれない。ゲンロンカフェのトークも楽しみ。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/furusato-tax" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/26/201502/furusato-tax/" class="article-date">
-  <time datetime="2015-02-25T15:00:00.000Z" itemprop="datePublished">Feb 26 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/26/201502/furusato-tax/">ふるさと納税した</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<img src="/images/201502/furusato-tax.jpg">
-<p>今年はふるさと納税してみようと思っていろいろ調べていたんだけど、特典目当てで縁もゆかりもない自治体に納税（寄付）するのもなんかなーというのと、確定申告の締め切りが迫ってきて迷ってもいられないということで結局自分の地元（下呂市）に15口の寄付をした。手続きにはWordファイルの様式書類をフォーマットが崩れないように編集してメールで添付したりしてお役所感満点だなーと思ったけどメールの返信はすぐだったりして滞りなく完了。</p>
-<p><a href="http://www.city.gero.lg.jp/gyousei/view.rbz?nd=398&amp;ik=1&amp;pnp=102&amp;pnp=137&amp;pnp=142&amp;pnp=398&amp;cd=551" target="_blank" rel="external">心のふるさと下呂市を応援してください（下呂市ふるさと寄附）：下呂市ホームページ</a></p>
-<p>贈呈品はまあなんでもいいんだけどという感じで「甘酒・ひし餅セット」というのにしたところ、届いてみたら想像していたよりもちゃんとした品で嬉しかった（味はまだ確かめてないけど）。サイトの贈呈品の写真とかがもうちょっと魅力が伝わる感じになっているといいのにね（期待値上げすぎるのもよくないのかな）。結果的に特産品を送ってくれた店の同封パンフレットも見てしまったりしてまんまとふるさとの魅力を再発見。そういう意味では特典目当てであってもふつうなら関係しない自治体の制度に関わったり風土品に触れたりできればそれはそれでいいのかもしれないなと思う。さすがにDMMポイントはどうかと思うけど。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yota/">yota</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/takamatsu-jiro-misteries" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/25/201502/takamatsu-jiro-misteries/" class="article-date">
-  <time datetime="2015-02-24T15:00:00.000Z" itemprop="datePublished">Feb 25 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/25/201502/takamatsu-jiro-misteries/">東京国立近代美術館『高松次郎ミステリーズ』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.momat.go.jp/Honkan/takamatsujiro/" target="_blank" rel="external">展覧会 高松次郎ミステリーズ (momat.go.jp) </a></p>
-<p>去年から評判が高くていつか見に行こうと思っていた「高松次郎次郎ミステリーズ」、けっきょくぎりぎりで見に行った。僕は高松次郎の作品についてはハイレッド・センターのころの紐の作品以外はぜんぜん知らなくて、<a href="http://www.shoto-museum.jp/06_past/hired.pdf" target="_blank" rel="external">ハイレッド・センター展</a>で「影」シリーズをはじめて見たくらいだったので、こんな興味をそそる作家だったのかーというのがはずかしながら新鮮だった。</p>
-<p>あとなんというか、完全にドミトリーともきんすの世界だなーと思った。幾何や次元や射影があって、階段と部屋と本と椅子があって、最後にお菓子（？）があってという。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/art/">art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/next-pebble" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/24/201502/next-pebble/" class="article-date">
-  <time datetime="2015-02-24T12:48:00.000Z" itemprop="datePublished">Feb 24 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/24/201502/next-pebble/">新しいPebbleどうだったらうれしいか</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>Pebbleのサイトで先週から<a href="https://getpebble.com/#/UGO2vb:V0i" target="_blank" rel="external">カウントダウン</a>が始まっていて、新機種が出るらしいとの噂。<a href="http://text-perforation.doppac.cc/2015/01/18/">前も書いた通り</a>借り物のPebbleをいまだ毎日つけているので、新型が出たらいずれにせよ買うつもりなんだけど、どんなんだったらいいかなというのを書き留めておく。</p>
-<p>薄くなってカラー化する、というのがもっぱらの噂で、バッテリーライフがそのままならカラー化はやぶさかでもないけど必要かっていうとそうでもないかなと思いつつ、Pebble採用しているというメモリ液晶のカラー版は<a href="http://www.j-display.com/news/2014/20140109.html" target="_blank" rel="external">こういう感じのやつ</a>のようなので、今のPebbleのオールドスクーラー感がそのままゲームボーイカラーになるならちょっとぐっとくるかもしれない。タッチパネルになったらかなり悲しい。</p>
-<p>あとは漢字フォントが満足に積めるぐらいROMが増量されてくれればぜんぜん文句はないな。あとは僕の使い方としては通知が一時的に来なくなるような仕組みが入るといいなと思う。あと通知をまとめてくれるとか。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pebble/">pebble</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/child-favor-best-practice" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/23/201502/child-favor-best-practice/" class="article-date">
-  <time datetime="2015-02-22T15:00:00.000Z" itemprop="datePublished">Feb 23 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/23/201502/child-favor-best-practice/">子供の発熱ベストプラクティス</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>子供がひさしぶりに発熱したので、書き出しておく。ほかにもあったかな。</p>
-<h3 id="毎朝（休日も）熱を測る"><a href="#毎朝（休日も）熱を測る" class="headerlink" title="毎朝（休日も）熱を測る"></a>毎朝（休日も）熱を測る</h3><p>保育園の連絡帳に書くので平日はだいたい熱を測るんだけど週末は忘れがち。測らないで遊びに連れて行ったりするとだいたい夕方に熱が上がってきて月曜から休まざるをえないパターンになりがちなので、休みの朝にチェックするのが大事。</p>
-<h3 id="食欲がないときはだいたい熱が出る"><a href="#食欲がないときはだいたい熱が出る" class="headerlink" title="食欲がないときはだいたい熱が出る"></a>食欲がないときはだいたい熱が出る</h3><p>子どもの食欲がないときは喉が腫れて痛いから食が進まないパターンが多い。喉がいたいとか教えてくれないので気づきにくい。体調が悪いので食べられないパターンもあるかな。</p>
-<h3 id="機嫌が悪いときはだいたい熱が出る"><a href="#機嫌が悪いときはだいたい熱が出る" class="headerlink" title="機嫌が悪いときはだいたい熱が出る"></a>機嫌が悪いときはだいたい熱が出る</h3><p>起き抜けから機嫌がわるいときはだいたい体調が悪いっぽい。</p>
-<h3 id="冷えピタは脇と股に貼る"><a href="#冷えピタは脇と股に貼る" class="headerlink" title="冷えピタは脇と股に貼る"></a>冷えピタは脇と股に貼る</h3><p>おでこに貼っても気休めにもならないと言われる冷えピタだけど、半分に切って両脇および両内股に貼ってから寝させると翌日熱が取れていることがおおい（気がする） </p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kodomo/">kodomo</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201502/measuring-exhibition" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/22/201502/measuring-exhibition/" class="article-date">
-  <time datetime="2015-02-21T15:00:00.000Z" itemprop="datePublished">Feb 22 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/22/201502/measuring-exhibition/">21_21 DESIGN SIGHT 『単位展 ― あれくらい それくらい どれくらい？』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<img src="/images/201502/measuring-exibition.jpeg">
-<p> <a href="http://www.2121designsight.jp/program/measuring/" target="_blank" rel="external">単位展 ― あれくらい それくらい どれくらい？</a></p>
-<p>先週始まった単位展に長男と行ってきた。21_21 DESIGN SIGHTの企画展はすごい混むイメージがあったのでちょっと覚悟して行ったんだけど、まだそれほど混んでなかった。物販コーナーが充実していてオリジナルグッズや関連書籍はもちろん、<a href="http://www.nakadai.co.jp/" target="_blank" rel="external">ナカダイ</a> とのコラボ（？）で産廃マテリアルのはかり売りをしていて、子供は素材感あふれるマテリアルに興味津々なようだった。</p>
-<p>展示のほうも１時間では見きれないくらいいろんな角度から「単位」を表現した展示が揃っててあますところなく見たいところだったのだけど子連れでそうもいかず断念。今度あらためて見たい。長男は奥田透也＋菅 俊一「命の単位　ゾウ・ヒト・ネズミの鼓動」が気に入ったみたいだった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design/">design</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xcode/">xcode</a></li></ul>
 
 			</span>
 		</div>
@@ -586,7 +602,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/82/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/81/">81</a><a class="page-number" href="/page/82/">82</a><span class="page-number current">83</span><a class="page-number" href="/page/84/">84</a><a class="page-number" href="/page/85/">85</a><span class="space">&hellip;</span><a class="page-number" href="/page/107/">107</a><a class="extend next" rel="next" href="/page/84/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/82/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/81/">81</a><a class="page-number" href="/page/82/">82</a><span class="page-number current">83</span><a class="page-number" href="/page/84/">84</a><a class="page-number" href="/page/85/">85</a><span class="space">&hellip;</span><a class="page-number" href="/page/108/">108</a><a class="extend next" rel="next" href="/page/84/">Next &raquo;</a>
     </nav>
   
 
