@@ -56,6 +56,306 @@
     <div id="main">
       
   
+    <article id="post-1_collisions/2005-11-19" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/19/1_collisions/2005-11-19/" class="article-date">
+  <time datetime="2005-11-18T15:00:00.000Z" itemprop="datePublished">Nov 19 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/19/1_collisions/2005-11-19/">Piccy ver.001</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/piccy001.png" alt="piccy001.png"></p>
+<p>■先日公開した<a href="http://collisions.dotimpac.to/works.web/piccy.html" target="_blank" rel="external">Piccy</a>を、問題の修正や新機能を追加してバージョン001として公開します。</p>
+<p>バージョン001では動作の不具合の修正と以下の機能を追加しました。</p>
+<ul>
+<li>管理者認証機能</li>
+<li>写真、フォルダ、タグへのコメント</li>
+<li>GPS携帯からの位置情報通知、ロケーションタグ機能</li>
+<li>GoogleMapsによるロケーションタグ一覧</li>
+</ul>
+<p>サンプルサイトをごらんください。サンプルサイトはパスワード「guest」で管理者ログインできます。</p>
+<ul>
+<li><a href="http://piccy.dotimpac.to/" target="_blank" rel="external">http://piccy.dotimpac.to/</a></li>
+</ul>
+<p>■ロケーションタグとGoogleMapsAPIもフォトアルバムを考えていた当初からやってみたかったので、とりあえず作ってみましたがどうでしょうか。</p>
+<p>ちなみに写真と位置情報については、以前増井&#8221;富豪家&#8221;俊之さんとお話してたときに（Wikiばなですな）、「位置情報と時間の関連データが取れてれば後からどうにでもなるんだから位置情報をいちいち写真に添付するのはナンセンスだ」という話をしてて、もっともだなーと思っていたので、そういうものをつくってみたいなと前から思ってたんでした。</p>
+<p>■［追記］</p>
+<ul>
+<li>バグを修正したpiccy002をリリースしました。</li>
+<li><a href="http://processing.dotimpac.to/?PiccySupport" target="_blank" rel="external">piccyサポートwikiページを用意しました</a></li>
+</ul>
+<h1 id="Piccyとは"><a href="#Piccyとは" class="headerlink" title="Piccyとは"></a>Piccyとは</h1><p>■Ajaxを採用したオンラインフォトアルバムです。 気軽に管理できてストレスなく閲覧できる画像ビュアーを目指して開発しています。</p>
+<p>詳しくは以下の解説ページもごらんください。</p>
+<ul>
+<li><a href="http://collisions.dotimpac.to/works/web/piccy.html" target="_blank" rel="external">http://collisions.dotimpac.to/works/web/piccy.html</a></li>
+</ul>
+<h1 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h1><ul>
+<li><a href="http://piccy.dotimpac.to/release/piccy002_20051118.zip" target="_blank" rel="external">http://piccy.dotimpac.to/release/piccy002_20051118.zip</a></li>
+</ul>
+<h1 id="設置方法"><a href="#設置方法" class="headerlink" title="設置方法"></a>設置方法</h1><ul>
+<li>圧縮ファイルを展開する。</li>
+<li>info.txt のadminpassを必ず変更する。</li>
+<li>info.txt の site_name や url などを編集する。</li>
+<li>index.rb 先頭行のRubyのPATHをサーバーに合わせる。</li>
+<li>サーバに転送する。</li>
+<li>dot_htaccessは「.httaccess」に名前を変える。</li>
+<li>index.rb に実行属性を付加する。他の属性は良きに計らう。 <ul>
+<li>data以下のディレクトリに書き込み属性が必要かもしれません。</li>
+</ul>
+</li>
+</ul>
+<h2 id="サムネイル作成機能を使う"><a href="#サムネイル作成機能を使う" class="headerlink" title="サムネイル作成機能を使う"></a>サムネイル作成機能を使う</h2><p>ImageMagick/RMagickを使用することで、画像のサムネイルを作成することができます。 デフォルトでは機能はオフにされています。</p>
+<ul>
+<li>info.txtのmakethumnailをtrueにする。スペースで区切ってください。  <blockquote>
+<p>makethumnail true</p>
+</blockquote>
+</li>
+<li>ImageMagickとRMagickをインストールしてください。<br>　必要ならば、thumnail.rbのrequireのパスを変更してください</li>
+</ul>
+<h2 id="位置情報記録機能を使う"><a href="#位置情報記録機能を使う" class="headerlink" title="位置情報記録機能を使う"></a>位置情報記録機能を使う</h2><p>auのGPS機能のある携帯電話からアクセスすることで、位置情報のあるタグを使用できます。 デフォルトでは機能はオフにされています。</p>
+<ul>
+<li>info.txtのlocationをtrueにする。スペースで区切ってください。  <blockquote>
+<p>location true</p>
+</blockquote>
+</li>
+<li>ezwebからpiccyを置いたURLにアクセスしてください。  <blockquote>
+<p><a href="http://（自分のサイトURL）/index.rb?cmd=location" target="_blank" rel="external">http://（自分のサイトURL）/index.rb?cmd=location</a></p>
+</blockquote>
+</li>
+<li>位置情報通知ページが出ますので、「位置情報を通知する」をクリックします。</li>
+<li>位置情報をが得られればフォームが出ますので、場所の名前を入力して送信してください。<br>　（場所の名前は入力しなくてもかまいません）</li>
+</ul>
+<p>※現仕様では位置情報通知は誰からでもできてしまいますので注意してください。</p>
+<h2 id="GoogleMaps機能を使う"><a href="#GoogleMaps機能を使う" class="headerlink" title="GoogleMaps機能を使う"></a>GoogleMaps機能を使う</h2><p>GoogleMapsに位置情報タグをマッピングしてみることができます。</p>
+<ul>
+<li>GoogleMaps APIのキーを取得します。 <ul>
+<li><a href="http://www.google.com/apis/maps/signup.html" target="_blank" rel="external">http://www.google.com/apis/maps/signup.html</a></li>
+</ul>
+</li>
+<li>info.txtのgmapkeyをにAPIキーを入れる。スペースで区切ってください。  <blockquote>
+<p>location ABQIAAAAgf6OSxrgd3QJC98-sUWrXBT6rMgtMUOAl&#8230;</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="謝辞、同梱ライブラリについて"><a href="#謝辞、同梱ライブラリについて" class="headerlink" title="謝辞、同梱ライブラリについて"></a>謝辞、同梱ライブラリについて</h1><p>以下のライブラリ、モジュールを使用しています。関係者の開発と提供に感謝します。</p>
+<ul>
+<li>ruby-jsonをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://sourceforge.net/projects/json" target="_blank" rel="external">http://sourceforge.net/projects/json</a></li>
+</ul>
+</li>
+<li>imagesize.rbをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://tociyuki.cool.ne.jp/clife/comp/rubyimagesize.html" target="_blank" rel="external">http://tociyuki.cool.ne.jp/clife/comp/rubyimagesize.html</a></li>
+</ul>
+</li>
+<li>PhotoXPのexifパースモジュールexifcodec一式をアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://www.daifukuya.com/photoxp/" target="_blank" rel="external">http://www.daifukuya.com/photoxp/</a></li>
+</ul>
+</li>
+<li>javascriptライブラリscript.aculo.usをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://script.aculo.us/" target="_blank" rel="external">http://script.aculo.us/</a></li>
+</ul>
+</li>
+<li>GoogleMaps用測地系変換ライブラリwgsgmap.15.jsをアーカイブに同梱し、使用しています。 <ul>
+<li><a href="http://d.hatena.ne.jp/tociyuki/20050731/1122823117" target="_blank" rel="external">http://d.hatena.ne.jp/tociyuki/20050731/1122823117</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="動作について"><a href="#動作について" class="headerlink" title="動作について"></a>動作について</h1><ul>
+<li>動作についてはFirefox1.0.7、InternetExplorer6で行っています。</li>
+<li>Opera,Safariなどのブラウザでの動作検証は行っていません。問題がありましたらフィーとバックいただけると助かります。</li>
+<li>報告はこの記事のコメントなどにどうぞ。</li>
+</ul>
+<h1 id="ライセンス"><a href="#ライセンス" class="headerlink" title="ライセンス"></a>ライセンス</h1><ul>
+<li>piccy は、<a href="http://www.gnu.org/philosophy/free-sw.ja.html" target="_blank" rel="external">フリーソフトウェア</a>です。</li>
+<li>完全に無保証です。</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2005-11-11" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/11/1_collisions/2005-11-11/" class="article-date">
+  <time datetime="2005-11-10T15:00:00.000Z" itemprop="datePublished">Nov 11 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/11/1_collisions/2005-11-11/">＠IT連載「Ajaxで作るインタラクティブWebアプリケーション」(1)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>■<a href="http://www.atmarkit.co.jp/fwcr/index.html" target="_blank" rel="external">@IT：リッチクライアント＆帳票</a>フォーラムの記事を担当することになりました。全３回の連載第１回が公開されています。</p>
+<ul>
+<li>Ajaxで作るインタラクティブWebアプリケーション(1) <ul>
+<li><a href="http://www.atmarkit.co.jp/fwcr/rensai/ajax_photoalbum01/01.html" target="_blank" rel="external">Ajaxフォトアルバムのフェードイン画像フレームを作ろう</a></li>
+</ul>
+</li>
+</ul>
+<p>実践的な内容のAjax記事が欲しいという編集者さんとお話をさせてもらう機会がありまして、Prototypeやscript.aculo.usを紹介しながら、<a href="http://collisions.dotimpac.to/works/web/piccy.html" target="_blank" rel="external">Piccy</a>みたいなAjaxアプリケーションを実際につくるプロセスを解説するようなものなら書けるかなということで今回の連載となりました。Ajaxの技術は細かなテクニックやノウハウは各所のブログで公開されているものの、アプリっぽいものを最初からつくっていくような記事はあまりないようなので（強いて言うと<a href="http://d.hatena.ne.jp/AjaxEroge/" target="_blank" rel="external">Ajaxでエロゲーを作るブログ</a>とか？　ほかにあったら教えてください）。解説読んでたいしたことないなーともっと面白いもの作ってくれる人が増えるといいなと。あと２回続きますのでよろしくお願いします。ちなみにサーバ通信は最後の最後（！）になる予定です。まだ書いてないですけど。</p>
+<p>第１回の執筆時には以下の日記／ブログ／ソースを参考にさせていただきました。順不同で感謝。</p>
+<ul>
+<li><a href="http://prototype.conio.net/" target="_blank" rel="external">prototype.js</a></li>
+<li><a href="http://script.acul.us/" target="_blank" rel="external">script.acul.us</a></li>
+<li><a href="http://d.hatena.ne.jp/naoya/" target="_blank" rel="external">naoyaのはてなダイアリー</a>（prototype.js でデザインパターンのシリーズ）</li>
+<li><a href="http://www.sergiopereira.com/articles/prototype.js.html" target="_blank" rel="external">Using prototype.js</a></li>
+<li><a href="http://d.hatena.ne.jp/wanpark/" target="_blank" rel="external">こども(てれび)</a> <ul>
+<li><a href="http://d.hatena.ne.jp/wanpark/20050820#1124465166" target="_blank" rel="external">prototype.js ってなに？の巻</a></li>
+<li><a href="http://d.hatena.ne.jp/wanpark/20050821#1124556721" target="_blank" rel="external">prototype.js で簡単な Ajax のサンプル</a></li>
+</ul>
+</li>
+<li><a href="http://d.hatena.ne.jp/higepon/" target="_blank" rel="external">ひげぽん OSとか作っちゃうかMona</a> <ul>
+<li><a href="http://d.hatena.ne.jp/higepon/20050831/1125472820" target="_blank" rel="external">実践 prototype.js ［1］</a></li>
+<li><a href="http://d.hatena.ne.jp/higepon/20050901/1125555797" target="_blank" rel="external">実践 prototype.js ［2］</a></li>
+</ul>
+</li>
+<li><a href="http://d.hatena.ne.jp/brazil/" target="_blank" rel="external">Collection &amp; Copy</a> <ul>
+<li><a href="http://d.hatena.ne.jp/brazil/20050909/1126254775" target="_blank" rel="external">（翻訳）AJAX/JavaScriptライブラリまとめ</a></li>
+</ul>
+</li>
+<li><a href="http://www.lesserwiki.org/" target="_blank" rel="external">LesserWiki</a></li>
+<li><a href="http://zerobase.jp/blog/entry-268.html" target="_blank" rel="external">ページ内リンクでスムーススクロール@ZEROBASE CAST</a></li>
+</ul>
+<p>そのほか多くのJavaScript/Ajaxハッカーの技術とあけっぴろげのソースにも感謝。</p>
+<p>書き起こしのAjaxアプリの意義の考えかたについては<a href="http://chasen.org/~taku/blog/archives/2005/10/ajax.html" target="_blank" rel="external">Ajax で隠れた技術を表舞台に出す</a>をヒントにしました。<a href="http://chasen.org/~taku/blog/" target="_blank" rel="external">きまぐれ日記</a>の工藤拓さんもちょうど<a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20051104/224040/" target="_blank" rel="external">作って理解するAjax</a>という連載を始めるようなので、どんな内容になるのか楽しみです。</p>
+<p>あとあれだ、サンプルの画像が意味もなく<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4947752637/" target="_blank" rel="external">シンメトリー写真</a>なのはまあ気にせず。無難なのがなかっただけです。ほんとはオランダのサッカーチームの写真とかがよかったんですが。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/info/">info</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-1_collisions/2005-11-08" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/11/08/1_collisions/2005-11-08/" class="article-date">
+  <time datetime="2005-11-07T15:00:00.000Z" itemprop="datePublished">Nov 8 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/11/08/1_collisions/2005-11-08/">Tropy(とろぴぃ）のことを考えている</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>■ご多分にもれず、<a href="http://www.hyuki.com/d/200511.html#i20051103183338" target="_blank" rel="external">Tropy(とろぴぃ）</a>のことを考えている。Tropyとは、<a href="http://www.hyuki.com/index.html" target="_blank" rel="external">結城浩</a>さんがつくり、つい先日公開されていたソフトウェアだ。サーバ負荷の問題があり、いまは稼動していない。</p>
+<p>現在「お休み」しているTropyのことを記憶と想像だけで語るのはむずかしくあぶなっかしいのだが、それをしてみたい。たぶんおぼつかないので、間違いのないところは<a href="http://www.hyuki.com/d/200511.html#i20051103183338" target="_blank" rel="external">結城さん自身による解説</a>を読んでもらったほうがいいだろう。</p>
+<p>Tropyには「どこにも中心はない」、と結城さんが解説しているとおり、<a href="http://www.hyuki.com/tropy/" target="_blank" rel="external">http://www.hyuki.com/tropy/</a> を開いたとき表示されるページは、毎回ランダムに決定される。だから、Tropyを見た多くの人が、じっさいに最初にどんなページを見たかはわからない。にもかかわらずそれなりに確信があるのだけど、興味をもってTropyのページへ移動した人が、最初にTropyのページを見たとき、みんな「はっとした」んではないだろうか。Tropyのページは、いままで自分がみてきたいわゆるwebページの「なににも似ていない」、と感じただろうと想像する。それはおそらく結城さんが、「なににも似ていない」ようにTropyを設計していたからだ。</p>
+<p>しかし、その「なににも似ていない」Tropyが、初対面の仕事相手のように緊張を誘うものだったかというと、そうでもなかったはずだ。むしろ逆だろう。ここはやや大胆に言ってみようと思うけども、Tropyのページを見たとき、そのページに書かれたテキストを、「どこかのだれかが実際につぶやいているところ」をイメージしたんじゃなかっただろうか。Tropyのページには、どれにもちょうど「どこかのだれかの実際のつぶやき」分くらいの真実が含まれていたような気がする。その「つぶやき」を、ほかならぬ「どこかのだれかの実際のつぶやき」を聞くために、多くの人は「Random」のリンクを何度もクリックしてみたんだと僕は思う。そして、おそらくそれも、結城さんがTropyをそのように設計していたから、そうだったのだ。</p>
+<p>Tropyを見て、べつに最初からこういうことを考えていたわけではない。「Tropyが何をしていたのか」を考えるようになったのは、すでにたくさん開発されている<a href="http://www.hyuki.com/d/200511.html#i20051105203040" target="_blank" rel="external">Tropyクローン</a>をひととおり見てからだ。それらは、同機能を実現しているという意味では間違いなくTropyクローンだった。のだが、それらの多くは、Tropyよりも、「Tropy以外の別のもの」に似すぎているように感じられたのだった。どういうことだ？　と考えはじめたのは、それからだ。じっさいのところ、まだよくはわからない。</p>
+<p>結城浩さんご自身による<a href="http://www.hyuki.com/d/200511.html#i20051107092750" target="_blank" rel="external">Tropy設計判断</a>というメモが公開されていて、Tropyのいろいろな要素を、なぜそうしたのかがわかるようになっている。僭越ながらコメントをつけさせてもらうと、これらの判断そのものは、プログラムやデザインをする人なら、特にwebアプリケーションの開発者やwebデザイナーなら、だれでもやっていることであり、驚くところではないと思う。驚くべきはそこではなくて、結城さん自身が語っているとおり、開発の時点ではTropy（開発されていた時点では、まだ名前のついていなかった「それ」）が、いったいどういうものなのか結城さん自身にもわかっていなかったにもかかわらず、そうした自覚的な判断をしていたというところではないかな。</p>
+<blockquote>
+<p>Tropyでは、書かれたページの全貌や関係を、できるだけ&#8221;把握させない&#8221;ように工夫されています。できるだけランダムに、できるだけバラバラに。 </p>
+<p>このような、Webの慣習に逆行しているようなページに、いったいどんな意味があるのでしょうか。 </p>
+<p>結城自身にも、まだよくわかっていません。</p>
+<p>でも、あなたには、わかるかも。 </p>
+</blockquote>
+<p>たぶん結城さんは、そのページをみて、それがまだ「なににも似ていない」ことを目指して、それを見た人が「はっとする」ところを想像しながら、Tropyと名づけられるそれを作っていたのではないかと思うのだった。</p>
+<p>■私見ですが、現時点で本家にもっとも近いTropyクローン「<a href="http://tropy.aquahill.net/sys?a" target="_blank" rel="external">Fropy</a>」をどうぞ。</p>
+<ul>
+<li><a href="http://tropy.aquahill.net/" target="_blank" rel="external">http://tropy.aquahill.net/</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2005-11-06" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -636,224 +936,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-08-28" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/08/28/1_collisions/2005-08-28/" class="article-date">
-  <time datetime="2005-08-27T15:00:00.000Z" itemprop="datePublished">Aug 28 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/08/28/1_collisions/2005-08-28/">スケジュール指向webメモツール：Calki　ver.002</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/calki002.png" alt="calki002.png"></p>
-<p>■夏の自由研究がわりに<a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">calki</a>に手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。</p>
-<p><a href="http://prototype.conio.net/" target="_blank" rel="external">prototype.js</a>を使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。</p>
-<ul>
-<li><a href="http://calki.dotimpac.to/" target="_blank" rel="external">http://calki.dotimpac.to/</a>　サンプルサイト</li>
-</ul>
-<h1 id="Calkiとは"><a href="#Calkiとは" class="headerlink" title="Calkiとは"></a>Calkiとは</h1><p>■日付管理、簡易スケジュール機能のあるWiki風のメモツールです。<a href="http://ninjinix.x0.com/rn/" target="_blank" rel="external">RandomNote</a>がベースになっています。詳しくは以下のページをごらんください。</p>
-<ul>
-<li><a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">スケジュール指向Wiki風メモツール：Calki</a> <ul>
-<li>前バージョンの記事</li>
-</ul>
-</li>
-<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">Calkiとは</a> <ul>
-<li>CalkiのAboutPage</li>
-</ul>
-</li>
-</ul>
-<h1 id="新機能"><a href="#新機能" class="headerlink" title="新機能"></a>新機能</h1><p>■最近になって<a href="http://book.mycom.co.jp/wd/" target="_blank" rel="external">WebDesigning</a>の今月号を立ち読みしてたら、JavaScript/Ajaxの特集に<a href="http://collisions.dotimpac.to/works/web/kaiwarecotonoha.html" target="_blank" rel="external">kaiwarecotonoha</a>が紹介されてて驚いて、それでAjaxの検索が多かったのかー、あれすごい適当だしメンテもしてないしその後Ajaxもとくに触ってないから恐縮だなー、などと思いまして、じゃあprototype.jsでもちょっと触ってみるかと思ったんですな。せっかくだからとcalkiにいろいろ機能をつけていったら、インターフェイスの部分がかなり刷新されてしまいました。おおむね使いやすくなってると思います。</p>
-<h2 id="JavaScriptによる動的なページ操作"><a href="#JavaScriptによる動的なページ操作" class="headerlink" title="JavaScriptによる動的なページ操作"></a>JavaScriptによる動的なページ操作</h2><ul>
-<li>日付ページへのマウスオーバーでその日付ページに対するツールバーが出ます。直感的な操作が可能です。</li>
-<li>見出しをクリックすることで、メモを畳んで隠すことができます。</li>
-<li>開いている日付から「前の日」「次の週」のように順番に日付ページを開くことができます。</li>
-</ul>
-<p>JavaScriptでの動的なスタイル操作で、見たくない情報は隠せてちょっと気持ちがいいです。まだ開いてないメモを開いたり、日付を進めたり戻したりするときは、Ajax式の非同期ロードをします。</p>
-<h2 id="非同期ロード／セーブによるシームレス編集"><a href="#非同期ロード／セーブによるシームレス編集" class="headerlink" title="非同期ロード／セーブによるシームレス編集"></a>非同期ロード／セーブによるシームレス編集</h2><ul>
-<li>以前までは画面が切り替わっていたメモの編集がその場でできるようになりました。</li>
-<li>追記の書き込みもその場で非同期に行います。</li>
-<li>編集時にほかのメモが参照できるので、コピー＆ペーストが簡単です。</li>
-</ul>
-<p><a href="http://www.tiddlywiki.com/" target="_blank" rel="external">TiddlyWiki</a>のサクサク感を目指してみました。やや重いので待ち時間なしとはいきませんが。使ってみて編集時にほかのメモが見られる（そのメモも編集状態にしてwikiフォーマットでコピペできる）ってのがわりと重要だなと思ったんですが、それは後で書きます。</p>
-<h2 id="MM-memoインポート機能"><a href="#MM-memoインポート機能" class="headerlink" title="MM/memoインポート機能"></a><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>インポート機能</h2><ul>
-<li><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>から自分のブックマークを日付ごとに取得してメモを作れます。</li>
-<li>ちゃんとタグをキーワードリンクにするので、うれしいかも</li>
-</ul>
-<p>おまけというか、自分が欲しかったのでつけました。ほんとは毎日自動取得したほうがいいかもしれないけど。</p>
-<h1 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h1><p>■Ruby1.8.1の環境が必須です。また、非同期編集とMM/memoインポートは、別途Uconvをインストールしないと使えなくなっちゃったんで、デフォルトでは無効になっています。そのあたりご了承のうえ設置・使用してください。もちろん無保証です。</p>
-<ul>
-<li><a href="http://calki.dotimpac.to/release/calki002_20050829.zip" target="_blank" rel="external">http://calki.dotimpac.to/release/calki002_20050829.zip</a></li>
-</ul>
-<p>設置方法はAboutPageをごらんください。</p>
-<ul>
-<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">http://calki.dotimpac.to/?AboutPage.txt</a></li>
-</ul>
-<h1 id="雑談：シームレス編集とwikiページの再統合"><a href="#雑談：シームレス編集とwikiページの再統合" class="headerlink" title="雑談：シームレス編集とwikiページの再統合"></a>雑談：シームレス編集とwikiページの再統合</h1><p>■上にもちょっと書きましたが自分でちょっと使ってみて、シームレス編集（というかJavaScriptでエレメントを差し替えてその場で編集できる機能）とwikiはかなり相性がいいんじゃないかと思いましたね（TiddlyWikiはもともとそれを狙っているのかもしれませんが）。とくに、編集しながらほかのページを見たり、そのページから（しかもWiki書式で）コピーしたりできるのがwiki的にうれしい。wikiエンジンによるアジャイルなコンテンツ作りには、方針の変更とか内容の再統合というプロセスが絶対に避けられないわけで、長くなりすぎたページの株分けとか、よく参照する内容を集めた新しいページの作成みたいなことが極力やりやすくないといけないのではと思いました。</p>
-<p>CalkiにはRandomNoteから継承した検索キーワードリンク機能があって、この検索結果の一番上に「このキーワードの新しいメモを作る」というフォームを前バージョンからつけてたんですが、使ってるうちにあんまり便利じゃないんではずしたりしてたんですな。ところが、これが今バージョンからはかなり威力を発揮します。たとえば「JavaScript」を検索すると、いままでメモしたJavaScriptのメモが一覧されますが、この中にはよく見るメモもあればぜんぜん見ないメモもあるわけです。そこでよく見るメモをそれぞれ編集状態にしてコピーして、新しいフォームに入れて別のキーワードをつけてメモを作成すれば、いままでより情報が簡単に引き出せるようになるというわけ。これかなり便利じゃないすか？　便利だと思うんですが、どうでしょう。</p>
-<p>というわけで、もし興味があったら使ってみてください。たぶんバグはたくさんあると思いますが。バグがあったらサンプルサイトに［［バグ］］とか検索キーワードをつけてメモを作っておいていただけるとたすかります。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-07-25" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/07/25/1_collisions/2005-07-25/" class="article-date">
-  <time datetime="2005-07-24T15:00:00.000Z" itemprop="datePublished">Jul 25 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/25/1_collisions/2005-07-25/">Autostitchの間違った使いかた</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/autostitch.jpg" alt="autostitch.jpg"></p>
-<p>■<a href="http://cs.ubc.ca/~mbrown/autostitch/autostitch.html" target="_blank" rel="external">Autostitch</a>というソフトを最近知りました。カメラを振りながら撮った連続画像をつないで、いわゆるパノラマ画像にするソフト。同様の処理はいまやたいていのデジカメに同梱ツールでついてそうな気がしますが、ふつうはなんからの手作業が必要そうなところがこれは処理が完全全自動で、それらしい画像を多数つっこんでやれば、なんとなく画像を作ってくれるというところが特色なんでしょうか。</p>
-<p>せっかくなので試してみようと思ったんですがあんまりパノラマっぽい連続画像を撮ったことがなかったので、去年金沢２１世紀美術館に行ったときに外周を回りながら撮影していた連続画像をつっこんでみたところ、ぜんぜんパノラマではないですが奇妙な画像ができました。なんかがんばって整合させようとしてるとこが泣ける。よく見ると建物のガラスに映った自分の像をキーにつなごうとしてたりして。</p>
-<ul>
-<li>大きい画像はこっちに。 <ul>
-<li><a href="http://project.dotimpac.to/kanazawa21st/kanazawa_pano.jpg" target="_blank" rel="external">http://project.dotimpac.to/kanazawa21st/kanazawa_pano.jpg</a></li>
-</ul>
-</li>
-</ul>
-<h1 id="金沢２１世紀美術館人力タイムスライス"><a href="#金沢２１世紀美術館人力タイムスライス" class="headerlink" title="金沢２１世紀美術館人力タイムスライス"></a>金沢２１世紀美術館人力タイムスライス</h1><p>去年の１１月ごろ遊びにいった<a href="http://www.kanazawa21.jp/ja/index.html" target="_blank" rel="external">金沢２１世紀美術館</a>は、上から見ると建物が完全な円形をしていることで有名な美術館なんですが、構内に建物に沿って敷かれた遊歩道もあって、つまりこの道も円形になっているわけです。てことはこの遊歩道を数歩づつ歩きながら建物をデジカメで撮影していけば、円形の建物を周回するムービーができるなーと思ってやってみたんですな。当時サポートしてた映像の授業でデジカメでなにかのモノを周回しながら撮影してその静止画をタイムラインに並べて、いわゆる「タイムスライス（「マトリックス」にあるような、時間の止まった世界でカメラだけが移動するような効果を得られる特殊撮影）」っぽい映像を手作りするという課題を出していたんですが、これは21世紀美術館の人力タイムスライスというわけです。せっかくなんでムービーを公開しておきます。ダウンロードしてループ再生するとおもしろいかもしれません。</p>
-<ul>
-<li><a href="http://project.dotimpac.to/kanazawa21st/kanazawa21.mov" target="_blank" rel="external">http://project.dotimpac.to/kanazawa21st/kanazawa21.mov</a></li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-07-24" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/07/24/1_collisions/2005-07-24/" class="article-date">
-  <time datetime="2005-07-23T15:00:00.000Z" itemprop="datePublished">Jul 24 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/24/1_collisions/2005-07-24/">PONG-ED　(2005)</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/pong-ed.jpg" alt="pong-ed.jpg"></p>
-<ul>
-<li>体験型インスタレーション</li>
-<li>PC、プロジェクター、パドルコントローラ、スピーカ、合板</li>
-<li>制作協力：江田 由美子</li>
-</ul>
-<p>　世界最初の商用ビデオゲーム「PONG（ポン）」のルールで、ネットワークを介してとなりのギャラリーの相手と対戦プレイができます。ボールがとなりのギャラリーの画面に移る際、３つの場所の違うサーバ（会場内、東京都内、米国）を中継するため、最初はひとつに重なったボールが遅延によってしだいに離れていきます。</p>
-<p>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
-<h1 id="PONG-ED-2005"><a href="#PONG-ED-2005" class="headerlink" title="PONG-ED (2005)"></a>PONG-ED (2005)</h1><ul>
-<li>Interactive installation</li>
-<li>Computer, Projector, Paddle controller, Speaker system, Chipbord</li>
-<li>Collaboration with designing exterior: Yumiko Eda </li>
-</ul>
-<p>In this work, you can play the video game with another person who at next gallery space over computer network. When “the ball” moves to another monitor that put in the next gallery space, the data is transferred through three different servers. As a result, “the ball” is separated into three, and these balls is delayed each other little by little. </p>
-<p>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
 
 			</span>
 		</div>
