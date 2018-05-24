@@ -56,6 +56,61 @@
     <div id="main">
       
   
+    <article id="post-201712/drive-file-stream-reinstall" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/18/201712/drive-file-stream-reinstall/" class="article-date">
+  <time datetime="2017-12-17T15:00:00.000Z" itemprop="datePublished">Dec 18 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/18/201712/drive-file-stream-reinstall/">Drive File Streamを再インストール</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://support.google.com/a/answer/7491144?hl=ja" target="_blank" rel="external">ドライブ ファイル ストリームを導入する - G Suite 管理者 ヘルプ</a></p>
+<hr>
+<p>会社でだいぶ前にクラウドストレージをDropBoxの企業プランからGoogle Drive(G Guite)の有料プランに切り替えて以来、Google Driveクライアントの出来の悪さに辟易としていたのでDrive File Streamにはかなり期待していたんだけど、実際にリリースされてみたらクラウドドライブとしての機能がさらに下がってしまったのでGDriveはもうwebベースでしか使わなくなっていた。</p>
+<p>いちばん困っていたのは仮想化されたファイルがロードされるときに仮想ドライブがアンマウントされてしまい、実質的にファイルが開けないとこで、これはさすがに何かの不具合じゃないかと思い立ってDrive File Streamクライアントを再ダウンロードして指示通りにサイレントインストールしてみた。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">% hdiutil mount GoogleDriveFileStream.dmg; sudo installer -pkg /Volumes/Install\ Google\ Drive\ File\ Stream/GoogleDriveFileStream.pkg -target &quot;/Volumes/Macintosh HD&quot;; hdiutil unmount /Volumes/Install\ Google\ Drive\ File\ Stream/</div></pre></td></tr></table></figure>
+<p>再インストールしてみたら、入れ直したせいなのかサイレントインストールが必要だったのかそれとも使ってないうちにクライアントがアップデートされたのかわからないけど、ロード時にアンマウントされる現象は起きなくなった。</p>
+<p>でも相変わらずフォルダをFinderの「よく使う項目」に登録してもアンマウント時に消えてしまうし、シンボリックリンクはできないしでアクティブなフォルダとしては使い物にならないと思う。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201712/android-strait-news-broadcast-app" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -110,58 +165,6 @@
 
 
   
-    <article id="post-201712/manchester-by-the-sea" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/12/12/201712/manchester-by-the-sea/" class="article-date">
-  <time datetime="2017-12-11T15:00:00.000Z" itemprop="datePublished">Dec 12 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/12/12/201712/manchester-by-the-sea/">ケネス・ロナーガン『マンチェスター・バイ・ザ・シー』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.manchesterbythesea.jp/" target="_blank" rel="external">映画『マンチェスター・バイ・ザ・シー』公式サイト</a></p>
-<hr>
-<p>飯田橋ギンレイホール（初めて行った）で『LION/ライオン 25年目のただいま』との二本立てだったけどこっちだけ観てきた。</p>
-<p>マンチェスターって聞いてイギリスのマンチェスターのことだと思い込んで観てたんだけど、「マンチェスター・バイ・ザ・シー」はアメリカの町のほうだった。主人公の人生に起きたことをひじょうにゆったりとした演出で重すぎず軽すぎず描く映画で関心したんだけど、ギンレイホールのお客はなかなかファンキーで上映中最前席で好きに立ち上がったり、トイレなのか何度も席を外すので気がそがれる場面があった。しかもその席を外した場面が、まさに映画の中で主人公がうかつに家を留守にした結果彼の人生に深く影を落とすことになる決定的な出来事が起きるところだったという…</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
     <article id="post-201712/hent-economics" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -202,6 +205,58 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manga/">manga</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201712/manchester-by-the-sea" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/12/201712/manchester-by-the-sea/" class="article-date">
+  <time datetime="2017-12-11T15:00:00.000Z" itemprop="datePublished">Dec 12 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/12/201712/manchester-by-the-sea/">ケネス・ロナーガン『マンチェスター・バイ・ザ・シー』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://www.manchesterbythesea.jp/" target="_blank" rel="external">映画『マンチェスター・バイ・ザ・シー』公式サイト</a></p>
+<hr>
+<p>飯田橋ギンレイホール（初めて行った）で『LION/ライオン 25年目のただいま』との二本立てだったけどこっちだけ観てきた。</p>
+<p>マンチェスターって聞いてイギリスのマンチェスターのことだと思い込んで観てたんだけど、「マンチェスター・バイ・ザ・シー」はアメリカの町のほうだった。主人公の人生に起きたことをひじょうにゆったりとした演出で重すぎず軽すぎず描く映画で関心したんだけど、ギンレイホールのお客はなかなかファンキーで上映中最前席で好きに立ち上がったり、トイレなのか何度も席を外すので気がそがれる場面があった。しかもその席を外した場面が、まさに映画の中で主人公がうかつに家を留守にした結果彼の人生に深く影を落とすことになる決定的な出来事が起きるところだったという…</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
 
 			</span>
 		</div>
@@ -385,63 +440,6 @@
 
 
   
-    <article id="post-201712/diggin-in-a-carts-soundtrack" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/12/06/201712/diggin-in-a-carts-soundtrack/" class="article-date">
-  <time datetime="2017-12-05T15:00:00.000Z" itemprop="datePublished">Dec 6 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/12/06/201712/diggin-in-a-carts-soundtrack/">V.A.『Diggin In The Carts - A Collection Of Pioneering Japanese Video Game Music』</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=404114016/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://hyperdub.bandcamp.com/album/various-artists-diggin-in-the-carts-a-collection-of-pioneering-japanese-video-game-music" target="_blank" rel="external">Various Artists: Diggin&#39; In The Carts, A Collection Of Pioneering Japanese Video Game Music by Hyperdub</a></iframe>
-
-<p>出るの忘れててちと遅れて購入。hallyさんのライナーついてるならCDで買おうとタワーレコードで探したところ、ゲームミュージックコーナーにはなくてちょっと残念だった（クラブ・テクノコーナーにあった）。</p>
-<p>リリース情報で曲目を見た段階で変わったセレクションだなーと思っていて、実際聞いてみても最初は結構「？」という感じだったんだけど、しばらく聴いていたらなんとなく聴きどころがわかってきた。おそらく「メロディ、リズム主体でなく短いシーケンスの繰り返しからなる」かつ「音源チップのサウンドの特徴（魅力）が出ている」トラックが選ばれた結果、有名な、あるいはポップで勢いのあるステージ１とかの曲はなく、あまり有名でないゲームのそれもステージ5とか中盤ステージのトリップ感のある曲ばかりが集められたゲームミュージックコンピレーションになったというのがこのCDなんだと思う。激シブすぎる。</p>
-<p>でも「短いシーケンスの繰り返しからなる」「音源チップのサウンドの特徴（魅力）が出ている」という観点で聞き込むとたしかになかなかいい（収録時間の問題なのかループが少ないのが残念）。『源平討魔伝 BIGモード』とかは有名な名曲だけどグルーヴィーな曲に聞こえて新鮮だし、『ワルキューレの伝説』のエレキマン王の曲なんかはなぜかPCエンジン版のアレンジで収録されてるんだけど、このCDの並びだとアブストラクトなチップチューンに聞こえる。3曲収録されているゴブリンサウンド（知らなかったけどメサイヤのサウンドチームの名前なのかな）の曲もいい。あとはまさに「ディギン・イン・ザ・カーツ」で発掘された、リードトラック『THE 麻雀・闘牌伝（スティーヴ・ライヒばりのミニマルミュージック）』をはじめとする日の当たらないゲームの知られざる名曲たちも最高（セレクションの文脈でいうと複数収録されている斉藤博人さんの曲がそこだけ「いわゆるゲームミュージック的な曲」なのでちょっと不思議ではあった）。</p>
-<p>国内盤に寄せられたhallyのライナーはこのアルバムにふさわしいもの（批評的にセレクションされた初めてのゲームミュージックのアルバム、という）ではあったけど、全曲徹底解説的なものを勝手に期待してたのでちょっと拍子抜けだった。ちなみにOTOTOYだとデジタルで変えてこのライナーもpdfでついてくるのに後から気づいた。</p>
-<ul>
-<li><a href="https://ototoy.jp/_/default/p/86491" target="_blank" rel="external">DIGGIN IN THE CARTS - OTOTOY</a></li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
     <article id="post-201712/scrapbox-user-script-and-style-for-outliner-user" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -501,6 +499,63 @@
 
 
   
+    <article id="post-201712/diggin-in-a-carts-soundtrack" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/06/201712/diggin-in-a-carts-soundtrack/" class="article-date">
+  <time datetime="2017-12-05T15:00:00.000Z" itemprop="datePublished">Dec 6 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/06/201712/diggin-in-a-carts-soundtrack/">V.A.『Diggin In The Carts - A Collection Of Pioneering Japanese Video Game Music』</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=404114016/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://hyperdub.bandcamp.com/album/various-artists-diggin-in-the-carts-a-collection-of-pioneering-japanese-video-game-music" target="_blank" rel="external">Various Artists: Diggin&#39; In The Carts, A Collection Of Pioneering Japanese Video Game Music by Hyperdub</a></iframe>
+
+<p>出るの忘れててちと遅れて購入。hallyさんのライナーついてるならCDで買おうとタワーレコードで探したところ、ゲームミュージックコーナーにはなくてちょっと残念だった（クラブ・テクノコーナーにあった）。</p>
+<p>リリース情報で曲目を見た段階で変わったセレクションだなーと思っていて、実際聞いてみても最初は結構「？」という感じだったんだけど、しばらく聴いていたらなんとなく聴きどころがわかってきた。おそらく「メロディ、リズム主体でなく短いシーケンスの繰り返しからなる」かつ「音源チップのサウンドの特徴（魅力）が出ている」トラックが選ばれた結果、有名な、あるいはポップで勢いのあるステージ１とかの曲はなく、あまり有名でないゲームのそれもステージ5とか中盤ステージのトリップ感のある曲ばかりが集められたゲームミュージックコンピレーションになったというのがこのCDなんだと思う。激シブすぎる。</p>
+<p>でも「短いシーケンスの繰り返しからなる」「音源チップのサウンドの特徴（魅力）が出ている」という観点で聞き込むとたしかになかなかいい（収録時間の問題なのかループが少ないのが残念）。『源平討魔伝 BIGモード』とかは有名な名曲だけどグルーヴィーな曲に聞こえて新鮮だし、『ワルキューレの伝説』のエレキマン王の曲なんかはなぜかPCエンジン版のアレンジで収録されてるんだけど、このCDの並びだとアブストラクトなチップチューンに聞こえる。3曲収録されているゴブリンサウンド（知らなかったけどメサイヤのサウンドチームの名前なのかな）の曲もいい。あとはまさに「ディギン・イン・ザ・カーツ」で発掘された、リードトラック『THE 麻雀・闘牌伝（スティーヴ・ライヒばりのミニマルミュージック）』をはじめとする日の当たらないゲームの知られざる名曲たちも最高（セレクションの文脈でいうと複数収録されている斉藤博人さんの曲がそこだけ「いわゆるゲームミュージック的な曲」なのでちょっと不思議ではあった）。</p>
+<p>国内盤に寄せられたhallyのライナーはこのアルバムにふさわしいもの（批評的にセレクションされた初めてのゲームミュージックのアルバム、という）ではあったけど、全曲徹底解説的なものを勝手に期待してたのでちょっと拍子抜けだった。ちなみにOTOTOYだとデジタルで変えてこのライナーもpdfでついてくるのに後から気づいた。</p>
+<ul>
+<li><a href="https://ototoy.jp/_/default/p/86491" target="_blank" rel="external">DIGGIN IN THE CARTS - OTOTOY</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201712/scrapbox-alfred-workflow" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -546,60 +601,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapbox/">scrapbox</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201712/baked-sweet-potato-made-by-rice-cooker" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/12/03/201712/baked-sweet-potato-made-by-rice-cooker/" class="article-date">
-  <time datetime="2017-12-03T02:03:00.000Z" itemprop="datePublished">Dec 3 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/12/03/201712/baked-sweet-potato-made-by-rice-cooker/">炊飯器で焼きいもをつくる</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>さつまいもってふだん頻繁に買ってきて料理する野菜じゃないと思うんだけど、こどもがやや大きくなると園や学校の行事でいもほりをしてもらって帰ってくるので料理する機会増えるものみたい。自宅で使っている東芝の石窯オーブンレンジに焼きいもモードがあるのでそれで焼きいもをつくっていて、ふつうにおいしくできるものの外側の水分がだいぶ抜けてしまって可食部分が少なかったりしてわりと不満が多い。最近炊飯器でつくるといいという話をよく見るのでやってみた。</p>
-<ul>
-<li><a href="https://cookpad.com/search/%E7%82%8A%E9%A3%AF%E5%99%A8%20%E7%84%BC%E3%81%8D%E8%8A%8B" target="_blank" rel="external">【みんなが作ってる】 炊飯器 焼き芋のレシピ 【クックパッド】 簡単おいしいみんなのレシピが279万品</a></li>
-<li><a href="https://www.tbsradio.jp/204669" target="_blank" rel="external">お家で「焼き芋」！電子レンジ・トースター・炊飯器で作ってみた</a></li>
-</ul>
-<p>レシピはだいたい同じで釜に芋をいれて水を半分つかる程度に入れて、玄米モード（炊飯時間が長い）で仕掛けるというもの。その通りにしてみたら確かに焼きいもっていうか、スイートポテトっぽいふかし芋ができた。なるほど手軽でいいかんじ。皮まで食べられるし、つくって冷蔵庫で保存しておいてレンジで再加熱しても食感や風味がかわらないのもいい。まだ試してないけど、ちょっとだけトーストで火をいれてもいいのかも。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
 
 			</span>
 		</div>
