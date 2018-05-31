@@ -56,6 +56,285 @@
     <div id="main">
       
   
+    <article id="post-201601/switch-game-evolution-1985-2015-issue" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/21/201601/switch-game-evolution-1985-2015-issue/" class="article-date">
+  <time datetime="2016-01-20T15:00:00.000Z" itemprop="datePublished">Jan 21 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/21/201601/switch-game-evolution-1985-2015-issue/">『SWITCH Vol.34 No.1 ◆ ゲームの30年 1985-2015』を読んだ</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4884183762/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/619FUVzdoTL._SL160_.jpg" alt="SWITCH Vol.34 No.1 ◆ ゲームの30年 1985-2015" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4884183762/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">SWITCH Vol.34 No.1 ◆ ゲームの30年 1985-2015</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.21</div></div><div class="amazlet-detail"><br>スイッチパブリッシング (2015-12-20)<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4884183762/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>わりとちゃんとゲームの（正確には「日本のコンソールゲームの」かな）30年を興味深く掘り下げた特集になってておもしろかった。さやわかさん選のゲーム関連本ガイド「ゲームを考える10冊」がしぶい。</p>
+<p>あとスプラトゥーン開発者インタビューでの天野氏の発言「新規IPではダジャレ重要」が説得力あった。ゲームには動詞の発明だけじゃなくてダジャレの発明も必要なんだな。</p>
+<blockquote><p><strong>天野</strong>　最初から「尖ったものを作ろう」という意識はありましたが、そうすると全く刺さらなかった人には「自分には関係ない」と思われる可能性もあります。今回はゼロから作っているのでなおさら、「ダジャレでもいいから、そうである理由をつける」というのは、すべての領域で意識しました。</p>
+<footer><strong>天野祐介 - 『SWITCH Vol.34 No.1 ◆ ゲームの30年 1985-2015』 Splatoon開発者インタビュー</strong></footer></blockquote>
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/magazine/">magazine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/simulator-remote-notifications" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/20/201601/simulator-remote-notifications/" class="article-date">
+  <time datetime="2016-01-19T15:00:00.000Z" itemprop="datePublished">Jan 20 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/20/201601/simulator-remote-notifications/">SimulatorRemoteNotificationsを使ってみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/acoomans/SimulatorRemoteNotifications" target="_blank" rel="external">acoomans/SimulatorRemoteNotifications - Objective-C</a></p>
+<p>これ使ってみた。iOSシミュレータでプッシュ通知をシミュレートして受信時のテストを行うライブラリ。cocoapodsで導入できる。</p>
+<p><code>didfinishLaunching</code>でライブラリを起動しておいて（デバッグターゲットのみで）、</p>
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    ...
+
+    if DEBUG
+        [application listenForRemoteNotifications];
+    endif
+
+    return YES;
+}
+</code></pre><p>ターミナルで9930ポートにデータを送ると</p>
+<pre><code>echo -n &apos;{&quot;message&quot;:&quot;message&quot;}&apos; | nc -4u -w1 localhost 9930
+</code></pre><p>iOSシミュレータに起動中のアプリの<code>didReceiveRemoteNotification</code>が擬似的に呼ばれる仕組み。簡単に確認できてよかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iosdev/">iosdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/inner-space" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/19/201601/inner-space/" class="article-date">
+  <time datetime="2016-01-18T15:00:00.000Z" itemprop="datePublished">Jan 19 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/19/201601/inner-space/">ジョー・ダンテ『インナースペース』を見た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0000C9VD7/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51GAWDS6WEL._SL160_.jpg" alt="インナースペース [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0000C9VD7/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">インナースペース [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.19</div></div><div class="amazlet-detail">ワーナー・ホーム・ビデオ (2003-10-03)<br>売り上げランキング: 162,647<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0000C9VD7/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>週末に見たWOWOWの録画。1987年公開か。昔B級映画として面白いという評判（Beepのらくしょ＝にしぢま氏のコラム連載でロボコップと同時上映で観たと書いてたと思う）を聞いて見てみようと思っていたのがようやく観れた。</p>
+<p>終始今はこういう雑さのある作品ないよなーと思いながら観た。あとメグ・ライアンのファッションのピーキーな80年代感もすごかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/profiling-washing-machine" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/18/201601/profiling-washing-machine/" class="article-date">
+  <time datetime="2016-01-17T15:00:00.000Z" itemprop="datePublished">Jan 18 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/18/201601/profiling-washing-machine/">ドラム型洗濯機の故障</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>自宅で使っているドラム型洗濯乾燥機（<a href="http://panasonic.jp/wash/p-db/NA-VR1100.html" target="_blank" rel="external">NA-VR1100</a>）が脱水の途中で止まってエラー（U13 エラー：ドラムのアンバランス検出）が出るようになった。洗濯物の量を減らしたりしてもかわらず、手でドラムを回してもひっかかりがあり音も明らかにおかしい。日々生産されるこどもの洗濯物が洗えないとかなり詰むのであわててPanasonicのサービスマンを呼んで修理をお願いした。</p>
+<p>Panasonicのサービスマンは洗濯機を「この子」と呼ぶ感じの丁寧な方でいろいろ状況を教えてもらった。</p>
+<ul>
+<li>故障状況としてはドラムの軸受けベアリングが摩滅してドラムが傾いている状態で、裏を開けてみてもすでに軸から漏水してモーターが錆かけていた（＝要モーター、ドラム交換）</li>
+<li>だいぶ前から脱水時の音と振動がかなり大きかったはずとのこと。確かに…</li>
+<li>運転回数（見てなかったけどどうにかすると調べられるらしい）がすでに4000回を超えていて、8年でこれはかなり酷使している。同じような状態での故障で見たことがあるのは警察寮で柔道着をガンガン洗ってる洗濯機くらいとのこと。</li>
+<li>メーカーの立場としては、ドラムを乾燥させてメンテナンスする意味合いもあるので、「洗濯乾燥機はちゃんと乾燥も使ってほしい」というのが本音とのこと。うちはここ6年くらいはほぼ乾燥機として使ってなかった。また洗濯完了後の余熱乾燥運転もフィルターが目詰まりしていると効果が薄くなるので乾燥を使わなくてもフィルター掃除をこまめにするべきとのこと。</li>
+<li>モーター、ドラム交換は部品ふくめ4万前後でできるが、すでに8年経過した商品は補修部品が欠品しがち。モーター、ドラムは後継商品の部品を適用することもできるが、洗濯機の場合はフロントパネルのボタン部などで機種独自の補修部品が欠品すると修理ができなくなり、今回修理したとしても今後再度故障した際に修理できないリスクは高い。</li>
+</ul>
+<p>などなど。部品を取り寄せるのに2月まで待たないといけないのもあり、今回修理はキャンセルして洗濯機は買い換えることにした。次はドラム型じゃなくて縦型を選んだ（といっても今の縦型は簡易乾燥機能があるのが主流なのでそういうやつ）</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaku-doshi/">yaku-doshi</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201601/yaku-barai" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/17/201601/yaku-barai/" class="article-date">
+  <time datetime="2016-01-16T15:00:00.000Z" itemprop="datePublished">Jan 17 2016</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/17/201601/yaku-barai/">厄払い</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/201601/yaku-barai.jpg">
+<p>新年に入ってぼこぼこ身の回りの機械が壊れると思ったら大厄だった。初詣はしてたけど別途厄払いもしておこうということで近くの神社にお願いしてきた。「四十余り<ruby>二歳<rt>ふたとせ</rt></ruby>」とか言うのね。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaku-doshi/">yaku-doshi</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201601/the-silence-of-the-lambs" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -318,287 +597,9 @@
 
 
   
-    <article id="post-201601/x-men-future-and-past" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/10/201601/x-men-future-and-past/" class="article-date">
-  <time datetime="2016-01-09T15:00:00.000Z" itemprop="datePublished">Jan 10 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/10/201601/x-men-future-and-past/">ブライアン・ジンガー『X-MEN：フューチャー＆パスト』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00HZZ5UNK/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61inrU3kYYL._SL160_.jpg" alt="X-MEN：フューチャー＆パスト　2枚組ブルーレイ＆DVD(初回生産限定) [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00HZZ5UNK/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">X-MEN：フューチャー＆パスト　2枚組ブルーレイ＆DVD(初回生産限定) [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.12</div></div><div class="amazlet-detail">20世紀フォックス・ホーム・エンターテイメント・ジャパン (2014-11-05)<br>売り上げランキング: 12,233<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00HZZ5UNK/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>前作『ファースト・ジェネレーション』とその前までの話をつなぐアクロバティックな脚本でこれはこれでいいけど、今後はもう70年代が舞台の作品はないのかな。</p>
-<p>未来のある人物の精神（記憶や意志）を過去に転送する能力を使って過去に介入して未来を変える、というのはいわゆるタイムトラベルものの仕掛けなんだけど、この作品ではタイムトラベル中の過去のパートとカットバックで未来のシーンでのタイムサスペンスが進行するというどっちかというと「インセプション」みたいな展開になっていて、まあなんでもありだとはいえ、「それどういうことなの？」というのが釈然としなかった。『タイムトラベルの哲学』を読み返そうかな。</p>
-<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4480427821/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/41qKaHlpT1L._SL160_.jpg" alt="新版　タイムトラベルの哲学 (ちくま文庫)" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4480427821/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">新版　タイムトラベルの哲学 (ちくま文庫)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.15</div></div><div class="amazlet-detail">青山 拓央 <br>筑摩書房 <br>売り上げランキング: 425,654<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4480427821/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201601/saving-private-ryan" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/09/201601/saving-private-ryan/" class="article-date">
-  <time datetime="2016-01-08T15:00:00.000Z" itemprop="datePublished">Jan 9 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/09/201601/saving-private-ryan/">スティーブン・スピルバーグ『プライベート・ライアン』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00DACMNQO/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51g4Bb4lE7L._SL160_.jpg" alt="プライベート・ライアン [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00DACMNQO/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">プライベート・ライアン [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.15</div></div><div class="amazlet-detail">パラマウント ホーム エンタテインメント ジャパン (2013-08-23)<br>売り上げランキング: 7,218<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00DACMNQO/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>WOWOWでやってたので久しぶりに観た。冒頭のオマハビーチ上陸戦の凄惨さは今見ても古びてなくてすごい。再見して改めて思ったけどあの海の中まで弾丸が飛んでくる（そしてどんどん肉体を貫通する）カットがいやすぎる。あれとカメラが海水面を浮きつ沈みつする（海中では音が遮断される）ドキュメンタリックなカットがいちばん印象に残っている。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201601/genron-1" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/08/201601/genron-1/" class="article-date">
-  <time datetime="2016-01-07T15:00:00.000Z" itemprop="datePublished">Jan 8 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/08/201601/genron-1/">『ゲンロン1』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B019S6AVN2/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51C0yWCStgL._SL160_.jpg" alt="ゲンロン1 現代日本の批評" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B019S6AVN2/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ゲンロン1 現代日本の批評</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.20</div></div><div class="amazlet-detail">株式会社ゲンロン (2015-12-23)<br>売り上げランキング: 518<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B019S6AVN2/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>年末から読んでたやつ。メイン特集「現代日本の批評」もおもしろかったけど、小特集のほうの「テロの時代の芸術」がよかった。鈴木忠志さんのトークはゲンロンカフェの放映でも見ていたけど、亀山郁夫さんのドストエフスキー鼎談（<a href="http://genron-cafe.jp/event/20141209/" target="_blank" rel="external">『カラマーゾフの兄弟』からチェルノブイリへ</a>と<a href="http://genron-cafe.jp/event/20150717/" target="_blank" rel="external">「悪霊」が世界を徘徊している</a>）も観ようかな。本のゲンロンの記事や論考とゲンロンカフェの放送をつないでナビゲートするようなページがあるといいんじゃないかと思った。ついでに電子書籍版から各論考の注釈部分だけでも公開してくれると（参照リンクを見たりしやすいので）うれしいんだけど。</p>
-<p>読んでみてよかったのは。クレイグ・オーウェンス『アレゴリー的衝動』。この抄訳が唐突に掲載されている意図はいまいち図りかねるけど（「テロの時代の芸術」特集の一部なのかとおもったら目次的には分かれているし）、ちゃんと読むと批評という廃墟を蘇らせ未来へ向けて現代を読み替えようとする『ゲンロン』の各論考の縦糸になっているなと思った。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201601/avatar" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/07/201601/avatar/" class="article-date">
-  <time datetime="2016-01-06T15:00:00.000Z" itemprop="datePublished">Jan 7 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/07/201601/avatar/">ジェームズ・キャメロン『アバター』を再見した</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B002P66JMU/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51X-Tktc9BL._SL160_.jpg" alt="アバター [初回生産限定] [DVD]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B002P66JMU/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">アバター [初回生産限定] [DVD]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.01.12</div></div><div class="amazlet-detail">20世紀フォックス・ホーム・エンターテイメント・ジャパン (2010-04-23)<br>売り上げランキング: 4,538<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B002P66JMU/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
-<hr>
-<p>WOWOWで放映してたので久しぶりにちょっと観た。やっぱり導入と序盤はおもしろい。中盤以降は今となっては（2Dで大きな画面じゃないととくに）どうでもいいけど…</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201601/desktop-thriller" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/01/06/201601/desktop-thriller/" class="article-date">
-  <time datetime="2016-01-05T15:00:00.000Z" itemprop="datePublished">Jan 6 2016</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/01/06/201601/desktop-thriller/">デスクトップ・スリラー</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.rockpapershotgun.com/2015/01/23/text-lies-and-videotape-her-story-interview/" target="_blank" rel="external">Text, Lies And Videotape: Her Story Interview | Rock, Paper, Shotgun</a></p>
-<p>ウインターセールで買った『Her Story』をプレイしててそれの話はまた今度書くけど、デザイナーのSam Barlowさんのインタビュー（長い）を読んでたら『Her Story』のゲームのスタイルは氏が「Desktop Thriller」と呼ぶ、ある一人の人物の一人称視点で目の前のデスクトップやコンピュータのコンソールを唯一のインターフェイスとして（つまりゲーム内での立場をゲームをプレイするプレイヤーの立場と極限まで一致させた形で）没入的にフィクションをプレイさせるという一連のゲームの系譜の末裔として位置づけているのだそう。「Desktop Thriller」はあんまり一般的に認知されたジャンル名じゃなさそうだけど（Barlow氏が言ってるだけなのかもしれない）例として挙げられてるゲームも知らないものばかりだったので調べてみた。</p>
-<hr>
-<p><a href="https://en.wikipedia.org/wiki/The_Fourth_Protocol_(video_game)?oldformat=true" target="_blank" rel="external">The Fourth Protocol (video game) - Wikipedia, the free encyclopedia</a></p>
-<p>1985年にZX Spectrumで発売された同名のスパイ小説を原作にしたアドベンチャーゲーム。</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/FV4JB29Lz_I" frameborder="0" allowfullscreen></iframe></div> 
-<p>動画観ると純粋にデスクトップだけでゲームが展開するわけではなさそう。でかいアイコンが並んでるだけのメイン画面が印象的。</p>
-<hr>
-<p><a href="https://en.wikipedia.org/wiki/Floor_13_(video_game)?oldformat=true" target="_blank" rel="external">Floor 13 (video game) - Wikipedia, the free encyclopedia</a></p>
-<p>1991年にPCに出たゲームで、現政権の覇権を保つために反政府勢力に対して秘密活動を行う非公認執行組織の局長としてペーパーワークを行うという内容みたい。秘密組織の局長アコガレを叶えるみたいなゲームかな。</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/BZqS1T7_Vj0" frameborder="0" allowfullscreen></iframe></div>
-<hr>
-<p>The Vera Cruz Affair</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/uE7PdiA2NGs" frameborder="0" allowfullscreen></iframe></div>
-<p>1985年にAmstrad CPCに出たゲーム。これがわりと直接的にHer Storyのインターフェイスに似てる感じなのかな。捜査官がTELEXのコンソールを通じて事件の手がかりの調査や関係者の聴取を行いながら推理を進めるという内容みたい。</p>
-<hr>
-<p><a href="https://en.wikipedia.org/wiki/Portal_(interactive_novel)?oldformat=true" target="_blank" rel="external">Portal (interactive novel) - Wikipedia, the free encyclopedia</a></p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/ioBTcRHvKk4" frameborder="0" allowfullscreen></iframe></div>
-<p>いまよく知られているほうのPortalとは別の、1986年にAmigaで出たインタラクティブノベルのゲームだそう。100年におよぶ外宇宙探索の失敗で帰還した宇宙飛行士が、すでに人類が絶滅した地球を見つける。残されたメインフレームの情報にアクセスして、人類絶滅の理由を探るという内容とのこと。面白そう。<a href="https://www.kickstarter.com/projects/subgames/rob-swigarts-portal-1986-reborn-v20/" target="_blank" rel="external">原作者がKickStarterでリメイクを企画したけどキャンセルされた</a>らしい。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/55/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="page-number" href="/page/55/">55</a><span class="page-number current">56</span><a class="page-number" href="/page/57/">57</a><a class="page-number" href="/page/58/">58</a><span class="space">&hellip;</span><a class="page-number" href="/page/111/">111</a><a class="extend next" rel="next" href="/page/57/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/55/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="page-number" href="/page/55/">55</a><span class="page-number current">56</span><a class="page-number" href="/page/57/">57</a><a class="page-number" href="/page/58/">58</a><span class="space">&hellip;</span><a class="page-number" href="/page/112/">112</a><a class="extend next" rel="next" href="/page/57/">Next &raquo;</a>
     </nav>
   
 
