@@ -56,11 +56,11 @@
     <div id="main">
       
   
-    <article id="post-3_works/real-time-machine-for-tv-game" class="post">
+    <article id="post-1_collisions/2005-08-28" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2005/07/04/3_works/real-time-machine-for-tv-game/" class="article-date">
-  <time datetime="2005-07-03T15:00:00.000Z" itemprop="datePublished">Jul 4 2005</time>
+			<a href="/2005/08/28/1_collisions/2005-08-28/" class="article-date">
+  <time datetime="2005-08-27T15:00:00.000Z" itemprop="datePublished">Aug 28 2005</time>
 </a>
 		</span>
 		<span class="meta-elements author">doppac</span>
@@ -73,27 +73,59 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/04/3_works/real-time-machine-for-tv-game/">リアル・タイム・マシーン・フォー・テレビゲーム　(2005)</a>
+      <a class="article-title" href="/2005/08/28/1_collisions/2005-08-28/">スケジュール指向webメモツール：Calki　ver.002</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<img src="/images/works/RTMFT.jpg">
-<hr>
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/calki002.png" alt="calki002.png"></p>
+<p>■夏の自由研究がわりに<a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">calki</a>に手を入れてバージョンを上げてみました。Ajax系支援機能の追加でおもにデザインとユーザビリティがリファインされています。</p>
+<p><a href="http://prototype.conio.net/" target="_blank" rel="external">prototype.js</a>を使ってこりこりと地味に非同期ロード系の機能を盛り込んでみたら、なんとなく便利っぽくなってきましたがどうでしょうか。とりあえずサンプル（というか自分で使ってる）サイトをごらんくださいませ。</p>
 <ul>
-<li>テレビゲームを使用した体験型作品</li>
-<li>テレビゲーム、TVモニタ、ケーブル、合板</li>
-<li>電子デバイス制作協力：二村 直広</li>
-<li>筐体制作協力：江田 由美子</li>
+<li><a href="http://calki.dotimpac.to/" target="_blank" rel="external">http://calki.dotimpac.to/</a>　サンプルサイト</li>
 </ul>
-<p>　一人のプレイヤーが、6台の「スーパーマリオブラザーズ」を同時にプレイできます。一番遠いＴＶモニターから順に操作の入力が遅れていくので、プレイヤーの目の前のモニターでは操作とゲームプレイの間に大きな遅延が生じてしまいます。</p>
-<p>SUPER MARIO BROS.     (C)1985 Nintendo.<br>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
-<p>*Real-Time-Machine for Home Video Game (2005)</p>
-<p>-Interactive installation<br>-Home video game, TV, Cables, Chipboard<br>-Collaboration with creating electronic device: Naohiro Futamura<br>-Collaboration with designing exterior: Yumiko Eda</p>
-<p>In this work, you can play the video game, ”Super Mario Brothers”, on 6 TV monitors at same time. During playing the game, the time lag happens and increases from the furthest TV monitor to the TV in front of you little by little. You might be realized the big time lag on each TV monitor.</p>
-<p>SUPER MARIO BROS.     (C)1985 Nintendo.<br>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
+<h1 id="Calkiとは"><a href="#Calkiとは" class="headerlink" title="Calkiとは"></a>Calkiとは</h1><p>■日付管理、簡易スケジュール機能のあるWiki風のメモツールです。<a href="http://ninjinix.x0.com/rn/" target="_blank" rel="external">RandomNote</a>がベースになっています。詳しくは以下のページをごらんください。</p>
+<ul>
+<li><a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">スケジュール指向Wiki風メモツール：Calki</a> <ul>
+<li>前バージョンの記事</li>
+</ul>
+</li>
+<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">Calkiとは</a> <ul>
+<li>CalkiのAboutPage</li>
+</ul>
+</li>
+</ul>
+<h1 id="新機能"><a href="#新機能" class="headerlink" title="新機能"></a>新機能</h1><p>■最近になって<a href="http://book.mycom.co.jp/wd/" target="_blank" rel="external">WebDesigning</a>の今月号を立ち読みしてたら、JavaScript/Ajaxの特集に<a href="http://collisions.dotimpac.to/works/web/kaiwarecotonoha.html" target="_blank" rel="external">kaiwarecotonoha</a>が紹介されてて驚いて、それでAjaxの検索が多かったのかー、あれすごい適当だしメンテもしてないしその後Ajaxもとくに触ってないから恐縮だなー、などと思いまして、じゃあprototype.jsでもちょっと触ってみるかと思ったんですな。せっかくだからとcalkiにいろいろ機能をつけていったら、インターフェイスの部分がかなり刷新されてしまいました。おおむね使いやすくなってると思います。</p>
+<h2 id="JavaScriptによる動的なページ操作"><a href="#JavaScriptによる動的なページ操作" class="headerlink" title="JavaScriptによる動的なページ操作"></a>JavaScriptによる動的なページ操作</h2><ul>
+<li>日付ページへのマウスオーバーでその日付ページに対するツールバーが出ます。直感的な操作が可能です。</li>
+<li>見出しをクリックすることで、メモを畳んで隠すことができます。</li>
+<li>開いている日付から「前の日」「次の週」のように順番に日付ページを開くことができます。</li>
+</ul>
+<p>JavaScriptでの動的なスタイル操作で、見たくない情報は隠せてちょっと気持ちがいいです。まだ開いてないメモを開いたり、日付を進めたり戻したりするときは、Ajax式の非同期ロードをします。</p>
+<h2 id="非同期ロード／セーブによるシームレス編集"><a href="#非同期ロード／セーブによるシームレス編集" class="headerlink" title="非同期ロード／セーブによるシームレス編集"></a>非同期ロード／セーブによるシームレス編集</h2><ul>
+<li>以前までは画面が切り替わっていたメモの編集がその場でできるようになりました。</li>
+<li>追記の書き込みもその場で非同期に行います。</li>
+<li>編集時にほかのメモが参照できるので、コピー＆ペーストが簡単です。</li>
+</ul>
+<p><a href="http://www.tiddlywiki.com/" target="_blank" rel="external">TiddlyWiki</a>のサクサク感を目指してみました。やや重いので待ち時間なしとはいきませんが。使ってみて編集時にほかのメモが見られる（そのメモも編集状態にしてwikiフォーマットでコピペできる）ってのがわりと重要だなと思ったんですが、それは後で書きます。</p>
+<h2 id="MM-memoインポート機能"><a href="#MM-memoインポート機能" class="headerlink" title="MM/memoインポート機能"></a><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>インポート機能</h2><ul>
+<li><a href="http://1470.net/mm/" target="_blank" rel="external">MM/memo</a>から自分のブックマークを日付ごとに取得してメモを作れます。</li>
+<li>ちゃんとタグをキーワードリンクにするので、うれしいかも</li>
+</ul>
+<p>おまけというか、自分が欲しかったのでつけました。ほんとは毎日自動取得したほうがいいかもしれないけど。</p>
+<h1 id="ダウンロード"><a href="#ダウンロード" class="headerlink" title="ダウンロード"></a>ダウンロード</h1><p>■Ruby1.8.1の環境が必須です。また、非同期編集とMM/memoインポートは、別途Uconvをインストールしないと使えなくなっちゃったんで、デフォルトでは無効になっています。そのあたりご了承のうえ設置・使用してください。もちろん無保証です。</p>
+<ul>
+<li><a href="http://calki.dotimpac.to/release/calki002_20050829.zip" target="_blank" rel="external">http://calki.dotimpac.to/release/calki002_20050829.zip</a></li>
+</ul>
+<p>設置方法はAboutPageをごらんください。</p>
+<ul>
+<li><a href="http://calki.dotimpac.to/?AboutPage.txt" target="_blank" rel="external">http://calki.dotimpac.to/?AboutPage.txt</a></li>
+</ul>
+<h1 id="雑談：シームレス編集とwikiページの再統合"><a href="#雑談：シームレス編集とwikiページの再統合" class="headerlink" title="雑談：シームレス編集とwikiページの再統合"></a>雑談：シームレス編集とwikiページの再統合</h1><p>■上にもちょっと書きましたが自分でちょっと使ってみて、シームレス編集（というかJavaScriptでエレメントを差し替えてその場で編集できる機能）とwikiはかなり相性がいいんじゃないかと思いましたね（TiddlyWikiはもともとそれを狙っているのかもしれませんが）。とくに、編集しながらほかのページを見たり、そのページから（しかもWiki書式で）コピーしたりできるのがwiki的にうれしい。wikiエンジンによるアジャイルなコンテンツ作りには、方針の変更とか内容の再統合というプロセスが絶対に避けられないわけで、長くなりすぎたページの株分けとか、よく参照する内容を集めた新しいページの作成みたいなことが極力やりやすくないといけないのではと思いました。</p>
+<p>CalkiにはRandomNoteから継承した検索キーワードリンク機能があって、この検索結果の一番上に「このキーワードの新しいメモを作る」というフォームを前バージョンからつけてたんですが、使ってるうちにあんまり便利じゃないんではずしたりしてたんですな。ところが、これが今バージョンからはかなり威力を発揮します。たとえば「JavaScript」を検索すると、いままでメモしたJavaScriptのメモが一覧されますが、この中にはよく見るメモもあればぜんぜん見ないメモもあるわけです。そこでよく見るメモをそれぞれ編集状態にしてコピーして、新しいフォームに入れて別のキーワードをつけてメモを作成すれば、いままでより情報が簡単に引き出せるようになるというわけ。これかなり便利じゃないすか？　便利だと思うんですが、どうでしょう。</p>
+<p>というわけで、もし興味があったら使ってみてください。たぶんバグはたくさんあると思いますが。バグがあったらサンプルサイトに［［バグ］］とか検索キーワードをつけてメモを作っておいていただけるとたすかります。</p>
 
     
 	</div>
@@ -104,7 +136,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
 
 			</span>
 		</div>
@@ -118,11 +150,11 @@
 
 
   
-    <article id="post-3_works/real-time-machine-for-arcade" class="post">
+    <article id="post-1_collisions/2005-07-25" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2005/07/04/3_works/real-time-machine-for-arcade/" class="article-date">
-  <time datetime="2005-07-03T15:00:00.000Z" itemprop="datePublished">Jul 4 2005</time>
+			<a href="/2005/07/25/1_collisions/2005-07-25/" class="article-date">
+  <time datetime="2005-07-24T15:00:00.000Z" itemprop="datePublished">Jul 25 2005</time>
 </a>
 		</span>
 		<span class="meta-elements author">doppac</span>
@@ -135,26 +167,26 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/04/3_works/real-time-machine-for-arcade/">リアル・タイム・マシーン・フォー・アーケード　(2005)</a>
+      <a class="article-title" href="/2005/07/25/1_collisions/2005-07-25/">Autostitchの間違った使いかた</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<img src="/images/works/RTMFA.jpg">
-<hr>
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/autostitch.jpg" alt="autostitch.jpg"></p>
+<p>■<a href="http://cs.ubc.ca/~mbrown/autostitch/autostitch.html" target="_blank" rel="external">Autostitch</a>というソフトを最近知りました。カメラを振りながら撮った連続画像をつないで、いわゆるパノラマ画像にするソフト。同様の処理はいまやたいていのデジカメに同梱ツールでついてそうな気がしますが、ふつうはなんからの手作業が必要そうなところがこれは処理が完全全自動で、それらしい画像を多数つっこんでやれば、なんとなく画像を作ってくれるというところが特色なんでしょうか。</p>
+<p>せっかくなので試してみようと思ったんですがあんまりパノラマっぽい連続画像を撮ったことがなかったので、去年金沢２１世紀美術館に行ったときに外周を回りながら撮影していた連続画像をつっこんでみたところ、ぜんぜんパノラマではないですが奇妙な画像ができました。なんかがんばって整合させようとしてるとこが泣ける。よく見ると建物のガラスに映った自分の像をキーにつなごうとしてたりして。</p>
 <ul>
-<li>ビデオゲームを使用した体験型作品</li>
-<li>アーケードゲーム基板、液晶モニタ、スピーカ、合板、ガラス、アルミ板</li>
-<li>電子デバイス制作協力：二村 直広</li>
-<li>筐体制作協力：江田 由美子</li>
+<li>大きい画像はこっちに。 <ul>
+<li><a href="http://project.dotimpac.to/kanazawa21st/kanazawa_pano.jpg" target="_blank" rel="external">http://project.dotimpac.to/kanazawa21st/kanazawa_pano.jpg</a></li>
 </ul>
-<p>　２つの別々のアーケードゲームを、一人のプレイヤーが同時にプレイすることができます。２つのゲームは同時にスタートし同様の操作が入力されていますが、２つのゲームハードがそれぞれ別々のタイミングで動作しているため、ゲーム展開は微妙にずれを生じていき、やがてまったく別のプレイになっていきます。<br>　展示では「XEVIOUS」(namco, 1983年）をプレイできます。</p>
-<p>XEVIOUS    (C)1983 NAMCO LTD.<br>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
-<p>*Real-Time-Machine for Arcade (2005)</p>
-<p>-Interactive installation<br>-Arcade game board, LCD monitor, Speaker system, Chipboard, Glass, Aluminum Plate<br>-Collaboration with creating electronic device: Naohiro Futamura<br>-Collaboration with designing exterior: Yumiko Eda &gt;Arcade PCB, LCD monitor,<br>In this work, you can play two arcade games, “XEVIOUS”, at same time. The game starts at once on each monitor, but these two games work independently and have slightly different timing. As a result, the time lag between two monitors is increasing, and you may be confused.</p>
-<p>XEVIOUS    (C)1983 NAMCO LTD.<br>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
+</li>
+</ul>
+<h1 id="金沢２１世紀美術館人力タイムスライス"><a href="#金沢２１世紀美術館人力タイムスライス" class="headerlink" title="金沢２１世紀美術館人力タイムスライス"></a>金沢２１世紀美術館人力タイムスライス</h1><p>去年の１１月ごろ遊びにいった<a href="http://www.kanazawa21.jp/ja/index.html" target="_blank" rel="external">金沢２１世紀美術館</a>は、上から見ると建物が完全な円形をしていることで有名な美術館なんですが、構内に建物に沿って敷かれた遊歩道もあって、つまりこの道も円形になっているわけです。てことはこの遊歩道を数歩づつ歩きながら建物をデジカメで撮影していけば、円形の建物を周回するムービーができるなーと思ってやってみたんですな。当時サポートしてた映像の授業でデジカメでなにかのモノを周回しながら撮影してその静止画をタイムラインに並べて、いわゆる「タイムスライス（「マトリックス」にあるような、時間の止まった世界でカメラだけが移動するような効果を得られる特殊撮影）」っぽい映像を手作りするという課題を出していたんですが、これは21世紀美術館の人力タイムスライスというわけです。せっかくなんでムービーを公開しておきます。ダウンロードしてループ再生するとおもしろいかもしれません。</p>
+<ul>
+<li><a href="http://project.dotimpac.to/kanazawa21st/kanazawa21.mov" target="_blank" rel="external">http://project.dotimpac.to/kanazawa21st/kanazawa21.mov</a></li>
+</ul>
 
     
 	</div>
@@ -165,7 +197,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
 
 			</span>
 		</div>
@@ -179,10 +211,73 @@
 
 
   
-    <article id="post-3_works/exhibition/real-time-machine-exhibition" class="post">
+    <article id="post-1_collisions/2005-07-24" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2005/07/04/3_works/exhibition/real-time-machine-exhibition/" class="article-date">
+			<a href="/2005/07/24/1_collisions/2005-07-24/" class="article-date">
+  <time datetime="2005-07-23T15:00:00.000Z" itemprop="datePublished">Jul 24 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/07/24/1_collisions/2005-07-24/">PONG-ED　(2005)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/pong-ed.jpg" alt="pong-ed.jpg"></p>
+<ul>
+<li>体験型インスタレーション</li>
+<li>PC、プロジェクター、パドルコントローラ、スピーカ、合板</li>
+<li>制作協力：江田 由美子</li>
+</ul>
+<p>　世界最初の商用ビデオゲーム「PONG（ポン）」のルールで、ネットワークを介してとなりのギャラリーの相手と対戦プレイができます。ボールがとなりのギャラリーの画面に移る際、３つの場所の違うサーバ（会場内、東京都内、米国）を中継するため、最初はひとつに重なったボールが遅延によってしだいに離れていきます。</p>
+<p>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
+<h1 id="PONG-ED-2005"><a href="#PONG-ED-2005" class="headerlink" title="PONG-ED (2005)"></a>PONG-ED (2005)</h1><ul>
+<li>Interactive installation</li>
+<li>Computer, Projector, Paddle controller, Speaker system, Chipbord</li>
+<li>Collaboration with designing exterior: Yumiko Eda </li>
+</ul>
+<p>In this work, you can play the video game with another person who at next gallery space over computer network. When “the ball” moves to another monitor that put in the next gallery space, the data is transferred through three different servers. As a result, “the ball” is separated into three, and these balls is delayed each other little by little. </p>
+<p>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-3_works/pong-ed" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/07/04/3_works/pong-ed/" class="article-date">
   <time datetime="2005-07-03T15:00:00.000Z" itemprop="datePublished">Jul 4 2005</time>
 </a>
 		</span>
@@ -196,60 +291,26 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/07/04/3_works/exhibition/real-time-machine-exhibition/">個展　「リアル・タイム・マシーン」(2005) | self exhibition &quot;real-time-machine&quot;(2005)</a>
+      <a class="article-title" href="/2005/07/04/3_works/pong-ed/">PONG-ED　(2005)</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<p>『リアル・タイム・マシーン展』開催当時のblogエントリの採録です。</p>
-<ul>
-<li><a href="/2005/07/04/3_works/exhibition/real-time-machine-exhibition/">『リアル・タイム・マシーン展』概要</a></li>
-<li><a href="/2005/07/04/3_works/real-time-machine-for-arcade/">リアル・タイム・マシーン・フォー・アーケード　(2005)</a></li>
-<li><a href="/2005/07/04/3_works/real-time-machine-for-tv-game/">リアル・タイム・マシーン・フォー・テレビゲーム　(2005)</a></li>
-<li><a href="/2005/07/04/3_works/pong-ed/">PONG-ED　(2005)</a></li>
-<li><a href="/2005/07/04/3_works/exhibition/work-in-progress/">『リアル・タイム・マシーン展』Work in progress</a></li>
-<li><a href="/2005/07/04/3_works/exhibition/financial-report/">『リアル・タイム・マシーン展』決算報告</a></li>
-</ul>
-<hr>
-<img src="/images/works/exhibition.jpg">
+    	<img src="/images/works/PONG-ED.jpg">
 <hr>
 <ul>
-<li>dotimpact 田中孝太郎[リアル・タイム・マシーン]展<ul>
-<li>期間：2005年7月4日［月］〜7月9日［土］</li>
-<li>会場：表参道画廊＋MUSEE F</li>
-<li>イベント：<ul>
-<li>オープニングパーティ(2005-07-04)</li>
-<li>「リアル・タイム・マシーン・ライブ！」(2005-07-09)</li>
+<li>体験型インスタレーション</li>
+<li>PC、プロジェクター、パドルコントローラ、スピーカ、合板</li>
+<li>制作協力：江田 由美子</li>
 </ul>
-</li>
-<li>来場数：160人〜（推定200人）</li>
-</ul>
-</li>
-</ul>
-<h1 id="作品概要"><a href="#作品概要" class="headerlink" title="作品概要"></a>作品概要</h1><p>■「リアルタイム」とはコンピュータが生み出した言葉と言っていいでしょう。すべてがあるがままの現実世界と私たちとの間にコンピュータが介在するとき、そこでなにかが起きるタイミングが「リアル」であるかが問われはじめます。コンピュータとネットワークに日常的に触れることになった私たちは、この「リアルタイム」の感覚に、すでに現実以上のリアリティを感じているのではないでしょうか。現実にはモニターが画面を描き換える1/60秒の瞬間には光は5000kmしか進めず、コンピュータの処理速度やネットワークの速度がどれだけ上がったとしてもそこには必ず遅延が存在します。しかし、すでに「リアルタイム」の世界に生きている私たちにとって、その「現実」の遅延は、むしろ現実感を後退させるものになるでしょう。まるで、ふいに時間を飛び越えてしまったかのような。</p>
-<p>■「リアル・タイム・マシーン」展では、操作が遅延するコンピュータゲームを実際にプレイし、「遅れた現実」を体験できる作品を展示します。すでに「リアルタイム」の感覚に慣れている私たちにとって、そこには想像以上に違和感があるはずで、その違和感によって私たち現実感の輪郭をたしかめることができるかもしれません。</p>
-<h1 id="展示作品"><a href="#展示作品" class="headerlink" title="展示作品"></a>展示作品</h1><h2 id="「リアル・タイム・マシーン・フォー・アーケード」-Real-Time-Machine-for-Arcade-2005"><a href="#「リアル・タイム・マシーン・フォー・アーケード」-Real-Time-Machine-for-Arcade-2005" class="headerlink" title="「リアル・タイム・マシーン・フォー・アーケード」 | Real-Time-Machine for Arcade (2005)"></a>「リアル・タイム・マシーン・フォー・アーケード」 | Real-Time-Machine for Arcade (2005)</h2><p>■ 一人のプレイヤーが同時に２つのゲームをプレイできるアーケードコンソール型の作品。２つのゲーム基板はそれぞれ別々のタイミングで動作しているため、プレイヤーのジョイスティックやボタンの操作が同時に入力されていても、そのゲーム展開は微妙にずれを生じていき、やがてはまったく別々の展開となり、最終的には破綻するでしょう。</p>
-<p>展示では「XEVIOUS」(namco, 1983年）を実際にプレイできます。</p>
-<h2 id="「リアル・タイムーマシーン・フォー・テレビゲーム」-Real-Time-Machine-for-Home-Videogame-2005"><a href="#「リアル・タイムーマシーン・フォー・テレビゲーム」-Real-Time-Machine-for-Home-Videogame-2005" class="headerlink" title="「リアル・タイムーマシーン・フォー・テレビゲーム」 | Real-Time-Machine for Home Videogame (2005)"></a>「リアル・タイムーマシーン・フォー・テレビゲーム」 | Real-Time-Machine for Home Videogame (2005)</h2><p>■６台のテレビゲームに、一人のプレイヤーの操作が少しづつ遅れてプレイされていく作品。プレイするゲームがすでによく知っているゲームであればあるほど、そこにある「遅延」は不気味なものに感じられるはずです。</p>
-<p>展示では「スーパーマリオブラザーズ」(任天堂, 1985年)を実際にプレイできます。</p>
-<h2 id="PONG-ED-2005"><a href="#PONG-ED-2005" class="headerlink" title="PONG-ED(2005)"></a>PONG-ED(2005)</h2><p>■世界最初の商用アーケードゲーム「PONG（ポン）」をネットワークごしにプレイできる作品。すぐとなりのギャラリーの相手と対戦できますが、その間でサーバを介してネットワークで通信を行っているため、２人のプレイヤーの間を行きかうボールの遅延が、そのままネットワークの遅延を表します。</p>
-<h1 id="イベント"><a href="#イベント" class="headerlink" title="イベント"></a>イベント</h1><h2 id="「リアル・タイム・マシーン・ライブ！」"><a href="#「リアル・タイム・マシーン・ライブ！」" class="headerlink" title="「リアル・タイム・マシーン・ライブ！」"></a>「リアル・タイム・マシーン・ライブ！」</h2><ul>
-<li>ゲーマーを招いての「リアル・タイム・マシーン・フォー・アーケード」デモプレイ</li>
-<li>「リアル・タイムーマシーン・フォー・テレビゲーム」での遅延対戦プレイ大会</li>
-</ul>
-<img src="/images/works/realtimemachine.jpg">
-<h1 id="関連リンク"><a href="#関連リンク" class="headerlink" title="関連リンク"></a>関連リンク</h1><ul>
-<li>個展準備、開催中のblog<ul>
-<li><a href="http://collisions.dotimpac.to/inProgress/realtimemachine" target="_blank" rel="external">http://collisions.dotimpac.to/inProgress/realtimemachine</a></li>
-</ul>
-</li>
-<li>関連リンク集<ul>
-<li><a href="http://processing.dotimpac.to/?RealTimeMachineLinks" target="_blank" rel="external">http://processing.dotimpac.to/?RealTimeMachineLinks</a></li>
-</ul>
-</li>
-</ul>
+<p>　世界最初の商用ビデオゲーム「PONG（ポン）」のルールで、ネットワークを介してとなりのギャラリーの相手と対戦プレイができます。ボールがとなりのギャラリーの画面に移る際、３つの場所の違うサーバ（会場内、東京都内、米国）を中継するため、最初はひとつに重なったボールが遅延によってしだいに離れていきます。</p>
+<p>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
+<p>*PONG-ED (2005)</p>
+<p>-Interactive installation<br>-Computer, Projector, Paddle controller, Speaker system, Chipbord<br>-Collaboration with designing exterior: Yumiko Eda</p>
+<p>In this work, you can play the video game with another person who at next gallery space over computer network. When “the ball” moves to another monitor that put in the next gallery space, the data is transferred through three different servers. As a result, “the ball” is separated into three, and these balls is delayed each other little by little.</p>
+<p>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
 
     
 	</div>
@@ -260,7 +321,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
 
 			</span>
 		</div>
@@ -364,6 +425,67 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-3_works/real-time-machine-for-arcade" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/07/04/3_works/real-time-machine-for-arcade/" class="article-date">
+  <time datetime="2005-07-03T15:00:00.000Z" itemprop="datePublished">Jul 4 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/07/04/3_works/real-time-machine-for-arcade/">リアル・タイム・マシーン・フォー・アーケード　(2005)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/works/RTMFA.jpg">
+<hr>
+<ul>
+<li>ビデオゲームを使用した体験型作品</li>
+<li>アーケードゲーム基板、液晶モニタ、スピーカ、合板、ガラス、アルミ板</li>
+<li>電子デバイス制作協力：二村 直広</li>
+<li>筐体制作協力：江田 由美子</li>
+</ul>
+<p>　２つの別々のアーケードゲームを、一人のプレイヤーが同時にプレイすることができます。２つのゲームは同時にスタートし同様の操作が入力されていますが、２つのゲームハードがそれぞれ別々のタイミングで動作しているため、ゲーム展開は微妙にずれを生じていき、やがてまったく別のプレイになっていきます。<br>　展示では「XEVIOUS」(namco, 1983年）をプレイできます。</p>
+<p>XEVIOUS    (C)1983 NAMCO LTD.<br>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
+<p>*Real-Time-Machine for Arcade (2005)</p>
+<p>-Interactive installation<br>-Arcade game board, LCD monitor, Speaker system, Chipboard, Glass, Aluminum Plate<br>-Collaboration with creating electronic device: Naohiro Futamura<br>-Collaboration with designing exterior: Yumiko Eda &gt;Arcade PCB, LCD monitor,<br>In this work, you can play two arcade games, “XEVIOUS”, at same time. The game starts at once on each monitor, but these two games work independently and have slightly different timing. As a result, the time lag between two monitors is increasing, and you may be confused.</p>
+<p>XEVIOUS    (C)1983 NAMCO LTD.<br>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
 
 			</span>
 		</div>
@@ -727,6 +849,163 @@
 
 
   
+    <article id="post-3_works/exhibition/real-time-machine-exhibition" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/07/04/3_works/exhibition/real-time-machine-exhibition/" class="article-date">
+  <time datetime="2005-07-03T15:00:00.000Z" itemprop="datePublished">Jul 4 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/07/04/3_works/exhibition/real-time-machine-exhibition/">個展　「リアル・タイム・マシーン」(2005) | self exhibition &quot;real-time-machine&quot;(2005)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>『リアル・タイム・マシーン展』開催当時のblogエントリの採録です。</p>
+<ul>
+<li><a href="/2005/07/04/3_works/exhibition/real-time-machine-exhibition/">『リアル・タイム・マシーン展』概要</a></li>
+<li><a href="/2005/07/04/3_works/real-time-machine-for-arcade/">リアル・タイム・マシーン・フォー・アーケード　(2005)</a></li>
+<li><a href="/2005/07/04/3_works/real-time-machine-for-tv-game/">リアル・タイム・マシーン・フォー・テレビゲーム　(2005)</a></li>
+<li><a href="/2005/07/04/3_works/pong-ed/">PONG-ED　(2005)</a></li>
+<li><a href="/2005/07/04/3_works/exhibition/work-in-progress/">『リアル・タイム・マシーン展』Work in progress</a></li>
+<li><a href="/2005/07/04/3_works/exhibition/financial-report/">『リアル・タイム・マシーン展』決算報告</a></li>
+</ul>
+<hr>
+<img src="/images/works/exhibition.jpg">
+<hr>
+<ul>
+<li>dotimpact 田中孝太郎[リアル・タイム・マシーン]展<ul>
+<li>期間：2005年7月4日［月］〜7月9日［土］</li>
+<li>会場：表参道画廊＋MUSEE F</li>
+<li>イベント：<ul>
+<li>オープニングパーティ(2005-07-04)</li>
+<li>「リアル・タイム・マシーン・ライブ！」(2005-07-09)</li>
+</ul>
+</li>
+<li>来場数：160人〜（推定200人）</li>
+</ul>
+</li>
+</ul>
+<h1 id="作品概要"><a href="#作品概要" class="headerlink" title="作品概要"></a>作品概要</h1><p>■「リアルタイム」とはコンピュータが生み出した言葉と言っていいでしょう。すべてがあるがままの現実世界と私たちとの間にコンピュータが介在するとき、そこでなにかが起きるタイミングが「リアル」であるかが問われはじめます。コンピュータとネットワークに日常的に触れることになった私たちは、この「リアルタイム」の感覚に、すでに現実以上のリアリティを感じているのではないでしょうか。現実にはモニターが画面を描き換える1/60秒の瞬間には光は5000kmしか進めず、コンピュータの処理速度やネットワークの速度がどれだけ上がったとしてもそこには必ず遅延が存在します。しかし、すでに「リアルタイム」の世界に生きている私たちにとって、その「現実」の遅延は、むしろ現実感を後退させるものになるでしょう。まるで、ふいに時間を飛び越えてしまったかのような。</p>
+<p>■「リアル・タイム・マシーン」展では、操作が遅延するコンピュータゲームを実際にプレイし、「遅れた現実」を体験できる作品を展示します。すでに「リアルタイム」の感覚に慣れている私たちにとって、そこには想像以上に違和感があるはずで、その違和感によって私たち現実感の輪郭をたしかめることができるかもしれません。</p>
+<h1 id="展示作品"><a href="#展示作品" class="headerlink" title="展示作品"></a>展示作品</h1><h2 id="「リアル・タイム・マシーン・フォー・アーケード」-Real-Time-Machine-for-Arcade-2005"><a href="#「リアル・タイム・マシーン・フォー・アーケード」-Real-Time-Machine-for-Arcade-2005" class="headerlink" title="「リアル・タイム・マシーン・フォー・アーケード」 | Real-Time-Machine for Arcade (2005)"></a>「リアル・タイム・マシーン・フォー・アーケード」 | Real-Time-Machine for Arcade (2005)</h2><p>■ 一人のプレイヤーが同時に２つのゲームをプレイできるアーケードコンソール型の作品。２つのゲーム基板はそれぞれ別々のタイミングで動作しているため、プレイヤーのジョイスティックやボタンの操作が同時に入力されていても、そのゲーム展開は微妙にずれを生じていき、やがてはまったく別々の展開となり、最終的には破綻するでしょう。</p>
+<p>展示では「XEVIOUS」(namco, 1983年）を実際にプレイできます。</p>
+<h2 id="「リアル・タイムーマシーン・フォー・テレビゲーム」-Real-Time-Machine-for-Home-Videogame-2005"><a href="#「リアル・タイムーマシーン・フォー・テレビゲーム」-Real-Time-Machine-for-Home-Videogame-2005" class="headerlink" title="「リアル・タイムーマシーン・フォー・テレビゲーム」 | Real-Time-Machine for Home Videogame (2005)"></a>「リアル・タイムーマシーン・フォー・テレビゲーム」 | Real-Time-Machine for Home Videogame (2005)</h2><p>■６台のテレビゲームに、一人のプレイヤーの操作が少しづつ遅れてプレイされていく作品。プレイするゲームがすでによく知っているゲームであればあるほど、そこにある「遅延」は不気味なものに感じられるはずです。</p>
+<p>展示では「スーパーマリオブラザーズ」(任天堂, 1985年)を実際にプレイできます。</p>
+<h2 id="PONG-ED-2005"><a href="#PONG-ED-2005" class="headerlink" title="PONG-ED(2005)"></a>PONG-ED(2005)</h2><p>■世界最初の商用アーケードゲーム「PONG（ポン）」をネットワークごしにプレイできる作品。すぐとなりのギャラリーの相手と対戦できますが、その間でサーバを介してネットワークで通信を行っているため、２人のプレイヤーの間を行きかうボールの遅延が、そのままネットワークの遅延を表します。</p>
+<h1 id="イベント"><a href="#イベント" class="headerlink" title="イベント"></a>イベント</h1><h2 id="「リアル・タイム・マシーン・ライブ！」"><a href="#「リアル・タイム・マシーン・ライブ！」" class="headerlink" title="「リアル・タイム・マシーン・ライブ！」"></a>「リアル・タイム・マシーン・ライブ！」</h2><ul>
+<li>ゲーマーを招いての「リアル・タイム・マシーン・フォー・アーケード」デモプレイ</li>
+<li>「リアル・タイムーマシーン・フォー・テレビゲーム」での遅延対戦プレイ大会</li>
+</ul>
+<img src="/images/works/realtimemachine.jpg">
+<h1 id="関連リンク"><a href="#関連リンク" class="headerlink" title="関連リンク"></a>関連リンク</h1><ul>
+<li>個展準備、開催中のblog<ul>
+<li><a href="http://collisions.dotimpac.to/inProgress/realtimemachine" target="_blank" rel="external">http://collisions.dotimpac.to/inProgress/realtimemachine</a></li>
+</ul>
+</li>
+<li>関連リンク集<ul>
+<li><a href="http://processing.dotimpac.to/?RealTimeMachineLinks" target="_blank" rel="external">http://processing.dotimpac.to/?RealTimeMachineLinks</a></li>
+</ul>
+</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-3_works/real-time-machine-for-tv-game" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2005/07/04/3_works/real-time-machine-for-tv-game/" class="article-date">
+  <time datetime="2005-07-03T15:00:00.000Z" itemprop="datePublished">Jul 4 2005</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2005/07/04/3_works/real-time-machine-for-tv-game/">リアル・タイム・マシーン・フォー・テレビゲーム　(2005)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<img src="/images/works/RTMFT.jpg">
+<hr>
+<ul>
+<li>テレビゲームを使用した体験型作品</li>
+<li>テレビゲーム、TVモニタ、ケーブル、合板</li>
+<li>電子デバイス制作協力：二村 直広</li>
+<li>筐体制作協力：江田 由美子</li>
+</ul>
+<p>　一人のプレイヤーが、6台の「スーパーマリオブラザーズ」を同時にプレイできます。一番遠いＴＶモニターから順に操作の入力が遅れていくので、プレイヤーの目の前のモニターでは操作とゲームプレイの間に大きな遅延が生じてしまいます。</p>
+<p>SUPER MARIO BROS.     (C)1985 Nintendo.<br>※写真提供：MAEKAWA Takashi, OKI Yoshiya</p>
+<p>*Real-Time-Machine for Home Video Game (2005)</p>
+<p>-Interactive installation<br>-Home video game, TV, Cables, Chipboard<br>-Collaboration with creating electronic device: Naohiro Futamura<br>-Collaboration with designing exterior: Yumiko Eda</p>
+<p>In this work, you can play the video game, ”Super Mario Brothers”, on 6 TV monitors at same time. During playing the game, the time lag happens and increases from the furthest TV monitor to the TV in front of you little by little. You might be realized the big time lag on each TV monitor.</p>
+<p>SUPER MARIO BROS.     (C)1985 Nintendo.<br>※photograph：MAEKAWA Takashi, OKI Yoshiya</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/media/">media</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/realtimemachine/">realtimemachine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/works/">works</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-1_collisions/2005-05-08" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -784,303 +1063,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/">study</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-05-04" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/05/04/1_collisions/2005-05-04/" class="article-date">
-  <time datetime="2005-05-03T15:00:00.000Z" itemprop="datePublished">May 4 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/05/04/1_collisions/2005-05-04/">Processing days</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/processingdays.jpg" alt="processingdays.jpg"> ※dotimpactが「紙相撲の土俵をトントンすると、画面の相撲中継のムービーがコマ送りされる」という改造マウス作品のムービーを発表している様子。「紙相撲」が英訳できそうになくて困った。</p>
-<p>■ <a href="http://collisions.dotimpac.to/info/TDCDAY05.html" target="_blank" rel="external">前</a> 書いたとおりTDCDAYのために <a href="http://www.processing.org" target="_blank" rel="external">Processing</a> のプロジェクトリーダー <a href="http://acg.media.mit.edu/people/fry/" target="_blank" rel="external">Ben Fry</a> と <a href="http://reas.com/" target="_blank" rel="external">Casey Reas</a> （ケイシー・リースという読みかたがなかなか馴染まない…）が来日していました。</p>
-<p>で、TDCDAYでのレクチャーはもちろん聴きにいったんですけども、とある筋で両名を招いた日本のProcessingユーザー（…だったのかな？）によるパーティのようなものが企画されていまして、そちらにも参加させていただきました。</p>
-<p>てことでそのあたりをレポートしておきます。</p>
-<h1 id="Processing-Party-at-OFFICE"><a href="#Processing-Party-at-OFFICE" class="headerlink" title="Processing Party at OFFICE"></a>Processing Party at OFFICE</h1><p>■今回の席は <a href="http://www.design.ucla.edu/" target="_blank" rel="external">UCLA D|MA</a> で学んでいる <a href="http://www.saitatsu.net/" target="_blank" rel="external">さいたつ</a> さんが、ちょうど同時期に帰国するのでCaseyと連絡を取って食事でも…という話で当初進んでいたのだそうですけど、せっかくProcessingのリーダーと話できる機会があるのだから日本のProcessingコミュニティから（というか、日本のinteractive design関係の人から）作品が紹介できるといいだろうということで、mixiなどで声がかけられた30人ほどのメンバーでのパーティと軽いプレゼンテーションをするというなかなか貴重な集いとなりました。場所は外苑前の <a href="http://www.transit-web.com/c/shop_c/office/" target="_blank" rel="external">OFFICE</a> というバー？　というかイベントスペースというか。名前は知ってましたが初めて行きました。PC持っていって長居するにはいい場所ですねー。もうちょっと無線LANの電波が強いとよかったけど。</p>
-<p>紹介された作品についてはまだ未完成でオフレコっぽいものもありましたが、ネットで見れる作品はリンクしておくと、</p>
-<ul>
-<li>石澤さんのデジカメの新しいインターフェイスのイメージプロトタイプをProcessingで開発した話</li>
-<li><a href="http://eto.com" target="_blank" rel="external">eto</a> さんと <a href="http://www.din.or.jp/~ku_/" target="_blank" rel="external">渡辺（kuni）</a> さんのプロジェクトの発表と、kuniさんの <a href="http://www.piece-me.com/index.html" target="_blank" rel="external">P/ECE</a> で開発したパーティクル系ゲーム（ <a href="http://www.din.or.jp/~ku_/junk/junk.htm#spout" target="_blank" rel="external">spout</a> , <a href="http://www.din.or.jp/~ku_/junk/junk.htm#inter" target="_blank" rel="external">interground</a> ）の紹介 </li>
-<li><a href="http://acg.media.mit.edu/people/nik/" target="_blank" rel="external">Nikita Pashenkov</a> さんの <a href="http://www.tdctokyo.org/awards/award01/01interactive.html" target="_blank" rel="external">ALPHABOTS</a> や自作デバイスの作品 </li>
-<li><a href="http://www.unsound.com/Wiggle/" target="_blank" rel="external">Gil Kuno</a> さんの <a href="http://www.unsound.com/SSS/" target="_blank" rel="external">the six string sonics</a>（１台のギターを１弦ごとに分離したギターを６人で演奏してコンピュータで合成して曲を演奏する！　というプロジェクト。かっこいい＆笑える）の紹介 </li>
-<li>この春IAMASを卒業した増田さんによるProcessingの作品 <a href="http://www.iamas.ac.jp/~madman03/haohao/" target="_blank" rel="external">haohao</a>の紹介（群体シミュレーションでの個体の動きにあるルールで線を描画させて、絵を描くという作品）やそのほかの作品など</li>
-<li><a href="http://megaui.net/fukuchi/" target="_blank" rel="external">ふくち</a> さんの <a href="http://effectv.sourceforge.net/index.ja.html" target="_blank" rel="external">EffecTV</a> のエフェクトがProcessingだとこんなに楽に開発できる！　というお話。</li>
-<li><a href="http://web.sfc.keio.ac.jp/~wakita/" target="_blank" rel="external">脇田</a> さんによる、<a href="http://www.itmedia.co.jp/enterprise/articles/0411/24/news112.html" target="_blank" rel="external">SFC OPEN RESEARCH FORUM</a> での会場インスタレーションの紹介。あれはRFIDリーダと連携したProcessingで動いていて、ソフトは学部２年生（だったかな）が１ヶ月で作ったそうな。おお。</li>
-<li><a href="http://www.generative.info/" target="_blank" rel="external">Takachin</a> さんによる <a href="http://www.generative.info/daily/20040415.html#p01" target="_blank" rel="external">Particle Typography</a> のProcessingスケッチと、Takachinさんが立ち上げた日本のProcesingポータル <a href="http://processing.jp/" target="_blank" rel="external">Processing.jp</a> の紹介 </li>
-</ul>
-<p>といった感じでした。それから僕もいちおう発表させてもらって、学校でProcessingを教えているという話と、どんな授業かということで１年の学生がやったマウス改造課題のムービーを見てもらいました。とりあえずウケたようでなにより。ちなみに当日は <a href="http://mixi.jp/show_friend.pl?id=468045" target="_blank" rel="external">serendipity（mixi）</a> さんに通訳をお願いできて非常ーに助かりました。ありがとう！</p>
-<p>それからもちろんProcessingの次期バージョン（0080）についてもCaseyからプレゼンが。グラフィックをJavaじゃなくOpenGLで描画するモード（かなり速い）がついたりとか、ライブラリ（物理計算、衝突判定付きのパーティクルライブラリとか）の充実とか、ソースを分割できたりするあたりが目玉みたい。公開が楽しみです。</p>
-<p>■プレゼン以外でも初めて会った人といろいろ話ができたり、作品を見てもらえたりできてすんごく面白かったです。またこんな機会があるといいですね。そのころにはProcessingコミュニティが増えててより大きなパーティになるともっといい。</p>
-<h1 id="TDC-DAY-2005"><a href="#TDC-DAY-2005" class="headerlink" title="TDC DAY 2005"></a>TDC DAY 2005</h1><p>■えーと、あとで書きます。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-03-22" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/03/22/1_collisions/2005-03-22/" class="article-date">
-  <time datetime="2005-03-21T15:00:00.000Z" itemprop="datePublished">Mar 22 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/03/22/1_collisions/2005-03-22/">kaiwarecotonoha powered by AJAX</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/kaiwarecotonoha.png" alt="kaiwarecotonoha.png"></p>
-<p>■AJAXしてみました。</p>
-<ul>
-<li><a href="http://dotimpac.to/work/kaiwarecotonoha/" target="_blank" rel="external">http://dotimpac.to/work/kaiwarecotonoha/</a></li>
-</ul>
-<h1 id="これはなにか"><a href="#これはなにか" class="headerlink" title="これはなにか"></a>これはなにか</h1><p>文字が育つ不思議チャットボード、かな。画面の好きな位置に「かいわれフォント」で文字を入力できます。「かいわれフォント」は打ち込んだときは種の状態ですが、時間が経つにつれて芽を出し成長し、やがて枯れていきます。画面に出ている文字は画面左のスライドバーを操作して時間をもどすことで、成長の様子を見ることができます。</p>
-<p>ちなみにいわゆる世にいう <a href="http://antipop.zapto.org/docs/translations/ajax.html" target="_blank" rel="external">AJAX</a> スタイルで開発しました。JavaScript上のXMLHTTPRequestで入力されたメッセージを非同期でサーバに保存し、同時に閲覧しているユーザのページが画面遷移なしにリアルタイムで更新されるはずです。</p>
-<h1 id="かいわれタイプライターとAJAX"><a href="#かいわれタイプライターとAJAX" class="headerlink" title="かいわれタイプライターとAJAX"></a>かいわれタイプライターとAJAX</h1><p>「かいわれフォント(Seed Letter）」というのは元同僚で友達の <a href="http://www.kaiware.org/" target="_blank" rel="external">小林ますみ</a> さんの作品でして、これちゃんと全てのアルファベット（今回使ってませんが小文字や記号もあります）について字形のベースにカイワレの種を植えて毎日撮影して作ったというドド労作なのですが、このデータを使って好きな単語を打てるようなタイプライター的なソフトを見てみたいという話があって僕が安請け合いしていたのですな。でもprocessingで試作してみたりしてみたもののいまいち面白いものにならなくて放置していたのでした。で、ここのところのAJAXの盛り上がりでなんか作ってみるかと考えてたときにふと思い出して、今回のような形にしてみました。去年の <a href="http://collisions.dotimpac.to/works/web/bulletSurf.html" target="_blank" rel="external">BulletSurf</a> に続いて２年連続Javascriptのアプリをエイプリルフールリリース！　というのも考えてたんですが、去年エイプリルフールにリリースしたらただのネタで実装してないと思われたみたいだったので早めにリリースしてみました。</p>
-<p>各地でAJAXに触発されて作られているサンプル的なアプリはインクリメンタルサーチを行う（つまりGoogleSuggestをパクった）ものが多いですけれども、個人的にはどうもリモートデータに対するインクリメンタルサーチがぴんとこない気がしますし（インクリメンタルな検索手法って「このへんにあるのは分かってるけどそれがどこだかわからない」みたいな、知っているたくさんのものの中から今いるものを取り出すというシチュエーションにこそ有用なんであって、全ての検索において有用なんではないと思うんですよね。逆に <a href="http://wema.sourceforge.jp/" target="_blank" rel="external">wema2</a> の付箋インクリメンタルサーチが誰が見ても強力に思えるのはそういった事情ではないかと）、どうせパクるならより強烈なGoogleMapのほうだろーと思っていましたんで、今回のはなかなか気に入っているんですがいかがでしょうか。あと「フォームがなくてタイプするとマウスポインタの位置に直接書き込まれる」というインターフェイスは案外初めて見た気がする。いやじっさいキーボードを触ってるときにポインタの位置を意識させられるのは気持ちわるくて、そりゃ誰もやらんわなと思いましたが。</p>
-<p>前このかいわれフォントのデータを使ってサンプルをつくってみた時はそのデータの重さに辟易しましたし、仮にflashでやるとなると大量の画像データの管理で死にそうな気がしますので、HTML+Javascriptで作ったのはそれなりに正解だったかもと思いました。imgタグでの画像データを表示するとこ自体がある意味非同期なわけだし。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-03-14" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/03/14/1_collisions/2005-03-14/" class="article-date">
-  <time datetime="2005-03-13T15:00:00.000Z" itemprop="datePublished">Mar 14 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/03/14/1_collisions/2005-03-14/">WikiばなVol.4　Wiki博覧会に行ってきた</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img class="img_R" src="/images/wp-content/uploads/2008/02/wikibanavol4.jpg" alt="wikibanavol4.jpg"> ※産業プラザ6Fは眺めがよかったです。</p>
-<p>■3月12日に大田区産業プラザで行われた「WikiばなVol.4」に参加してきました。WikiとWikiばなというものがどの程度認知されているのかよくわからないんですけども、Wikiというのはおおまかに言うと「いつ誰からも書き換えられるWebページ」というコンセプトとそのためのソフトのことで、「Wikiばな」というのは、このなんでもありのWebコラボレーションツールとどうやってうまくつきあっていくか、Wikiが今後どうなっていくかについて、Wikiっぽく「ざっくばらん」に話し合うというイベントです。</p>
-<ul>
-<li>WikiばなVol.4のWikiページ <ul>
-<li><a href="http://wikibana.socoda.net/wiki.cgi?WikiBana%2fVOL%2e4" target="_blank" rel="external">http://wikibana.socoda.net/wiki.cgi?WikiBana%2fVOL%2e4</a></li>
-</ul>
-</li>
-</ul>
-<p>Vol.4である今回は万博イヤーらしく（なのかな）「Wiki博覧会」ということで、各地で発表されている定番／先鋭／変態Wikiエンジンについて、開発者やユーザーみずからにプレゼンテーションしてもらおうというイベントでした。僕は前２回のWikiばなにも参加していて、過去はわりと少人数によるディスカッションが主だったのですが、今回はわりと学会ぽいというか、たくさんのWikiについてみんなで知ろうという会になってましたね。</p>
-<ul>
-<li>ちなみに前々回WikiばなVol.2のポジションペーパーと感想 <ul>
-<li><a href="http://www.dotimpac.to/project/Calki/index.rb?2004/06/05/1086312269.txt" target="_blank" rel="external">http://www.dotimpac.to/project/Calki/index.rb?2004/06/05/1086312269.txt</a></li>
-<li><a href="http://www.dotimpac.to/project/Calki/index.rb?2004/06/06/1086492417.txt" target="_blank" rel="external">http://www.dotimpac.to/project/Calki/index.rb?2004/06/06/1086492417.txt</a></li>
-<li><a href="http://www.dotimpac.to/project/Calki/index.rb?2004/06/07/1086543839.txt" target="_blank" rel="external">http://www.dotimpac.to/project/Calki/index.rb?2004/06/07/1086543839.txt</a></li>
-</ul>
-</li>
-<li>前回WikiばなVol.3のポジションペーパーと感想 <ul>
-<li><a href="http://www.dotimpac.to/project/Calki/index.rb?2004/11/05/1099664616.txt" target="_blank" rel="external">http://www.dotimpac.to/project/Calki/index.rb?2004/11/05/1099664616.txt</a></li>
-<li><a href="http://www.dotimpac.to/project/Calki/index.rb?2004/11/06/1110723368.txt" target="_blank" rel="external">http://www.dotimpac.to/project/Calki/index.rb?2004/11/06/1110723368.txt</a></li>
-</ul>
-</li>
-</ul>
-<p>*Wiki博の各パビリオン紹介 というわけで、各発表についての気の抜けた感想を書いておきます。</p>
-<h2 id="Hiki（かずひこさん）"><a href="#Hiki（かずひこさん）" class="headerlink" title="Hiki（かずひこさん）"></a>Hiki（かずひこさん）</h2><p>「Rubyの国、松江からやってまいりました！」というツカミからしてばっちり。関西系プレゼン！　じつはHikiは書法がなじめなくてあんまり使ってないんですけど、「とにかくアジャイル」というスローガンは素敵。使ってみたくなりました。</p>
-<h2 id="PukiWiki（増井さん）"><a href="#PukiWiki（増井さん）" class="headerlink" title="PukiWiki（増井さん）"></a>PukiWiki（増井さん）</h2><p>僕がふだん立ち上げるWikiもほとんどPukiWikiだし、「たぶん日本で一番設置されているWiki」というのには納得。でもなぜなんだろう、というとこはちょっと気になりますね。</p>
-<p>増井さんの発表はPukiWikiのプレゼンモードを使われていました。</p>
-<p>PukiWiki本が夏あたりに出る予定だそうですが「まだ１ページも書いてません」とのこと。それはまずWikiを立ち上げるとこからでしょう。</p>
-<h2 id="FreeStyleWiki（たけぞうさん）"><a href="#FreeStyleWiki（たけぞうさん）" class="headerlink" title="FreeStyleWiki（たけぞうさん）"></a>FreeStyleWiki（たけぞうさん）</h2><p>FSWikiはPDF出力に興味があって導入しようとしたんですが、重すぎてサーバで動かなくて断念したままでした。PDF出力機能ってもうちょっと注目されてもいいような気がするんですが（出版用の草稿にwikiを使う、という話も多いみたいだし）、どうなんでしょうね。</p>
-<h2 id="MoinMoin（とくひろさん）"><a href="#MoinMoin（とくひろさん）" class="headerlink" title="MoinMoin（とくひろさん）"></a>MoinMoin（とくひろさん）</h2><p>とくひろさんもMoinMoinのページでプレゼンしてたのかな？</p>
-<h2 id="NOTA（洛西さん）"><a href="#NOTA（洛西さん）" class="headerlink" title="NOTA（洛西さん）"></a>NOTA（洛西さん）</h2><p>NOTAすごくオモシロそう。タブレットPCで使ってみようかなと。</p>
-<h2 id="wema2（kanさん）"><a href="#wema2（kanさん）" class="headerlink" title="wema2（kanさん）"></a>wema2（kanさん）</h2><p>wema2のバージョンアップぶりにはかなりどよめきがおきていました。インクリメンタルに付箋が絞り込まれる機能はかなりいい。</p>
-<p>付箋の動きを録画するプラグインとかどうかなーと思いました。</p>
-<h2 id="ContentEditableWiki（たつをさん）"><a href="#ContentEditableWiki（たつをさん）" class="headerlink" title="ContentEditableWiki（たつをさん）"></a>ContentEditableWiki（たつをさん）</h2><p>前回Wikiばなでも発表されていたWYSIWIGWikiがバージョンアップされていました。リンクははてな方式というか、ページ名のオートリンクで実現。なんとなくこのへんはもうちょっとシステムにあった仕組みが模索できそうな気が。</p>
-<h2 id="ThreadWiki（久末さん）"><a href="#ThreadWiki（久末さん）" class="headerlink" title="ThreadWiki（久末さん）"></a>ThreadWiki（久末さん）</h2><p>名前空間とツリービューが特徴のスレウィキ。ツリービューでページの移動や順序変えがドラッグ＆ドロップでできたりすると、ほかにはない使いかたがでてきそうなんですがどうでしょうか。</p>
-<h2 id="RandomNote（ninjinさん）"><a href="#RandomNote（ninjinさん）" class="headerlink" title="RandomNote（ninjinさん）"></a>RandomNote（ninjinさん）</h2><p>ninjinさんのプレゼンのフリースタイルぶり！</p>
-<p>個人用のWiki風ツールには興味あるので、RandomNoteの次の展開も見てみたいです。</p>
-<h2 id="MirrorMan（malaさん）"><a href="#MirrorMan（malaさん）" class="headerlink" title="MirrorMan（malaさん）"></a>MirrorMan（malaさん）</h2><p>今もっともとんがったWikiエンジンMirrorManは、人間の思考のミラーリングのためのインターフェイスを目指しているとのこと。最終目標だという「MirrorMan上でのリアルタイムリモートペアプロによるMirrorMan開発」というのは、最近聞いた中で最大級の野望に聞こえました。</p>
-<p>malaさんもMirrorManのプレゼンモードでプレゼンしてました。</p>
-<p>懇親会でmalaさんがどうやってjavascriptの開発やらデバッグをしてるのか聞こうと思ってたんですが、お話できなくて残念でした。</p>
-<h2 id="Clockworks（たろうさん）"><a href="#Clockworks（たろうさん）" class="headerlink" title="Clockworks（たろうさん）"></a>Clockworks（たろうさん）</h2><p>Wikiというか、cgiベースのS式インタプリタ。かっこいいかも。</p>
-<h2 id="qwikWeb（etoさん）"><a href="#qwikWeb（etoさん）" class="headerlink" title="qwikWeb（etoさん）"></a>qwikWeb（etoさん）</h2><p>MLとwikiの連携が主ながら、いろんな機能をプラグインで節操なくとりいれていくとのこと。ビデオ編集プラグインはかなり便利そう。</p>
-<p>mp3もカット編集したいなーとetoさんに言ったら「じゃあそれは作ってもらうということで」と言われました。えー！</p>
-<p>qwikWebにもプレゼンモードがあるそうで、発表に使っていました。</p>
-<hr>
-<p>という感じ。プレゼンモードがあって実際にそれで発表している方が目立ってた印象で、まあWikiのイベントだからというのもあるんでしょうけど、PowerPointのスライドのフォーマットとWikiページのフォーマットってかなり近いしプレゼン資料の公開のことなんか考えても全部Wikiでできるってのはたしかにかなり魅力的だなーと思いました。こんどやってみよう。</p>
-<p>あとはやっぱりjavascriptによるダイナミックな機能かな。 Wikiを使ってると、いくつかのページを参照しながら新しいページが書きたいみたいなことがわりとあるので、wemaみたいに新規作成ページに既存ページがポップアップしてくれたり、逆に付箋にメモ書きした内容でそのまま新規ページを作ってくれたりすると便利そう。あと <a href="http://www.tiddlywiki.com/" target="_blank" rel="external">TiddlyWiki</a> みたいに今あるページを順序立てて並べて新しいビューをつくるみたいな機能もなんか可能性がありそうな気がしてます。</p>
-<p>■参加できないかなと思ってた懇親会もキャンセルに滑り込んで参加できました。これがまた面白かったんですがそれはまたあとから書きますね。</p>
-<p>■ああそうだ、 <a href="http://collisions.dotimpac.to/works/web/calki.html" target="_blank" rel="external">Calki</a> もよろしく！</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-1_collisions/2005-02-07" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2005/02/07/1_collisions/2005-02-07/" class="article-date">
-  <time datetime="2005-02-06T15:00:00.000Z" itemprop="datePublished">Feb 7 2005</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2005/02/07/1_collisions/2005-02-07/">Network tangram</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>■えーと、ずいぶん遅くなってしまいましたが2005年正月に公開した年賀flashについて。</p>
-<p>そもそも去年までは年賀状も出さない自堕落な正月だったんですが、去年から紙年賀状と、同じデザインでちょっと遊べるflashオンライン年賀状をつくるようにしています。ちなみに去年は <a href="http://www.kaisoku.com/dotimpact/2004.html" target="_blank" rel="external">こんな感じ</a> 。今年はサーバ通信のあるflashをつくってみたかったので、タングラム（正方形を６つのピースに切り出し、形を作って遊ぶパズル）のピースをみんなで動かして酉を作ろう！　というものに。正月のヒマなときにほかの人がピースを動かしてるのがわかるのはちょっと楽しいかも！　と思ったわけですけども、そもそも正月からだと同時につなぐ人が少なすぎてあんまり成立しなかったですな。だめじゃん。</p>
-<ul>
-<li><a href="http://www.dotimpac.to/work/nettangram/" target="_blank" rel="external">http://www.dotimpac.to/work/nettangram/</a></li>
-</ul>
-<h1 id="flashによるサーバ通信"><a href="#flashによるサーバ通信" class="headerlink" title="flashによるサーバ通信"></a>flashによるサーバ通信</h1><p>■ちなみに「同時接続でステージのパーツを動かして遊ぶ」というのは、<a href="http://web.okaygo.co.uk/apps/letters/flashcom/" target="_blank" rel="external">Just Letters</a>というflashをみてそのの自由さ（ルールがなんにもないのに、ただ多人数がアルファベットを動かしてるだけで遊べる！）に感銘を受けたんで、自分でもつくってみたくなったものです。flashでサーバ通信が絡むものってそんな簡単に作れるのか？　と思いきや、増井 俊之さんのUnix Magazine連載「インターフェイスの街角」で触れられていたサンプルを利用したらサーバ、クライアントともあっけなく動いて拍子抜けしました。勉強になった。もちろんパフォーマンスとか同時接続人数とかを考えるとFCSとかを使うべきなのかな。</p>
-<ul>
-<li>Just Letters <ul>
-<li><a href="http://web.okaygo.co.uk/apps/letters/flashcom/" target="_blank" rel="external">http://web.okaygo.co.uk/apps/letters/flashcom/</a></li>
-</ul>
-</li>
-<li>インターフェイスの街角「flashによるサーバ通信」(PDF) <ul>
-<li><a href="http://pitecan.com/UnixMagazine/PDF/if0302.pdf" target="_blank" rel="external">http://pitecan.com/UnixMagazine/PDF/if0302.pdf</a></li>
-</ul>
-</li>
-<li>実際に使ったサーバ用スクリプト <ul>
-<li><a href="http://processing.dotimpac.to/index.php?sample%2FRuby%2FnetTangramSrv" target="_blank" rel="external">http://processing.dotimpac.to/index.php?sample%2FRuby%2FnetTangramSrv</a></li>
-</ul>
-</li>
-</ul>
-<p>タングラムの問題（影絵）やタングラムによるアルファベットフォントなどは「日曜日のタングラム」のものを使用させていただきました。</p>
-<ul>
-<li>日曜日のタングラム <ul>
-<li><a href="http://www1.kamakuranet.ne.jp/usasan/" target="_blank" rel="external">http://www1.kamakuranet.ne.jp/usasan/</a></li>
-</ul>
-</li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flash/">flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
 
 			</span>
 		</div>
