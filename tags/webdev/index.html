@@ -56,6 +56,56 @@
     <div id="main">
       
   
+    <article id="post-201807/force-https" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/07/03/201807/force-https/" class="article-date">
+  <time datetime="2018-07-02T15:00:00.000Z" itemprop="datePublished">Jul 3 2018</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/07/03/201807/force-https/">ドメインをHTTPS化した</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>GitHub PagesでホストしているこのblogはHTTPS対応していると思いこんでたんだけど、最近自分でアクセスしてみたら警告が表示されたのでげげげと思って対応した。<br></p>
+<p>とりあえず<a href="https://qiita.com/superbrothers/items/95e5723e9bd320094537" target="_blank" rel="external">カスタムドメインの GitHub Pages で HTTPS を使う</a>を参考にCloudflareを挟むことで警告を出なくした。<a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/" target="_blank" rel="external">5月からカスタムドメインでもHTTPSサポートされた</a>はずでちゃんとすれば特別なことをしなくても警告はでないんじゃないかな…<br></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201802/how-to-develop-well-in-zend-framework-3" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -547,71 +597,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201511/aspect-mock-return-generator-issue" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/11/19/201511/aspect-mock-return-generator-issue/" class="article-date">
-  <time datetime="2015-11-18T15:00:00.000Z" itemprop="datePublished">Nov 19 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/11/19/201511/aspect-mock-return-generator-issue/">AspectMockを使うクラスでyieldを使ってるとき</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>AspectMockでモッキングするクラス（に依存するクラス）でyieldを使ってると、AspectMockが注入するコードがreturnで値を返そうとするためエラーになる。</p>
-<pre><code>PHP Fatal error:  Generators cannot return values using &quot;return&quot; in /...
-</code></pre><p>とりあえずキャッシュコードのreturnをyieldに変えて動かしてたけど、もうissueになっててdev-masterでは解消されているっぽい。</p>
-<p><a href="https://github.com/Codeception/AspectMock/issues/50%0A" target="_blank" rel="external">Generators result in fatal error · Issue #50 · Codeception/AspectMock</a></p>
-<p>Composerでdev-masterのモジュールをインストールする（”minimum-stability”: “dev”にしてもいいけどこれだと全モジュールのdev-masterが入る）</p>
-<pre><code>&quot;require-dev&quot;: {
-   ...
-   &quot;codeception/aspect-mock&quot;: &quot;dev-master&quot;
-   ...
-}
-</code></pre><p>上記修正は返り値のキーワードをPHPDOCの@returnで判別するものなので、AspectMockのキャッシュを消して、yieldを使ってるメソッドのPHPDOCの@returnに <code>\Generator</code> を書く（<code>Generator</code>だけだとだめだった）</p>
-<pre><code>/**
- * @param $name
- * @return \Generator
- */
-public function generatorMethod($name)
-</code></pre><p>これで動いた。AspectMock黒魔術感あってハマると苦しい…。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webdev/">webdev</a></li></ul>
 
 			</span>
 		</div>
