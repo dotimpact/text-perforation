@@ -56,6 +56,285 @@
     <div id="main">
       
   
+    <article id="post-201712/scrapbox-user-script-and-style-for-outliner-user" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/06/201712/scrapbox-user-script-and-style-for-outliner-user/" class="article-date">
+  <time datetime="2017-12-05T15:00:00.000Z" itemprop="datePublished">Dec 6 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/06/201712/scrapbox-user-script-and-style-for-outliner-user/">Scrapboxをアウトライナーぽく使う人むけのuserScript/Style</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>とりあえず不満だったとこに対応したやつ</p>
+<h4 id="行の付加情報用の文字修飾UserStyle"><a href="#行の付加情報用の文字修飾UserStyle" class="headerlink" title="行の付加情報用の文字修飾UserStyle"></a>行の付加情報用の文字修飾UserStyle</h4><img src="https://i.gyazo.com/f8d7985b5705b5eae358ab71eebd015e.png">
+<p>noteのあるアウトラインを持ってきたりするときに、強弱がなくてごちゃごちゃするのでほしかった。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">code</span><span class="selector-pseudo">:style.css</span></div><div class="line">  <span class="selector-class">.deco-</span>\~ &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">0.8em</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#999</span>;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>リンクをコピーする用に<a href="https://chrome.google.com/webstore/detail/create-link/gcmghdmnkfdbncmnmlkkglmnnhagajbm?hl=ja" target="_blank" rel="external">Copy Link</a>に<code>%text% [~ %url%]</code>というのを追加して使っている。文字全体をリンクにすると青色ばっかりになってこれまたうるさいので。</p>
+<img src="https://i.gyazo.com/1942d0864d72da70ddb006662220ae7b.png" width="400">
+<img src="https://i.gyazo.com/7a8469e83268df55727835cf3d24f94b.png" width="600">
+<h4 id="選択テキストの検索結果にリンクするUserScript"><a href="#選択テキストの検索結果にリンクするUserScript" class="headerlink" title="選択テキストの検索結果にリンクするUserScript"></a>選択テキストの検索結果にリンクするUserScript</h4><img src="https://i.gyazo.com/0125455bc73b897c80af7a6e8fbebd5d.gif" width="500">
+<hr>
+<p><a href="https://scrapbox.io/customize/%E6%96%87%E5%AD%97%E5%88%97%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6Scrapbox%E5%86%85%E6%A4%9C%E7%B4%A2" target="_blank" rel="external">文字列を選択してScrapbox内検索</a>から発展したもの。Scrapboxのダイナミックリンク楽しいんだけど、行の情報に対するタグ的に使うと一覧性がなくて、検索結果のほうがみたいと思うことが多いのでそうするやつ。個人的にはハッシュ形式のリンククリックの挙動が変えられるなら検索結果のほうにしたい。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">code:script.js</div><div class="line">  scrapbox.PopupMenu.addButton(&#123;</div><div class="line">    title: <span class="string">'検索リンク'</span>,</div><div class="line">    onClick: <span class="function"><span class="keyword">function</span> (<span class="params">text</span>) </span>&#123;</div><div class="line">      <span class="keyword">var</span> projectName = <span class="string">'YOUR PROJECT NAME'</span>;</div><div class="line">      <span class="keyword">return</span> <span class="string">'['</span> + text + <span class="string">' https://scrapbox.io/'</span>+ projectName +<span class="string">'/search/page?q='</span> + <span class="built_in">encodeURIComponent</span>(text) + <span class="string">']'</span>;</div><div class="line">    &#125;</div><div class="line">   &#125;);</div><div class="line"> </div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapbox/">scrapbox</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201712/diggin-in-a-carts-soundtrack" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/06/201712/diggin-in-a-carts-soundtrack/" class="article-date">
+  <time datetime="2017-12-05T15:00:00.000Z" itemprop="datePublished">Dec 6 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/06/201712/diggin-in-a-carts-soundtrack/">V.A.『Diggin In The Carts - A Collection Of Pioneering Japanese Video Game Music』</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=404114016/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://hyperdub.bandcamp.com/album/various-artists-diggin-in-the-carts-a-collection-of-pioneering-japanese-video-game-music" target="_blank" rel="external">Various Artists: Diggin&#39; In The Carts, A Collection Of Pioneering Japanese Video Game Music by Hyperdub</a></iframe>
+
+<p>出るの忘れててちと遅れて購入。hallyさんのライナーついてるならCDで買おうとタワーレコードで探したところ、ゲームミュージックコーナーにはなくてちょっと残念だった（クラブ・テクノコーナーにあった）。</p>
+<p>リリース情報で曲目を見た段階で変わったセレクションだなーと思っていて、実際聞いてみても最初は結構「？」という感じだったんだけど、しばらく聴いていたらなんとなく聴きどころがわかってきた。おそらく「メロディ、リズム主体でなく短いシーケンスの繰り返しからなる」かつ「音源チップのサウンドの特徴（魅力）が出ている」トラックが選ばれた結果、有名な、あるいはポップで勢いのあるステージ１とかの曲はなく、あまり有名でないゲームのそれもステージ5とか中盤ステージのトリップ感のある曲ばかりが集められたゲームミュージックコンピレーションになったというのがこのCDなんだと思う。激シブすぎる。</p>
+<p>でも「短いシーケンスの繰り返しからなる」「音源チップのサウンドの特徴（魅力）が出ている」という観点で聞き込むとたしかになかなかいい（収録時間の問題なのかループが少ないのが残念）。『源平討魔伝 BIGモード』とかは有名な名曲だけどグルーヴィーな曲に聞こえて新鮮だし、『ワルキューレの伝説』のエレキマン王の曲なんかはなぜかPCエンジン版のアレンジで収録されてるんだけど、このCDの並びだとアブストラクトなチップチューンに聞こえる。3曲収録されているゴブリンサウンド（知らなかったけどメサイヤのサウンドチームの名前なのかな）の曲もいい。あとはまさに「ディギン・イン・ザ・カーツ」で発掘された、リードトラック『THE 麻雀・闘牌伝（スティーヴ・ライヒばりのミニマルミュージック）』をはじめとする日の当たらないゲームの知られざる名曲たちも最高（セレクションの文脈でいうと複数収録されている斉藤博人さんの曲がそこだけ「いわゆるゲームミュージック的な曲」なのでちょっと不思議ではあった）。</p>
+<p>国内盤に寄せられたhallyのライナーはこのアルバムにふさわしいもの（批評的にセレクションされた初めてのゲームミュージックのアルバム、という）ではあったけど、全曲徹底解説的なものを勝手に期待してたのでちょっと拍子抜けだった。ちなみにOTOTOYだとデジタルで変えてこのライナーもpdfでついてくるのに後から気づいた。</p>
+<ul>
+<li><a href="https://ototoy.jp/_/default/p/86491" target="_blank" rel="external">DIGGIN IN THE CARTS - OTOTOY</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videogame/">videogame</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201712/scrapbox-alfred-workflow" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/05/201712/scrapbox-alfred-workflow/" class="article-date">
+  <time datetime="2017-12-04T15:00:00.000Z" itemprop="datePublished">Dec 5 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/05/201712/scrapbox-alfred-workflow/">scrapboxを検索して開くalfred workflow</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/dotimpact/scrapbox-alfred-workflow/" target="_blank" rel="external">dotimpact/scrapbox-alfred-workflow: scrapbox alfred workflow</a></p>
+<hr>
+<p>ご多分にもれず、情報集約に<a href="https://scrapbox.io/product" target="_blank" rel="external">Scrapbox</a>を使い始めて、ちびちびと環境整備をしている。</p>
+<p>githubで検索していたら、<a href="https://github.com/ohtomi/scrapbox" target="_blank" rel="external">go製の検索cli</a>をみつけたので、これを呼び出すalfred workflowを書いた。</p>
+<hr>
+<img src="https://i.gyazo.com/6a5b23660e0d2964f65b7ed29a0d33bb.gif" width="600">
+<hr>
+<p>cliでプライベートprojectにアクセスするためのトークンは、ログインしたブラウザのクッキーが持ってる値を渡せばいいみたい。</p>
+<hr>
+<img src="https://i.gyazo.com/3553f45c0718e488a72703a0f299a110.png0" width="300">
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/activity/">activity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapbox/">scrapbox</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201712/baked-sweet-potato-made-by-rice-cooker" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/03/201712/baked-sweet-potato-made-by-rice-cooker/" class="article-date">
+  <time datetime="2017-12-03T02:03:00.000Z" itemprop="datePublished">Dec 3 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/03/201712/baked-sweet-potato-made-by-rice-cooker/">炊飯器で焼きいもをつくる</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>さつまいもってふだん頻繁に買ってきて料理する野菜じゃないと思うんだけど、こどもがやや大きくなると園や学校の行事でいもほりをしてもらって帰ってくるので料理する機会増えるものみたい。自宅で使っている東芝の石窯オーブンレンジに焼きいもモードがあるのでそれで焼きいもをつくっていて、ふつうにおいしくできるものの外側の水分がだいぶ抜けてしまって可食部分が少なかったりしてわりと不満が多い。最近炊飯器でつくるといいという話をよく見るのでやってみた。</p>
+<ul>
+<li><a href="https://cookpad.com/search/%E7%82%8A%E9%A3%AF%E5%99%A8%20%E7%84%BC%E3%81%8D%E8%8A%8B" target="_blank" rel="external">【みんなが作ってる】 炊飯器 焼き芋のレシピ 【クックパッド】 簡単おいしいみんなのレシピが279万品</a></li>
+<li><a href="https://www.tbsradio.jp/204669" target="_blank" rel="external">お家で「焼き芋」！電子レンジ・トースター・炊飯器で作ってみた</a></li>
+</ul>
+<p>レシピはだいたい同じで釜に芋をいれて水を半分つかる程度に入れて、玄米モード（炊飯時間が長い）で仕掛けるというもの。その通りにしてみたら確かに焼きいもっていうか、スイートポテトっぽいふかし芋ができた。なるほど手軽でいいかんじ。皮まで食べられるし、つくって冷蔵庫で保存しておいてレンジで再加熱しても食感や風味がかわらないのもいい。まだ試してないけど、ちょっとだけトーストで火をいれてもいいのかも。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201712/yu-irie-taiyo" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/02/201712/yu-irie-taiyo/" class="article-date">
+  <time datetime="2017-12-01T15:00:00.000Z" itemprop="datePublished">Dec 2 2017</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/02/201712/yu-irie-taiyo/">入江悠『太陽』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://eiga-taiyo.jp/" target="_blank" rel="external">映画『太陽』公式サイト 2016年4月23日、「沁みる」ロードショー</a></p>
+<hr>
+<p>WOWOWで録画してたやつ。SFというアリバイで日本の限界集落を舞台にした自壊目前のムラ社会の話を真っ向から撮るという映画。演劇っぽい寓話的な話が映画としてもぎりぎり成立していてよかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201712/atmic-blonde" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -335,274 +614,9 @@
 
 
   
-    <article id="post-201711/script-doctors-presentation-method" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/11/21/201711/script-doctors-presentation-method/" class="article-date">
-  <time datetime="2017-11-20T15:00:00.000Z" itemprop="datePublished">Nov 21 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/11/21/201711/script-doctors-presentation-method/">三宅隆太『スクリプトドクターのプレゼンテーション術』を読んだ</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.small-light.com/books/book049.html" target="_blank" rel="external">商品一覧：スクリプトドクターのプレゼンテーション術</a></p>
-<hr>
-<p>奥さん（三宅隆太さんのファン）が買って貸してくれたのでさくっと読んだ。ここまで露骨に「タマフルファン向けの本」だと思わなかったなー。逆に言うと「タマフルのファンが買う」というだけで出版が成立するくらいの厚い支持層があるというのはすごい。この本の理論でいうところの「転調」がある質疑の部分とあとがきがよかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book/">book</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201711/twisted-justice" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/11/20/201711/twisted-justice/" class="article-date">
-  <time datetime="2017-11-19T15:00:00.000Z" itemprop="datePublished">Nov 20 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/11/20/201711/twisted-justice/">白石和彌『日本で一番悪い奴ら』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.nichiwaru.com/" target="_blank" rel="external">映画『日本で一番悪い奴ら』 | 大ヒット上映中!</a></p>
-<hr>
-<p>WOWOWで録画してあったのをようやく観た。テンポもいいしなんというか「リアリティのあるコメディ」として描かれていて最後まで面白く観れたんだけど、このほとんど『土竜の唄』みたいな荒唐無稽な話が道警の手口や経緯に関してはほぼ実話だという現実の重みもあって複雑な気持ちになる。抜けの良さと気持ち悪さがちょうどいいバランス。</p>
-<p>公開当時たまむすびに綾野剛と白石監督がゲスト出演した回がおもしろかったのを思い出したので聞き直した。</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/2q5SvQLqqZA" frameborder="0" allowfullscreen></iframe></div>
-<p>関係ないけど綾野剛の印象と真鍋大渡さんに近いものを感じる。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201711/their-finest" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/11/19/201711/their-finest/" class="article-date">
-  <time datetime="2017-11-18T15:00:00.000Z" itemprop="datePublished">Nov 19 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/11/19/201711/their-finest/">ロネ・シェルフィグ『人生はシネマティック!』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://jinsei-cinema.jp/" target="_blank" rel="external">映画『人生はシネマティック！』公式サイト</a></p>
-<hr>
-<p>添野知生さんの</p>
-<div class="twitter-wrapper"><blockquote class="twitter-tweet"><a href="https://twitter.com/chise_soeno/status/929553219793043456" target="_blank" rel="external"></a></blockquote></div><script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p>というツイートを観て、それ大好物なのでは？ と思って観たんだけど果たして大好物だった。『ブレードランナー2048』の鈍重な話し運びにひたっていたのであまりにさくさくと進む序盤の展開にこんなんでいいんだっけと不安を覚えたんだけど、これでいいんだよな！</p>
-<p>もちろん狙ってのことだろうけど、ダンケルク撤退についての新作映画を2作も観られるのは今年しかないと思うので観るなら今しかない。「女性と戦争」「女性と専門職」というポイントで『ワンダーウーマン』『ドリーム』にもつながりを感じた。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201711/tomoko-oshima-solo-exhibition" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/11/16/201711/tomoko-oshima-solo-exhibition/" class="article-date">
-  <time datetime="2017-11-15T15:00:00.000Z" itemprop="datePublished">Nov 16 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/11/16/201711/tomoko-oshima-solo-exhibition/">『大島智子 個展 パルコでもロイホでもラブホでもいいよ』を見た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://demoiiyo.tomoko-oshima.com/" target="_blank" rel="external">大島智子 個展 パルコでもロイホでもラブホでもいいよ</a></p>
-<hr>
-<p>見てきた。大島さんやその作品はtwitterなりtumblrなり、あるいはtofubeats『No.1』MVでの被写体なりである時期以降のインターネットにふわふわと漂っているものだったなという思いはありせど僕自身はそれほど好んだり追いかけたりしていなかったつもりだったので、個展があると聞いて行くでしょという気持ちになったところが自分でいちばん新鮮に思えた。</p>
-<p>男性にとっての生理の話題みたいなもので彼女の作品を軽々しくいいとかわかるとか言うのは危険だという感覚があるけど、今回の展示は完成作品と彩色前の原画が並べてあったことと、フォントで組まれた（きわめて繊細で理知的に見える）テキストと（こういってはなんだが、とてもつたなく見える）彼女直筆の文字が重ねられた画集冒頭のページにつながりがあるように思えたのが発見だった。</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/bQWxxdGsSSk" frameborder="0" allowfullscreen></iframe></div>
-<p>それはそれとして『No.1』のMVはいまだに強度あるなー</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/art/">art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exhibition/">exhibition</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manga/">manga</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201711/jodorowskys-dune" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/11/14/201711/jodorowskys-dune/" class="article-date">
-  <time datetime="2017-11-13T15:00:00.000Z" itemprop="datePublished">Nov 14 2017</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/11/14/201711/jodorowskys-dune/">フランク・パヴィッチ『ホドロフスキーのDUNE』を観た</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://www.uplink.co.jp/dune/" target="_blank" rel="external">映画『ホドロフスキーのDUNE』公式サイト</a></p>
-<hr>
-<p>Netflixにあるのを知ってようやく観た。DUNEという作品にもホドロフスキー監督にも思い入れがなくても（僕がそう）映画を見るだけでアガる、そしてホドロフスキーが好きになる作りになっていてドキュメンタリーとしてとてもよくできていた。</p>
-<p>ホドロフスキー、弦人さんぽいよね？ という話を鍵っ子に振ったら同意してもらえた。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/blog/page/9/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/8/">8</a><a class="page-number" href="/tags/blog/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/tags/blog/page/11/">11</a><a class="page-number" href="/tags/blog/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/80/">80</a><a class="extend next" rel="next" href="/tags/blog/page/11/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/tags/blog/page/9/">&laquo; Prev</a><a class="page-number" href="/tags/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/8/">8</a><a class="page-number" href="/tags/blog/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/tags/blog/page/11/">11</a><a class="page-number" href="/tags/blog/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/tags/blog/page/81/">81</a><a class="extend next" rel="next" href="/tags/blog/page/11/">Next &raquo;</a>
     </nav>
   
 

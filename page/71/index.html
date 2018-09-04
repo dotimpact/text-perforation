@@ -56,6 +56,322 @@
     <div id="main">
       
   
+    <article id="post-201509/wallaby-js" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/09/201509/wallaby-js/" class="article-date">
+  <time datetime="2015-09-08T15:00:00.000Z" itemprop="datePublished">Sep 9 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/09/201509/wallaby-js/">IDEプラグイン型の自動テストツール「Wallaby.js」を導入してみた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="http://wallabyjs.com/" target="_blank" rel="external">Wallaby - intelligent test runner for JavaScript, TypeScript, and CoffeeScript</a></p>
+<p>BCCKSの組版エンジンに安定性と大規模な拡張が同時に求められる局面が生じてきたのでちゃんとテストを書いてからいじるようにしようとjsのテストフレームワークやら自動テスト環境やらを調べていたら、Intellij系のIDE（やVisual StudioとAtom）向けのプラグインとして提供され、テストのパス状態や結果がエディタのコード上に完全なかたちで統合されるというツール「Wallaby.js」を見つけたので導入してみた。1ライセンス$100でまあちょっと高いなと思うけど、１日使ってみてこれはテストうんぬんより開発ツールとして非常に便利なので確実に定着するしすでに誰かにオススメしたい感じがしている。</p>
+<p>僕が使っているのはIntellij IDE（PhpStorm / Intellij IDEA）なのでIntellij プラグイン版のみの評価になる（Atomプラグイン版もどんな感じなのか気になるけど）。もともとIntellijのIDEには標準でもテストランナープラグインが提供されていて、それを使ってみるつもりでいろいろ調べていたんだけど、ブラウザjsのテストはjsTestDriverを起動してからブラウザを起動しないといけなかったり、いまいち乗りきれない感じがあった。Wallabyはプラグインにヘッドレスブラウザ（PhantomJS）が完全に隠蔽された形で統合されていて、テストフレームワークのインストールと設定（テスト対象のソースとテストソースの定義）をすれば実行過程のことはなにも気にしなくてもテストが実行されるようになる。導入が楽。</p>
+<p>テスト結果のエディタ統合も想像した以上の完成度で、テスト側のソースの各行にカラーチップでテストのパス状態が信号のように表示されるのはもちろん、テストするソース側も現在のテストスイートでの各行のカバレッジ状態がやはりカラーチップで表示されるので、テストがぜんぜんないコードにテストを足していく今回のような場合でもモチベーションを上がりやすいし、キーになるロジックのテストを先に書こうといった判断もしやすい。コード修正後の反映パフォーマンスもまったく問題ない（これはまだテストが少ないせいかもしれないけど）。</p>
+<img src="http://wallabyjs.com/assets/img/wallaby.gif">
+<p>Wallaby.jsのサイトからアニメgifを引用</p>
+<p>さらに体験してみて眼からうろこが落ちたのは、Wallabyの環境だとほんとうに「テスト駆動開発」ができるということ。Wallabyプラグインはテストの状態だけでなく、テスト実行時の各行での出力やエラー内容もインラインで表示される（Chromeのjsデバッガのステップ実行状態とおなじ感じ）。コードにconsole.logを追記すれば即座にそのブロックに関するテストが実行され、出力された変数の値がインラインに表示される。Wallabyの環境でテストが書かれた環境でコードを書くと、まさにテストというエンジンに接続された動いているプログラムを動いたまま触っているような感覚で開発ができる。あまりテストツールをさわったことがないので他のツールでもできることなのかもしれないけど、これは新鮮だった。</p>
+<img src="https://i.gyazo.com/527ee24bab0615e656816c939d89f658.gif">
+<p>なにしろきのう導入したばかりなのでもうちょっと使ってみないとわからない部分もあるけど（テストが増えるとどうなるかとか）、現時点ではWallabyによってコーディングの進めかた自体が変わりそうな気がしている。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/intellij/">intellij</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/review/">review</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/text/">text</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/second-nasne" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/08/201509/second-nasne/" class="article-date">
+  <time datetime="2015-09-07T15:00:00.000Z" itemprop="datePublished">Sep 8 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/08/201509/second-nasne/">２台目のnasne</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>自分が録画したい番組が奥さんが録るドラマの予約とぶつかって録画できないことが多くなってきたので、nasneを増設してみてみた。1台目と同じLANに接続してtorneから登録すれば、録画済みのデータに関してはどちらのnasneに入っているかは意識せずに見たり管理したりできるみたい。よくできてるな。録画に関してはどちらのnasneに予約登録するのかを選ぶ必要があった（WOWOWとかの契約はB-CASカード単位で１台でしか録画できないので仕方ない）。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gadget/">gadget</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/zenpad-s-8" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/07/201509/zenpad-s-8/" class="article-date">
+  <time datetime="2015-09-06T15:00:00.000Z" itemprop="datePublished">Sep 7 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/07/201509/zenpad-s-8/">ZenPad S 8.0を買った</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0148KH1Q8/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/41K7DsJt40L._SL160_.jpg" alt="ASUS ZenPadシリーズ TABLET / ブラック ( Android 5.0 / 7.9inch touch / インテルR Atom Z3580 / 4G / 32G ) Z580CA-BK32" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0148KH1Q8/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ASUS ZenPadシリーズ TABLET / ブラック ( Android 5.0 / 7.9inch touch / インテルR Atom Z3580 / 4G / 32G ) Z580CA-BK32</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.09.14</div></div><div class="amazlet-detail">Asustek (2015-09-04)<br>売り上げランキング: 2,274<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B0148KH1Q8/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>タブレットっぽくてペンのついてるデバイスとしてASUSのFonepad note 6を楽しく使っていたんだけど、バッテリーがすぐ切れるようになってしまったのでやっぱりASUSの安くてペンのついているタブレットとして出たZenPad S 8.0を買った。ASUSのZenPadというタブレットの新ブランドは今回まとめて5機種くらい出たけどそのなかのフラッグシップでアスペクト比4:3の8インチで64ビットAtomで4GBメモリのやつ。Fonepadはsimが挿せたので便利だったんだけどwifiモデルしかないのが残念。</p>
+<p>まだそんなに使い込んでないけど、スペックはすごく上がったので快適にはなった（まえはdマガジンの雑誌を１つ開くのに5分くらいかかっていた）。デジタイザペン（Z Stylus）も買ってそれもスペックに合わせてよくなってるといいなと思ったけどこれは印象が変わるような変化はなかった（筆跡の追従性はかなりアプリによるのと、やっぱりペン先の位置やパームリジェクションの問題はさけられないみたい）。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gadget/">gadget</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/lucy" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/06/201509/lucy/" class="article-date">
+  <time datetime="2015-09-05T15:00:00.000Z" itemprop="datePublished">Sep 6 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/06/201509/lucy/">リュック・ベッソン『LUCY/ルーシー』</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00N0LY9DU/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/519vQr0dtoL._SL160_.jpg" alt="LUCY/ルーシー [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00N0LY9DU/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">LUCY/ルーシー [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.09.10</div></div><div class="amazlet-detail">NBCユニバーサル・エンターテイメントジャパン (2015-01-16)<br>売り上げランキング: 15,762<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00N0LY9DU/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>ルーシーは意外とおもしろく観た。安っぽ仰々しいフッテージを多用するところが作品のばかばかしさを増しててよかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/usagi-drop" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/05/201509/usagi-drop/" class="article-date">
+  <time datetime="2015-09-04T15:00:00.000Z" itemprop="datePublished">Sep 5 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/05/201509/usagi-drop/">SABU『うさぎドロップ』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B005WQWPRS/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61r72LNB5oL._SL160_.jpg" alt="うさぎドロップ [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B005WQWPRS/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">うさぎドロップ [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.09.07</div></div><div class="amazlet-detail">Happinet(SB)(D) (2012-02-02)<br>売り上げランキング: 89,877<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B005WQWPRS/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>原作漫画を読んでなかったので観ながら途中で出てくる謎のイメージダンスシーン（主人公の松山ケンイチが雑誌のページを凝視しているうちにそのページに写ったモデル（香里奈）とダンスをする妄想シーンが始まる）が原作になかったらすごいなーと思ってたんだけど、あとで調べたら原作にはぜんぜんないらしい。映画のシーンとしてもそのあと登場する香里奈役とのからみで関係するわけでもなく意味不明すぎる。特殊な事情があったのだろうか…それ以外のことをいいたくなる映画でもなかった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-201509/saving-mr-banks" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/09/04/201509/saving-mr-banks/" class="article-date">
+  <time datetime="2015-09-03T15:00:00.000Z" itemprop="datePublished">Sep 4 2015</time>
+</a>
+		</span>
+		<span class="meta-elements author">doppac</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/09/04/201509/saving-mr-banks/">ジョン・リー・ハンコック『ウォルト・ディズニーの約束』を観た</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00KBLC6LO/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51tuvH3-rpL._SL160_.jpg" alt="ウォルト・ディズニーの約束 MovieNEX [ブルーレイ+DVD+デジタルコピー(クラウド対応)+MovieNEXワールド] [Blu-ray]" style="border: none;"></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00KBLC6LO/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">ウォルト・ディズニーの約束 MovieNEX [ブルーレイ+DVD+デジタルコピー(クラウド対応)+MovieNEXワールド] [Blu-ray]</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 15.09.07</div></div><div class="amazlet-detail">ウォルト・ディズニー・ジャパン株式会社 (2014-08-06)<br>売り上げランキング: 5,855<br></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00KBLC6LO/dotimpact-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+<hr>
+<p>WOWOWの退会会員誘致で9月は無料にするから再入会してくれという電話に応じて再入会した。見逃した映画がたくさん放映しているのでうれしい。これも見逃してたやつ。</p>
+<p>ウォルト・ディズニーの…というのは釣りで実際はメリー・ポピンズの作者P.L.トラバースの話。この映画でこのトラバース婦人は不快なほど複雑な人物として描かれていて、最初はかなりうへーと思うんだけど、彼女の孤独と彼女の物語のモデルである子供時代の父親の回想とを坦々と描写されるなかですごくゆるやかにトラバース婦人の世界というのが観客に伝えられ、彼女のふるまいが受け入れられるようになる。へんに態度が軟化したり、悔い改めたりするわけではないのがすごい。まあ実話ベースの話で、エンディングで流される記録音声にもあるようにP.L.トラバース本人が実際にものすごく辛辣な人物だったみたいだけど。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/movie/">movie</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-201509/mail-from-suzu-san" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -236,7 +552,7 @@
 	</header>
 	<div class="entry-content">
 		
-    	<h1 id="8月にしたこと"><a href="#8月にしたこと" class="headerlink" title="8月にしたこと"></a>8月にしたこと</h1><ul><li><a href="/2015/08/01/201508/shirobako/">水島努『SHIROBAKO』を見終わった [08/01]</a></li><li><a href="/2015/08/02/201508/paper-moon/">吉田大八『紙の月』を観た [08/02]</a></li><li><a href="/2015/08/03/201508/pebble-recent-watchface/">最近のWatchface [08/03]</a></li><li><a href="/2015/08/04/201508/persuasive-technology-yakiniku/">Persuasive Technology焼肉 [08/04]</a></li><li><a href="/2015/08/05/201508/steel-series-free/">Steel Series Free [08/05]</a></li><li><a href="/2015/08/06/201508/zenfone5-mobile-network-trouble/">Zenfone5のモバイルネットワーク不調 [08/06]</a></li><li><a href="/2015/08/07/201508/seventh-attend-to-dentist/">歯医者（通院７回目） [08/07]</a></li><li><a href="/2015/08/08/201508/kyo-aku/">白石和彌『凶悪』を観た [08/08]</a></li><li><a href="/2015/08/09/201508/cai-guo-qiang-in-yokohama-museum/">トミカ博と『蔡國強展：帰去来』を観てきた [08/09]</a></li><li><a href="/2015/08/10/201508/project-almanac/">ディーン・イズレイリート『プロジェクト・アルマナック』を観た [08/10]</a></li><li><a href="/2015/08/11/201508/secret-of-contents/">川上量生『コンテンツの秘密』を読んだ [08/11]</a></li><li><a href="/2015/08/12/201508/regexp-for-adobe-japan-1-6/">Adobe-Japan1-6に収録された文字にマッチする正規表現 [08/12]</a></li><li><a href="/2015/08/13/201508/history-of-human-and-architecture/">藤森照信『人間と建築の歴史』を読んだ [08/13]</a></li><li><a href="/2015/08/14/201508/sylvanian-families-for-sylvanian-families/">シルバニアファミリーのためのシルバニアファミリー [08/14]</a></li><li><a href="/2015/08/15/201508/kitakyusyu-museum-of-natual-history-and-human-history/">北九州市立 いのちのたび博物館博物館を観た [08/15]</a></li><li><a href="/2015/08/16/201508/non-stop/">ジャウム・コレット＝セラ『フライト・ゲーム』を観た [08/16]</a></li><li><a href="/2015/08/17/201508/sxsw-2015-gaming-awards-opening/">SXSW 2015 Gaming Awards: Opening Sequence [08/17]</a></li><li><a href="/2015/08/18/201508/dungeon-meshi-2/">九井諒子『ダンジョン飯』2巻を読んだ [08/18]</a></li><li><a href="/2015/08/19/201508/visualizing-rules/">ルールの可視化 [08/19]</a></li><li><a href="/2015/08/21/201508/a-new-text-composition-lecture/">唐木元『新しい文章力の教室　苦手を得意に変えるナタリー式トレーニング』を読んだ [08/21]</a></li><li><a href="/2015/08/21/201508/eighth-attend-to-dentist/">歯医者（通院８回目） [08/21]</a></li><li><a href="/2015/08/22/201508/wood-job!/">矢口史靖『WOOD JOB! 神去なあなあ日常』を観た [08/22]</a></li><li><a href="/2015/08/23/201508/pikmin3-cleared/">『ピクミン3』をクリア [08/23]</a></li><li><a href="/2015/08/25/201508/kung-fury/">KUNG FURY Official Movie [08/25]</a></li><li><a href="/2015/08/26/201508/repairing-mbp-trackpad/">MacBook Proのトラックパッドのクリックを直す [08/26]</a></li><li><a href="/2015/08/27/201508/sony-digital-paper-dpt-s1/">ソニー デジタルペーパー DPT-S1を触った [08/27]</a></li><li><a href="/2015/08/28/201508/nineth-attend-to-dentist/">歯医者（通院９回目） [08/28]</a></li><li><a href="/2015/08/29/201508/workshop-collection/">ワークショップコレクション [08/29]</a></li><li><a href="/2015/08/30/201508/oktober-fest-with-kumode/">オクトーバーフェスト飲み会 [08/30]</a></li></ul>
+    	<h1 id="8月にしたこと"><a href="#8月にしたこと" class="headerlink" title="8月にしたこと"></a>8月にしたこと</h1><ul><li><a href="/2015/08/01/201508/shirobako/">水島努『SHIROBAKO』を見終わった [08/01]</a></li><li><a href="/2015/08/02/201508/paper-moon/">吉田大八『紙の月』を観た [08/02]</a></li><li><a href="/2015/08/03/201508/pebble-recent-watchface/">最近のWatchface [08/03]</a></li><li><a href="/2015/08/04/201508/persuasive-technology-yakiniku/">Persuasive Technology焼肉 [08/04]</a></li><li><a href="/2015/08/05/201508/steel-series-free/">Steel Series Free [08/05]</a></li><li><a href="/2015/08/06/201508/zenfone5-mobile-network-trouble/">Zenfone5のモバイルネットワーク不調 [08/06]</a></li><li><a href="/2015/08/07/201508/seventh-attend-to-dentist/">歯医者（通院７回目） [08/07]</a></li><li><a href="/2015/08/08/201508/kyo-aku/">白石和彌『凶悪』を観た [08/08]</a></li><li><a href="/2015/08/09/201508/cai-guo-qiang-in-yokohama-museum/">トミカ博と『蔡國強展：帰去来』を観てきた [08/09]</a></li><li><a href="/2015/08/10/201508/project-almanac/">ディーン・イズレイリート『プロジェクト・アルマナック』を観た [08/10]</a></li><li><a href="/2015/08/11/201508/secret-of-contents/">川上量生『コンテンツの秘密』を読んだ [08/11]</a></li><li><a href="/2015/08/12/201508/regexp-for-adobe-japan-1-6/">Adobe-Japan1-6に収録された文字にマッチする正規表現 [08/12]</a></li><li><a href="/2015/08/13/201508/history-of-human-and-architecture/">藤森照信『人間と建築の歴史』を読んだ [08/13]</a></li><li><a href="/2015/08/14/201508/sylvanian-families-for-sylvanian-families/">シルバニアファミリーのためのシルバニアファミリー [08/14]</a></li><li><a href="/2015/08/15/201508/kitakyusyu-museum-of-natual-history-and-human-history/">北九州市立 いのちのたび博物館博物館を観た [08/15]</a></li><li><a href="/2015/08/16/201508/non-stop/">ジャウム・コレット＝セラ『フライト・ゲーム』を観た [08/16]</a></li><li><a href="/2015/08/17/201508/sxsw-2015-gaming-awards-opening/">SXSW 2015 Gaming Awards: Opening Sequence [08/17]</a></li><li><a href="/2015/08/18/201508/dungeon-meshi-2/">九井諒子『ダンジョン飯』2巻を読んだ [08/18]</a></li><li><a href="/2015/08/19/201508/visualizing-rules/">ルールの可視化 [08/19]</a></li><li><a href="/2015/08/21/201508/eighth-attend-to-dentist/">歯医者（通院８回目） [08/21]</a></li><li><a href="/2015/08/21/201508/a-new-text-composition-lecture/">唐木元『新しい文章力の教室　苦手を得意に変えるナタリー式トレーニング』を読んだ [08/21]</a></li><li><a href="/2015/08/22/201508/wood-job!/">矢口史靖『WOOD JOB! 神去なあなあ日常』を観た [08/22]</a></li><li><a href="/2015/08/23/201508/pikmin3-cleared/">『ピクミン3』をクリア [08/23]</a></li><li><a href="/2015/08/25/201508/kung-fury/">KUNG FURY Official Movie [08/25]</a></li><li><a href="/2015/08/26/201508/repairing-mbp-trackpad/">MacBook Proのトラックパッドのクリックを直す [08/26]</a></li><li><a href="/2015/08/27/201508/sony-digital-paper-dpt-s1/">ソニー デジタルペーパー DPT-S1を触った [08/27]</a></li><li><a href="/2015/08/28/201508/nineth-attend-to-dentist/">歯医者（通院９回目） [08/28]</a></li><li><a href="/2015/08/29/201508/workshop-collection/">ワークショップコレクション [08/29]</a></li><li><a href="/2015/08/30/201508/oktober-fest-with-kumode/">オクトーバーフェスト飲み会 [08/30]</a></li></ul>
     
 	</div>
 	<footer class="entry-footer">
@@ -247,309 +563,6 @@
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/summary/">summary</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/oktober-fest-with-kumode" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/30/201508/oktober-fest-with-kumode/" class="article-date">
-  <time datetime="2015-08-29T15:00:00.000Z" itemprop="datePublished">Aug 30 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/30/201508/oktober-fest-with-kumode/">オクトーバーフェスト飲み会</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>去年に引き続きコミティア詣でに状況したクモデ氏主催のオクトーバーフェストでドイツビールを飲む会に参加した。話題は艦これやらスプラトゥーンやらダンジョン飯やらPNGグリッチやら。ビール飲むのものすごい久しぶりだったのでものすごい酔った。</p>
-<p>いま子供がマリオ＆ルイージRPG4を楽しんでプレイしている、と伝えたら <a href="https://twitter.com/babagiant" target="_blank" rel="external">@babagiant</a>さんがすごくうれしそうだったのが印象的だった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/workshop-collection" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/29/201508/workshop-collection/" class="article-date">
-  <time datetime="2015-08-28T15:00:00.000Z" itemprop="datePublished">Aug 29 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/29/201508/workshop-collection/">ワークショップコレクション</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><a href="http://wsc.or.jp/" target="_blank" rel="external">ワークショップコレクション・こどものためのワークショップの博覧会</a></p>
-<p>土日に子供と行ってきた。サイト見たら2004年から毎年開催してるんだな。今年は東急の取り壊し予定のビル２棟を使ってかなり自由な感じで開催されていた。CETとかTrans Art Tokyoとか東京の東側ではときどきあるタイプのイベントだけど渋谷でここまで大規模なのは珍しい気がする。</p>
-<p>100以上のワークショップがあったらしく（実際はあんまりワークショップになってないものもあったけど）とても全体は見られなかったけど、子供がやってたのでいうとエッグランディングチャレンジ（生卵を天井から落としても割れないような対ショックケースを紙やストローで作ってその場で落として実験してみるワークショップ）は本人的にうまくできたらしくもう一度やってみたいと言っていた。ほかにも手作り、お絵かき系のワークショップにいくつか参加。</p>
-<p>HMDを装着してCGのモンスターと戦う<a href="http://wsc.or.jp/workshop/special/article/2618.html" target="_blank" rel="external">HADO</a>も体験してたんだけど、ハードが不調だったのかやりかたの問題だったのか、あんまりモンスターと戦ってるように見えなかったみたい。ああいう主観型のゲームだと実際にどう見えてるのか外から確認できないからこういうトラブルもありそうだな。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kosodate/">kosodate</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/workshop/">workshop</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/nineth-attend-to-dentist" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/28/201508/nineth-attend-to-dentist/" class="article-date">
-  <time datetime="2015-08-27T15:00:00.000Z" itemprop="datePublished">Aug 28 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/28/201508/nineth-attend-to-dentist/">歯医者（通院９回目）</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>今回はほぼ施術はなしで歯石除去くらいで済んで、まる２ヶ月通院した歯医者の治療がようやく終わった。今回そんな痛みで駆け込んだわけでもなく歯医者そのものもそんなにいやじゃないのでつらいわけではなかったけど、２ヶ月毎週時間をとられてたので開放感はあるなあ。年齢からすると歯周病のコンディションに意識的になるべきだとのことで歯間ブラシを買った。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/health/">health</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/sony-digital-paper-dpt-s1" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/27/201508/sony-digital-paper-dpt-s1/" class="article-date">
-  <time datetime="2015-08-26T15:00:00.000Z" itemprop="datePublished">Aug 27 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/27/201508/sony-digital-paper-dpt-s1/">ソニー デジタルペーパー DPT-S1を触った</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<img src="/images/201508/dpt-s1.jpg">
-<p><a href="https://www.sony.jp/digital-paper/" target="_blank" rel="external">デジタルペーパー | 法人のお客様 | ソニー</a></p>
-<p>持ち運べるデジタル手書きデバイスの最高峰として、あと値段がとにかく高いことで有名なソニーのデジタルペーパーを、手書きデバイスの所有に関してはかなり見境ないことで有名なカラツくんが入手したとのことで、触らせてもらった。カラツくんはちょっと前にクラウドファンディングで入手したべつの電子ペーパーデバイスが最近ファームアップの失敗で文鎮化したいきおいでこれを注文したらしい。</p>
-<p>実際触ってみるとほとんどコンセプトモデルがそのまま出荷されたという感じのプロダクトで、そのサイズ感と重さと薄さと全体的なディティールのマットさはデジタルデバイスで似たものがまったく思い当たらなくてまさしく文房具という言葉がしっくりくる感じ。表示したpdfを読んだりペンで書いたりする文房具としての感触もかなりよかった。ただデータ処理のパフォーマンスと電子ペーパーのレスポンスという点では控えめに言ってもかなりゆったりとした気持ちが求められ、これいいじゃん！　欲しい！　と思うタイミングとうーんこれじゃなあ…と萎えるタイミングが交互に来る感じだった。あと実際持ち歩いて出して使ってしまうことを考えると、文房具として13.3インチはちょっと大きいなと思った。ほんとに紙みたいにペラペラなら別なんだろうけど。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/device/">device</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/repairing-mbp-trackpad" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/26/201508/repairing-mbp-trackpad/" class="article-date">
-  <time datetime="2015-08-25T15:00:00.000Z" itemprop="datePublished">Aug 26 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/26/201508/repairing-mbp-trackpad/">MacBook Proのトラックパッドのクリックを直す</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>使っているMacBook(MacBook Pro Retina 13inch Late 2012)のトラックパッドでクリックが反応しないことがしばらく前から起きていた。機械的なクリック感は生きていて通常のクリックができているように感じるのだが、スイッチは押されていないような状態。強く押すと反応するので完全な故障ではないんだけど、反応してなくてもクリック感だけはあるので逆に不快感が強い。新しいMacBookのトラックパッドでクリック感を擬似的に発生させるのの逆みたいな。</p>
-<p>原因はよくわからないんだけど、なんとなくクリック機構のヒンジ周辺にゴミがついてスイッチが上手く押されない状態っぽい。とりあえず急場しのぎでクリック時にトラックパッドの手前側にできる隙間にフィルムの付箋を差し込んでゴミを取り除けないかと試してみたら（一時的に？）直った。クリックが信用を取り戻した。現代のコンピュータにおいてクリックが信用をうしなうとかなりまずい感じになることもわかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-201508/kung-fury" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/08/25/201508/kung-fury/" class="article-date">
-  <time datetime="2015-08-24T15:00:00.000Z" itemprop="datePublished">Aug 25 2015</time>
-</a>
-		</span>
-		<span class="meta-elements author">doppac</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/08/25/201508/kung-fury/">KUNG FURY Official Movie</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<div class="video-container"><iframe src="//www.youtube.com/embed/bS5P_LAqiVg" frameborder="0" allowfullscreen></iframe></div>
-<p>だいぶ前に話題になってたけど最近みたやつ。80’sマナーのポリスアクションをクラウドファンドで2015年に、という作品で、なんというかふざけてないように見えるのが印象的だった。もちろん実際には全編ふざけていると言ってもいい内容なんだけど、「こうでなければならない」というヴィジジョンに貫かれていて気持ちがよかった。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/youtube/">youtube</a></li></ul>
 
 			</span>
 		</div>
